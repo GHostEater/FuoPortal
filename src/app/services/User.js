@@ -10,8 +10,10 @@ angular.module('fuoPortal')
 
         function initialize(){
             var user = {
-                username: '',
                 name: '',
+                firstName: '',
+                middleName: '',
+                lastName: '',
                 id: '',
                 get loggedIn(){
                     return this.id;
@@ -19,16 +21,20 @@ angular.module('fuoPortal')
             };
             var localUser = localStorage.get(USER_INFO);
             if(localUser){
-                user.username = localUser.username;
                 user.name = localUser.name;
+                user.firstName = localUser.firstName;
+                user.middleName = localUser.middleName;
+                user.lastName = localUser.lastName;
                 user.id = localUser.id;
             }
             return user;
         }
 
-        function setUser(username,name,id){
-            profile.username = username;
+        function setUser(name,firstName,middleName,lastName,id){
             profile.name = name;
+            profile.firstName = firstName;
+            profile.middleName = middleName;
+            profile.lastName = lastName;
             profile.id = id;
 
             localStorage.add(USER_INFO,profile);
