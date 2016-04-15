@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseMgmtController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/HomeController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseMgmt.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/home.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Auth.js" afterPath="$PROJECT_DIR$/src/app/services/Auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/LoginController.js" afterPath="$PROJECT_DIR$/src/app/LoginController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/User.js" afterPath="$PROJECT_DIR$/src/app/services/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/layout/header.jade" afterPath="$PROJECT_DIR$/src/app/layout/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.route.js" afterPath="$PROJECT_DIR$/src/app/index.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -300,6 +287,13 @@
       <option name="number" value="Default" />
       <updated>1460631878565</updated>
     </task>
+    <task id="LOCAL-00001" summary="created course management">
+      <created>1460726697900</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1460726697900</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -314,6 +308,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -344,6 +339,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="created course management" />
+    <option name="LAST_COMMIT_MESSAGE" value="created course management" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
