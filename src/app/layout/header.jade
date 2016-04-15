@@ -1,0 +1,27 @@
+//
+   Created by GHostEater on 23-Jan-16.
+
+nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle(type="button",data-toggle="collapse",data-target="#collapse")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#/") FUO Result Computation
+        #collapse.collapse.navbar-collapse
+            ul.nav.navbar-nav(ng-show="model.user.loggedIn")
+                li(ui-sref-active="active")
+                    a(ui-sref="home") Home
+                li(ui-sref-active="active")
+                    a(ui-sref="voterUnaccred") Voter Accreditation
+                li(ui-sref-active="active")
+                    a(ui-sref="candidateList") Candidate Management
+                li(ui-sref-active="active")
+                    a(ui-sref="votingControl") Voting Control
+                li(ui-sref-active="active")
+                    a(ui-sref="profilesAdmin") Profile Management
+            .navbar-right.navbar-form(ng-show="model.user.loggedIn")
+                span.text-info Hello {{model.user.name}}
+                button.btn.btn-danger(ng-click = "model.logOut()") Logout

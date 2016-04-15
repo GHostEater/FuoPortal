@@ -1,0 +1,14 @@
+//
+   Created by GHostEater on 19-Feb-16.
+div(ng-controller="LoginController as login")
+    .row
+        section.col-sm-4.col-sm-offset-4
+            form(name="loginForm")
+                .panel.panel-success
+                    .panel-heading Login
+                    .panel-body
+                        small.text-danger(ng-show="login.userError === true") Username is Incorrect
+                        input.form-control(type="text" ng-model="login.username" placeholder="Username")
+                        small.text-danger(ng-show="login.passError === true") Password is Incorrect
+                        input.form-control(type="password" ng-model="login.password" placeholder="Password")
+                        button.btn.btn-primary.form-control(ng-click="login.login(login.username,login.password)") Login
