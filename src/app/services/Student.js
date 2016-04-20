@@ -81,19 +81,7 @@ angular.module('fuoPortal')
                 method: 'POST',
                 url: Host.host + '/student/delete.php',
                 params: {
-                    matric_no: matric_no,
-                    firstName: firstName,
-                    middleName: middleName,
-                    lastName: lastName,
-                    collegeId: collegeId,
-                    departmentId: departmentId,
-                    majorId: majorId,
-                    level: level,
-                    mode_of_entry: mode_of_entry,
-                    session: session,
-                    dateBirth: dateBirth,
-                    email: email,
-                    address: address
+                    matric_no: matric_no
                 }
             })
                 .then(function (response) {

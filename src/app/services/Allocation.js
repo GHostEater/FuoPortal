@@ -65,11 +65,7 @@ angular.module('fuoPortal')
                 method: 'POST',
                 url: Host.host + '/course/delete.php',
                 params: {
-                    lecturerId: lecturerId,
-                    code: code,
-                    title: title,
-                    unit: unit,
-                    level: level
+                    lecturerId: lecturerId
                 }
             })
                 .then(function (response) {

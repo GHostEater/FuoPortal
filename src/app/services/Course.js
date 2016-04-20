@@ -21,7 +21,7 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function add(code,title,unit,semester,level,semester,prerequisiteFor){
+        function add(code,title,unit,semester,level,prerequisiteFor){
             return $http({
                 method: 'POST',
                 url: Host.host+'/course/add.php',
@@ -31,7 +31,7 @@ angular.module('fuoPortal')
                     unit: unit,
                     semester: semester,
                     level: level,
-                    prequisiteFor
+                    prerequisiteFor: prerequisiteFor
                 }
             })
                 .then(function(response){
@@ -41,7 +41,7 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(code,title,unit,semester,level,prequisiteFor) {
+        function edit(code,title,unit,semester,level,prerequisiteFor) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/course/edit.php',
@@ -51,7 +51,7 @@ angular.module('fuoPortal')
                     unit: unit,
                     semester: semester,
                     level: level,
-                    prequisiteFor
+                    prerequisiteFor: prerequisiteFor
 
                 }
             })
@@ -62,17 +62,12 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function remove(course_code) {
+        function remove(code) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/course/delete.php',
                 params: {
-                    code: code,
-                    title: title,
-                    unit: unit,
-                    semester: semester,
-                    level: level,
-                    prequisiteFor
+                    code: code
                 }
             })
                 .then(function (response) {

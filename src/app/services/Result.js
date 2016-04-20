@@ -71,14 +71,7 @@ angular.module('fuoPortal')
                 method: 'POST',
                 url: Host.host + '/result/delete.php',
                 params: {
-                    code: code,
-                    matricNo: matricNo,
-                    ca: ca,
-                    exam: exam,
-                    final: final,
-                    grade: grade,
-                    session: session,
-                    semester: semester
+                    code: code
                 }
             })
                 .then(function (response) {

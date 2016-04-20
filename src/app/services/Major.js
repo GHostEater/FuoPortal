@@ -60,8 +60,7 @@ angular.module('fuoPortal')
                 method: 'POST',
                 url: Host.host + '/major/delete.php',
                 params: {
-                    name: name,
-                    acronym: acronym
+                    id: id
                 }
             })
                 .then(function (response) {
