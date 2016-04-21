@@ -28,7 +28,6 @@ angular.module('fuoPortal')
                 params:{
                     name: name,
                     acronym: acronym
-
                 }
             })
                 .then(function(response){
@@ -38,11 +37,12 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(name,acronym) {
+        function edit(id,name,acronym) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/college/edit.php',
                 params: {
+                    id: id,
                     name: name,
                     acronym: acronym
 

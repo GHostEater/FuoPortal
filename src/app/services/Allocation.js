@@ -12,7 +12,7 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function getOne(id){
+        function getOne(lecturerId){
             return $http.get(Host.host+'/allocation/allocation.php')
                 .then(function(response){
                     return lodash.find(response.data,{'lecturerId':lecturerId});
@@ -63,7 +63,7 @@ angular.module('fuoPortal')
         function remove(lecturerId) {
             return $http({
                 method: 'POST',
-                url: Host.host + '/course/delete.php',
+                url: Host.host + '/allocation/delete.php',
                 params: {
                     lecturerId: lecturerId
                 }

@@ -38,7 +38,7 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(name,acronym) {
+        function edit(id,name,acronym) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/department/edit.php',
@@ -60,8 +60,7 @@ angular.module('fuoPortal')
                 method: 'POST',
                 url: Host.host + '/department/delete.php',
                 params: {
-                    name: name,
-                    acronym: acronym
+                    id: id
                 }
             })
                 .then(function (response) {
