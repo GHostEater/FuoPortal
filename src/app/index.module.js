@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('fuoPortal', ['ngAnimate', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr']);
+    .module('fuoPortal', ['ngLodash','ngAnimate', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'ngProgress']);
 
 })();

@@ -32,7 +32,7 @@
                     <div class="panel-body">
                         <ul class="nav nav-pills nav-stacked">
                             <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
-                            <li ui-sref-active="active"><a ui-sref="courseMgmt">Course Management</a></li>
+                            <li ui-sref-active="active"><a ui-sref="course">Course Management</a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,6 +57,7 @@
     <script src="../bower_components/malarkey/dist/malarkey.min.js"></script>
     <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
     <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/ng-lodash/build/ng-lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -65,9 +66,17 @@
     <script src="app/index.module.js"></script>
     <script src="app/services/localStorage.js"></script>
     <script src="app/services/User.js"></script>
+    <script src="app/services/Student.js"></script>
+    <script src="app/services/Result.js"></script>
+    <script src="app/services/Major.js"></script>
     <script src="app/services/Host.js"></script>
+    <script src="app/services/Department.js"></script>
+    <script src="app/services/Course.js"></script>
+    <script src="app/services/College.js"></script>
     <script src="app/services/Auth.js"></script>
-    <script src="app/courseMgmt/CourseMgmtController.js"></script>
+    <script src="app/services/Allocation.js"></script>
+    <script src="app/courseMgmt/CourseController.js"></script>
+    <script src="app/ngprogress.min.js"></script>
     <script src="app/index.run.js"></script>
     <script src="app/index.route.js"></script>
     <script src="app/index.constants.js"></script>

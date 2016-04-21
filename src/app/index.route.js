@@ -10,7 +10,7 @@
     $stateProvider
         .state('login',{url:'/',templateUrl:'app/login.html'})
         .state('home',{url:'/home',templateUrl:'app/home.html'})
-        .state('courseMgmt',{url:'/courseMgmt',templateUrl:'app/courseMgmt/courseMgmt.html'});
+        .state('course',{url:'/course',templateUrl:'app/courseMgmt/course.html'});
 
     $urlRouterProvider.otherwise('/');
   }

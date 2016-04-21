@@ -1,0 +1,31 @@
+//
+   Created by GHostEater on 15-Apr-16.
+div(ng-controller="CourseController as model")
+    div.col-sm-2(ng-include="'app/courseMgmt/courseMenu.html'")
+    .col-sm-10
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Course
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Course Code
+                th Course Title
+                th Unit
+                th Semester
+                th Prerequisite For
+                th Level
+            tbody
+                tr(ng-repeat="(key,course) in model.courses | orderBy: '+code' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{course.code}}
+                    td {{course.title}}
+                    td {{course.unit}}
+                    td {{course.semester}}
+                    td {{course.prerequisiteFor}}
+                    td {{course.level}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(course.code)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(course.code)") Delete
+
