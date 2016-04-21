@@ -12,10 +12,10 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function getOne(id){
+        function getOne(code){
             return $http.get(Host.host+'/course/course.php')
                 .then(function(response){
-                    return lodash.find(response.data,{'id':id});
+                    return lodash.find(response.data,{'code':code});
                 })
                 .catch(function(reponse){
                     return $q.reject(reponse.status);
