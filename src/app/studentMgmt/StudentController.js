@@ -9,7 +9,7 @@
             vm.edit = edit;
             Student.getAll()
                 .then(function(data){
-                    vm.courses = data;
+                    vm.students = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
