@@ -1,0 +1,25 @@
+//
+   Created by GHostEater on 21-Apr-16.
+.modal-header
+    h3.modal-title Add Course
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Course Code
+            .col-sm-10
+                input.form-control(type="text" name="code" required ng-model="model.code")
+        .form-group
+            label.control-label.col-sm-2 Course Title
+            .col-sm-10
+                input.form-control(type="text" name="title" required ng-model="model.title")
+        .form-group
+            label.control-label.col-sm-2 Semester
+            .col-sm-10
+                input.form-control(type="text" name="semester" required ng-model="model.semester")
+        .form-group
+            label.control-label.col-sm-2 Level
+            .col-sm-10
+                input.form-control(type="text" name="level" required ng-model="model.level")
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
