@@ -24,25 +24,9 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="container-fluid">
-        <div class="row">
-            <aside class="col-sm-2 sidebar text-center">
-                <div class="panel panel-success">
-                    <div class="panel-heading">Dashboard</div>
-                    <div class="panel-body">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
-                            <li ui-sref-active="active"><a ui-sref="course">Course Management</a></li>
-                            <li ui-sref-active="active"><a ui-sref="student">Student Management</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-            <section class="col-sm-10">
-                <div ng-include="'app/layout/header.html'"></div>
-                <div class="mainBody" ui-view></div>
-            </section>
-        </div>
+    <div ng-include="'app/layout/header.html'"></div>
+    <div class="container-fluid mainBody">
+        <div ui-view></div>
     </div>
     <div ng-include="'app/layout/footer.html'"></div>
 
@@ -70,11 +54,11 @@
     <script src="app/studentMgmt/StudentController.js"></script>
     <script src="app/studentMgmt/StudentAddController.js"></script>
     <script src="app/services/localStorage.js"></script>
-    <script src="app/services/lecturer.js"></script>
     <script src="app/services/User.js"></script>
     <script src="app/services/Student.js"></script>
     <script src="app/services/Result.js"></script>
     <script src="app/services/Major.js"></script>
+    <script src="app/services/Lecturer.js"></script>
     <script src="app/services/Host.js"></script>
     <script src="app/services/Department.js"></script>
     <script src="app/services/Course.js"></script>

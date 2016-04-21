@@ -1,6 +1,5 @@
-div(ng-controller="CourseController as model")
-    div.col-sm-2(ng-include="'app/studentMgmt/studentMenu.html'")
-    .col-sm-10
+div(ng-controller="StudentController as model")
+    .col-sm-12
         .row.content
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Student
         form.content.col-sm-4
@@ -28,15 +27,15 @@ div(ng-controller="CourseController as model")
                     td {{student.firstName}}
                     td {{student.middleName}}
                     td {{student.lastName}}
-                    td {{student.collegeId}}
-                    td {{student.departmentId}}
-                    td {{student.majorId}}
+                    td {{student.college}}
+                    td {{student.department}}
+                    td {{student.major}}
                     td {{student.level}}
-                    td {{student.mode_of_entry}}
+                    td {{student.modeOfEntry}}
                     td {{student.session}}
                     td {{student.dateBirth}}
                     td {{student.email}}
                     td {{student.address}}
                     td
-                        button.btn.btn-warning(ng-click="model.edit(student.code)") Edit
-                        button.btn.btn-danger(ng-click="model.remove(student.code)") Delete
+                        button.btn.btn-warning(ng-click="model.edit(student.matricNo)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(student.matricNo)") Delete

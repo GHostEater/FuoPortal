@@ -21,14 +21,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function add(name,acronym){
+        function add(name,departmentId){
             return $http({
                 method: 'POST',
                 url: Host.host+'/major/add.php',
                 params:{
                     name: name,
-                    acronym: acronym
-
+                    departmentId: departmentId
                 }
             })
                 .then(function(response){
