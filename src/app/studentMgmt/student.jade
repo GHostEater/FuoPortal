@@ -1,4 +1,4 @@
-div(ng-controller="CourseController as model")
+div(ng-controller="StudentController as model")
     .col-sm-12
         .row.content
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Student
@@ -27,9 +27,9 @@ div(ng-controller="CourseController as model")
                     td {{student.firstName}}
                     td {{student.middleName}}
                     td {{student.lastName}}
-                    td {{student.collegeId}}
-                    td {{student.departmentId}}
-                    td {{student.majorId}}
+                    td {{student.college}}
+                    td {{student.department}}
+                    td {{student.major}}
                     td {{student.level}}
                     td {{student.modeOfEntry}}
                     td {{student.session}}
