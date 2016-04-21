@@ -25,7 +25,7 @@
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Course.getAll()
+                        Student.getAll()
                             .then(function(data){
                                 vm.students = data;
                             })
@@ -41,8 +41,8 @@
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        matricNo: function(){
-                            return matricNo;
+                        code: function(){
+                            return code;
                         }
                     }
                 };
@@ -64,7 +64,7 @@
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        matricNo: function(){
+                        code: function(){
                             return matricNo;
                         }
                     }

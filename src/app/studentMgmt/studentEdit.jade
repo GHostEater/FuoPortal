@@ -23,18 +23,15 @@
         .form-group
             label.control-label.col-sm-2 College
             .col-sm-10
-                select.form-control(name="college" required ng-model="model.student.collegeId")
-                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
+                input.form-control(type="text" name="collegeId" required ng-model="model.student.collegeId")
         .form-group
             label.control-label.col-sm-2 Department
             .col-sm-10
-                select.form-control(name="department" required ng-model="model.student.departmentId")
-                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
+                input.form-control(type="text" name="departmentId" required ng-model="model.student.departmentId")
         .form-group
             label.control-label.col-sm-2 Major
             .col-sm-10
-                select.form-control(name="major" required ng-model="model.student.majorId")
-                    option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
+                input.form-control(type="text" name="majorId" required ng-model="model.student.majorId")
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
