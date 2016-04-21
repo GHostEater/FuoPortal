@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseDeleteController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseDelete.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Course.js" afterPath="$PROJECT_DIR$/src/app/services/Course.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -473,7 +467,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461243045463</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="delete course">
+      <created>1461244087043</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1461244087043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -521,7 +521,8 @@
     </option>
     <MESSAGE value="created course management" />
     <MESSAGE value="edit course" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit course" />
+    <MESSAGE value="delete course" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete course" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
