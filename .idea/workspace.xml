@@ -277,8 +277,9 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
             <PATH vcs="Git" revision="">$PROJECT_DIR$/.tmp/serve/index.html</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/index.route.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/index.html</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -286,13 +287,16 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/Allocation.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/College.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/Course.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/Department.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/Major.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/Result.js</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/Student.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/services/lecturer.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/StudentAdd.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/StudentController.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/StudentEdit.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/student.jade</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/studentAdd.jade</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/studentDelete.jade</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/studentDelete.js</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/studentEdit.jade</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/app/studentMgmt/studentMenu.jade</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Deleted" />
@@ -473,12 +477,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461244087043</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="delete course">
+      <created>1461244135622</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1461244135622</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -493,7 +503,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
