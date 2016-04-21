@@ -12,21 +12,21 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function getOne(matric_no){
+        function getOne(matricNo){
             return $http.get(Host.host+'/student/student.php')
                 .then(function(response){
-                    return lodash.find(response.data,{'matric_no':matric_no});
+                    return lodash.find(response.data,{'matricNo':matricNo});
                 })
                 .catch(function(reponse){
                     return $q.reject(reponse.status);
                 });
         }
-        function add(matric_no,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address){
+        function add(matricNo,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address){
             return $http({
                 method: 'POST',
                 url: Host.host+'/student/add.php',
                 params:{
-                    matric_no: matric_no,
+                    matricNo: matricNo,
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
@@ -48,12 +48,12 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(matric_no,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address) {
+        function edit(matricNo,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/student/edit.php',
                 params: {
-                    matric_no: matric_no,
+                    matricNo: matricNo,
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
@@ -76,12 +76,12 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function remove(matric_no) {
+        function remove(matricNo) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/student/delete.php',
                 params: {
-                    matric_no: matric_no
+                    matricNo: matricNo
                 }
             })
                 .then(function (response) {

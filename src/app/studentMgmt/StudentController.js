@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("StudentController",function(toastr,$modal,Course){
+        .controller("StudentController",function(toastr,$modal,Student){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
@@ -34,15 +34,15 @@
                             });
                     });
             }
-            function edit(code){
+            function edit(matricNo){
                 var options = {
                     templateUrl: 'app/studentMgmt/studentEdit.html',
                     controller: "StudentEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        code: function(){
-                            return code;
+                        matricNo: function(){
+                            return matricNo;
                         }
                     }
                 };
@@ -57,15 +57,15 @@
                             });
                     });
             }
-            function remove(code){
+            function remove(matricNo){
                 var options = {
                     templateUrl: 'app/studentMgmt/studentDelete.html',
                     controller: "StudentDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        code: function(){
-                            return code;
+                        matricNo: function(){
+                            return matricNo;
                         }
                     }
                 };
