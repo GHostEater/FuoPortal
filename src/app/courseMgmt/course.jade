@@ -22,7 +22,9 @@ div(ng-controller="CourseController as model")
                     td {{course.code}}
                     td {{course.title}}
                     td {{course.unit}}
-                    td {{course.semester}}
+                    td
+                        span(ng-show="course.semester == 1") 1st Semester
+                        span(ng-show="course.semester == 2") 2nd Semester
                     td {{course.prerequisiteFor}}
                     td {{course.level}}
                     td
