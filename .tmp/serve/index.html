@@ -33,6 +33,7 @@
                         <ul class="nav nav-pills nav-stacked">
                             <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
                             <li ui-sref-active="active"><a ui-sref="course">Course Management</a></li>
+                            <li ui-sref-active="active"><a ui-sref="student">Student Management</a></li>
                         </ul>
                     </div>
                 </div>
@@ -63,8 +64,13 @@
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
+    <script src="app/studentMgmt/studentDelete.js"></script>
+    <script src="app/studentMgmt/StudentEdit.js"></script>
     <script src="app/index.module.js"></script>
+    <script src="app/studentMgmt/StudentController.js"></script>
+    <script src="app/studentMgmt/StudentAdd.js"></script>
     <script src="app/services/localStorage.js"></script>
+    <script src="app/services/lecturer.js"></script>
     <script src="app/services/User.js"></script>
     <script src="app/services/Student.js"></script>
     <script src="app/services/Result.js"></script>
