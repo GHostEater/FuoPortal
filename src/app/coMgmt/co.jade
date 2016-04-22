@@ -3,7 +3,7 @@
 div(ng-controller="CoController as model")
     .col-sm-12
         .row.content
-            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Co
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add College Officer
         form.content.col-sm-4
             input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
         table.table.table-striped.table-bordered
@@ -27,8 +27,8 @@ div(ng-controller="CoController as model")
                         span(ng-show="co.collegeId == 2") College Of Natural and Applied Sciences
                     td {{lecturer.email}}
                     td
-                        button.btn.btn-warning(ng-click="model.edit(co.firstName)") Edit
-                        button.btn.btn-danger(ng-click="model.remove(co.firstName)") Delete
+                        button.btn.btn-warning(ng-click="model.edit(co.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(co.id)") Delete
 
 
 

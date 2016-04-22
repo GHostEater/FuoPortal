@@ -27,11 +27,9 @@ div(ng-controller="StudentController as model")
                     td {{student.firstName}}
                     td {{student.middleName}}
                     td {{student.lastName}}
-                    td {{student.collegeId}}
                     td
                         span(ng-show="student.collegeId == 1") College Of Management and Social Sciences
                         span(ng-show="student.collegeId == 2") College Of Natural and Applied Sciences
-                    td {{student.departmentId}}
                     td
                         span(ng-show="student.departmentId == 1") Department of Accounting and Finance
                         span(ng-show="student.departmentId == 2") Department of Biological Sciences
@@ -43,7 +41,6 @@ div(ng-controller="StudentController as model")
                         span(ng-show="student.departmentId == 8") Department of Physics with Electronics
                         span(ng-show="student.departmentId == 9") Department of Political Science and Administration
                         span(ng-show="student.departmentId == 10") Department of Sociology and Psychology
-                    td {{student.majorId}}
                     td
                         span(ng-show="student.majorId == 1") Department of Accounting
                         span(ng-show="student.majorId == 2") Department of Banking and Finane
@@ -56,13 +53,11 @@ div(ng-controller="StudentController as model")
                         span(ng-show="student.majorId == 9") Department of Physics with Electronics
                         span(ng-show="student.majorId == 10") Department of Political Science
                         span(ng-show="student.majorId == 11") Department of Sociology and Psychology
-                    td {{student.levelId}}
                     td
                         span(ng-show="student.levelId == 1") 100 Level
                         span(ng-show="student.levelId == 2") 200 Level
                         span(ng-show="student.levelId == 3") 300 Level
                         span(ng-show="student.levelId == 4") 400 Level
-                    td {{student.modeOfEntry}}
                     td
                         span(ng-show="student.modeOfEntry == 1") UTME
                         span(ng-show="student.modeOfEntry == 2") Direct Entry

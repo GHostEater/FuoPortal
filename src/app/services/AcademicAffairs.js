@@ -31,7 +31,6 @@ angular.module('fuoPortal')
                     lastName: lastName,
                     email: email,
                     password: password
-
                 }
             })
                 .then(function(response){
@@ -41,18 +40,17 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(academicAffairs) {
+        function edit(id,firstName,middleName,lastName,email,password) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/academicAffairs/edit.php',
                 params: {
+                    id: id,
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
                     email: email,
                     password: password
-
-
                 }
             })
                 .then(function(response){

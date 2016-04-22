@@ -12,7 +12,11 @@
         .state('home',{url:'/home',templateUrl:'app/home.html'})
         .state('course',{url:'/course',templateUrl:'app/courseMgmt/course.html'})
         .state('student',{url:'/student',templateUrl:'app/studentMgmt/student.html'})
-        .state('lecturer',{url:'/lecturer',templateUrl:'app/lecturerMgmt/lecturer.html'});
+        .state('lecturer',{url:'/lecturer',templateUrl:'app/lecturerMgmt/lecturer.html'})
+        .state('co',{url:'/co',templateUrl:'app/coMgmt/co.html'})
+        .state('hod',{url:'/hod',templateUrl:'app/hodMgmt/hod.html'})
+        .state('department',{url:'/department',templateUrl:'app/departmentMgmt/department.html'})
+        .state('academicAffairs',{url:'/academicAffairs',templateUrl:'app/academicAffairsMgmt/academicAffairs.html'});
 
     $urlRouterProvider.otherwise('/');
   }

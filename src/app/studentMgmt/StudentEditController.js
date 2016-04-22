@@ -4,11 +4,46 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('StudentEditController',function(Student,toastr,matricNo,$modalInstance){
+        .controller('StudentEditController',function(Student,Major,Department,College,Level,ModeOfEntry,toastr,matricNo,$modalInstance){
             var vm = this;
             Student.getOne(matricNo)
                 .then(function(data){
                     vm.student = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Major.getAll()
+                .then(function(data){
+                    vm.majors = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Department.getAll()
+                .then(function(data){
+                    vm.departments = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            College.getAll()
+                .then(function(data){
+                    vm.colleges = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Level.getAll()
+                .then(function(data){
+                    vm.levels = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            ModeOfEntry.getAll()
+                .then(function(data){
+                    vm.modeOfEntries = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

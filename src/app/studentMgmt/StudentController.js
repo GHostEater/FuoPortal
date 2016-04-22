@@ -41,7 +41,7 @@
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        code: function(){
+                        matricNo: function(){
                             return matricNo;
                         }
                     }
@@ -64,7 +64,7 @@
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        code: function(){
+                        matricNo: function(){
                             return matricNo;
                         }
                     }

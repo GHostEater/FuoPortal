@@ -27,7 +27,6 @@ angular.module('fuoPortal')
                 url: Host.host+'/level/add.php',
                 params:{
                     level: level
-
                 }
             })
                 .then(function(response){
@@ -37,14 +36,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(level) {
+        function edit(id,level) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/level/edit.php',
                 params: {
+                    id: id,
                     level: level
-
-
                 }
             })
                 .then(function(response){

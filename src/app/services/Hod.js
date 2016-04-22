@@ -21,14 +21,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function add(hod){
+        function add(lecturerId,departmentId){
             return $http({
                 method: 'POST',
                 url: Host.host+'/hod/add.php',
                 params:{
                     lecturerId: lecturerId,
                     departmentId: departmentId
-
                 }
             })
                 .then(function(response){
@@ -38,15 +37,14 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(hod) {
+        function edit(id,lecturerId,departmentId) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/hod/edit.php',
                 params: {
+                    id:id,
                     lecturerId: lecturerId,
                     departmentId: departmentId
-
-
                 }
             })
                 .then(function(response){

@@ -37,14 +37,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(modeOfEntry) {
+        function edit(id,modeOfEntry) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/modeOfEntry/edit.php',
                 params: {
+                    id: id,
                     modeOfEntry: modeOfEntry
-
-
                 }
             })
                 .then(function(response){

@@ -23,23 +23,28 @@
         .form-group
             label.control-label.col-sm-2 College
             .col-sm-10
-                input.form-control(type="text" name="collegeId" required ng-model="model.student.collegeId")
+                select.form-control( name="collegeId" required ng-model="model.student.collegeId")
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
         .form-group
             label.control-label.col-sm-2 Department
             .col-sm-10
-                input.form-control(type="text" name="departmentId" required ng-model="model.student.departmentId")
+                select.form-control( name="departmentId" required ng-model="model.student.departmentId")
+                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
         .form-group
             label.control-label.col-sm-2 Major
             .col-sm-10
-                input.form-control(type="text" name="majorId" required ng-model="model.student.majorId")
+                select.form-control( name="majorId" required ng-model="model.student.majorId")
+                    option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
-                input.form-control(type="text" name="level" required ng-model="model.student.level")
+                select.form-control( name="levelId" required ng-model="model.student.levelId")
+                    option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
         .form-group
             label.control-label.col-sm-2 Mode of Entry
             .col-sm-10
-                input.form-control(type="text" name="modeOfEntry" required ng-model="model.student.modeOfEntry")
+                select.form-control( name="modeOfEntryId" required ng-model="model.student.modeOfEntryId")
+                    option(ng-repeat="modeOfEntry in model.modeOfEntries" value="{{modeOfEntry.id}}") {{modeOfEntry.modeOfEntry}}
         .form-group
             label.control-label.col-sm-2 Session
             .col-sm-10

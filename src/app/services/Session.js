@@ -27,7 +27,6 @@ angular.module('fuoPortal')
                 url: Host.host+'/session/add.php',
                 params:{
                     session: session
-
                 }
             })
                 .then(function(response){
@@ -37,14 +36,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(session) {
+        function edit(id,session) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/session/edit.php',
                 params: {
+                    id: id,
                     session: session
-
-
                 }
             })
                 .then(function(response){
