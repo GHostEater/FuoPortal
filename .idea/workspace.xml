@@ -2,47 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/AcademicAffairs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/Co.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/CoAddController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/CoController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/CoDeleteController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/CoEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/DepartmentAddController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/DepartmentController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/DepartmentDeleletController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/DepartmentEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/Hod.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/HodAddController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/HodController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/HodDeleteController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/HodEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/LecturerAddController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/LecturerController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/LecturerDeleteController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/LecturerEditController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/co.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/coDelete.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/coMgmt/coEdit.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/department.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/departmentAdd.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/departmentDelete.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/departmentMgmt/departmentEdit.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/hod.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/hodAdd.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/hodDelete.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/hodMgmt/hodEdit.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerAdd.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerDelete.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerEdit.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/level.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" afterPath="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/StudentController.js" afterPath="$PROJECT_DIR$/src/app/studentMgmt/StudentController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.route.js" afterPath="$PROJECT_DIR$/src/app/index.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/student.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/student.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -398,7 +357,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461254571908</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit">
+      <created>1461326781069</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1461326781069</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -413,6 +378,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -423,7 +389,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -470,6 +435,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="442">
           <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -484,6 +450,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="419" max-vertical-offset="1513">
           <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -491,6 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.116883114" vertical-offset="142" max-vertical-offset="527">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
