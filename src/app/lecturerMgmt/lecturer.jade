@@ -1,0 +1,55 @@
+//
+   Created by Bello J on 4/21/2016.
+div(ng-controller="LecturerController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Lecturer
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th lecturerId
+                th First Name
+                th Middle Name
+                th Last Name
+                th Rank
+                th Status
+                th College
+                th Departmart
+                th Phone Number
+                th E-mail
+                th Address
+            tbody
+                tr(ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+code' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{lecturer.lecturerId}}
+                    td {{lecturer.firstName}}
+                    td {{lecturer.middleName}}
+                    td {{lecturer.lastName}}
+                    td {{lecturer.rank}}
+                    td {{lecturer.status}}
+                    td {{lecturer.collegeId}}
+                    td
+                        span(ng-show="department.collegeId == 1") College Of Management and Social Sciences
+                        span(ng-show="department.collegeId == 2") College Of Natural and Applied Sciences
+                    td {{lecturer.departmentId}}
+                    td
+                        span(ng-show="hod.departmentId == 1") Department of Accounting and Finance
+                        span(ng-show="hod.departmentId == 2") Department of Biological Sciences
+                        span(ng-show="hod.departmentId == 3") Department of Business Administration
+                        span(ng-show="hod.departmentId == 4") Department of Chemical Sciences
+                        span(ng-show="hod.departmentId == 5") Department of Economics
+                        span(ng-show="hod.departmentId == 6") Department of Mass Communication
+                        span(ng-show="hod.departmentId == 7") Department of Mathematical and Computer Sciences
+                        span(ng-show="hod.departmentId == 2") Department of Physics with Electronics
+                        span(ng-show="hod.departmentId == 2") Department of Political Science and Administration
+                        span(ng-show="hod.departmentId == 2") Department of Sociology and Psychology
+                    td {{lecturer.phoneNumber}}
+                    td {{lecturer.email}}
+                    td {{lecturer.address}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(lecturer.lecturerId)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(lecturer.lecturerId)") Delete
+
+

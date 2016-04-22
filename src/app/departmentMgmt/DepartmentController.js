@@ -1,79 +1,79 @@
 /**
- * Created by Bello J on 4/21/2016.
+ * Created by Bello J on 4/22/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("StudentController",function(toastr,$modal,Student){
+        .controller("DepartmentController",function(toastr,$modal,Department){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
-            Student.getAll()
+            Department.getAll()
                 .then(function(data){
-                    vm.students = data;
+                    vm.departments = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
             function add(){
                 var options = {
-                    templateUrl: 'app/studentMgmt/studentAdd.html',
-                    controller: "StudentAddController",
+                    templateUrl: 'app/departmentMgmt/departmentAdd.html',
+                    controller: "DepartmentAddController",
                     controllerAs: 'model',
                     size: 'lg'
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Student.getAll()
+                        Department.getAll()
                             .then(function(data){
-                                vm.students = data;
+                                vm.departments = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function edit(matricNo){
+            function edit(name){
                 var options = {
-                    templateUrl: 'app/studentMgmt/studentEdit.html',
-                    controller: "StudentEditController",
+                    templateUrl: 'app/departmentMgmt/departmentEdit.html',
+                    controller: "DepartmentEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
                         code: function(){
-                            return matricNo;
+                            return name;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Student.getAll()
+                        Department.getAll()
                             .then(function(data){
-                                vm.students = data;
+                                vm.departments = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function remove(matricNo){
+            function remove(name){
                 var options = {
-                    templateUrl: 'app/studentMgmt/studentDelete.html',
-                    controller: "StudentDeleteController",
+                    templateUrl: 'app/departmentMgmt/departmentDelete.html',
+                    controller: "DepartmentDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        code: function(){
-                            return matricNo;
+                        name: function(){
+                            return name;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Student.getAll()
+                        Department.getAll()
                             .then(function(data){
-                                vm.students = data;
+                                vm.departments = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");

@@ -4,18 +4,18 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('StudentAddController',function(Student,toastr,$modalInstance){
+        .controller('LecturerAddController',function(Lecturer,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Student.add(vm.matricNo,vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.departmentId,vm.majorId,vm.level,vm.mode_of_entry,vm.session,vm.dateBirth,vm.email,vm.address,vm.password)
+                    Lecturer.add(vm.lecturerId,vm.firstName,vm.middleName,vm.lastName,vm.rank,vm.status,vm.collegeId,vm.departmentId,vm.phoneNumber,vm.email,vm.address,vm.password)
                         .then(function(){
-                            toastr.success("Student Added");
+                            toastr.success("Lecturer Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Student");
+                            toastr.error("Unable to Add Lecturer");
                         });
                 }
                 else{

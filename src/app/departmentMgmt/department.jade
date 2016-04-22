@@ -1,0 +1,31 @@
+//
+   Created by Bello J on 4/22/2016.
+div(ng-controller="DepartmentController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Department
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Department Name
+                th College Id
+                th Acronym
+            tbody
+                tr(ng-repeat="(key,department) in model.departments | orderBy: '+code' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{department.name}}
+                    td {{department.collegeId}}
+                    td
+                        span(ng-show="department.collegeId == 1") College Of Management and Social Sciences
+                        span(ng-show="department.collegeId == 2") College Of Natural and Applied Sciences
+                    td {{department.acronym}}
+                    td
+                        span(ng-show="department.acronym == 1") COMAS
+                        span(ng-show="department.acronym == 2") CONAS
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(department.name)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(department.name)") Delete
+
+

@@ -1,0 +1,34 @@
+//
+   Created by Bello J on 4/22/2016.
+.modal-header
+    h3.modal-title Add Co
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 First Name
+            .col-sm-10
+                input.form-control(type="text" name="firstName" required ng-model="model.firstName")
+        .form-group
+            label.control-label.col-sm-2 Middle Name
+            .col-sm-10
+                input.form-control(type="text" name="middleName" required ng-model="model.middleName")
+        .form-group
+            label.control-label.col-sm-2 Last Name
+            .col-sm-10
+                input.form-control(type="text" name="lastName" required ng-model="model.lastName")
+        .form-group
+            label.control-label.col-sm-2 College
+            .col-sm-10
+                input.form-control(type="text" name="collegeId" required ng-model="model.collegeId")
+        .form-group
+            label.control-label.col-sm-2 E-mail
+            .col-sm-10
+                input.form-control(type="text" name="email" required ng-model="model.email")
+        .form-group
+            label.control-label.col-sm-2 Password
+            .col-sm-10
+                input.form-control(type="password" name="password" required ng-model="model.password")
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
+

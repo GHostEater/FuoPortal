@@ -1,0 +1,34 @@
+//
+   Created by Bello J on 4/22/2016.
+div(ng-controller="CoController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Co
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th First Name
+                th Middle Name
+                th Last Name
+                th College
+                th E-mail
+                th Address
+            tbody
+                tr(ng-repeat="(key,co) in model.cos | orderBy: '+code' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{co.firstName}}
+                    td {{co.middleName}}
+                    td {{co.lastName}}
+                    td {{co.collegeId}}
+                    td
+                        span(ng-show="co.collegeId == 1") College Of Management and Social Sciences
+                        span(ng-show="co.collegeId == 2") College Of Natural and Applied Sciences
+                    td {{lecturer.email}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(co.firstName)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(co.firstName)") Delete
+
+
+

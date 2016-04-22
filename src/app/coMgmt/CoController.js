@@ -1,79 +1,79 @@
 /**
- * Created by Bello J on 4/21/2016.
+ * Created by Bello J on 4/22/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("StudentController",function(toastr,$modal,Student){
+        .controller("CoController",function(toastr,$modal,Co){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
-            Student.getAll()
+            Co.getAll()
                 .then(function(data){
-                    vm.students = data;
+                    vm.cos = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
             function add(){
                 var options = {
-                    templateUrl: 'app/studentMgmt/studentAdd.html',
-                    controller: "StudentAddController",
+                    templateUrl: 'app/coMgmt/coAdd.html',
+                    controller: "CoAddController",
                     controllerAs: 'model',
                     size: 'lg'
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Student.getAll()
+                        Co.getAll()
                             .then(function(data){
-                                vm.students = data;
+                                vm.cos = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function edit(matricNo){
+            function edit(firstName){
                 var options = {
-                    templateUrl: 'app/studentMgmt/studentEdit.html',
-                    controller: "StudentEditController",
+                    templateUrl: 'app/coMgmt/coEdit.html',
+                    controller: "CoEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        code: function(){
-                            return matricNo;
+                        firstName: function(){
+                            return firstName;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Student.getAll()
+                        Co.getAll()
                             .then(function(data){
-                                vm.students = data;
+                                vm.cos = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function remove(matricNo){
+            function remove(firstName){
                 var options = {
-                    templateUrl: 'app/studentMgmt/studentDelete.html',
-                    controller: "StudentDeleteController",
+                    templateUrl: 'app/coMgmt/lecturerDelete.html',
+                    controller: "CoDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        code: function(){
-                            return matricNo;
+                        firstName: function(){
+                            return firstName;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Student.getAll()
+                        Co.getAll()
                             .then(function(data){
-                                vm.students = data;
+                                vm.cos = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
