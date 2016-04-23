@@ -8,7 +8,7 @@
             var vm = this;
 
             vm.ok = function(){
-                Department.remove(name)
+                College.remove(name)
                     .then(function(){
                         toastr.success("College Removed");
                         $modalInstance.close();

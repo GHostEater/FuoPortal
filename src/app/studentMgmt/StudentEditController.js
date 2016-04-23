@@ -51,7 +51,7 @@
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Stduent.edit(vm.matricNo,vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.departmentId,vm.majorId,vm.level,vm.mode_of_entry,vm.session,vm.dateBirth,vm.email,vm.address,vm.password)
+                    Student.edit(vm.matricNo,vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.departmentId,vm.majorId,vm.level,vm.mode_of_entry,vm.session,vm.dateBirth,vm.email,vm.address,vm.password)
                         .then(function(){
                             toastr.success("Student Changed");
                             $modalInstance.close();

@@ -17,11 +17,11 @@
                 if(vm.form.$dirty && vm.form.$valid){
                     AcademicAffair.edit(vm.Id,vm.firstName,vm.middleName,vm.lastName,vm.email,vm.password)
                         .then(function(){
-                            toastr.success("AcademicAffair Changed");
+                            toastr.success("College Officer Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change AcademicAffair");
+                            toastr.error("Unable to Change College Officer");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){
