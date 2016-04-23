@@ -6,7 +6,7 @@
     angular.module('fuoPortal')
         .controller('DepartmentEditController',function(Department,College,toastr,name,$modalInstance){
             var vm = this;
-            Course.getOne(code)
+            Department.getOne(name)
                 .then(function(data){
                     vm.department = data;
                 })

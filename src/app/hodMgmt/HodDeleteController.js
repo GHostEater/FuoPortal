@@ -5,7 +5,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('HodDeleteController',function(HOd,lecturerId,toastr,$modalInstance){
+        .controller('HodDeleteController',function(Hod,lecturerId,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){

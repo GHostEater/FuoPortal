@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('HodEditController',function(Hod,Department,toastr,LecturerId,$modalInstance){
+        .controller('HodEditController',function(Hod,Department,toastr,lecturerId,$modalInstance){
             var vm = this;
             Hod.getOne(lecturerId)
                 .then(function(data){
@@ -25,11 +25,11 @@
                 if(vm.form.$dirty && vm.form.$valid){
                     Hod.edit(vm.hod.lecturerId,vm.hod.departmentId)
                         .then(function(){
-                            toastr.success("Hod Changed");
+                            toastr.success("HOD Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change Hod");
+                            toastr.error("Unable to Change HOD");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){

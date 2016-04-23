@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CoDeleteController',function(Co,firstName,toastr,$modalInstance){
+        .controller('CoDeleteController',function(Co,lecturerId,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){

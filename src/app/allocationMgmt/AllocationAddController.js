@@ -11,11 +11,11 @@
                 if(vm.form.$valid){
                     Allocation.add(vm.lecturerId,vm.code)
                         .then(function(){
-                            toastr.success("Allocation Added");
+                            toastr.success("Allocation Successful");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Allocation");
+                            toastr.error("Unable to Allocate");
                         });
                 }
                 else{
