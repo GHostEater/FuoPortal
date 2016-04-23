@@ -8,17 +8,17 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
-        function getOne(id){
+        function getOne(Id){
             return $http.get(Host.host+'/level/level.php')
                 .then(function(response){
-                    return lodash.find(response.data,{'id':id});
+                    return lodash.find(response.data,{'Id':Id});
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function add(level){
@@ -32,39 +32,39 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
-        function edit(id,level) {
+        function edit(Id,level) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/level/edit.php',
                 params: {
-                    id: id,
+                    Id: Id,
                     level: level
                 }
             })
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
-        function remove(id) {
+        function remove(Id) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/level/delete.php',
                 params: {
-                    id: id
+                    Id: Id
                 }
             })
                 .then(function (response) {
                     return response.status;
                 })
-                .catch(function (reponse) {
-                    return $q.reject(reponse.status);
+                .catch(function (response) {
+                    return $q.reject(response.status);
                 });
         }
         return{

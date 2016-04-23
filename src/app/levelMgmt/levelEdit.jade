@@ -1,17 +1,17 @@
 //   Created by RBpi96 on 23-Apr-16.
 .modal-header
-    h3.modal-title Add Level
+    h3.modal-title Edit Level
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
             label.control-label.col-sm-2 S/N
             .col-sm-10
-                input.form-control(type="text" name="Id" required ng-model="model.Id")
+                input.form-control(type="text" name="Id" required ng-model="model.levels.Id")
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
-                input.form-control(type="text" name="level" required ng-model="model.level")
-                
+                input.form-control(type="text" name="level" required ng-model="model.levels.level")
+        
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

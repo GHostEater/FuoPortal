@@ -8,8 +8,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function getOne(id){
@@ -17,8 +17,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return lodash.find(response.data,{'id':id});
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function add(session){
@@ -32,8 +32,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function edit(id,session) {
@@ -48,8 +48,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function remove(id) {
@@ -63,8 +63,8 @@ angular.module('fuoPortal')
                 .then(function (response) {
                     return response.status;
                 })
-                .catch(function (reponse) {
-                    return $q.reject(reponse.status);
+                .catch(function (response) {
+                    return $q.reject(response.status);
                 });
         }
         return{

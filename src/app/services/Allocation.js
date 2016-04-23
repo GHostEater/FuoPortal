@@ -14,8 +14,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function getMyCourses(id){
@@ -29,8 +29,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function getCourses(id){
@@ -44,8 +44,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function allocate(lecturerId,code,allocatedBy){
@@ -79,8 +79,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return lodash.find(response.data,{'lecturerId':lecturerId});
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function remove(id) {
@@ -94,8 +94,8 @@ angular.module('fuoPortal')
                 .then(function (response) {
                     return response.status;
                 })
-                .catch(function (reponse) {
-                    return $q.reject(reponse.status);
+                .catch(function (response) {
+                    return $q.reject(response.status);
                 });
         }
         return{

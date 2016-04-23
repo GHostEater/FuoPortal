@@ -8,8 +8,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function getOne(code){
@@ -17,8 +17,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return lodash.find(response.data,{'code':code});
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function add(code,title,unit,semester,level,prerequisiteFor){
@@ -37,8 +37,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function edit(code,title,unit,semester,level,prerequisiteFor) {
@@ -58,8 +58,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function remove(code) {
@@ -73,8 +73,8 @@ angular.module('fuoPortal')
                 .then(function (response) {
                     return response.status;
                 })
-                .catch(function (reponse) {
-                    return $q.reject(reponse.status);
+                .catch(function (response) {
+                    return $q.reject(response.status);
                 });
         }
         return{
