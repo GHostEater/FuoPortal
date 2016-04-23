@@ -1,5 +1,4 @@
-//
-   Created by GHostEater on 21-Apr-16.
+//   Created by GHostEater on 21-Apr-16.
 .modal-header
     h3.modal-title Edit Course
 .modal-body
@@ -13,13 +12,23 @@
             .col-sm-10
                 input.form-control(type="text" name="title" required ng-model="model.course.title")
         .form-group
+            label.control-label.col-sm-2 Course Unit
+            .col-sm-10
+                input.form-control(type="text" name="unit" required ng-model="model.course.unit")
+        .form-group
             label.control-label.col-sm-2 Semester
             .col-sm-10
-                input.form-control(type="text" name="semester" required ng-model="model.course.semester")
+                select.form-control( name="semesterId" required ng-model="model.course.semesterId")
+                    option(ng-repeat="semester in model.semesters" value="{{semester.id}}") {{semester.semester}}
+        .form-group
+            label.control-label.col-sm-2 Prerequisite For
+            .col-sm-10
+                input.form-control(type="text" name="prerequisiteFor" required ng-model="model.course.prerequisiteFor")
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
-                input.form-control(type="text" name="level" required ng-model="model.course.level")
+                select.form-control( name="levelId" required ng-model="model.course.levelId")
+                    option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

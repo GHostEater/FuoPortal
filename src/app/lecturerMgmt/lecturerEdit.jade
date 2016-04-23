@@ -31,11 +31,13 @@
         .form-group
             label.control-label.col-sm-2 College
             .col-sm-10
-                input.form-control(type="text" name="collegeId" required ng-model="model.lecturer.collegeId")
+                select.form-control( name="collegeId" required ng-model="model.lecturer.collegeId")
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
         .form-group
             label.control-label.col-sm-2 Department
             .col-sm-10
-                input.form-control(type="text" name="departmentId" required ng-model="model.lecturer.departmentId")
+                select.form-control( name="departmentId" required ng-model="model.lecturer.collegeId")
+                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
         .form-group
             label.control-label.col-sm-2 Phone Number
             .col-sm-10

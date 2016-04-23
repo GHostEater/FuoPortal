@@ -1,8 +1,12 @@
-//   Created by GHostEater on 21-Apr-16.
+//   Created by Bello J on 4/23/2016.
 .modal-header
     h3.modal-title Add Course
 .modal-body
     form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Lecturer Id
+            .col-sm-10
+                input.form-control(type="text" name="lecturerId" required ng-model="model.lecturerId")
         .form-group
             label.control-label.col-sm-2 Course Code
             .col-sm-10
@@ -12,21 +16,17 @@
             .col-sm-10
                 input.form-control(type="text" name="title" required ng-model="model.title")
         .form-group
-            label.control-label.col-sm-2 Course Unit
+            label.control-label.col-sm-2 Unit
             .col-sm-10
                 input.form-control(type="text" name="unit" required ng-model="model.unit")
-        .form-group
-            label.control-label.col-sm-2 Semester
-            .col-sm-10
-                input.form-control(type="text" name="semester" required ng-model="model.semester")
-        .form-group
-            label.control-label.col-sm-2 Prerequisite For
-            .col-sm-10
-                input.form-control(type="text" name="prerequisiteFor" required ng-model="model.prerequisiteFor")
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
                 input.form-control(type="text" name="level" required ng-model="model.level")
+        .form-group
+            label.control-label.col-sm-2 Semester
+            .col-sm-10
+                input.form-control(type="text" name="semester" required ng-model="model.semester")
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

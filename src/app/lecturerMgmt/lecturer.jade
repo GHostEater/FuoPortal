@@ -29,11 +29,9 @@ div(ng-controller="LecturerController as model")
                     td {{lecturer.lastName}}
                     td {{lecturer.rank}}
                     td {{lecturer.status}}
-                    td {{lecturer.collegeId}}
                     td
                         span(ng-show="department.collegeId == 1") College Of Management and Social Sciences
                         span(ng-show="department.collegeId == 2") College Of Natural and Applied Sciences
-                    td {{lecturer.departmentId}}
                     td
                         span(ng-show="hod.departmentId == 1") Department of Accounting and Finance
                         span(ng-show="hod.departmentId == 2") Department of Biological Sciences

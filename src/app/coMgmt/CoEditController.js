@@ -4,11 +4,18 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CoEditController',function(Co,toastr,firstName,$modalInstance){
+        .controller('CoEditController',function(Co,College,toastr,lecturerId,$modalInstance){
             var vm = this;
-            Co.getOne(firstName)
+            Co.getOne(lecturerId)
                 .then(function(data){
-                    vm.co = data;
+                    vm.cos = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            College.getAll()
+                .then(function(data){
+                    vm.colleges = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

@@ -59,7 +59,7 @@
             }
             function remove(id){
                 var options = {
-                    templateUrl: 'app/coMgmt/lecturerDelete.html',
+                    templateUrl: 'app/coMgmt/coDelete.html',
                     controller: "CoDeleteController",
                     controllerAs: 'model',
                     size: 'sm',

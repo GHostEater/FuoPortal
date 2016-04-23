@@ -1,78 +1,79 @@
-/**Created by Bello J on 4/22/2016.
- **/
+/**
+ * Created by Bello J on 4/22/2016.
+ */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("DepartmentController",function(toastr,$modal,Department){
+        .controller("AcademicAffairController",function(toastr,$modal,AcademicAffair){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
-            Department.getAll()
+            AcademicAffair.getAll()
                 .then(function(data){
-                    vm.departments = data;
+                    vm.academicAffairs = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
             function add(){
                 var options = {
-                    templateUrl: 'app/departmentMgmt/departmentAdd.html',
-                    controller: "DepartmentAddController",
+                    templateUrl: 'app/academicAffairMgmt/academicAffairAdd.html',
+                    controller: "AcademicAffairAddController",
                     controllerAs: 'model',
                     size: 'lg'
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Department.getAll()
+                        AcademicAffair.getAll()
                             .then(function(data){
-                                vm.departments = data;
+                                vm.academicAffairs = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function edit(name){
+            function edit(id){
                 var options = {
-                    templateUrl: 'app/departmentMgmt/departmentEdit.html',
-                    controller: "DepartmentEditController",
+                    templateUrl: 'app/academicAffairMgmt/academicAffairEdit.html',
+                    controller: "AcademicAffairEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        name: function(){
-                            return name;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Department.getAll()
+                        AcademicAffair.getAll()
                             .then(function(data){
-                                vm.departments = data;
+                                vm.academicAffairs = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function remove(name){
+            function remove(id){
                 var options = {
-                    templateUrl: 'app/departmentMgmt/departmentDelete.html',
-                    controller: "DepartmentDeleteController",
+                    templateUrl: 'app/academicAffairMgmt/academicAffairDelete.html',
+                    controller: "AcademicAffairDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        name: function(){
-                            return name;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Department.getAll()
+                        AcademicAffair.getAll()
                             .then(function(data){
-                                vm.departments = data;
+                                vm.academicAffairs = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");

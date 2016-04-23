@@ -1,14 +1,28 @@
 /**
- * Created by Bello J on 4/21/2016.
- */
-(function () {
-    'use strict';
-    angular.module('fuoPortal')
-        .controller('LecturerEditController',function(Lecturer,toastr,lecturerId,$modalInstance){
-            var vm = this;
-            Lecturer.getOne(lecturerId)
+             * Created by Bello J on 4/21/2016.
+             */
+            (function () {
+                'use strict';
+                angular.module('fuoPortal')
+                    .controller('LecturerEditController',function(Lecturer,Department,College,toastr,lecturerId,$modalInstance){
+                        var vm = this;
+                        Lecturer.getOne(lecturerId)
                 .then(function(data){
                     vm.lecturer = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            College.getAll()
+                .then(function(data){
+                    vm.colleges = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Department.getAll()
+                .then(function(data){
+                    vm.departments = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

@@ -10,7 +10,8 @@
         .form-group
             label.control-label.col-sm-2 Department Id
             .col-sm-10
-                input.form-control(type="text" name="departmentId" required ng-model="model.department.departmentId")
+                select.form-control( name="departmentId" required ng-model="model.hod.collegeId")
+                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
         .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

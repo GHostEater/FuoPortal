@@ -1,5 +1,4 @@
-//
-   Created by Bello J on 4/22/2016.
+//   Created by Bello J on 4/22/2016.
 .modal-header
     h3.modal-title Edit Department
 .modal-body
@@ -11,7 +10,8 @@
         .form-group
             label.control-label.col-sm-2 College Id
             .col-sm-10
-                input.form-control(type="text" name="collegeId" required ng-model="model.department.collegeId")
+                select.form-control( name="collegeId" required ng-model="model.department.collegeId")
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
         .form-group
             label.control-label.col-sm-2 Acronym
             .col-sm-10

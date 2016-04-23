@@ -1,21 +1,14 @@
 /**
- * Created by Bello J on 4/22/2016.
+ * Created by Bello J on 4/23/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('HodEditController',function(Hod,Department,toastr,LecturerId,$modalInstance){
+        .controller('CollegeEditController',function(College,toastr,name,$modalInstance){
             var vm = this;
-            Hod.getOne(lecturerId)
+            Course.getOne(Id)
                 .then(function(data){
-                    vm.hod = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
-                });
-            Department.getAll()
-                .then(function(data){
-                    vm.departments = data;
+                    vm.college = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
@@ -23,13 +16,13 @@
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Hod.edit(vm.hod.lecturerId,vm.hod.departmentId)
+                    College.edit(vm.college.Id,vm.college.name,vm.college.acronym)
                         .then(function(){
-                            toastr.success("Hod Changed");
+                            toastr.success("College Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change Hod");
+                            toastr.error("Unable to Change College");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){

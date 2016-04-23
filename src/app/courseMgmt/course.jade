@@ -25,7 +25,11 @@ div(ng-controller="CourseController as model")
                         span(ng-show="course.semester == 1") 1st Semester
                         span(ng-show="course.semester == 2") 2nd Semester
                     td {{course.prerequisiteFor}}
-                    td {{course.level}}
+                    td
+                        span(ng-show="student.levelId == 1") 100 Level
+                        span(ng-show="student.levelId == 2") 200 Level
+                        span(ng-show="student.levelId == 3") 300 Level
+                        span(ng-show="student.levelId == 4") 400 Level
                     td
                         button.btn.btn-warning(ng-click="model.edit(course.code)") Edit
                         button.btn.btn-danger(ng-click="model.remove(course.code)") Delete

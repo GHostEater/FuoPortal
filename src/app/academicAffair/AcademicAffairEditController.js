@@ -4,32 +4,24 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('HodEditController',function(Hod,Department,toastr,LecturerId,$modalInstance){
+        .controller('AcademicAffairEditController',function(AcademicAffair,toastr,Id,$modalInstance){
             var vm = this;
-            Hod.getOne(lecturerId)
+            AcademicAffair.getOne(Id)
                 .then(function(data){
-                    vm.hod = data;
+                    vm.academicAffairs = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            Department.getAll()
-                .then(function(data){
-                    vm.departments = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
-                });
-
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Hod.edit(vm.hod.lecturerId,vm.hod.departmentId)
+                    AcademicAffair.edit(vm.Id,vm.firstName,vm.middleName,vm.lastName,vm.email,vm.password)
                         .then(function(){
-                            toastr.success("Hod Changed");
+                            toastr.success("AcademicAffair Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change Hod");
+                            toastr.error("Unable to Change AcademicAffair");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){

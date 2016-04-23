@@ -1,20 +1,21 @@
-/** * Created by Bello J on 4/22/2016.
+/**
+ * Created by Bello J on 4/22/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('DepartmentAddController',function(Department,toastr,$modalInstance){
+        .controller('AllocationAddController',function(Allocation,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Department.add(vm.name,vm.collegeId,vm.acronym)
+                    Allocation.add(vm.lecturerId,vm.code,vm.title,vm.unit,vm.semester,vm.level,vm.prerequisiteFor)
                         .then(function(){
-                            toastr.success("Department Added");
+                            toastr.success("Allocation Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Department");
+                            toastr.error("Unable to Add Allocation");
                         });
                 }
                 else{

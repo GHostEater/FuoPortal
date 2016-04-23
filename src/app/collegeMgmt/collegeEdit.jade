@@ -1,0 +1,16 @@
+//   Created by Bello J on 4/23/2016.
+.modal-header
+    h3.modal-title Edit College
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Department Name
+            .col-sm-10
+                input.form-control(type="text" name="name" required ng-model="model.college.name")
+        .form-group
+            label.control-label.col-sm-2 Acronym
+            .col-sm-10
+                input.form-control(type="text" name="acronym" required ng-model="model.college.acronym")
+        .modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

@@ -1,5 +1,4 @@
-//
-   Created by Bello J on 4/22/2016.
+//   Created by Bello J on 4/22/2016.
 div(ng-controller="DepartmentController as model")
     .col-sm-12
         .row.content
@@ -16,11 +15,9 @@ div(ng-controller="DepartmentController as model")
                 tr(ng-repeat="(key,department) in model.departments | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{department.name}}
-                    td {{department.collegeId}}
                     td
                         span(ng-show="department.collegeId == 1") College Of Management and Social Sciences
                         span(ng-show="department.collegeId == 2") College Of Natural and Applied Sciences
-                    td {{department.acronym}}
                     td
                         span(ng-show="department.acronym == 1") COMAS
                         span(ng-show="department.acronym == 2") CONAS

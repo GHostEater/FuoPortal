@@ -1,20 +1,17 @@
-//   Created by Bello J on 4/22/2016.
+//   Created by Bello J on 4/23/2016.
 .modal-header
-    h3.modal-title Add Department
+    h3.modal-title Add College
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 Department Name
+            label.control-label.col-sm-2 College Name
             .col-sm-10
                 input.form-control(type="text" name="name" required ng-model="model.name")
-        .form-group
-            label.control-label.col-sm-2 College Id
-            .col-sm-10
-                input.form-control(type="text" name="collegeId" required ng-model="model.collegeId")
         .form-group
             label.control-label.col-sm-2 Acronym
             .col-sm-10
                 input.form-control(type="text" name="acronym" required ng-model="model.acronym")
-       .modal-footer
+    .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel
+

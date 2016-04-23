@@ -15,7 +15,6 @@ div(ng-controller="HodController as model")
                 tr(ng-repeat="(key,hod) in model.departments | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{hod.lecturerId}}
-                    td {{hod.departmentId}}
                     td
                         span(ng-show="hod.departmentId == 1") Department of Accounting and Finance
                         span(ng-show="hod.departmentId == 2") Department of Biological Sciences
