@@ -8,8 +8,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.data;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function getOne(matricNo){
@@ -17,8 +17,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return lodash.find(response.data,{'matricNo':matricNo});
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function add(matricNo,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address){
@@ -44,8 +44,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function edit(matricNo,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address) {
@@ -72,8 +72,8 @@ angular.module('fuoPortal')
                 .then(function(response){
                     return response.status;
                 })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
+                .catch(function(response){
+                    return $q.reject(response.status);
                 });
         }
         function remove(matricNo) {
@@ -87,8 +87,8 @@ angular.module('fuoPortal')
                 .then(function (response) {
                     return response.status;
                 })
-                .catch(function (reponse) {
-                    return $q.reject(reponse.status);
+                .catch(function (response) {
+                    return $q.reject(response.status);
                 });
         }
         return{
