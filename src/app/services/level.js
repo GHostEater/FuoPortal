@@ -12,10 +12,10 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function getOne(Id){
+        function getOne(id){
             return $http.get(Host.host+'/level/level.php')
                 .then(function(response){
-                    return lodash.find(response.data,{'Id':Id});
+                    return lodash.find(response.data,{'id':id});
                 })
                 .catch(function(response){
                     return $q.reject(response.status);
@@ -36,12 +36,12 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(Id,level) {
+        function edit(id,level) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/level/edit.php',
                 params: {
-                    Id: Id,
+                    id: id,
                     level: level
                 }
             })
@@ -52,12 +52,12 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function remove(Id) {
+        function remove(id) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/level/delete.php',
                 params: {
-                    Id: Id
+                    id: id
                 }
             })
                 .then(function (response) {

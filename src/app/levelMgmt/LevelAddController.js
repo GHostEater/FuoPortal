@@ -9,7 +9,7 @@
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Level.add(vm.Id,vm.level)
+                    Level.add(vm.level)
                         .then(function(){
                             toastr.success("Level Added");
                             $modalInstance.close();

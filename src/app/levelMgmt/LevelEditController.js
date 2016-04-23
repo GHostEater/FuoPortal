@@ -4,11 +4,11 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('LevelEditController',function(Level,toastr,Id,$modalInstance){
+        .controller('LevelEditController',function(Level,toastr,id,$modalInstance){
             var vm = this;
-            Level.getOne(Id)
+            Level.getOne(id)
                 .then(function(data){
-                    vm.levels = data;
+                    vm.level = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
@@ -16,7 +16,7 @@
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Level.edit(vm.levels.Id,vm.levels.level)
+                    Level.edit(vm.level.id,vm.level.level)
                         .then(function(){
                             toastr.success("Level Changed");
                             $modalInstance.close();

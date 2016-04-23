@@ -34,15 +34,15 @@
                             });
                     });
             }
-            function edit(Id){
+            function edit(id){
                 var options = {
                     templateUrl: 'app/levelMgmt/levelEdit.html',
                     controller: "LevelEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        code: function(){
-                            return Id;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
@@ -57,15 +57,15 @@
                             });
                     });
             }
-            function remove(Id){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/levelMgmt/levelDelete.html',
                     controller: "LevelDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        code: function(){
-                            return Id;
+                        id: function(){
+                            return id;
                         }
                     }
                 };

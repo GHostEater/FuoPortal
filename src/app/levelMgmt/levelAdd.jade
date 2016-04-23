@@ -4,14 +4,9 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 S/N
-            .col-sm-10
-                input.form-control(type="text" name="Id" required ng-model="model.Id")
-        .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
                 input.form-control(type="text" name="level" required ng-model="model.level")
-                
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel
