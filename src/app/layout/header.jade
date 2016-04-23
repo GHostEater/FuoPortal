@@ -14,13 +14,17 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
             ul.nav.navbar-nav(ng-show="model.user.loggedIn")
                 li(ui-sref-active="active")
                     a(ui-sref="home") Home
-                li(ui-sref-active="active")
-                    a(ui-sref="course") Course Management
-                li(ui-sref-active="active")
-                    a(ui-sref="student") Student Management
-                li(ui-sref-active="active")
+                li.dropdown(ng-show="model.user.sysRank == 1")
+                    a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") System Management
+                        span.caret
+                    ul.dropdown-menu
+                        li(ui-sref-active="active")
+                            a(ui-sref="course") Course Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="student") Student Management
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4")
                     a(ui-sref="myCourses") My Courses
-                li(ui-sref-active="active")
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
                     a(ui-sref="courseAllocation") Course Allocation
             .navbar-right.navbar-form(ng-show="model.user.loggedIn")
                 span.text-danger Hello {{model.user.name}} {{model.user.firstName}} {{model.user.middleName}} {{model.user.lastName}}

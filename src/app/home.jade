@@ -2,6 +2,19 @@
    Created by GHostEater on 15-Apr-16.
 div(ng-controller="HomeController as model")
     h3 Home
-    p {{model.user}}
-    div(ng-show="model.user.hod")
+    div(ng-show="model.user.sysRank == 1")
+        p You are an Admin
+    div(ng-show="model.user.sysRank == 2")
+        p You are a College Officer
+    div(ng-show="model.user.sysRank == 3")
         p You are a HOD
+    div(ng-show="model.user.sysRank == 4")
+        p You are a Lecturer
+    div(ng-show="model.user.sysRank == 5")
+        p You are a Student
+    div(ng-show="model.user.sysRank == 6")
+        p You are a Academic Affairs
+    div(ng-show="model.user.sysRank == 7")
+        p You are a Bursary Officer
+    div(ng-show="model.user.sysRank == 8")
+        p You are a Student Affairs
