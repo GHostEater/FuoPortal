@@ -9,7 +9,7 @@
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Allocation.add(vm.lecturerId,vm.code,vm.title,vm.unit,vm.semester,vm.level,vm.prerequisiteFor)
+                    Allocation.add(vm.lecturerId,vm.code)
                         .then(function(){
                             toastr.success("Allocation Added");
                             $modalInstance.close();

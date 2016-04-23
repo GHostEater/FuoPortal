@@ -11,24 +11,6 @@
             label.control-label.col-sm-2 Course Code
             .col-sm-10
                 input.form-control(type="text" name="code" required ng-model="model.allocation.code")
-        .form-group
-            label.control-label.col-sm-2 Course Title
-            .col-sm-10
-                input.form-control(type="text" name="title" required ng-model="model.allocation.title")
-        .form-group
-            label.control-label.col-sm-2 Course Unit
-            .col-sm-10
-                input.form-control(type="text" name="unit" required ng-model="model.allocation.unit")
-        .form-group
-            label.control-label.col-sm-2 Level
-            .col-sm-10
-                select.form-control( name="levelId" required ng-model="model.allocation.levelId")
-                    option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
-        .form-group
-            label.control-label.col-sm-2 Semester
-            .col-sm-10
-                select.form-control( name="semesterId" required ng-model="model.allocation.semesterId")
-                    option(ng-repeat="semester in model.semesters" value="{{semester.id}}") {{semester.semester}}
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

@@ -10,27 +10,12 @@ div(ng-controller="AllocationController as model")
                 th S/N
                 th Lecturer Id
                 th Course Code
-                th Course Title
-                th Unit
-                th Level
-                th Semester
             tbody
                 tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter: model.searchTerm")
                     td {{key +1 }}
                     td {{allocation.lecturerId}}
                     td {{allocation.code}}
-                    td {{allocation.title}}
-                    td {{allocation.unit}}
-                    td
-                        span(ng-show="allocation.levelId == 1") 100 Level
-                        span(ng-show="allocation.levelId == 2") 200 Level
-                        span(ng-show="allocation.levelId == 3") 300 Level
-                        span(ng-show="allocation.levelId == 4") 400 Level
-                    td
-                        span(ng-show="allocation.semester == 1") 1st Semester
-                        span(ng-show="allocation.semester == 2") 2nd Semester
-
-                    td
+                                        td
                         button.btn.btn-warning(ng-click="model.edit(allocation.code)") Edit
                         button.btn.btn-danger(ng-click="model.remove(allocation.code)") Delete
 

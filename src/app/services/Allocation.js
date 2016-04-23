@@ -21,16 +21,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function add(lecturerId,code,title,unit,level){
+        function add(lecturerId,code){
             return $http({
                 method: 'POST',
                 url: Host.host+'/allocation/add.php',
                 params:{
                     lecturerId: lecturerId,
-                    code: code,
-                    title: title,
-                    unit: unit,
-                    level: level
+                    code: code
                 }
             })
                 .then(function(response){
@@ -40,17 +37,13 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function edit(lecturerId,code,title,unit,level) {
+        function edit(lecturerId,code) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/allocation/edit.php',
                 params: {
                     lecturerId: lecturerId,
-                    code: code,
-                    title: title,
-                    unit: unit,
-                    level: level
-
+                    code: code
                 }
             })
                 .then(function(response){
@@ -60,12 +53,12 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function remove(lecturerId) {
+        function remove(Id) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/allocation/delete.php',
                 params: {
-                    lecturerId: lecturerId
+                    Id: Id
                 }
             })
                 .then(function (response) {

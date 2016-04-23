@@ -34,15 +34,15 @@
                             });
                     });
             }
-            function edit(lecturerId){
+            function edit(Id){
                 var options = {
                     templateUrl: 'app/allocationMgmt/allocationEdit.html',
                     controller: "AllocationEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        Id: function(){
+                            return Id;
                         }
                     }
                 };
@@ -57,15 +57,15 @@
                             });
                     });
             }
-            function remove(lecturerId){
+            function remove(Id){
                 var options = {
                     templateUrl: 'app/allocationMgmt/allocationDelete.html',
                     controller: "AllocationDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        Id: function(){
+                            return Id;
                         }
                     }
                 };

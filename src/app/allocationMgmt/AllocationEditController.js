@@ -34,7 +34,7 @@
                             });
                     });
             }
-            function edit(lecturerId){
+            function edit(Id){
                 var options = {
                     templateUrl: 'app/allocationMgmt/allocationEdit.html',
                     controller: "AllocationEditController",
@@ -42,7 +42,7 @@
                     size: 'lg',
                     resolve:{
                         lecturerId: function(){
-                            return lecturerId;
+                            return Id;
                         }
                     }
                 };
@@ -57,7 +57,7 @@
                             });
                     });
             }
-            function remove(lecturerId){
+            function remove(Id){
                 var options = {
                     templateUrl: 'app/allocationMgmt/allocationDelete.html',
                     controller: "AllocationDeleteController",
@@ -65,7 +65,7 @@
                     size: 'sm',
                     resolve:{
                         lecturerId: function(){
-                            return lecturerId;
+                            return Id;
                         }
                     }
                 };
