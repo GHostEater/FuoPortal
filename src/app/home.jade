@@ -2,3 +2,6 @@
    Created by GHostEater on 15-Apr-16.
 div(ng-controller="HomeController as model")
     h3 Home
+    p {{model.user}}
+    div(ng-show="model.user.hod")
+        p You are a HOD

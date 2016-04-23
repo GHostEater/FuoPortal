@@ -6,8 +6,7 @@
     angular.module('fuoPortal')
         .controller("AllocationController",function(toastr,$modal,Allocation){
             var vm = this;
-            vm.add = add;
-            vm.edit = edit;
+            vm.allocate = allocate;
             vm.remove = remove;
             Allocation.getAll()
                 .then(function(data){
@@ -16,10 +15,10 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            function add(){
+            function allocate(){
                 var options = {
-                    templateUrl: 'app/allocationMgmt/allocationAdd.html',
-                    controller: "AllocationAddController",
+                    templateUrl: 'app/allocationMgmt/allocate.html',
+                    controller: "AllocateController",
                     controllerAs: 'model',
                     size: 'lg'
                 };
@@ -34,38 +33,15 @@
                             });
                     });
             }
-            function edit(Id){
-                var options = {
-                    templateUrl: 'app/allocationMgmt/allocationEdit.html',
-                    controller: "AllocationEditController",
-                    controllerAs: 'model',
-                    size: 'lg',
-                    resolve:{
-                        Id: function(){
-                            return Id;
-                        }
-                    }
-                };
-                $modal.open(options).result
-                    .then(function(){
-                        Allocation.getAll()
-                            .then(function(data){
-                                vm.allocations = data;
-                            })
-                            .catch(function(){
-                                toastr.warning("Could Not Connect To Server");
-                            });
-                    });
-            }
-            function remove(Id){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/allocationMgmt/allocationDelete.html',
                     controller: "AllocationDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        Id: function(){
-                            return Id;
+                        id: function(){
+                            return id;
                         }
                     }
                 };

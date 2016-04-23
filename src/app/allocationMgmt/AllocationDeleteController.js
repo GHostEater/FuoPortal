@@ -4,11 +4,11 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('AllocationDeleteController',function(Allocation,Id,toastr,$modalInstance){
+        .controller('AllocationDeleteController',function(Allocation,id,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
-                Allocation.remove(lecturerId)
+                Allocation.remove(id)
                     .then(function(){
                         toastr.success("Allocation Removed");
                         $modalInstance.close();
