@@ -3,6 +3,68 @@
  */
 angular.module('fuoPortal')
     .factory("Allocation",function(Host,$http,$q,lodash){
+        function getMyAllocations(id){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/allocation/myAllocations.php',
+                params:{
+                    id: id
+                }
+            })
+                .then(function(response){
+                    return response.data;
+                })
+                .catch(function(reponse){
+                    return $q.reject(reponse.status);
+                });
+        }
+        function getMyCourses(id){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/allocation/myCourses.php',
+                params:{
+                    id: id
+                }
+            })
+                .then(function(response){
+                    return response.data;
+                })
+                .catch(function(reponse){
+                    return $q.reject(reponse.status);
+                });
+        }
+        function getCourses(id){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/allocation/courses.php',
+                params:{
+                    id: id
+                }
+            })
+                .then(function(response){
+                    return response.data;
+                })
+                .catch(function(reponse){
+                    return $q.reject(reponse.status);
+                });
+        }
+        function allocate(lecturerId,code,allocatedBy){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/allocation/allocate.php',
+                params:{
+                    lecturerId: lecturerId,
+                    code: code,
+                    allocatedBy: allocatedBy
+                }
+            })
+                .then(function(response){
+                    return response.data;
+                })
+                .catch(function(reponse){
+                    return $q.reject(reponse.status);
+                });
+        }
         function getAll(){
             return $http.get(Host.host+'/allocation/allocation.php')
                 .then(function(response){
@@ -21,44 +83,12 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function add(lecturerId,code){
-            return $http({
-                method: 'POST',
-                url: Host.host+'/allocation/add.php',
-                params:{
-                    lecturerId: lecturerId,
-                    code: code
-                }
-            })
-                .then(function(response){
-                    return response.status;
-                })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
-                });
-        }
-        function edit(lecturerId,code) {
-            return $http({
-                method: 'POST',
-                url: Host.host + '/allocation/edit.php',
-                params: {
-                    lecturerId: lecturerId,
-                    code: code
-                }
-            })
-                .then(function(response){
-                    return response.status;
-                })
-                .catch(function(reponse){
-                    return $q.reject(reponse.status);
-                });
-        }
-        function remove(Id) {
+        function remove(id) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/allocation/delete.php',
                 params: {
-                    Id: Id
+                    id: id
                 }
             })
                 .then(function (response) {
@@ -70,9 +100,11 @@ angular.module('fuoPortal')
         }
         return{
             getAll: getAll,
+            getMyAllocations: getMyAllocations,
+            getMyCourses: getMyCourses,
+            getCourses: getCourses,
             getOne: getOne,
-            add: add,
-            edit: edit,
+            allocate: allocate,
             remove: remove
         }
     });

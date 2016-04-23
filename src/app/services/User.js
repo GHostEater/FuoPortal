@@ -15,6 +15,7 @@ angular.module('fuoPortal')
                 middleName: '',
                 lastName: '',
                 id: '',
+                hod: '',
                 get loggedIn(){
                     return this.id;
                 }
@@ -26,16 +27,18 @@ angular.module('fuoPortal')
                 user.middleName = localUser.middleName;
                 user.lastName = localUser.lastName;
                 user.id = localUser.id;
+                user.hod = localUser.hod;
             }
             return user;
         }
 
-        function setUser(name,firstName,middleName,lastName,id){
+        function setUser(name,firstName,middleName,lastName,id,hod){
             profile.name = name;
             profile.firstName = firstName;
             profile.middleName = middleName;
             profile.lastName = lastName;
             profile.id = id;
+            profile.hod = hod;
 
             localStorage.add(USER_INFO,profile);
         }

@@ -18,6 +18,10 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                     a(ui-sref="course") Course Management
                 li(ui-sref-active="active")
                     a(ui-sref="student") Student Management
+                li(ui-sref-active="active")
+                    a(ui-sref="myCourses") My Courses
+                li(ui-sref-active="active")
+                    a(ui-sref="courseAllocation") Course Allocation
             .navbar-right.navbar-form(ng-show="model.user.loggedIn")
                 span.text-danger Hello {{model.user.name}} {{model.user.firstName}} {{model.user.middleName}} {{model.user.lastName}}
                 button.btn.btn-danger(ng-click = "model.logOut()") Logout

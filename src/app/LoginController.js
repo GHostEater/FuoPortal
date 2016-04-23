@@ -17,7 +17,7 @@ angular.module('fuoPortal')
             vm.passError = false;
             Auth.login(username,password)
                 .then(function(data){
-                    User.setUser(data.name,data.firstName,data.middleName,data.lastName,data.id);
+                    User.setUser(data.name,data.firstName,data.middleName,data.lastName,data.id,data.hod);
                     toastr.success("Login Successful");
                     $location.url('/home');
                 })

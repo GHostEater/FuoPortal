@@ -1,8 +1,7 @@
-//   Created by Bello J on 4/23/2016.
-div(ng-controller="AllocationController as model")
+//
+   Created by GHostEater on 23-Apr-16.
+div(ng-controller="MyCoursesController as model")
     .col-sm-12
-        .row.content
-            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Allocate Course
         form.content.col-sm-4
             input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
         table.table.table-striped.table-bordered
@@ -14,6 +13,7 @@ div(ng-controller="AllocationController as model")
                 th Semester
                 th Level
                 th Prerequisite
+                th Actions
             tbody
                 tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter: model.searchTerm")
                     td {{key +1 }}
@@ -21,9 +21,10 @@ div(ng-controller="AllocationController as model")
                     td {{allocation.title}}
                     td {{allocation.unit}}
                     td
-                        span(ng-show="allocation.semester == 1") 1st Semester
-                        span(ng-show="allocation.semester == 2") 2nd Semester
+                        span(ng-show="allocation.semesterId == 1") 1st Semester
+                        span(ng-show="allocation.semesterId == 2") 2nd Semester
                     td {{allocation.level}}
                     td {{allocation.prerequisiteFor}}
                     td
-                        button.btn.btn-danger(ng-click="model.remove(allocation.code)") Delete
+                        // TODO After Course Registration
+                        button.btn.btn-primary View Details

@@ -16,7 +16,9 @@
         .state('co',{url:'/co',templateUrl:'app/coMgmt/co.html'})
         .state('hod',{url:'/hod',templateUrl:'app/hodMgmt/hod.html'})
         .state('department',{url:'/department',templateUrl:'app/departmentMgmt/department.html'})
-        .state('academicAffairs',{url:'/academicAffair',templateUrl:'app/academicAffairMgmt/academicAffair.html'});
+        .state('academicAffairs',{url:'/academicAffair',templateUrl:'app/academicAffairMgmt/academicAffair.html'})
+        .state('myCourses',{url:'/MyCourses',templateUrl:'app/allocationMgmt/myCourses.html'})
+        .state('courseAllocation',{url:'/CourseAllocation',templateUrl:'app/allocationMgmt/hodAllocation.html'});
 
     $urlRouterProvider.otherwise('/');
   }
