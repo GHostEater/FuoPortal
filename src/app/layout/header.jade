@@ -13,13 +13,37 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
         #collapse.collapse.navbar-collapse
             ul.nav.navbar-nav(ng-show="model.user.loggedIn")
                 li(ui-sref-active="active")
-                    a(ui-sref="home") Home
+                    a(ui-sref="home")
+                        span.glyphicon.glyphicon-home &nbsp
+                        span Home
                 li.dropdown(ng-show="model.user.sysRank == 1")
-                    a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") System Management
+                    a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+                        span.glyphicon.glyphicon-wrench &nbsp
+                        span System Management
                         span.caret
                     ul.dropdown-menu
                         li(ui-sref-active="active")
+                            a(ui-sref="college") College Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="department") Department Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="major") Major Management
+                        li(ui-sref-active="active")
                             a(ui-sref="course") Course Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="level") Level Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="modeOfEntry") Mode of Entry Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="session") Session Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="lecturer") Lecturer Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="co") College Officer Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="hod") HOD Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="academicAffairs") Academic Affairs Management
                         li(ui-sref-active="active")
                             a(ui-sref="student") Student Management
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4")

@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CollegeEditController',function(College,toastr,name,$modalInstance){
+        .controller('CollegeEditController',function(College,toastr,$modalInstance,id){
             var vm = this;
-            College.getOne(name)
+            College.getOne(id)
                 .then(function(data){
                     vm.college = data;
                 })
@@ -16,7 +16,7 @@
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    College.edit(vm.college.Id,vm.college.name,vm.college.acronym)
+                    College.edit(vm.college.id,vm.college.name,vm.college.acronym)
                         .then(function(){
                             toastr.success("College Changed");
                             $modalInstance.close();

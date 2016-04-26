@@ -19,7 +19,8 @@
             label.control-label.col-sm-2 Semester
             .col-sm-10
                 select.form-control( name="semesterId" required ng-model="model.course.semesterId")
-                    option(ng-repeat="semester in model.semesters" value="{{semester.id}}") {{semester.semester}}
+                    option(value="1") 1st Semester
+                    option(value="2") 2nd Semester
         .form-group
             label.control-label.col-sm-2 Prerequisite For
             .col-sm-10
@@ -29,6 +30,16 @@
             .col-sm-10
                 select.form-control( name="levelId" required ng-model="model.course.levelId")
                     option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
+        .form-group
+            label.control-label.col-sm-2 Department
+            .col-sm-10
+                select.form-control(name="departmentId" required ng-model="model.course.departmentId")
+                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
+        .form-group
+            label.control-label.col-sm-2 Major
+            .col-sm-10
+                select.form-control(name="majorId" required ng-model="model.course.majorId")
+                    option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

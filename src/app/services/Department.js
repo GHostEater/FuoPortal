@@ -21,14 +21,13 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(name,acronym){
+        function add(name,collegeId){
             return $http({
                 method: 'POST',
                 url: Host.host+'/department/add.php',
                 params:{
                     name: name,
-                    acronym: acronym
-
+                    collegeId: collegeId
                 }
             })
                 .then(function(response){
@@ -38,14 +37,14 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(id,name,acronym) {
+        function edit(id,name,collegeId) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/department/edit.php',
                 params: {
+                    id: id,
                     name: name,
-                    acronym: acronym
-
+                    collegeId: collegeId
                 }
             })
                 .then(function(response){

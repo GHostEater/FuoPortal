@@ -9,20 +9,15 @@ div(ng-controller="DepartmentController as model")
             thead
                 th S/N
                 th Department Name
-                th College Id
-                th Acronym
+                th College
+                th Actions
             tbody
                 tr(ng-repeat="(key,department) in model.departments | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{department.name}}
+                    td {{department.college}}
                     td
-                        span(ng-show="department.collegeId == 1") College Of Management and Social Sciences
-                        span(ng-show="department.collegeId == 2") College Of Natural and Applied Sciences
-                    td
-                        span(ng-show="department.acronym == 1") COMAS
-                        span(ng-show="department.acronym == 2") CONAS
-                    td
-                        button.btn.btn-warning(ng-click="model.edit(department.name)") Edit
-                        button.btn.btn-danger(ng-click="model.remove(department.name)") Delete
+                        button.btn.btn-warning(ng-click="model.edit(department.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(department.id)") Delete
 
 

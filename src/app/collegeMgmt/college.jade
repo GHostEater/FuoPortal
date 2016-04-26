@@ -10,16 +10,15 @@ div(ng-controller="CollegeController as model")
                 th S/N
                 th College Name
                 th Acronym
+                th Actions
             tbody
                 tr(ng-repeat="(key,college) in model.colleges | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{college.name}}
+                    td {{college.acronym}}
                     td
-                        span(ng-show="college.acronym == 1") COMAS
-                        span(ng-show="college.acronym == 2") CONAS
-                    td
-                        button.btn.btn-warning(ng-click="model.edit(college.name)") Edit
-                        button.btn.btn-danger(ng-click="model.remove(college.name)") Delete
+                        button.btn.btn-warning(ng-click="model.edit(college.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(college.id)") Delete
 
 
 

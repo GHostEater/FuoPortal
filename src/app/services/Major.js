@@ -37,14 +37,14 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(name,acronym) {
+        function edit(id,name,departmentId) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/major/edit.php',
                 params: {
+                    id: id,
                     name: name,
-                    acronym: acronym
-
+                    departmentId: departmentId
                 }
             })
                 .then(function(response){

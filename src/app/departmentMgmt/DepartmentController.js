@@ -33,15 +33,15 @@
                             });
                     });
             }
-            function edit(name){
+            function edit(id){
                 var options = {
                     templateUrl: 'app/departmentMgmt/departmentEdit.html',
                     controller: "DepartmentEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        name: function(){
-                            return name;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
@@ -56,15 +56,15 @@
                             });
                     });
             }
-            function remove(name){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/departmentMgmt/departmentDelete.html',
                     controller: "DepartmentDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        name: function(){
-                            return name;
+                        id: function(){
+                            return id;
                         }
                     }
                 };

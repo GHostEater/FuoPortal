@@ -27,7 +27,6 @@ angular.module('fuoPortal')
                 url: Host.host+'/modeOfEntry/add.php',
                 params:{
                     modeOfEntry: modeOfEntry
-
                 }
             })
                 .then(function(response){

@@ -9,7 +9,7 @@
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    College.add(vm.Id,vm.name,vm.acronym)
+                    College.add(vm.name,vm.acronym)
                         .then(function(){
                             toastr.success("College Added");
                             $modalInstance.close();

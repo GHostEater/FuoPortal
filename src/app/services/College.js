@@ -45,7 +45,6 @@ angular.module('fuoPortal')
                     id: id,
                     name: name,
                     acronym: acronym
-
                 }
             })
                 .then(function(response){

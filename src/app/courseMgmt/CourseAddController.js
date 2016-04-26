@@ -4,12 +4,33 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CourseAddController',function(Course,toastr,$modalInstance){
+        .controller('CourseAddController',function(Course,toastr,Level,Department,Major,$modalInstance){
             var vm = this;
+            Level.getAll()
+                .then(function(data){
+                    vm.levels = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Department.getAll()
+                .then(function(data){
+                    vm.departments = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Major.getAll()
+                .then(function(data){
+                    vm.majors = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Course.add(vm.code,vm.title,vm.unit,vm.semester,vm.level,vm.prerequisiteFor)
+                    Course.add(vm.code,vm.title,vm.unit,vm.semesterId,vm.levelId,vm.departmentId,vm.majorId,vm.prerequisiteFor)
                         .then(function(){
                             toastr.success("Course Added");
                             $modalInstance.close();

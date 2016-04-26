@@ -11,7 +11,7 @@
             vm.remove = remove;
             College.getAll()
                 .then(function(data){
-                    vm.college = data;
+                    vm.colleges = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
@@ -27,22 +27,22 @@
                     .then(function(){
                         College.getAll()
                             .then(function(data){
-                                vm.college = data;
+                                vm.colleges = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function edit(code){
+            function edit(id){
                 var options = {
                     templateUrl: 'app/collegeMgmt/collegeEdit.html',
                     controller: "CollegeEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        code: function(){
-                            return code;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
@@ -50,22 +50,22 @@
                     .then(function(){
                         College.getAll()
                             .then(function(data){
-                                vm.college = data;
+                                vm.colleges = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function remove(code){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/collegeMgmt/collegeDelete.html',
                     controller: "CollegeDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        code: function(){
-                            return code;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
@@ -73,7 +73,7 @@
                     .then(function(){
                         College.getAll()
                             .then(function(data){
-                                vm.college = data;
+                                vm.colleges = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
