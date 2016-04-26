@@ -29,20 +29,8 @@ div(ng-controller="LecturerController as model")
                     td {{lecturer.lastName}}
                     td {{lecturer.rank}}
                     td {{lecturer.status}}
-                    td
-                        span(ng-show="department.collegeId == 1") College Of Management and Social Sciences
-                        span(ng-show="department.collegeId == 2") College Of Natural and Applied Sciences
-                    td
-                        span(ng-show="hod.departmentId == 1") Department of Accounting and Finance
-                        span(ng-show="hod.departmentId == 2") Department of Biological Sciences
-                        span(ng-show="hod.departmentId == 3") Department of Business Administration
-                        span(ng-show="hod.departmentId == 4") Department of Chemical Sciences
-                        span(ng-show="hod.departmentId == 5") Department of Economics
-                        span(ng-show="hod.departmentId == 6") Department of Mass Communication
-                        span(ng-show="hod.departmentId == 7") Department of Mathematical and Computer Sciences
-                        span(ng-show="hod.departmentId == 2") Department of Physics with Electronics
-                        span(ng-show="hod.departmentId == 2") Department of Political Science and Administration
-                        span(ng-show="hod.departmentId == 2") Department of Sociology and Psychology
+                    td {{lecturer.college}}
+                    td {{lecturer.department}}
                     td {{lecturer.phoneNumber}}
                     td {{lecturer.email}}
                     td {{lecturer.address}}

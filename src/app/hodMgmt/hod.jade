@@ -23,9 +23,10 @@ div(ng-controller="HodController as model")
                         span(ng-show="hod.departmentId == 5") Department of Economics
                         span(ng-show="hod.departmentId == 6") Department of Mass Communication
                         span(ng-show="hod.departmentId == 7") Department of Mathematical and Computer Sciences
-                        span(ng-show="hod.departmentId == 2") Department of Physics with Electronics
-                        span(ng-show="hod.departmentId == 2") Department of Political Science and Administration
-                        span(ng-show="hod.departmentId == 2") Department of Sociology and Psychology
+                        span(ng-show="hod.departmentId == 8") Department of Physics with Electronics
+                        span(ng-show="hod.departmentId == 9") Department of Political Science and Administration
+                        span(ng-show="hod.departmentId == 10") Department of Sociology and Psychology
+                        span(ng-show="hod.departmentId == 11") Department of GNS
                     td
                         button.btn.btn-warning(ng-click="model.edit(hod.lecturerId)") Edit
                         button.btn.btn-danger(ng-click="model.remove(hod.lecturerId)") Delete
