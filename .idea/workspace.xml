@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Project\fuoPortal\src\favicon.ico" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerMgmt/LecturerController.js" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/LecturerController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/hodMgmt/hod.jade" afterPath="$PROJECT_DIR$/src/app/hodMgmt/hod.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/levelMgmt/levelEdit.jade" afterPath="$PROJECT_DIR$/src/app/levelMgmt/levelEdit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/student.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/student.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -404,7 +397,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461331804171</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="pic change">
+      <created>1461671180216</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1461671180216</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -419,6 +418,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -429,7 +429,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -454,7 +453,8 @@
     <MESSAGE value="edit course" />
     <MESSAGE value="delete course" />
     <MESSAGE value="quality of life changes to StudentMgmt" />
-    <option name="LAST_COMMIT_MESSAGE" value="quality of life changes to StudentMgmt" />
+    <MESSAGE value="pic change" />
+    <option name="LAST_COMMIT_MESSAGE" value="pic change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
