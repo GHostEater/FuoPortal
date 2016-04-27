@@ -1,0 +1,34 @@
+//   Created by Bello J on 4/27/2016.
+div(ng-controller="HodController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Hod
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Major
+                th Department Id
+
+            tbody
+                tr(ng-repeat="(key,major) in model.departments | orderBy: '+code' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{major.name}}
+                    td
+                        span(ng-show="hod.departmentId == 1") Department of Accounting and Finance
+                        span(ng-show="hod.departmentId == 2") Department of Biological Sciences
+                        span(ng-show="hod.departmentId == 3") Department of Business Administration
+                        span(ng-show="hod.departmentId == 4") Department of Chemical Sciences
+                        span(ng-show="hod.departmentId == 5") Department of Economics
+                        span(ng-show="hod.departmentId == 6") Department of Mass Communication
+                        span(ng-show="hod.departmentId == 7") Department of Mathematical and Computer Sciences
+                        span(ng-show="hod.departmentId == 8") Department of Physics with Electronics
+                        span(ng-show="hod.departmentId == 9") Department of Political Science and Administration
+                        span(ng-show="hod.departmentId == 10") Department of Sociology and Psychology
+                        span(ng-show="hod.departmentId == 11") Department of GNS
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(major.name)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(major.name)") Delete
+
+

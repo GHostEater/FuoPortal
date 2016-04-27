@@ -1,0 +1,19 @@
+//   Created by Bello J on 4/27/2016.
+div(ng-controller="SessionController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Session
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Session
+            tbody
+                tr(ng-repeat="(key,session) in model.session | orderBy: '+level' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{session.session}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(session.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(session.id)") Delete
+

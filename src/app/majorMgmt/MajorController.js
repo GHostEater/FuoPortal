@@ -1,79 +1,79 @@
 /**
- * Created by Bello J on 4/22/2016.
+ * Created by Bello J on 4/27/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("HodController",function(toastr,$modal,Hod){
+        .controller("MajorController",function(toastr,$modal,Major){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
-            Hod.getAll()
+            Major.getAll()
                 .then(function(data){
-                    vm.hods = data;
+                    vm.majors = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
             function add(){
                 var options = {
-                    templateUrl: 'app/hodMgmt/hodAdd.html',
-                    controller: "HodAddController",
+                    templateUrl: 'app/majorMgmt/majorAdd.html',
+                    controller: "MajorAddController",
                     controllerAs: 'model',
                     size: 'lg'
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Hod.getAll()
+                        Major.getAll()
                             .then(function(data){
-                                vm.hods = data;
+                                vm.majors = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function edit(lecturerId){
+            function edit(name){
                 var options = {
-                    templateUrl: 'app/hodMgmt/hodEdit.html',
-                    controller: "HodEditController",
+                    templateUrl: 'app/majorMgmt/majorEdit.html',
+                    controller: "MajorEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        name: function(){
+                            return name;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Hod.getAll()
+                        Major.getAll()
                             .then(function(data){
-                                vm.hods = data;
+                                vm.majors = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
-            function remove(lecturerId){
+            function remove(name){
                 var options = {
-                    templateUrl: 'app/hodMgmt/hodDelete.html',
-                    controller: "HodDeleteController",
+                    templateUrl: 'app/majorMgmt/majorDelete.html',
+                    controller: "MajorDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        name: function(){
+                            return name;
                         }
                     }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Hod.getAll()
+                        Major.getAll()
                             .then(function(data){
-                                vm.hods = data;
+                                vm.majors = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
