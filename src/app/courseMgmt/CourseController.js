@@ -9,6 +9,9 @@
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
+            vm.changeStatus = changeStatus;
+            vm.addPre = addPre;
+            vm.removePre = removePre;
             Course.getAll()
                 .then(function(data){
                     vm.courses = data;
@@ -24,7 +27,105 @@
                     toastr.warning("Could Not Connect");
                 });
 
-
+            function changeStatus(id,status){
+                if (status == 0){
+                    Prerequisite.setActive(id)
+                        .then(function(){
+                            Course.getAll()
+                                .then(function(data){
+                                    vm.courses = data;
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                            Prerequisite.getAll()
+                                .then(function(data){
+                                    vm.pres = data;
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                        })
+                        .catch(function(){
+                            toastr.warning("Unable to Change Status");
+                        });
+                }
+                else if (status == 1){
+                    Prerequisite.setInactive(id)
+                        .then(function(){
+                            Course.getAll()
+                                .then(function(data){
+                                    vm.courses = data;
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                            Prerequisite.getAll()
+                                .then(function(data){
+                                    vm.pres = data;
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                        })
+                        .catch(function(){
+                            toastr.warning("Unable to Change Status");
+                        });
+                }
+            }
+            function addPre(code){
+                var options = {
+                    templateUrl: 'app/courseMgmt/addPrerequisite.html',
+                    controller: "AddPrerequisiteController",
+                    controllerAs: 'model',
+                    size: 'lg',
+                    resolve:{
+                        code: function(){
+                            return code;
+                        }
+                    }
+                };
+                $modal.open(options).result
+                    .then(function(){
+                        Course.getAll()
+                            .then(function(data){
+                                vm.courses = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
+                            });
+                        Prerequisite.getAll()
+                            .then(function(data){
+                                vm.pres = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect");
+                            });
+                    });
+            }
+            function removePre(id){
+                Prerequisite.remove(id)
+                    .then(function(){
+                        toastr.success("Prerequisite Removed");
+                        Course.getAll()
+                            .then(function(data){
+                                vm.courses = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect");
+                            });
+                        Prerequisite.getAll()
+                            .then(function(data){
+                                vm.pres = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect");
+                            });
+                    })
+                    .catch(function(){
+                        toastr.warning("Unable to Remove Prerequisite");
+                    });
+            }
             function add(){
                 var options = {
                     templateUrl: 'app/courseMgmt/courseAdd.html',
@@ -40,6 +141,13 @@
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
+                            });
+                        Prerequisite.getAll()
+                            .then(function(data){
+                                vm.pres = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect");
                             });
                     });
             }
@@ -64,6 +172,13 @@
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
                             });
+                        Prerequisite.getAll()
+                            .then(function(data){
+                                vm.pres = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect");
+                            });
                     });
             }
             function remove(code){
@@ -86,6 +201,13 @@
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
+                            });
+                        Prerequisite.getAll()
+                            .then(function(data){
+                                vm.pres = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect");
                             });
                     });
             }

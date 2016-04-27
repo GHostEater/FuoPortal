@@ -1,0 +1,14 @@
+//
+   Created by GHostEater on 27-Apr-16.
+.modal-header
+    h3.modal-title Add Prerequisites to {{model.course.code}}
+.modal-body
+    label.control-label Select Course to add
+        select.form-control(ng-model="model.pre")
+            option(ng-repeat="course in model.courses" value="{{course.code}}") {{course.code}}
+    button.btn.btn-primary(ng-click="model.addCourse(model.course.code,model.pre)") Add Course
+    h5 List of Courses to be added as Prerequisite to {{model.course.code}}
+    li(ng-repeat="pre in model.pres") {{pre.prerequisite}}
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

@@ -28,12 +28,54 @@
                     })
                     .catch(function(response){
                         return $q.reject(response.status);
-                    })
+                    });
             }
-            function remove(){}
+            function remove(id){
+                return $http({
+                    method: 'POST',
+                    url: Host.host+'/prerequisites/delete.php',
+                    params:{
+                        id: id
+                    }
+                })
+                    .then(function(response){
+                        return response.data;
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
             function getForCourse(){}
-            function setActive(){}
-            function setInactive(){}
+            function setActive(id){
+                return $http({
+                    method: 'POST',
+                    url: Host.host+'/prerequisites/setActive.php',
+                    params:{
+                        id: id
+                    }
+                })
+                    .then(function(response){
+                        return response.data;
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
+            function setInactive(id){
+                return $http({
+                    method: 'POST',
+                    url: Host.host+'/prerequisites/setInactive.php',
+                    params:{
+                        id: id
+                    }
+                })
+                    .then(function(response){
+                        return response.data;
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
             return{
                 getAll: getAll,
                 getForCourse: getForCourse,

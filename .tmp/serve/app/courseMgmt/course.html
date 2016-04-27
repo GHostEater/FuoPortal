@@ -28,13 +28,14 @@
           <td>{{course.unit}}</td>
           <td><span ng-show="course.semesterId == 1">1st Semester</span><span ng-show="course.semesterId == 2">2nd Semester</span></td>
           <td>
-            <div ng-repeat="pre in model.pres | filter: {code: course.code}" class="sm-content"><small ng-show="pre.active == 1" class="text-success">Active &nbsp</small><small ng-show="pre.active == 0" class="text-danger">Inactive &nbsp</small><span>{{pre.prerequisite}}</span>
-              <button class="btn btn-warning btn-sm">Change Status</button>
-              <button class="btn btn-danger btn-sm">Remove</button>
+            <div ng-repeat="pre in model.pres | orderBy: '+code' | filter: {code: course.code}" class="sm-content"><small ng-show="pre.active == 1" class="text-success">Active &nbsp</small><small ng-show="pre.active == 0" class="text-danger">Inactive &nbsp</small><span>{{pre.prerequisite}}</span>
+              <button ng-click="model.changeStatus(pre.id,pre.active)" class="btn btn-warning btn-sm">Change Status</button>
+              <button ng-click="model.removePre(pre.id)" class="btn btn-danger btn-sm">Remove</button>
             </div>
           </td>
           <td>{{course.level}}</td>
           <td>
+            <button ng-click="model.addPre(course.code)" class="btn btn-primary">Add Prerequisites</button>
             <button ng-click="model.edit(course.code)" class="btn btn-warning btn-primary">Edit</button>
             <button ng-click="model.remove(course.code)" class="btn btn-danger">Delete</button>
           </td>

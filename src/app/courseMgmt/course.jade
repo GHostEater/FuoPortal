@@ -26,14 +26,14 @@ div(ng-controller="CourseController as model")
                         span(ng-show="course.semesterId == 1") 1st Semester
                         span(ng-show="course.semesterId == 2") 2nd Semester
                     td
-                        div.sm-content(ng-repeat="pre in model.pres | filter: {code: course.code}")
+                        div.sm-content(ng-repeat="pre in model.pres | orderBy: '+code' | filter: {code: course.code}")
                             small.text-success(ng-show="pre.active == 1") Active &nbsp
                             small.text-danger(ng-show="pre.active == 0") Inactive &nbsp
                             span {{pre.prerequisite}}
-                            button.btn.btn-warning.btn-sm Change Status
-                            button.btn.btn-danger.btn-sm Remove
+                            button(ng-click="model.changeStatus(pre.id,pre.active)").btn.btn-warning.btn-sm Change Status
+                            button(ng-click="model.removePre(pre.id)").btn.btn-danger.btn-sm Remove
                     td {{course.level}}
                     td
+                        button.btn.btn-primary(ng-click="model.addPre(course.code)") Add Prerequisites
                         button.btn.btn-warning.btn-primary(ng-click="model.edit(course.code)") Edit
                         button.btn.btn-danger(ng-click="model.remove(course.code)") Delete
-
