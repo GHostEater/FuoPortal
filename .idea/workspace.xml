@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/AddPrerequisiteController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseMgmt/addPrerequisite.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/CourseController.js" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Course.js" afterPath="$PROJECT_DIR$/src/app/services/Course.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Prerequisite.js" afterPath="$PROJECT_DIR$/src/app/services/Prerequisite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/course.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/course.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/home.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,21 +39,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Prerequisite.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/services/Prerequisite.js">
+      <file leaf-file-name="course.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/course.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1581">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="782">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/course.jade">
+      <file leaf-file-name="courseEdit.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77568495" vertical-offset="91" max-vertical-offset="748">
-              <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.8150685" vertical-offset="0" max-vertical-offset="901">
+              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseEditController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1088">
+              <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -62,26 +74,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="3740">
               <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addPrerequisite.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/addPrerequisite.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddPrerequisiteController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/AddPrerequisiteController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="816">
-              <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -138,18 +130,18 @@
         <option value="$PROJECT_DIR$/src/app/studentMgmt/student.jade" />
         <option value="$PROJECT_DIR$/src/app/studentMgmt/StudentController.js" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/app/services/Course.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
         <option value="$PROJECT_DIR$/src/app/styles/mainBody.scss" />
-        <option value="$PROJECT_DIR$/src/app/services/Prerequisite.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/addPrerequisites.jade" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseController.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/addPrerequisite.jade" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/AddPrerequisiteController.js" />
+        <option value="$PROJECT_DIR$/src/app/services/Prerequisite.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/course.jade" />
+        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" />
+        <option value="$PROJECT_DIR$/src/app/services/Course.js" />
+        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
       </list>
     </option>
   </component>
@@ -570,7 +562,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461761514321</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="prerequisite">
+      <created>1461768089079</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1461768089079</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -629,13 +627,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseMenu.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/ng-lodash/build/ng-lodash.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="222241">
@@ -896,30 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6318493" vertical-offset="311" max-vertical-offset="1088">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7568493" vertical-offset="0" max-vertical-offset="867">
-          <caret line="26" column="69" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7979453" vertical-offset="225" max-vertical-offset="1581">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/styles/general.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
@@ -939,30 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33047944" vertical-offset="181" max-vertical-offset="782">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.635274" vertical-offset="207" max-vertical-offset="884">
-          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Prerequisite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="370" max-vertical-offset="1581">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -991,10 +934,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/Prerequisite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9126712" vertical-offset="810" max-vertical-offset="1547">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/Course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.10616438" vertical-offset="1031" max-vertical-offset="1615">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75" vertical-offset="106" max-vertical-offset="884">
+          <caret line="32" column="115" selection-start-line="32" selection-start-column="115" selection-end-line="32" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/course.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77568495" vertical-offset="91" max-vertical-offset="748">
-          <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="782">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1088">
+          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38869864" vertical-offset="181" max-vertical-offset="884">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8150685" vertical-offset="0" max-vertical-offset="901">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
           <folding />
         </state>
       </provider>

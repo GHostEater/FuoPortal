@@ -16,15 +16,17 @@
             .col-sm-10
                 input.form-control(type="text" name="unit" required ng-model="model.course.unit")
         .form-group
+            label.control-label.col-sm-2 Type
+            .col-sm-10
+                select.form-control(name="type" required ng-model="model.course.type")
+                    option(value="E") Elective
+                    option(value="C") Cumpulsory
+        .form-group
             label.control-label.col-sm-2 Semester
             .col-sm-10
                 select.form-control( name="semesterId" required ng-model="model.course.semesterId")
                     option(value="1") 1st Semester
                     option(value="2") 2nd Semester
-        .form-group
-            label.control-label.col-sm-2 Prerequisite For
-            .col-sm-10
-                input.form-control(type="text" name="prerequisiteFor" ng-model="model.course.prerequisiteFor")
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10

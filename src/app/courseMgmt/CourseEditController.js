@@ -38,7 +38,7 @@
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
                     Course.edit(vm.course.code,vm.course.title,vm.course.unit,vm.course.semesterId,vm.course.levelId,
-                        vm.course.departmentId,vm.course.majorId)
+                        vm.course.departmentId,vm.course.majorId,vm.course.type)
                         .then(function(){
                             toastr.success("Course Changed");
                             $modalInstance.close();

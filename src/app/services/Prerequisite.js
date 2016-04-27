@@ -45,7 +45,6 @@
                         return $q.reject(response.status);
                     });
             }
-            function getForCourse(){}
             function setActive(id){
                 return $http({
                     method: 'POST',
@@ -78,7 +77,6 @@
             }
             return{
                 getAll: getAll,
-                getForCourse: getForCourse,
                 add: add,
                 remove: remove,
                 setActive: setActive,

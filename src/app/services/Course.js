@@ -21,7 +21,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(code,title,unit,semesterId,levelId,departmentId,majorId){
+        function add(code,title,unit,semesterId,levelId,departmentId,majorId,type){
             return $http({
                 method: 'POST',
                 url: Host.host+'/course/add.php',
@@ -33,6 +33,7 @@ angular.module('fuoPortal')
                     levelId: levelId,
                     departmentId: departmentId,
                     majorId: majorId,
+                    type: type
                 }
             })
                 .then(function(response){
@@ -42,7 +43,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(code,title,unit,semesterId,levelId,departmentId,majorId) {
+        function edit(code,title,unit,semesterId,levelId,departmentId,majorId,type) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/course/edit.php',
@@ -53,7 +54,8 @@ angular.module('fuoPortal')
                     semesterId: semesterId,
                     levelId: levelId,
                     departmentId: departmentId,
-                    majorId: majorId
+                    majorId: majorId,
+                    type: type
                 }
             })
                 .then(function(response){

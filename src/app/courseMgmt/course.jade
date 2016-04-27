@@ -12,6 +12,7 @@ div(ng-controller="CourseController as model")
                 th Course Code
                 th Course Title
                 th Unit
+                th Type
                 th Semester
                 th Prerequisites
                 th Level
@@ -22,6 +23,7 @@ div(ng-controller="CourseController as model")
                     td {{course.code}}
                     td {{course.title}}
                     td {{course.unit}}
+                    td {{course.type}}
                     td
                         span(ng-show="course.semesterId == 1") 1st Semester
                         span(ng-show="course.semesterId == 2") 2nd Semester
