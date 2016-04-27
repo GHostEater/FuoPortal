@@ -22,7 +22,8 @@
         .state('session',{url:'/sysMgmt/session',templateUrl:'app/sessionMgmt/session.html'})
         .state('level',{url:'/sysMgmt/level',templateUrl:'app/levelMgmt/level.html'})
         .state('myCourses',{url:'/MyCourses',templateUrl:'app/allocationMgmt/myCourses.html'})
-        .state('courseAllocation',{url:'/CourseAllocation',templateUrl:'app/allocationMgmt/hodAllocation.html'});
+        .state('courseAllocation',{url:'/CourseAllocation',templateUrl:'app/allocationMgmt/hodAllocation.html'})
+        .state('courseRegistration',{url:'/student/courseRegistration',templateUrl:'app/courseRegistration/courseRegister.html'});
 
     $urlRouterProvider.otherwise('/');
   }

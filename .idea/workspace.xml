@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Course.js" afterPath="$PROJECT_DIR$/src/app/services/Course.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Prerequisite.js" afterPath="$PROJECT_DIR$/src/app/services/Prerequisite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/course.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/course.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" afterPath="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" afterPath="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/layout/header.jade" afterPath="$PROJECT_DIR$/src/app/layout/header.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.route.js" afterPath="$PROJECT_DIR$/src/app/index.route.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -49,31 +41,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courseEdit.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/layout/header.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7791096" vertical-offset="378" max-vertical-offset="1071">
+              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courseEdit.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8150685" vertical-offset="0" max-vertical-offset="901">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
               <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseEditController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js">
+      <file leaf-file-name="courseRegister.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="311" max-vertical-offset="1088">
-              <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseController.js">
+      <file leaf-file-name="index.route.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/index.route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="3740">
-              <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="629">
+              <caret line="25" column="126" selection-start-line="25" selection-start-column="126" selection-end-line="25" selection-end-column="126" />
               <folding />
             </state>
           </provider>
@@ -91,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/services/localStorage.js" />
         <option value="$PROJECT_DIR$/src/app/services/Host.js" />
         <option value="$PROJECT_DIR$/src/app/HeaderController.js" />
         <option value="$PROJECT_DIR$/src/app/login.jade" />
@@ -107,7 +108,6 @@
         <option value="$PROJECT_DIR$/src/app/index.module.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/courseDelete.jade" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseDeleteController.js" />
-        <option value="$PROJECT_DIR$/src/app/layout/header.jade" />
         <option value="$PROJECT_DIR$/src/app/home.jade" />
         <option value="$PROJECT_DIR$/src/app/services/College.js" />
         <option value="$PROJECT_DIR$/src/app/services/Allocation.js" />
@@ -121,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/app/services/level.js" />
         <option value="$PROJECT_DIR$/src/app/services/ModeOfEntry.js" />
         <option value="$PROJECT_DIR$/src/app/services/Session.js" />
-        <option value="$PROJECT_DIR$/src/app/index.route.js" />
         <option value="$PROJECT_DIR$/src/app/coMgmt/CoController.js" />
         <option value="$PROJECT_DIR$/src/app/coMgmt/co.jade" />
         <option value="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" />
@@ -142,6 +141,9 @@
         <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
+        <option value="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" />
+        <option value="$PROJECT_DIR$/src/app/index.route.js" />
+        <option value="$PROJECT_DIR$/src/app/layout/header.jade" />
       </list>
     </option>
   </component>
@@ -252,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="courseMgmt" />
+              <option name="myItemId" value="courseRegistration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -568,7 +570,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461768089079</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="prerequisite">
+      <created>1461770033049</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1461770033049</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -666,13 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/home.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08732877" vertical-offset="0" max-vertical-offset="584">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -795,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/index.route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/coMgmt/CoController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1513">
@@ -872,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/layout/header.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1037">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.124542125" vertical-offset="0" max-vertical-offset="935">
@@ -942,14 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/Course.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.10616438" vertical-offset="1031" max-vertical-offset="1615">
@@ -992,8 +971,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8150685" vertical-offset="0" max-vertical-offset="901">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
           <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/index.route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="629">
+          <caret line="25" column="126" selection-start-line="25" selection-start-column="126" selection-end-line="25" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/home.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08732877" vertical-offset="0" max-vertical-offset="584">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/layout/header.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7791096" vertical-offset="378" max-vertical-offset="1071">
+          <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
           <folding />
         </state>
       </provider>
