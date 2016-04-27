@@ -30,7 +30,7 @@
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Course.add(vm.code,vm.title,vm.unit,vm.semesterId,vm.levelId,vm.departmentId,vm.majorId,vm.prerequisiteFor)
+                    Course.add(vm.code,vm.title,vm.unit,vm.semesterId,vm.levelId,vm.departmentId,vm.majorId)
                         .then(function(){
                             toastr.success("Course Added");
                             $modalInstance.close();

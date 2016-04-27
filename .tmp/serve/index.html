@@ -2,7 +2,7 @@
 <html ng-app="fuoPortal">
   <head>
     <meta charset="utf-8">
-    <title>fuoPortal</title>
+    <title>FUO Portal</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -55,13 +55,14 @@
     <script src="app/studentMgmt/StudentAddController.js"></script>
     <script src="app/services/localStorage.js"></script>
     <script src="app/services/level.js"></script>
+    <script src="app/services/lecturer.js"></script>
     <script src="app/services/User.js"></script>
     <script src="app/services/Student.js"></script>
     <script src="app/services/Session.js"></script>
     <script src="app/services/Result.js"></script>
+    <script src="app/services/Prerequisite.js"></script>
     <script src="app/services/ModeOfEntry.js"></script>
     <script src="app/services/Major.js"></script>
-    <script src="app/services/Lecturer.js"></script>
     <script src="app/services/Host.js"></script>
     <script src="app/services/Hod.js"></script>
     <script src="app/services/Department.js"></script>
@@ -71,6 +72,10 @@
     <script src="app/services/Auth.js"></script>
     <script src="app/services/Allocation.js"></script>
     <script src="app/services/AcademicAffair.js"></script>
+    <script src="app/levelMgmt/LevelEditController.js"></script>
+    <script src="app/levelMgmt/LevelDeleteController.js"></script>
+    <script src="app/levelMgmt/LevelController.js"></script>
+    <script src="app/levelMgmt/LevelAddController.js"></script>
     <script src="app/lecturerMgmt/LecturerEditController.js"></script>
     <script src="app/lecturerMgmt/LecturerDeleteController.js"></script>
     <script src="app/lecturerMgmt/LecturerController.js"></script>
@@ -80,7 +85,7 @@
     <script src="app/hodMgmt/HodController.js"></script>
     <script src="app/hodMgmt/HodAddController.js"></script>
     <script src="app/departmentMgmt/DepartmentEditController.js"></script>
-    <script src="app/departmentMgmt/DepartmentDeleletController.js"></script>
+    <script src="app/departmentMgmt/DepartmentDeleteController.js"></script>
     <script src="app/departmentMgmt/DepartmentController.js"></script>
     <script src="app/departmentMgmt/DepartmentAddController.js"></script>
     <script src="app/courseMgmt/CourseEditController.js"></script>
@@ -89,15 +94,17 @@
     <script src="app/courseMgmt/CourseAddController.js"></script>
     <script src="app/collegeMgmt/CollegeEditController.js"></script>
     <script src="app/collegeMgmt/CollegeDeleteController.js"></script>
+    <script src="app/collegeMgmt/CollegeController.js"></script>
     <script src="app/collegeMgmt/CollegeAddController.js"></script>
     <script src="app/coMgmt/CoEditController.js"></script>
     <script src="app/coMgmt/CoDeleteController.js"></script>
     <script src="app/coMgmt/CoController.js"></script>
     <script src="app/coMgmt/CoAddController.js"></script>
-    <script src="app/allocationMgmt/AllocationEditController.js"></script>
+    <script src="app/allocationMgmt/MyCoursesController.js"></script>
+    <script src="app/allocationMgmt/HodAllocationController.js"></script>
     <script src="app/allocationMgmt/AllocationDeleteController.js"></script>
     <script src="app/allocationMgmt/AllocationController.js"></script>
-    <script src="app/allocationMgmt/AllocationAddController.js"></script>
+    <script src="app/allocationMgmt/AllocateController.js"></script>
     <script src="app/academicAffair/AcademicAffairEditController.js"></script>
     <script src="app/academicAffair/AcademicAffairDeleteController.js"></script>
     <script src="app/academicAffair/AcademicAffairController.js"></script>
@@ -107,6 +114,7 @@
     <script src="app/index.route.js"></script>
     <script src="app/index.constants.js"></script>
     <script src="app/index.config.js"></script>
+    <script src="app/bootstrap.min.js"></script>
     <script src="app/LoginController.js"></script>
     <script src="app/HomeController.js"></script>
     <script src="app/HeaderController.js"></script>

@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("CourseController",function(toastr,$modal,Course){
+        .controller("CourseController",function(toastr,$modal,Course,Prerequisite){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
@@ -16,6 +16,15 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
+            Prerequisite.getAll()
+                .then(function(data){
+                    vm.pres = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+
+
             function add(){
                 var options = {
                     templateUrl: 'app/courseMgmt/courseAdd.html',

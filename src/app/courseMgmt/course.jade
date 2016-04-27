@@ -13,7 +13,7 @@ div(ng-controller="CourseController as model")
                 th Course Title
                 th Unit
                 th Semester
-                th Prerequisite For
+                th Prerequisites
                 th Level
                 th Actions
             tbody
@@ -25,9 +25,15 @@ div(ng-controller="CourseController as model")
                     td
                         span(ng-show="course.semesterId == 1") 1st Semester
                         span(ng-show="course.semesterId == 2") 2nd Semester
-                    td {{course.prerequisiteFor}}
+                    td
+                        div.sm-content(ng-repeat="pre in model.pres | filter: {code: course.code}")
+                            small.text-success(ng-show="pre.active == 1") Active &nbsp
+                            small.text-danger(ng-show="pre.active == 0") Inactive &nbsp
+                            span {{pre.prerequisite}}
+                            button.btn.btn-warning.btn-sm Change Status
+                            button.btn.btn-danger.btn-sm Remove
                     td {{course.level}}
                     td
-                        button.btn.btn-warning(ng-click="model.edit(course.code)") Edit
+                        button.btn.btn-warning.btn-primary(ng-click="model.edit(course.code)") Edit
                         button.btn.btn-danger(ng-click="model.remove(course.code)") Delete
 
