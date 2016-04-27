@@ -2,6 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fuo.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/FountainResultComputation.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/LecturerRank.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankDeleteController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankEditController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/LecturerStatus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/MajorController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/MajorControllerAdd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/MajorControllerDelete.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/MajorControllerEdit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryAddController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryDeleteController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryEditController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/SessionAddController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/SessionController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/SessionDeleteController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/SessionEditController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/academicAffair/academicAffair.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/academicAffair/academicAffairAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/academicAffair/academicAffairDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/academicAffair/academicAffairEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/add.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/admins.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocationAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocationDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocationEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/co.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/college.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseMenu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseMgmt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/delete.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/departmentMgmt/department.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/departmentMgmt/departmentAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/departmentMgmt/departmentDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/departmentMgmt/departmentEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hod.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/hodAllocation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRank.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankAdd.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankDelete.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankEdit.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/levelMgmt/level.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/levelMgmt/levelAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/levelMgmt/levelDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/levelMgmt/levelEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/major.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/majorAdd.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/majorDelete.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/majorMgmt/majorEdit.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntry.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryAdd.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryDelete.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryEdit.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/myCourses.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/session.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/sessionAdd.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/sessionDelete.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/sessionEdit.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/student.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentDelete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentMenu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentMgmt.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploadImg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/hodMgmt/HodController.js" afterPath="$PROJECT_DIR$/src/app/hodMgmt/HodController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,21 +127,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AcademicAffair.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/services/AcademicAffair.js">
+      <file leaf-file-name="session.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/session.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.72431076" vertical-offset="0" max-vertical-offset="425">
+              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/layout/header.jade">
+      <file leaf-file-name="level.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/level.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1037">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -60,53 +159,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/index.config.js" />
-        <option value="$PROJECT_DIR$/src/app/services/localStorage.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Host.js" />
-        <option value="$PROJECT_DIR$/src/app/HeaderController.js" />
-        <option value="$PROJECT_DIR$/src/app/login.jade" />
-        <option value="$PROJECT_DIR$/src/app/layout/footer.jade" />
-        <option value="$PROJECT_DIR$/src/app/index.run.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Auth.js" />
-        <option value="$PROJECT_DIR$/src/app/HomeController.js" />
-        <option value="$PROJECT_DIR$/src/app/LoginController.js" />
-        <option value="$PROJECT_DIR$/src/app/services/User.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseMgmt.jade" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseMgmtController.js" />
-        <option value="$PROJECT_DIR$/bower.json" />
-        <option value="$PROJECT_DIR$/src/app/index.module.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseController.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade" />
-        <option value="$PROJECT_DIR$/src/app/services/Course.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/courseDelete.jade" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseDeleteController.js" />
-        <option value="$PROJECT_DIR$/src/app/courseMgmt/course.jade" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/app/layout/header.jade" />
-        <option value="$PROJECT_DIR$/src/app/home.jade" />
-        <option value="$PROJECT_DIR$/src/app/services/College.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Allocation.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Department.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Major.js" />
-        <option value="$PROJECT_DIR$/src/app/studentMgmt/studentDelete.jade" />
-        <option value="$PROJECT_DIR$/src/app/services/Student.js" />
-        <option value="$PROJECT_DIR$/src/app/services/AcademicAffairs.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Co.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Hod.js" />
-        <option value="$PROJECT_DIR$/src/app/services/level.js" />
-        <option value="$PROJECT_DIR$/src/app/services/ModeOfEntry.js" />
-        <option value="$PROJECT_DIR$/src/app/services/Session.js" />
-        <option value="$PROJECT_DIR$/src/app/index.route.js" />
-        <option value="$PROJECT_DIR$/src/app/coMgmt/CoController.js" />
-        <option value="$PROJECT_DIR$/src/app/coMgmt/co.jade" />
-        <option value="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" />
-        <option value="$PROJECT_DIR$/src/app/studentMgmt/StudentEditController.js" />
-        <option value="$PROJECT_DIR$/src/app/studentMgmt/studentEdit.jade" />
-        <option value="$PROJECT_DIR$/src/app/studentMgmt/student.jade" />
-        <option value="$PROJECT_DIR$/src/app/studentMgmt/StudentController.js" />
+        <option value="$PROJECT_DIR$/src/app/services/LecturerRank.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerRankController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerRankAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerRankEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerRankDeleteController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerStatusController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerStatusEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerStatusAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/LecturerStatusDeleteController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/lecturerRank.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/lecturerStatus.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/lecturerStatusAdd.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/lecturerStatusEdit.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerstatusMgmt/lecturerStatusDelete.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankDeleteController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerStatusMgmt/LecturerStatusEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerStatusMgmt/LecturerStatusAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerStatusMgmt/LecturerStatusController.js" />
+        <option value="$PROJECT_DIR$/src/app/lecturerStatusMgmt/lecturerStatusDelete.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankDelete.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankEdit.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankAdd.jade" />
+        <option value="$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRank.jade" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/MajorControllerDelete.js" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/MajorControllerEdit.js" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/MajorControllerAdd.js" />
+        <option value="$PROJECT_DIR$/src/app/hodMgmt/HodController.js" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/MajorController.js" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/majorDelete.jade" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/majorEdit.jade" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/majorAdd.jade" />
+        <option value="$PROJECT_DIR$/src/app/majorMgmt/major.jade" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryDeleteController.js" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryController.js" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryDelete.jade" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryEdit.jade" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryAdd.jade" />
+        <option value="$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntry.jade" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/SessionDeleteController.js" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/SessionEditController.js" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/SessionAddController.js" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/SessionController.js" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/sessionDelete.jade" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/sessionEdit.jade" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/sessionAdd.jade" />
+        <option value="$PROJECT_DIR$/src/app/sessionMgmt/session.jade" />
       </list>
     </option>
   </component>
@@ -162,7 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
+              <option name="myItemId" value="fuoPortal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -172,7 +275,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
+              <option name="myItemId" value="fuoPortal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -186,25 +289,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
+              <option name="myItemId" value="fuoPortal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -215,10 +300,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -226,7 +307,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
+              <option name="myItemId" value="fuoPortal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -238,7 +319,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collegeMgmt" />
+              <option name="myItemId" value="lecturerStatusMgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FuoPortal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fuoPortal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lecturerRankMgmt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,20 +351,21 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/wamp/www/fuoPortal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="js.buildTools.gulp.node_interpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="C:\Users\GHostEater\AppData\Roaming\npm\node_modules\gulp" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="C:\Users\Bello J\AppData\Roaming\npm\node_modules\gulp" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\fuoPortal\src" />
+      <recent name="C:\Project\fuoPortal\src\app" />
       <recent name="C:\Projects\FuoPortal\src\app" />
       <recent name="C:\Projects\FuoPortal\src\app\courseMgmt" />
       <recent name="C:\Projects\FuoPortal\src\app\styles" />
-      <recent name="C:\Projects\FuoPortal\src\app\services" />
     </key>
   </component>
   <component name="RunManager" selected="Gulp.js.Serve">
@@ -397,35 +501,47 @@
       <option name="project" value="LOCAL" />
       <updated>1461331804171</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="pic change">
+      <created>1461671180216</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1461671180216</updated>
+    </task>
+    <task id="LOCAL-00015" summary="pic change">
+      <created>1461671364477</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1461671364477</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32755905" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24659607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -447,371 +563,449 @@
     <MESSAGE value="edit course" />
     <MESSAGE value="delete course" />
     <MESSAGE value="quality of life changes to StudentMgmt" />
-    <option name="LAST_COMMIT_MESSAGE" value="quality of life changes to StudentMgmt" />
+    <MESSAGE value="pic change" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/login.jade">
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerStatusMgmt/LecturerStatusController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70100504" vertical-offset="146" max-vertical-offset="1479">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/LecturerRank.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5376885" vertical-offset="102" max-vertical-offset="1360">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerStatusMgmt/lecturerStatusDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38442212" vertical-offset="0" max-vertical-offset="398">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085427135" vertical-offset="0" max-vertical-offset="398">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerStatusMgmt/lecturerStatusEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5125628" vertical-offset="0" max-vertical-offset="398">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerStatusMgmt/lecturerStatusAdd.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <caret line="13" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Auth.js">
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRankAdd.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="0" max-vertical-offset="398">
+          <caret line="8" column="104" selection-start-line="8" selection-start-column="104" selection-end-line="8" selection-end-column="104" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/LoginController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerStatusMgmt/lecturerStatus.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="748">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/User.js">
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerRankMgmt/lecturerRank.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4469178" vertical-offset="436" max-vertical-offset="1020">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.72613066" vertical-offset="0" max-vertical-offset="408">
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/HomeController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23287672" vertical-offset="0" max-vertical-offset="584">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state vertical-scroll-proportion="-0.98241204" vertical-offset="816" max-vertical-offset="1479">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseMenu.jade">
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/HodDeleteController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="21" column="5" selection-start-line="4" selection-start-column="0" selection-end-line="21" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/ng-lodash/build/ng-lodash.js">
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/MajorControllerDelete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="222241">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2562814" vertical-offset="0" max-vertical-offset="408">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/HodEditController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="383">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="833">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/MajorControllerEdit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7619048" vertical-offset="0" max-vertical-offset="748">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state vertical-scroll-proportion="1.2386935" vertical-offset="0" max-vertical-offset="799">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/index.module.js">
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/HodAddController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11908932" vertical-offset="0" max-vertical-offset="571">
-          <caret line="4" column="128" selection-start-line="4" selection-start-column="128" selection-end-line="4" selection-end-column="128" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="527">
+          <caret line="25" column="5" selection-start-line="3" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseEditController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/MajorControllerAdd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02910959" vertical-offset="34" max-vertical-offset="714">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.5728643" vertical-offset="27" max-vertical-offset="493">
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseAddController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/HodController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="639" max-vertical-offset="1513">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseDelete.jade">
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/MajorController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08732877" vertical-offset="0" max-vertical-offset="584">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.91457283" vertical-offset="809" max-vertical-offset="1479">
+          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseDeleteController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/hodDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.298995" vertical-offset="0" max-vertical-offset="398">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/majorDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085427135" vertical-offset="0" max-vertical-offset="398">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/hodEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1281407" vertical-offset="0" max-vertical-offset="408">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/majorEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="0" max-vertical-offset="408">
+          <caret line="8" column="94" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/hodAdd.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085427135" vertical-offset="0" max-vertical-offset="398">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/majorAdd.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="0" max-vertical-offset="398">
+          <caret line="8" column="82" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/hod.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="663">
+          <caret line="24" column="104" selection-start-line="24" selection-start-column="104" selection-end-line="24" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/major.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81155777" vertical-offset="255" max-vertical-offset="680">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryDeleteController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59799" vertical-offset="0" max-vertical-offset="408">
+          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryEditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9396985" vertical-offset="0" max-vertical-offset="680">
+          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72613066" vertical-offset="0" max-vertical-offset="493">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/ModeOfEntryController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5552764" vertical-offset="1020" max-vertical-offset="1479">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="0" max-vertical-offset="398">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5552764" vertical-offset="0" max-vertical-offset="398">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntryAdd.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085427135" vertical-offset="0" max-vertical-offset="398">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modeOfEntryMgmt/modeOfEntry.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72613066" vertical-offset="0" max-vertical-offset="442">
+          <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/LevelDeleteController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76884425" vertical-offset="34" max-vertical-offset="442">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/SessionDeleteController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59799" vertical-offset="0" max-vertical-offset="408">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/LevelEditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6155779" vertical-offset="248" max-vertical-offset="714">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/SessionEditController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9396985" vertical-offset="0" max-vertical-offset="680">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/LevelAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6155779" vertical-offset="78" max-vertical-offset="544">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/SessionAddController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6407035" vertical-offset="0" max-vertical-offset="510">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/LevelController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1047" max-vertical-offset="1513">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/SessionController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42713568" vertical-offset="1071" max-vertical-offset="1479">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/levelDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/sessionDelete.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.085427135" vertical-offset="0" max-vertical-offset="398">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/levelEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/sessionEdit.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="0" max-vertical-offset="398">
+          <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/levelAdd.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/sessionAdd.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34170854" vertical-offset="0" max-vertical-offset="398">
+          <caret line="8" column="94" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/levelMgmt/level.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17431192" vertical-offset="364" max-vertical-offset="935">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/home.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08732877" vertical-offset="0" max-vertical-offset="584">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/CourseController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7568493" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/studentMenu.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/College.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9417808" vertical-offset="793" max-vertical-offset="1445">
-          <caret line="79" column="7" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Department.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24315068" vertical-offset="793" max-vertical-offset="1445">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02910959" vertical-offset="272" max-vertical-offset="1564">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/lecturer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9417808" vertical-offset="1082" max-vertical-offset="1734">
-          <caret line="96" column="7" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/studentAdd.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Major.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7568493" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/studentDeleteController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/studentDelete.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20376712" vertical-offset="0" max-vertical-offset="584">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Allocation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7568493" vertical-offset="17" max-vertical-offset="1530">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Co.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Hod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9417808" vertical-offset="776" max-vertical-offset="1428">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/level.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9417808" vertical-offset="742" max-vertical-offset="1394">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/ModeOfEntry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9417808" vertical-offset="759" max-vertical-offset="1411">
-          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Result.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Session.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9417808" vertical-offset="759" max-vertical-offset="1411">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Student.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="700" max-vertical-offset="1802">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/index.route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="18" column="109" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/coMgmt/CoController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1513">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseEdit.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61130136" vertical-offset="0" max-vertical-offset="584">
-          <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/student.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23287672" vertical-offset="0" max-vertical-offset="1309">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/StudentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17465754" vertical-offset="34" max-vertical-offset="1513">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/studentEdit.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91952056" vertical-offset="75" max-vertical-offset="1292">
-          <caret line="36" column="97" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/coMgmt/CoAddController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/coMgmt/co.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="5" column="94" selection-start-line="5" selection-start-column="94" selection-end-line="5" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/coMgmt/coAdd.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/StudentEditController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9404553" vertical-offset="296" max-vertical-offset="1309">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/AcademicAffair.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/course.jade">
+    <entry file="file://$PROJECT_DIR$/src/app/sessionMgmt/session.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05982906" vertical-offset="16" max-vertical-offset="663">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseAdd.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.010256411" vertical-offset="249" max-vertical-offset="850">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/collegeMgmt/college.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/layout/header.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1037">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.72431076" vertical-offset="0" max-vertical-offset="425">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
           <folding />
         </state>
       </provider>

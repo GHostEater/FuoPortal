@@ -1,0 +1,18 @@
+//   Created by Bello J on 4/27/2016.
+div(ng-controller="LecturerRankController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Rank
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Rank
+            tbody
+                tr(ng-repeat="(key,lecturerRank) in model.lecturerRank | orderBy: '+level' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{lecturerRank.rank}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(lecturerRank.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(lecturerRank.id)") Delete

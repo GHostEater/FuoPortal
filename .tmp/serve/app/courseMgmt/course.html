@@ -1,0 +1,40 @@
+
+<!--Created by GHostEater on 15-Apr-16.
+-->
+<div ng-controller="CourseController as model">
+  <div class="col-sm-12">
+    <div class="row content">
+      <button ng-click="model.add()" class="col-sm-2 btn btn-lg btn-primary">Add Course</button>
+    </div>
+    <form class="content col-sm-4">
+      <input type="text" placeholder="Search" ng-model="model.searchTerm" class="form-control">
+    </form>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <th>S/N</th>
+        <th>Course Code</th>
+        <th>Course Title</th>
+        <th>Unit</th>
+        <th>Semester</th>
+        <th>Prerequisite For</th>
+        <th>Level</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(key,course) in model.courses | orderBy: '+code' | filter: model.searchTerm">
+          <td>{{key + 1}}</td>
+          <td>{{course.code}}</td>
+          <td>{{course.title}}</td>
+          <td>{{course.unit}}</td>
+          <td><span ng-show="course.semesterId == 1">1st Semester</span><span ng-show="course.semesterId == 2">2nd Semester</span></td>
+          <td>{{course.prerequisiteFor}}</td>
+          <td>{{course.level}}</td>
+          <td>
+            <button ng-click="model.edit(course.code)" class="btn btn-warning">Edit</button>
+            <button ng-click="model.remove(course.code)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

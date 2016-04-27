@@ -1,0 +1,25 @@
+
+<!--   Created by Bello J on 4/23/2016.-->
+<div class="modal-header">
+  <h3 class="modal-title">Add Allocation</h3>
+</div>
+<div class="modal-body">
+  <form name="model.form" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Lecturer Id</label>
+      <div class="col-sm-10">
+        <input type="text" name="lecturerId" required ng-model="model.lecturerId" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Course Code</label>
+      <div class="col-sm-10">
+        <input type="text" name="code" required ng-model="model.code" class="form-control">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button ng-click="model.ok()" class="btn btn-primary">Confirm</button>
+  <button ng-click="$dismiss()" class="btn btn-default">Cancel</button>
+</div>

@@ -1,0 +1,20 @@
+//   Created by Bello J on 4/27/2016.
+div(ng-controller="ModeOfEntryController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Mode of Entry
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Mode of Entry
+            tbody
+                tr(ng-repeat="(key,modeOfEntry) in model.modeOfEntry | orderBy: '+level' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{modeOfEntry.modeOfEntry}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(modeOfEntry.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(modeOfEntry.id)") Delete
+
+

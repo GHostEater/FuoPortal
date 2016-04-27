@@ -1,0 +1,12 @@
+//   Created by Bello J on 4/27/2016.
+.modal-header
+    h3.modal-title Edit Lecturer Rank
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            label.control-label.col-sm-2 Lecturer Rank
+            .col-sm-10
+                input.form-control(type="text" name="rank" required ng-model="model.lecturerRank.rank")
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
