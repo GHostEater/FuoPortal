@@ -1,0 +1,30 @@
+
+<!--Created by GHostEater on 15-Apr-16.
+-->
+<div ng-controller="HomeController as model">
+  <h3>Home</h3>
+  <div ng-show="model.user.sysRank == 1">
+    <p>You are an Admin</p>
+  </div>
+  <div ng-show="model.user.sysRank == 2">
+    <p>You are a College Officer</p>
+  </div>
+  <div ng-show="model.user.sysRank == 3">
+    <p>You are a HOD</p>
+  </div>
+  <div ng-show="model.user.sysRank == 4">
+    <p>You are a Lecturer</p>
+  </div>
+  <div ng-show="model.user.sysRank == 5">
+    <p>You are a Student</p>
+  </div>
+  <div ng-show="model.user.sysRank == 6">
+    <p>You are a Academic Affairs</p>
+  </div>
+  <div ng-show="model.user.sysRank == 7">
+    <p>You are a Bursary Officer</p>
+  </div>
+  <div ng-show="model.user.sysRank == 8">
+    <p>You are a Student Affairs</p>
+  </div>
+</div>

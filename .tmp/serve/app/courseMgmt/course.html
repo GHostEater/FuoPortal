@@ -1,0 +1,45 @@
+
+<!--Created by GHostEater on 15-Apr-16.
+-->
+<div ng-controller="CourseController as model">
+  <div class="col-sm-12">
+    <div class="row content">
+      <button ng-click="model.add()" class="col-sm-2 btn btn-lg btn-primary">Add Course</button>
+    </div>
+    <form class="content col-sm-4">
+      <input type="text" placeholder="Search" ng-model="model.searchTerm" class="form-control">
+    </form>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <th>S/N</th>
+        <th>Course Code</th>
+        <th>Course Title</th>
+        <th>Unit</th>
+        <th>Semester</th>
+        <th>Prerequisites</th>
+        <th>Level</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(key,course) in model.courses | orderBy: '+code' | filter: model.searchTerm">
+          <td>{{key + 1}}</td>
+          <td>{{course.code}}</td>
+          <td>{{course.title}}</td>
+          <td>{{course.unit}}</td>
+          <td><span ng-show="course.semesterId == 1">1st Semester</span><span ng-show="course.semesterId == 2">2nd Semester</span></td>
+          <td>
+            <div ng-repeat="pre in model.pres | filter: {code: course.code}" class="sm-content"><small ng-show="pre.active == 1" class="text-success">Active &nbsp</small><small ng-show="pre.active == 0" class="text-danger">Inactive &nbsp</small><span>{{pre.prerequisite}}</span>
+              <button class="btn btn-warning btn-sm">Change Status</button>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </div>
+          </td>
+          <td>{{course.level}}</td>
+          <td>
+            <button ng-click="model.edit(course.code)" class="btn btn-warning btn-primary">Edit</button>
+            <button ng-click="model.remove(course.code)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

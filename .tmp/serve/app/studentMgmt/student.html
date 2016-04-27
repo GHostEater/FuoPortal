@@ -1,0 +1,51 @@
+
+<div ng-controller="StudentController as model">
+  <div class="col-sm-12">
+    <div class="row content">
+      <button ng-click="model.add()" class="col-sm-2 btn btn-lg btn-primary">Add Student</button>
+    </div>
+    <form class="content col-sm-4">
+      <input type="text" placeholder="Search" ng-model="model.searchTerm" class="form-control">
+    </form>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <th>S/N</th>
+        <th>Matric No</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>College</th>
+        <th>Departmart</th>
+        <th>Major</th>
+        <th>Level</th>
+        <th>Mode of Entry</th>
+        <th>Session</th>
+        <th>Date of Birth</th>
+        <th>E-mail</th>
+        <th>Address</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(key,student) in model.students | orderBy: '+code' | filter: model.searchTerm">
+          <td>{{key + 1}}</td>
+          <td>{{student.matricNo}}</td>
+          <td>{{student.firstName}}</td>
+          <td>{{student.middleName}}</td>
+          <td>{{student.lastName}}</td>
+          <td><span ng-show="student.collegeId == 1">College Of Management and Social Sciences</span><span ng-show="student.collegeId == 2">College Of Natural and Applied Sciences</span></td>
+          <td><span ng-show="student.departmentId == 1">Department of Accounting and Finance</span><span ng-show="student.departmentId == 2">Department of Biological Sciences</span><span ng-show="student.departmentId == 3">Department of Business Administration</span><span ng-show="student.departmentId == 4">Department of Chemical Sciences</span><span ng-show="student.departmentId == 5">Department of Economics</span><span ng-show="student.departmentId == 6">Department of Mass Communication</span><span ng-show="student.departmentId == 7">Department of Mathematical and Computer Sciences</span><span ng-show="student.departmentId == 8">Department of Physics with Electronics</span><span ng-show="student.departmentId == 9">Department of Political Science and Administration</span><span ng-show="student.departmentId == 10">Department of Sociology and Psychology</span><span ng-show="student.departmentId == 11">Department of GNS</span></td>
+          <td><span ng-show="student.majorId == 1">Accounting</span><span ng-show="student.majorId == 2">Banking and Finane</span><span ng-show="student.majorId == 3">BicChemistry</span><span ng-show="student.majorId == 4">Business Administration</span><span ng-show="student.majorId == 5">Computer Sciences</span><span ng-show="student.majorId == 6">Economics</span><span ng-show="student.majorId == 7">Industrial chemistry</span><span ng-show="student.majorId == 8">Mass Communication</span><span ng-show="student.majorId == 9">Physics with Electronics</span><span ng-show="student.majorId == 10">Political Science</span><span ng-show="student.majorId == 11">Sociology and Psychology</span></td>
+          <td><span ng-show="student.levelId == 1">100 Level</span><span ng-show="student.levelId == 2">200 Level</span><span ng-show="student.levelId == 3">300 Level</span><span ng-show="student.levelId == 4">400 Level</span></td>
+          <td><span ng-show="student.modeOfEntry == 1">UTME</span><span ng-show="student.modeOfEntry == 2">Direct Entry</span><span ng-show="student.modeOfEntry == 3">Direct Entry 300 Level</span></td>
+          <td>{{student.session}}</td>
+          <td>{{student.dateBirth}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.address}}</td>
+          <td>
+            <button ng-click="model.edit(student.matricNo)" class="btn btn-warning">Edit</button>
+            <button ng-click="model.remove(student.matricNo)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
