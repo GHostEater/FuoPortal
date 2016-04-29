@@ -34,15 +34,15 @@
                             });
                     });
             }
-            function edit(lecturerId){
+            function edit(id){
                 var options = {
                     templateUrl: 'app/lecturerMgmt/lecturerEdit.html',
                     controller: "LecturerEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
@@ -57,15 +57,15 @@
                             });
                     });
             }
-            function remove(lecturerId){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/lecturerMgmt/lecturerDelete.html',
                     controller: "LecturerDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        id: function(){
+                            return id;
                         }
                     }
                 };

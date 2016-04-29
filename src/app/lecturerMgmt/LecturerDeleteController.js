@@ -4,11 +4,11 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('LecturerDeleteController',function(Lecturer,lecturerId,toastr,$modalInstance){
+        .controller('LecturerDeleteController',function(Lecturer,id,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
-                Lecturer.remove(lecturerId)
+                Lecturer.remove(id)
                     .then(function(){
                         toastr.success("Lecturer Removed");
                         $modalInstance.close();

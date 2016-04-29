@@ -8,7 +8,7 @@
             var vm = this;
             LecturerRank.getOne(id)
                 .then(function(data){
-                    vm.lecturerRanks = data;
+                    vm.lecturerRank = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
@@ -18,11 +18,11 @@
                 if(vm.form.$dirty && vm.form.$valid){
                     LecturerRank.edit(vm.lecturerRank.id,vm.lecturerRank.rank)
                         .then(function(){
-                            toastr.success("LecturerRank Changed");
+                            toastr.success("Lecturer Rank Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change LecturerRank");
+                            toastr.error("Unable to Change Lecturer Rank");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){
@@ -34,4 +34,4 @@
                 }
             };
         });
-})()
+})();

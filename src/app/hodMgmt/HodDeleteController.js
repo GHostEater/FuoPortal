@@ -5,17 +5,17 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('HodDeleteController',function(Hod,lecturerId,toastr,$modalInstance){
+        .controller('HodDeleteController',function(Hod,id,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
-                Hod.remove(lecturerId)
+                Hod.remove(id)
                     .then(function(){
-                        toastr.success("Hod Removed");
+                        toastr.success("Head of Department Removed");
                         $modalInstance.close();
                     })
                     .catch(function(){
-                        toastr.error("Unable to Remove Hod");
+                        toastr.error("Unable to Remove Head of Department");
                     });
             };
         });

@@ -1,16 +1,18 @@
 //   Created by Bello J on 4/22/2016.
 .modal-header
-    h3.modal-title Add Hod
+    h3.modal-title Add Head of Department
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 Lecturer Id
+            label.control-label.col-sm-2 Lecturer
             .col-sm-10
-                input.form-control(type="text" name="lecturerId" required ng-model="lecturerId")
+                select.form-control(name="lecturerId" required ng-model="model.lecturerId")
+                    option(ng-repeat="lecturer in model.lecturers" value="{{lecturer.id}}") {{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}
         .form-group
-            label.control-label.col-sm-2 Department Id
+            label.control-label.col-sm-2 Department
             .col-sm-10
-                input.form-control(type="text" name="departmentId" required ng-model="model.departmentId")
+                select.form-control(name="departmentId" required ng-model="model.departmentId")
+                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
     .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

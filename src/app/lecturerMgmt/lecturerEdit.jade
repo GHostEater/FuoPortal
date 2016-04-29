@@ -5,10 +5,6 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 Lecturer Id
-            .col-sm-10
-                input.form-control(type="text" name="lecturerId" required ng-model="model.lecturer.lecturerId")
-        .form-group
             label.control-label.col-sm-2 First Name
             .col-sm-10
                 input.form-control(type="text" name="firstName" required ng-model="model.lecturer.firstName")
@@ -17,26 +13,28 @@
             .col-sm-10
                 input.form-control(type="text" name="middleName" required ng-model="model.lecturer.middleName")
         .form-group
-            label.control-label.col-sm-2 Last Name
+            label.control-label.col-sm-2 Surname
             .col-sm-10
                 input.form-control(type="text" name="lastName" required ng-model="model.lecturer.lastName")
         .form-group
             label.control-label.col-sm-2 Rank
             .col-sm-10
-                input.form-control(type="text" name="rank" required ng-model="model.lecturer.rank")
+                select.form-control(name="rankId" required ng-model="model.lecturer.rankId")
+                    option(ng-repeat="rank in model.ranks" value="{{rank.id}}") {{rank.rank}}
         .form-group
             label.control-label.col-sm-2 Status
             .col-sm-10
-                input.form-control(type="text" name="status" required ng-model="model.lecturer.status")
+                select.form-control(name="statusId" required ng-model="model.lecturer.statusId")
+                    option(ng-repeat="status in model.statuss" value="{{status.id}}") {{status.status}}
         .form-group
             label.control-label.col-sm-2 College
             .col-sm-10
-                select.form-control( name="collegeId" required ng-model="model.lecturer.collegeId")
-                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
+                select.form-control(name="collegeId" required ng-model="model.lecturer.collegeId")
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
         .form-group
             label.control-label.col-sm-2 Department
             .col-sm-10
-                select.form-control( name="departmentId" required ng-model="model.lecturer.collegeId")
+                select.form-control(name="departmentId" required ng-model="model.lecturer.departmentId")
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
         .form-group
             label.control-label.col-sm-2 Phone Number

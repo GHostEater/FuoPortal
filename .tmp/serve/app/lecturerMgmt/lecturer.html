@@ -12,10 +12,7 @@
     <table class="table table-striped table-bordered">
       <thead>
         <th>S/N</th>
-        <th>lecturerId</th>
-        <th>First Name</th>
-        <th>Middle Name</th>
-        <th>Last Name</th>
+        <th>Name</th>
         <th>Rank</th>
         <th>Status</th>
         <th>College</th>
@@ -23,14 +20,12 @@
         <th>Phone Number</th>
         <th>E-mail</th>
         <th>Address</th>
+        <th>Actions</th>
       </thead>
       <tbody>
         <tr ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+code' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
-          <td>{{lecturer.lecturerId}}</td>
-          <td>{{lecturer.firstName}}</td>
-          <td>{{lecturer.middleName}}</td>
-          <td>{{lecturer.lastName}}</td>
+          <td>{{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}</td>
           <td>{{lecturer.rank}}</td>
           <td>{{lecturer.status}}</td>
           <td>{{lecturer.college}}</td>
@@ -39,8 +34,8 @@
           <td>{{lecturer.email}}</td>
           <td>{{lecturer.address}}</td>
           <td>
-            <button ng-click="model.edit(lecturer.lecturerId)" class="btn btn-warning">Edit</button>
-            <button ng-click="model.remove(lecturer.lecturerId)" class="btn btn-danger">Delete</button>
+            <button ng-click="model.edit(lecturer.id)" class="btn btn-warning">Edit</button>
+            <button ng-click="model.remove(lecturer.id)" class="btn btn-danger">Delete</button>
           </td>
         </tr>
       </tbody>

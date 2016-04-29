@@ -8,9 +8,9 @@
             .col-sm-10
                 input.form-control(type="text" name="name" required ng-model="model.major.name")
         .form-group
-            label.control-label.col-sm-2 Department Id
+            label.control-label.col-sm-2 Department
             .col-sm-10
-                select.form-control( name="departmentId" required ng-model="model.hod.collegeId")
+                select.form-control( name="departmentId" required ng-model="model.major.departmentId")
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
         .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm

@@ -6,11 +6,12 @@
         .form-group
             label.control-label.col-sm-2 Major
             .col-sm-10
-                input.form-control(type="text" name="name" required ng-model="name")
+                input.form-control(type="text" name="name" required ng-model="model.name")
         .form-group
-            label.control-label.col-sm-2 Department Id
+            label.control-label.col-sm-2 Department
             .col-sm-10
-                input.form-control(type="text" name="departmentId" required ng-model="model.departmentId")
+                select.form-control(name="departmentId" required ng-model="model.departmentId")
+                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
     .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

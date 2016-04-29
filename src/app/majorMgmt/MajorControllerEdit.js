@@ -4,9 +4,9 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('MajorEditController',function(Major,Department,toastr,name,$modalInstance){
+        .controller('MajorEditController',function(Major,Department,toastr,id,$modalInstance){
             var vm = this;
-            Major.getOne(lecturerId)
+            Major.getOne(id)
                 .then(function(data){
                     vm.major = data;
                 })
@@ -23,7 +23,7 @@
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Major.edit(vm.major.name,vm.major.departmentId)
+                    Major.edit(id,vm.major.name,vm.major.departmentId)
                         .then(function(){
                             toastr.success("Major Changed");
                             $modalInstance.close();

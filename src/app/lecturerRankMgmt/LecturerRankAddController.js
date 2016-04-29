@@ -1,21 +1,21 @@
 /**
- * Created by Bello J on 4/27/2016.
+ * Created by GHostEater on 29-Apr-16.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('ModeOfEntryAddController',function(ModeOfEntry,toastr,$modalInstance){
+        .controller('LecturerRankAddController',function(LecturerRank,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    ModeOfEntry.add(vm.modeOfEntry)
+                    LecturerRank.add(vm.rank)
                         .then(function(){
-                            toastr.success("Mode of Entry Added");
+                            toastr.success("Lecturer Rank Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Mode of Entry");
+                            toastr.error("Unable to Add Lecturer Rank");
                         });
                 }
                 else{

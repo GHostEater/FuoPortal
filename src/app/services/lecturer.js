@@ -21,17 +21,16 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(lecturerId,firstName,middleName,lastName,rank,status,collegeId,departmentId,phoneNumber,email,address){
+        function add(firstName,middleName,lastName,rankId,statusId,collegeId,departmentId,phoneNumber,email,address){
             return $http({
                 method: 'POST',
                 url: Host.host+'/lecturer/add.php',
                 params:{
-                    lecturerId: lecturerId,
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
-                    rank: rank,
-                    status: status,
+                    rankId: rankId,
+                    statusId: statusId,
                     collegeId: collegeId,
                     departmentId: departmentId,
                     phoneNumber: phoneNumber,
@@ -46,17 +45,17 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(lecturerId,firstName,middleName,lastName,rank,status,collegeId,departmentId,phoneNumber,email,address) {
+        function edit(id,firstName,middleName,lastName,rankId,statusId,collegeId,departmentId,phoneNumber,email,address) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/lecturer/edit.php',
                 params: {
-                    lecturerId: lecturerId,
+                    id: id,
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
-                    rank: rank,
-                    status: status,
+                    rank: rankId,
+                    status: statusId,
                     collegeId: collegeId,
                     departmentId: departmentId,
                     phoneNumber: phoneNumber,
@@ -72,12 +71,12 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function remove(lecturerId) {
+        function remove(id) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/lecturer/delete.php',
                 params: {
-                    lecturerId: lecturerId
+                    id: id
                 }
             })
                 .then(function (response) {

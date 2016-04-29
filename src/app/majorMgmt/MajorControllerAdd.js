@@ -6,6 +6,13 @@
     angular.module('fuoPortal')
         .controller('MajorAddController',function(Major,Department,toastr,$modalInstance){
             var vm = this;
+            Department.getAll()
+                .then(function(data){
+                    vm.departments = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
 
             vm.ok = function(){
                 if(vm.form.$valid){

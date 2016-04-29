@@ -9,10 +9,7 @@ div(ng-controller="LecturerController as model")
         table.table.table-striped.table-bordered
             thead
                 th S/N
-                th lecturerId
-                th First Name
-                th Middle Name
-                th Last Name
+                th Name
                 th Rank
                 th Status
                 th College
@@ -20,13 +17,11 @@ div(ng-controller="LecturerController as model")
                 th Phone Number
                 th E-mail
                 th Address
+                th Actions
             tbody
                 tr(ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
-                    td {{lecturer.lecturerId}}
-                    td {{lecturer.firstName}}
-                    td {{lecturer.middleName}}
-                    td {{lecturer.lastName}}
+                    td {{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}
                     td {{lecturer.rank}}
                     td {{lecturer.status}}
                     td {{lecturer.college}}
@@ -35,7 +30,7 @@ div(ng-controller="LecturerController as model")
                     td {{lecturer.email}}
                     td {{lecturer.address}}
                     td
-                        button.btn.btn-warning(ng-click="model.edit(lecturer.lecturerId)") Edit
-                        button.btn.btn-danger(ng-click="model.remove(lecturer.lecturerId)") Delete
+                        button.btn.btn-warning(ng-click="model.edit(lecturer.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(lecturer.id)") Delete
 
 

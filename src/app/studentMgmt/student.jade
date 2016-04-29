@@ -4,7 +4,7 @@ div(ng-controller="StudentController as model")
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Student
         form.content.col-sm-4
             input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
-        table.table.table-striped.table-bordered
+        table.table.table-condensed.table-striped.table-bordered
             thead
                 th S/N
                 th Matric No
@@ -14,55 +14,20 @@ div(ng-controller="StudentController as model")
                 th Major
                 th Level
                 th Mode of Entry
-                th Session
-                th Date of Birth
                 th E-mail
-                th Address
+                th Actions
             tbody
-                tr(ng-repeat="(key,student) in model.students | orderBy: '+code' | filter: model.searchTerm")
+                tr(ng-repeat="(key,student) in model.students | orderBy: '+lastName' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{student.matricNo}}
                     td {{student.lastName}}, {{student.firstName}} {{student.middleName}}
-                    td
-                        span(ng-show="student.collegeId == 1") College Of Management and Social Sciences
-                        span(ng-show="student.collegeId == 2") College Of Natural and Applied Sciences
-                    td
-                        span(ng-show="student.departmentId == 1") Department of Accounting and Finance
-                        span(ng-show="student.departmentId == 2") Department of Biological Sciences
-                        span(ng-show="student.departmentId == 3") Department of Business Administration
-                        span(ng-show="student.departmentId == 4") Department of Chemical Sciences
-                        span(ng-show="student.departmentId == 5") Department of Economics
-                        span(ng-show="student.departmentId == 6") Department of Mass Communication
-                        span(ng-show="student.departmentId == 7") Department of Mathematical and Computer Sciences
-                        span(ng-show="student.departmentId == 8") Department of Physics with Electronics
-                        span(ng-show="student.departmentId == 9") Department of Political Science and Administration
-                        span(ng-show="student.departmentId == 10") Department of Sociology and Psychology
-                        span(ng-show="student.departmentId == 11") Department of GNS
-                    td
-                        span(ng-show="student.majorId == 1") Accounting
-                        span(ng-show="student.majorId == 2") Banking and Finane
-                        span(ng-show="student.majorId == 3") BicChemistry
-                        span(ng-show="student.majorId == 4") Business Administration
-                        span(ng-show="student.majorId == 5") Computer Sciences
-                        span(ng-show="student.majorId == 6") Economics
-                        span(ng-show="student.majorId == 7") Industrial chemistry
-                        span(ng-show="student.majorId == 8") Mass Communication
-                        span(ng-show="student.majorId == 9") Physics with Electronics
-                        span(ng-show="student.majorId == 10") Political Science
-                        span(ng-show="student.majorId == 11") Sociology and Psychology
-                    td
-                        span(ng-show="student.levelId == 1") 100 Level
-                        span(ng-show="student.levelId == 2") 200 Level
-                        span(ng-show="student.levelId == 3") 300 Level
-                        span(ng-show="student.levelId == 4") 400 Level
-                    td
-                        span(ng-show="student.modeOfEntry == 1") UTME
-                        span(ng-show="student.modeOfEntry == 2") Direct Entry
-                        span(ng-show="student.modeOfEntry == 3") Direct Entry 300 Level
-                    td {{student.session}}
-                    td {{student.dateBirth}}
+                    td {{student.college}}
+                    td {{student.department}}
+                    td {{student.major}}
+                    td {{student.level}}
+                    td {{student.modeOfEntry}}
                     td {{student.email}}
-                    td {{student.address}}
                     td
+                        button.btn.btn-primary(ng-click="model.view(student.matricNo)") View Details
                         button.btn.btn-warning(ng-click="model.edit(student.matricNo)") Edit
                         button.btn.btn-danger(ng-click="model.remove(student.matricNo)") Delete

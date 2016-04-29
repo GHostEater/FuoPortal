@@ -6,15 +6,16 @@ div(ng-controller="LevelController as model")
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Level
         form.content.col-sm-4
             input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
-        table.table.table-striped.table-bordered
-            thead
-                th S/N
-                th Level
-            tbody
-                tr(ng-repeat="(key,level) in model.level | orderBy: '+level' | filter: model.searchTerm")
-                    td {{key + 1}}
-                    td {{level.level}}
-                    td
-                        button.btn.btn-warning(ng-click="model.edit(level.id)") Edit
-                        button.btn.btn-danger(ng-click="model.remove(level.id)") Delete
-
+        div.col-sm-9
+            table.table.table-striped.table-bordered.table-condensed
+                thead
+                    th S/N
+                    th Level
+                    th Actions
+                tbody
+                    tr(ng-repeat="(key,level) in model.levels | orderBy: '+level' | filter: model.searchTerm")
+                        td {{key + 1}}
+                        td {{level.level}}
+                        td
+                            button.btn.btn-warning(ng-click="model.edit(level.id)") Edit
+                            button.btn.btn-danger(ng-click="model.remove(level.id)") Delete

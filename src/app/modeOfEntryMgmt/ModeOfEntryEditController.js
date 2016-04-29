@@ -8,7 +8,7 @@
             var vm = this;
             ModeOfEntry.getOne(id)
                 .then(function(data){
-                    vm.modeOfEntrys = data;
+                    vm.modeOfEntry = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

@@ -6,6 +6,7 @@
     angular.module('fuoPortal')
         .controller("StudentController",function(toastr,$modal,Student){
             var vm = this;
+            vm.view = view;
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
@@ -16,6 +17,30 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
+
+            function view(matricNo){
+                var options = {
+                    templateUrl: 'app/studentMgmt/studentView.html',
+                    controller: "StudentViewController",
+                    controllerAs: 'model',
+                    size: 'lg',
+                    resolve:{
+                        matricNo: function(){
+                            return matricNo;
+                        }
+                    }
+                };
+                $modal.open(options).result
+                    .then(function(){
+                        Student.getAll()
+                            .then(function(data){
+                                vm.students = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
+                            });
+                    });
+            }
             function add(){
                 var options = {
                     templateUrl: 'app/studentMgmt/studentAdd.html',

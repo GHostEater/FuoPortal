@@ -1,0 +1,67 @@
+//
+   Created by GHostEater on 29-Apr-16.
+.modal-header
+    h3.modal-title Details of {{model.student.lastName}}, {{model.student.firstName}} {{model.student.middleName}}
+.modal-body
+    .row
+        .col-sm-6
+            table.table.table-bordered.table-striped
+                tr
+                    th.col-sm-5 Name
+                    td {{model.student.lastName}}, {{model.student.firstName}} {{model.student.middleName}}
+                tr
+                    th Matric No
+                    td {{model.student.matricNo}}
+                tr
+                    th Sex
+                    td {{model.student.sex}}
+                tr
+                    th E-Mail
+                    td {{model.student.email}}
+                tr
+                    th Phone Number
+                    td {{model.student.phoneNumber}}
+                tr
+                    th Date of Birth
+                    td {{model.student.dateBirth}}
+                tr
+                    th Nationality
+                    td {{model.student.nationality}}
+                tr
+                    th State of Origin
+                    td {{model.student.stateOrigin}}
+                tr
+                    th Local Government Area
+                    td {{model.student.lga}}
+                tr
+                    th Religion
+                    td {{model.student.religion}}
+                tr
+                    th Address
+                    td {{model.student.address}}
+                tr
+                    th Next of Kin
+                    td
+                        span {{model.student.nextOfKin}}
+                        hr
+                        span {{model.student.nextOfKinAddress}}
+        .col-sm-6
+            img.img-responsive(ng-src="{{model.host}}/img/student/{{model.student.img}}" width="150" height="150")
+            table.table.table-bordered.table-striped
+                tr
+                    th College
+                    td {{model.student.college}}
+                tr
+                    th Department
+                    td {{model.student.department}}
+                tr
+                    th Major
+                    td {{model.student.major}}
+                tr
+                    th Level
+                    td {{model.student.level}}
+                tr
+                    th Mode of Entry
+                    td {{model.student.modeOfEntry}}
+.modal-footer
+    button.btn.btn-default(ng-click="$dismiss()") Close

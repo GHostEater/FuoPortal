@@ -9,8 +9,9 @@ div(ng-controller="ModeOfEntryController as model")
             thead
                 th S/N
                 th Mode of Entry
+                th Actions
             tbody
-                tr(ng-repeat="(key,modeOfEntry) in model.modeOfEntry | orderBy: '+level' | filter: model.searchTerm")
+                tr(ng-repeat="(key,modeOfEntry) in model.modeOfEntries | orderBy: '+level' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{modeOfEntry.modeOfEntry}}
                     td

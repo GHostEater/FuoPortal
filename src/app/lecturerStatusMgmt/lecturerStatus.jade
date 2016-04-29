@@ -1,0 +1,20 @@
+//
+   Created by GHostEater on 29-Apr-16.
+div(ng-controller="LecturerStatusController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Status
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Status
+                th Actions
+            tbody
+                tr(ng-repeat="(key,lecturerStatus) in model.lecturerStatuss | orderBy: '+status' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{lecturerStatus.status}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(lecturerStatus.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(lecturerStatus.id)") Delete

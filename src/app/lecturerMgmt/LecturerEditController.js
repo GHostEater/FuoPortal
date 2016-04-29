@@ -4,11 +4,25 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('LecturerEditController',function(Lecturer,Department,College,toastr,lecturerId,$modalInstance){
+        .controller('LecturerEditController',function(Lecturer,LecturerRank,LecturerStatus,Department,College,toastr,id,$modalInstance){
             var vm = this;
-            Lecturer.getOne(lecturerId)
+            Lecturer.getOne(id)
                 .then(function(data){
                     vm.lecturer = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            LecturerRank.getAll()
+                .then(function(data){
+                    vm.ranks = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            LecturerStatus.getAll()
+                .then(function(data){
+                    vm.statuss = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
@@ -30,7 +44,9 @@
             
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Lecturer.edit(vm.lecturerId,vm.firstName,vm.middleName,vm.lastName,vm.rank,vm.status,vm.collegeId,vm.departmentId,vm.phoneNumber,vm.email,vm.address,vm.password)
+                    Lecturer.edit(id,vm.lecturer.firstName,vm.lecturer.middleName,vm.lecturer.lastName,vm.lecturer.rankId,
+                        vm.lecturer.statusId,vm.lecturer.collegeId,vm.lecturer.departmentId,vm.lecturer.phoneNumber,
+                        vm.lecturer.email,vm.lecturer.address,vm.lecturer.password)
                         .then(function(){
                             toastr.success("Lecturer Changed");
                             $modalInstance.close();

@@ -4,8 +4,22 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('HodAddController',function(Hod,toastr,$modalInstance){
+        .controller('HodAddController',function(Hod,Lecturer,Department,toastr,$modalInstance){
             var vm = this;
+            Lecturer.getAll()
+                .then(function(data){
+                    vm.lecturers = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Department.getAll()
+                .then(function(data){
+                    vm.departments = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
 
             vm.ok = function(){
                 if(vm.form.$valid){
@@ -14,8 +28,16 @@
                             toastr.success("Hod Added");
                             $modalInstance.close();
                         })
-                        .catch(function(){
-                            toastr.error("Unable to Add Hod");
+                        .catch(function(error){
+                            if(error === 401){
+                                toastr.error("Lecturer Already Head of Department");
+                            }
+                            else if(error === 402){
+                                toastr.error("Department Already Has Head");
+                            }
+                            else{
+                                toastr.error("Unable to Add HOD");
+                            }
                         });
                 }
                 else{

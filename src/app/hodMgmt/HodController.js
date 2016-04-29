@@ -7,7 +7,6 @@
         .controller("HodController",function(toastr,$modal,Hod){
             var vm = this;
             vm.add = add;
-            vm.edit = edit;
             vm.remove = remove;
             Hod.getAll()
                 .then(function(data){
@@ -34,38 +33,15 @@
                             });
                     });
             }
-            function edit(lecturerId){
-                var options = {
-                    templateUrl: 'app/hodMgmt/hodEdit.html',
-                    controller: "HodEditController",
-                    controllerAs: 'model',
-                    size: 'lg',
-                    resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
-                        }
-                    }
-                };
-                $modal.open(options).result
-                    .then(function(){
-                        Hod.getAll()
-                            .then(function(data){
-                                vm.hods = data;
-                            })
-                            .catch(function(){
-                                toastr.warning("Could Not Connect To Server");
-                            });
-                    });
-            }
-            function remove(lecturerId){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/hodMgmt/hodDelete.html',
                     controller: "HodDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        lecturerId: function(){
-                            return lecturerId;
+                        id: function(){
+                            return id;
                         }
                     }
                 };

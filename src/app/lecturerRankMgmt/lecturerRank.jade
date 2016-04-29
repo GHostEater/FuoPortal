@@ -9,8 +9,9 @@ div(ng-controller="LecturerRankController as model")
             thead
                 th S/N
                 th Rank
+                th Actions
             tbody
-                tr(ng-repeat="(key,lecturerRank) in model.lecturerRank | orderBy: '+level' | filter: model.searchTerm")
+                tr(ng-repeat="(key,lecturerRank) in model.lecturerRanks | orderBy: '+level' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{lecturerRank.rank}}
                     td
