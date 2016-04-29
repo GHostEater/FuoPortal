@@ -34,15 +34,15 @@
                             });
                     });
             }
-            function edit(name){
+            function edit(id){
                 var options = {
                     templateUrl: 'app/majorMgmt/majorEdit.html',
                     controller: "MajorEditController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{
-                        name: function(){
-                            return name;
+                        id: function(){
+                            return id;
                         }
                     }
                 };
@@ -57,15 +57,15 @@
                             });
                     });
             }
-            function remove(name){
+            function remove(id){
                 var options = {
                     templateUrl: 'app/majorMgmt/majorDelete.html',
                     controller: "MajorDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
-                        name: function(){
-                            return name;
+                        id: function(){
+                            return id;
                         }
                     }
                 };

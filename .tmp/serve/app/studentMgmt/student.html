@@ -11,9 +11,7 @@
       <thead>
         <th>S/N</th>
         <th>Matric No</th>
-        <th>First Name</th>
-        <th>Middle Name</th>
-        <th>Last Name</th>
+        <th>Name</th>
         <th>College</th>
         <th>Departmart</th>
         <th>Major</th>
@@ -28,9 +26,7 @@
         <tr ng-repeat="(key,student) in model.students | orderBy: '+code' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
           <td>{{student.matricNo}}</td>
-          <td>{{student.firstName}}</td>
-          <td>{{student.middleName}}</td>
-          <td>{{student.lastName}}</td>
+          <td>{{student.lastName}}, {{student.firstName}} {{student.middleName}}</td>
           <td><span ng-show="student.collegeId == 1">College Of Management and Social Sciences</span><span ng-show="student.collegeId == 2">College Of Natural and Applied Sciences</span></td>
           <td><span ng-show="student.departmentId == 1">Department of Accounting and Finance</span><span ng-show="student.departmentId == 2">Department of Biological Sciences</span><span ng-show="student.departmentId == 3">Department of Business Administration</span><span ng-show="student.departmentId == 4">Department of Chemical Sciences</span><span ng-show="student.departmentId == 5">Department of Economics</span><span ng-show="student.departmentId == 6">Department of Mass Communication</span><span ng-show="student.departmentId == 7">Department of Mathematical and Computer Sciences</span><span ng-show="student.departmentId == 8">Department of Physics with Electronics</span><span ng-show="student.departmentId == 9">Department of Political Science and Administration</span><span ng-show="student.departmentId == 10">Department of Sociology and Psychology</span><span ng-show="student.departmentId == 11">Department of GNS</span></td>
           <td><span ng-show="student.majorId == 1">Accounting</span><span ng-show="student.majorId == 2">Banking and Finane</span><span ng-show="student.majorId == 3">BicChemistry</span><span ng-show="student.majorId == 4">Business Administration</span><span ng-show="student.majorId == 5">Computer Sciences</span><span ng-show="student.majorId == 6">Economics</span><span ng-show="student.majorId == 7">Industrial chemistry</span><span ng-show="student.majorId == 8">Mass Communication</span><span ng-show="student.majorId == 9">Physics with Electronics</span><span ng-show="student.majorId == 10">Political Science</span><span ng-show="student.majorId == 11">Sociology and Psychology</span></td>

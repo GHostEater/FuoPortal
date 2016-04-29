@@ -1,0 +1,25 @@
+//   Created by Bello J on 4/22/2016.
+div(ng-controller="AcademicAffairController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-3.btn.btn-lg.btn-primary(ng-click="model.add()") Add Academic Affairs Officer
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Name
+                th E-mail
+                th Actions
+            tbody
+                tr(ng-repeat="(key,academicAffair) in model.academicAffairs | orderBy: '+code' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{academicAffair.lastName}}, {{academicAffair.firstName}} {{academicAffair.middleName}}
+                    td {{academicAffair.email}}
+                    td
+                        button.btn.btn-warning(ng-click="model.edit(academicAffair.id)") Edit
+                        button.btn.btn-danger(ng-click="model.remove(academicAffair.id)") Delete
+
+
+
+

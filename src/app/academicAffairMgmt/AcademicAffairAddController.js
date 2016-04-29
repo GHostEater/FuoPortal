@@ -4,18 +4,18 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('AcademicAffairsAddController',function(AcademicAffairs,toastr,$modalInstance){
+        .controller('AcademicAffairAddController',function(AcademicAffair,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    AcademicAffairs.add(vm.lecturerId,vm.firstName,vm.middleName,vm.lastName,vm.email,vm.password)
+                    AcademicAffair.add(vm.firstName,vm.middleName,vm.lastName,vm.email,vm.password)
                         .then(function(){
-                            toastr.success("Academic Affairs Added");
+                            toastr.success("Academic Affairs Officer Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Academic Affairs");
+                            toastr.error("Unable to Add Academic Affairs Officer");
                         });
                 }
                 else{

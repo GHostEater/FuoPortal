@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('MajorAddController',function(Major,toastr,$modalInstance){
+        .controller('MajorAddController',function(Major,Department,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){

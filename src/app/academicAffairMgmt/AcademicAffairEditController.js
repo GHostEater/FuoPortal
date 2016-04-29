@@ -4,24 +4,25 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('AcademicAffairEditController',function(AcademicAffair,toastr,Id,$modalInstance){
+        .controller('AcademicAffairEditController',function(AcademicAffair,toastr,id,$modalInstance){
             var vm = this;
-            AcademicAffair.getOne(Id)
+            AcademicAffair.getOne(id)
                 .then(function(data){
-                    vm.academicAffairs = data;
+                    vm.academicAffair = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    AcademicAffair.edit(vm.Id,vm.firstName,vm.middleName,vm.lastName,vm.email,vm.password)
+                    AcademicAffair.edit(id,vm.academicAffair.firstName,vm.academicAffair.middleName,vm.academicAffair.lastName,
+                        vm.academicAffair.email,vm.academicAffair.password)
                         .then(function(){
-                            toastr.success("College Officer Changed");
+                            toastr.success("Academic Affairs Officer Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change College Officer");
+                            toastr.error("Unable to Change Academic Affairs Officer");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){

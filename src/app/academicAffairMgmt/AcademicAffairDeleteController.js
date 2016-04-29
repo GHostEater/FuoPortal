@@ -4,17 +4,17 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('AcademicAffairDeleteController',function(AcademicAffair,Id,toastr,$modalInstance){
+        .controller('AcademicAffairDeleteController',function(AcademicAffair,id,toastr,$modalInstance){
             var vm = this;
 
             vm.ok = function(){
-                AcademicAffair.remove(Id)
+                AcademicAffair.remove(id)
                     .then(function(){
-                        toastr.success("College Officer Removed");
+                        toastr.success("Academic Affairs Officer Removed");
                         $modalInstance.close();
                     })
                     .catch(function(){
-                        toastr.error("Unable to Remove College Officer");
+                        toastr.error("Unable to Remove Academic Affairs Officer");
                     });
             };
         });

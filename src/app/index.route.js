@@ -13,7 +13,7 @@
         .state('hod',{url:'/sysMgmt/hod',templateUrl:'app/hodMgmt/hod.html'})
         .state('student',{url:'/sysMgmt/student',templateUrl:'app/studentMgmt/student.html'})
         .state('lecturer',{url:'/sysMgmt/lecturer',templateUrl:'app/lecturerMgmt/lecturer.html'})
-        .state('academicAffairs',{url:'/sysMgmt/academicAffair',templateUrl:'app/academicAffairMgmt/academicAffair.html'})
+        .state('academicAffairs',{url:'/sysMgmt/academicAffairs',templateUrl:'app/academicAffairMgmt/academicAffair.html'})
         .state('college',{url:'/sysMgmt/college',templateUrl:'app/collegeMgmt/college.html'})
         .state('department',{url:'/sysMgmt/department',templateUrl:'app/departmentMgmt/department.html'})
         .state('major',{url:'/sysMgmt/major',templateUrl:'app/majorMgmt/major.html'})

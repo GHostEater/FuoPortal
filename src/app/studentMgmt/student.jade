@@ -8,9 +8,7 @@ div(ng-controller="StudentController as model")
             thead
                 th S/N
                 th Matric No
-                th First Name
-                th Middle Name
-                th Last Name
+                th Name
                 th College
                 th Departmart
                 th Major
@@ -24,9 +22,7 @@ div(ng-controller="StudentController as model")
                 tr(ng-repeat="(key,student) in model.students | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{student.matricNo}}
-                    td {{student.firstName}}
-                    td {{student.middleName}}
-                    td {{student.lastName}}
+                    td {{student.lastName}}, {{student.firstName}} {{student.middleName}}
                     td
                         span(ng-show="student.collegeId == 1") College Of Management and Social Sciences
                         span(ng-show="student.collegeId == 2") College Of Natural and Applied Sciences
