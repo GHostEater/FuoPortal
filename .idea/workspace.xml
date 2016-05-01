@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/CourseReg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseRegistration/CourseRegisterController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/Semester.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/courseRegistration/courseRegistrationComplete.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseRegistration/CourseRegistrationCompleteController.js" afterPath="$PROJECT_DIR$/src/app/courseRegistration/CourseRegistrationCompleteController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" afterPath="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentEdit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -64,8 +60,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseRegistrationCompleteController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/CourseRegistrationCompleteController.js">
+      <file leaf-file-name="courseRegistrationCompleteController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/courseRegistrationCompleteController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="584">
               <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
@@ -143,10 +139,10 @@
         <option value="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" />
         <option value="$PROJECT_DIR$/src/app/services/Semester.js" />
         <option value="$PROJECT_DIR$/src/app/courseRegistration/courseRegister.jade" />
-        <option value="$PROJECT_DIR$/src/app/courseRegistration/courseRegistrationCompleteController.js" />
         <option value="$PROJECT_DIR$/src/app/courseRegistration/CourseRegisterController.js" />
         <option value="$PROJECT_DIR$/src/app/services/CourseReg.js" />
         <option value="$PROJECT_DIR$/src/app/courseRegistration/CourseRegistrationCompleteController.js" />
+        <option value="$PROJECT_DIR$/src/app/courseRegistration/courseRegistrationCompleteController.js" />
       </list>
     </option>
   </component>
@@ -463,7 +459,19 @@
       <option name="project" value="LOCAL" />
       <updated>1461943788293</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="course Registrtion 100">
+      <created>1462117547641</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1462117547641</updated>
+    </task>
+    <task id="LOCAL-00023" summary="course Registrtion 100">
+      <created>1462117600143</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1462117600143</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -478,6 +486,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -488,7 +497,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -515,7 +523,8 @@
     <MESSAGE value="quality of life changes to StudentMgmt" />
     <MESSAGE value="prerequisite" />
     <MESSAGE value="code linting" />
-    <option name="LAST_COMMIT_MESSAGE" value="code linting" />
+    <MESSAGE value="course Registrtion 100" />
+    <option name="LAST_COMMIT_MESSAGE" value="course Registrtion 100" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -886,7 +895,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/CourseRegistrationCompleteController.js">
+    <entry file="file://$PROJECT_DIR$/src/app/courseRegistration/courseRegistrationCompleteController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="584">
           <caret line="6" column="87" selection-start-line="6" selection-start-column="87" selection-end-line="6" selection-end-column="87" />
