@@ -4,7 +4,7 @@
 angular.module('fuoPortal')
     .factory("AcademicAffair",function(Host,$http,$q,lodash){
         function getAll(){
-            return $http.get(Host.host+'/academicAffair/academicAffair.php')
+            return $http.get(Host.host+'/academicAffairMgmt/academicAffairMgmt.php')
                 .then(function(response){
                     return response.data;
                 })
@@ -13,7 +13,7 @@ angular.module('fuoPortal')
                 });
         }
         function getOne(id){
-            return $http.get(Host.host+'/academicAffair/academicAffair.php')
+            return $http.get(Host.host+'/academicAffairMgmt/academicAffairMgmt.php')
                 .then(function(response){
                     return lodash.find(response.data,{'id':id});
                 })
@@ -24,7 +24,7 @@ angular.module('fuoPortal')
         function add(firstName,middleName,lastName,email,password){
             return $http({
                 method: 'POST',
-                url: Host.host+'/academicAffair/add.php',
+                url: Host.host+'/academicAffairMgmt/add.php',
                 params:{
                     firstName: firstName,
                     middleName: middleName,
@@ -43,7 +43,7 @@ angular.module('fuoPortal')
         function edit(id,firstName,middleName,lastName,email,password) {
             return $http({
                 method: 'POST',
-                url: Host.host + '/academicAffair/edit.php',
+                url: Host.host + '/academicAffairMgmt/edit.php',
                 params: {
                     id: id,
                     firstName: firstName,
@@ -63,7 +63,7 @@ angular.module('fuoPortal')
         function remove(id) {
             return $http({
                 method: 'POST',
-                url: Host.host + '/academicAffair/delete.php',
+                url: Host.host + '/academicAffairMgmt/delete.php',
                 params: {
                     id: id
                 }

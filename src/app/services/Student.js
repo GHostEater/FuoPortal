@@ -21,7 +21,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(matricNo,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address){
+        function add(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session){
             return $http({
                 method: 'POST',
                 url: Host.host+'/student/add.php',
@@ -30,15 +30,23 @@ angular.module('fuoPortal')
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
+                    sex: sex,
+                    email: email,
+                    phoneNumber: phoneNumber,
+                    dateBirth: dateBirth,
+                    nationality: nationality,
+                    stateOrigin: stateOrigin,
+                    lga: lga,
+                    religion: religion,
+                    address: address,
+                    nextOfKin: nextOfKin,
+                    nextOfKinAddress: nextOfKinAddress,
                     collegeId: collegeId,
                     departmentId: departmentId,
                     majorId: majorId,
-                    level: level,
-                    mode_of_entry: mode_of_entry,
-                    session: session,
-                    dateBirth: dateBirth,
-                    email: email,
-                    address: address
+                    levelId: levelId,
+                    mode_of_entryId: modeOfEntryId,
+                    session: session
                 }
             })
                 .then(function(response){
@@ -48,7 +56,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(matricNo,firstName,middleName,lastName,collegeId,departmentId,majorId,level,mode_of_entry,session,dateBirth,email,address) {
+        function edit(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/student/edit.php',
@@ -57,16 +65,23 @@ angular.module('fuoPortal')
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
+                    sex: sex,
+                    email: email,
+                    phoneNumber: phoneNumber,
+                    dateBirth: dateBirth,
+                    nationality: nationality,
+                    stateOrigin: stateOrigin,
+                    lga: lga,
+                    religion: religion,
+                    address: address,
+                    nextOfKin: nextOfKin,
+                    nextOfKinAddress: nextOfKinAddress,
                     collegeId: collegeId,
                     departmentId: departmentId,
                     majorId: majorId,
-                    level: level,
-                    mode_of_entry: mode_of_entry,
-                    session: session,
-                    dateBirth: dateBirth,
-                    email: email,
-                    address: address
-
+                    levelId: levelId,
+                    mode_of_entryId: modeOfEntryId,
+                    session: session
                 }
             })
                 .then(function(response){

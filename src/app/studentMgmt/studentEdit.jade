@@ -5,66 +5,73 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 Matric No
-            .col-sm-10
-                input.form-control(type="text" name="matricNo" required ng-model="model.student.matricNo")
+            .col-sm-4
+                input.form-control(type="text" name="matricNo" required ng-model="model.student.matricNo" placeholder="Matric Number")
         .form-group
-            label.control-label.col-sm-2 First Name
-            .col-sm-10
-                input.form-control(type="text" name="firstName" required ng-model="model.student.firstName")
+            .col-sm-3
+                input.form-control(type="text" name="firstName" required ng-model="model.student.firstName" placeholder="First Name")
+            .col-sm-3
+                input.form-control(type="text" name="middleName" required ng-model="model.student.middleName" placeholder="Middle Name")
+            .col-sm-3
+                input.form-control(type="text" name="lastName" required ng-model="model.student.lastName" placeholder="Surname")
         .form-group
-            label.control-label.col-sm-2 Middle Name
             .col-sm-10
-                input.form-control(type="text" name="middleName" required ng-model="model.student.middleName")
+                select.form-control(name="sex" required ng-model="model.student.sex")
+                    option(value="") Select Sex
+                    option(value="Male") Male
+                    option(value="Female") Female
         .form-group
-            label.control-label.col-sm-2 Last Name
-            .col-sm-10
-                input.form-control(type="text" name="lastName" required ng-model="model.student.lastName")
+            .col-sm-6
+                input.form-control(type="email" name="email" required ng-model="model.student.email" placeholder="E-mail")
+            .col-sm-6
+                input.form-control(type="number" name="phoneNumber" required ng-model="model.student.phoneNumber" placeholder="Phone Number")
         .form-group
-            label.control-label.col-sm-2 College
             .col-sm-10
-                select.form-control( name="collegeId" required ng-model="model.student.collegeId")
-                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
+                input.form-control(type="date" name="dateBirth" required ng-model="model.student.dateBirth" placeholder="Date of Birth")
         .form-group
-            label.control-label.col-sm-2 Department
+            .col-sm-4
+                input.form-control(type="text" name="nationality" required ng-model="model.student.nationality" placeholder="Nationality")
+            .col-sm-4
+                input.form-control(type="text" name="stateOrigin" required ng-model="model.student.stateOrigin" placeholder="State Of Origin")
+            .col-sm-4
+                input.form-control(type="text" name="lga" required ng-model="model.student.lga" placeholder="Local Government Area")
+        .form-group
             .col-sm-10
-                select.form-control( name="departmentId" required ng-model="model.student.departmentId")
+                input.form-control(type="text" name="religion" required ng-model="model.student.religion" placeholder="Religion")
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="address" required ng-model="model.student.address" placeholder="Address")
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="nextOfKin" required ng-model="model.student.nextOfKin" placeholder="Next of Kin")
+            .col-sm-10
+                input.form-control(type="text" name="nextOfKinAddress" required ng-model="model.student.nextOfKinAddress" placeholder="Next of Kin Address")
+        .form-group
+            .col-sm-10
+                select.form-control(name="collegeId" required ng-model="model.student.collegeId")
+                    option(value="") Select College
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
+        .form-group
+            .col-sm-4
+                select.form-control(name="departmentId" required ng-model="model.student.departmentId")
+                    option(value="") Select Department
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
-        .form-group
-            label.control-label.col-sm-2 Major
-            .col-sm-10
-                select.form-control( name="majorId" required ng-model="model.student.majorId")
+            .col-sm-4
+                select.form-control(name="majorId" required ng-model="model.student.majorId")
+                    option(value="") Select Major
                     option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
-        .form-group
-            label.control-label.col-sm-2 Level
-            .col-sm-10
-                select.form-control( name="levelId" required ng-model="model.student.levelId")
+            .col-sm-4
+                select.form-control(name="levelId" required ng-model="model.student.levelId")
+                    option(value="") Select Level
                     option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
         .form-group
-            label.control-label.col-sm-2 Mode of Entry
             .col-sm-10
-                select.form-control( name="modeOfEntryId" required ng-model="model.student.modeOfEntryId")
+                select.form-control(name="modeOfEntryId" required ng-model="model.student.modeOfEntryId")
+                    option(value="") Select Mode of Entry
                     option(ng-repeat="modeOfEntry in model.modeOfEntries" value="{{modeOfEntry.id}}") {{modeOfEntry.modeOfEntry}}
         .form-group
-            label.control-label.col-sm-2 Session
             .col-sm-10
-                input.form-control(type="text" name="session" required ng-model="model.student.session")
-        .form-group
-            label.control-label.col-sm-2 Date of Birth
-            .col-sm-10
-                input.form-control(type="text" name="dateBirth" required ng-model="model.student.dateBirth")
-        .form-group
-            label.control-label.col-sm-2 E-mail
-            .col-sm-10
-                input.form-control(type="text" name="email" required ng-model="model.student.email")
-        .form-group
-            label.control-label.col-sm-2 Address
-            .col-sm-10
-                input.form-control(type="text" name="address" required ng-model="model.student.address")
-        .form-group
-            label.control-label.col-sm-2 Password
-            .col-sm-10
-                input.form-control(type="password" name="password" required ng-model="model.student.password")
+                input.form-control(type="password" name="password" required ng-model="model.student.password" placeholder="Password")
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel
