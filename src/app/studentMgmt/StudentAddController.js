@@ -13,7 +13,9 @@
             vm.modeOfEntry = '';
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Student.add(vm.matricNo,vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.departmentId,vm.majorId,vm.level,vm.mode_of_entry,vm.session,vm.dateBirth,vm.email,vm.address,vm.password)
+                    Student.add(vm.matricNo,vm.firstName,vm.middleName,vm.lastName,vm.sex,vm.email,vm.phoneNumber,vm.dateBirth,
+                        vm.nationality,vm.stateOrigin,vm.lga,vm.religion,vm.address,vm.nextOfKin,vm.nextOfKinAddress,vm.collegeId,
+                        vm.departmentId,vm.majorId,vm.levelId,vm.modeOfEntryId,vm.session,vm.password)
                         .then(function(){
                             toastr.success("Student Added");
                             $modalInstance.close();

@@ -1,5 +1,5 @@
 /**
- * Created by GHostEater on 29-Apr-16.
+ * Created by Bello J on 4/27/2016.
  */
 (function () {
     'use strict';
@@ -11,11 +11,11 @@
                 if(vm.form.$valid){
                     LecturerRank.add(vm.rank)
                         .then(function(){
-                            toastr.success("Lecturer Rank Added");
+                            toastr.success("LecturerRank Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Lecturer Rank");
+                            toastr.error("Unable to Add LecturerRank");
                         });
                 }
                 else{

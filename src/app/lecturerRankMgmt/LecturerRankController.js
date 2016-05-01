@@ -1,10 +1,10 @@
 /**
- * Created by GHostEater on 29-Apr-16.
+ * Created by Bello J on 4/27/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("LecturerRankController",function(LecturerRank,toastr,$modal){
+        .controller("LecturerRankController",function(toastr,$modal,LecturerRank){
             var vm = this;
             vm.add = add;
             vm.edit = edit;
@@ -16,7 +16,6 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-
             function add(){
                 var options = {
                     templateUrl: 'app/lecturerRankMgmt/lecturerRankAdd.html',
@@ -28,7 +27,7 @@
                     .then(function(){
                         LecturerRank.getAll()
                             .then(function(data){
-                                vm.lecturerRanks = data;
+                                vm.lecturerRank = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
@@ -74,7 +73,7 @@
                     .then(function(){
                         LecturerRank.getAll()
                             .then(function(data){
-                                vm.lecturerRanks = data;
+                                vm.LecturerRank = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
