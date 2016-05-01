@@ -1,4 +1,42 @@
 //
    Created by GHostEater on 27-Apr-16.
+div(ng-controller="CourseRegisterController as model")
+    .col-sm-4
+        .panel.panel-primary
+            .panel-heading Selected Courses
+            .panel-body
+                .col-sm-4.col-sm-offset-8
+                    span Total Units: {{model.counter}}
+                table.table.table-striped.table-condensed
+                    thead
+                        th Course Code
+                        th Unit
+                        th Action
+                    tbody
+                        tr(ng-repeat="reg in model.regs")
+                            td {{reg.code}}
+                            td {{reg.unit}}
+                            td
+                                button.btn.btn-danger(ng-click="model.removeCourse(reg.code,reg.unit)") Remove
+            .panel-footer
+                button(ng-show="model.counter >= 15" ng-click="model.submitCourseForm()").btn.btn-primary Submit Course Form
 
-h3 Course Registration
+    .col-sm-8
+        .panel.panel-primary
+            .panel-heading Course Registration
+            .panel-body
+                table.table.table-striped.table-condensed
+                    thead
+                        th Course Code
+                        th Course Title
+                        th Unit
+                        th Type
+                        th Actions
+                    tbody
+                        tr(ng-repeat="course in model.courses | orderBy: '+code' | filter: {majorId: model.student.majorId, levelId: model.student.levelId, semester: model.semester.semester}")
+                            td {{course.code}}
+                            td {{course.title}}
+                            td {{course.unit}}
+                            td {{course.type}}
+                            td
+                                button.btn.btn-success(ng-click="model.addCourse(course.code,course.unit,model.student.matricNo,model.student.levelId,model.semester.semester,model.session.id)") Add
