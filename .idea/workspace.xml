@@ -4,31 +4,9 @@
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankAddController.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/AcademicAffair.js" afterPath="$PROJECT_DIR$/src/app/services/AcademicAffair.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankAddController.js" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankAddController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankController.js" afterPath="$PROJECT_DIR$/src/app/lecturerRankMgmt/LecturerRankController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Student.js" afterPath="$PROJECT_DIR$/src/app/services/Student.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" afterPath="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/StudentEditController.js" afterPath="$PROJECT_DIR$/src/app/studentMgmt/StudentEditController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffair.jade" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffair.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairEdit.jade" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairEdit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hod.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hod.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodAdd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodDelete.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodDelete.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/index.css" afterPath="$PROJECT_DIR$/.tmp/serve/app/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerAdd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/levelMgmt/level.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/levelMgmt/level.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/student.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/student.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/studentAdd.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/studentAdd.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/studentEdit.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/studentEdit.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -57,8 +35,18 @@
       <file leaf-file-name="Student.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/services/Student.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2772021" vertical-offset="1479" max-vertical-offset="2057">
-              <caret line="58" column="225" selection-start-line="58" selection-start-column="225" selection-end-line="58" selection-end-column="225" />
+            <state vertical-scroll-proportion="2.0699482" vertical-offset="0" max-vertical-offset="2057">
+              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Session.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/services/Session.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,7 +75,7 @@
       <file leaf-file-name="StudentController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/StudentController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="1938">
+            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1938">
               <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
               <folding />
             </state>
@@ -266,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="studentMgmt" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,7 +438,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461761688753</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="commit">
+      <created>1462108047245</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1462108047245</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -465,6 +459,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -475,7 +470,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -510,13 +504,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/majorMgmt/MajorControllerAdd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5728643" vertical-offset="27" max-vertical-offset="493">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/hodMgmt/HodController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="639" max-vertical-offset="1513">
@@ -853,14 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/StudentController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="1938">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/studentDeleteController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
@@ -869,10 +848,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/Session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/studentMgmt/StudentController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="1938">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/Student.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2772021" vertical-offset="1479" max-vertical-offset="2057">
-          <caret line="58" column="225" selection-start-line="58" selection-start-column="225" selection-end-line="58" selection-end-column="225" />
+        <state vertical-scroll-proportion="2.0699482" vertical-offset="0" max-vertical-offset="2057">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
           <folding />
         </state>
       </provider>

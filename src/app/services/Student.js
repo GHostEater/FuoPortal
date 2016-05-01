@@ -45,7 +45,7 @@ angular.module('fuoPortal')
                     departmentId: departmentId,
                     majorId: majorId,
                     levelId: levelId,
-                    mode_of_entryId: modeOfEntryId,
+                    modeOfEntryId: modeOfEntryId,
                     session: session
                 }
             })
@@ -80,7 +80,7 @@ angular.module('fuoPortal')
                     departmentId: departmentId,
                     majorId: majorId,
                     levelId: levelId,
-                    mode_of_entryId: modeOfEntryId,
+                    modeOfEntryId: modeOfEntryId,
                     session: session
                 }
             })
