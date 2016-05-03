@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .factory("CourseReg",function($http,$q,Host){
+        .factory("CourseReg",function($http,$q,Host,lodash){
             function getCourses(){
                 return $http.get(Host.host+'/courseRegistration/registrableCourses.php')
                     .then(function(response){
@@ -14,7 +14,7 @@
                         return $q.reject(response.status);
                     });
             }
-            function registerCourse(code,matricNo,levelId,semesterId,sessionId){
+            function registerCourse(code,matricNo,levelId,semester,sessionId){
                 return $http({
                     method: 'POST',
                     url: Host.host+'/courseRegistration/register.php',
@@ -22,7 +22,7 @@
                         code: code,
                         matricNo: matricNo,
                         levelId: levelId,
-                        semesterId: semesterId,
+                        semester: semester,
                         sessionId: sessionId
                     }
                 })
@@ -33,10 +33,19 @@
                         return $q.reject(response.status);
                     });
             }
-            function getRegisterredCourses(){
+            function getRegisterredCourses(matricNo,semester,sessionId){
                 return $http.get(Host.host+'/courseRegistration/registerredCourses.php')
                     .then(function(response){
-                        return response.data;
+                        return lodash.filter(response.data,{matricNo: matricNo, semester: semester, sessionId: sessionId})
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
+            function getRegisterredStudents(code,semester,sessionId){
+                return $http.get(Host.host+'/courseRegistration/registerredCourses.php')
+                    .then(function(response){
+                        return lodash.filter(response.data,{code: code, semester: semester, sessionId: sessionId})
                     })
                     .catch(function(response){
                         return $q.reject(response.status);
@@ -45,7 +54,8 @@
             return{
                 getCourses: getCourses,
                 registerCourse: registerCourse,
-                getRegisterredCourses: getRegisterredCourses
+                getRegisterredCourses: getRegisterredCourses,
+                getRegisterredStudents: getRegisterredStudents
             }
         });
 })();

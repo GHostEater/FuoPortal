@@ -1,0 +1,25 @@
+//Created by GHostEater on 03-May-16.
+div(ng-controller="CourseDetailsController as model")
+    .panel.panel-primary
+        .panel-heading Course Details for {{model.course.code}} {{model.course.title}}
+        .panel-body
+            h4 Registerred Students
+            table.table.table-bordered.table-striped
+                thead
+                    th S/N
+                    th Matric No
+                    th Name
+                    th.text-center(colspan="4") Results
+                    tr
+                        th
+                        th
+                        th
+                        th CA
+                        th Exam
+                        th Final Score
+                        th Grade
+                tbody
+                    tr(ng-repeat="(key,student) in model.students")
+                        td {{key+1}}
+                        td {{student.matricNo}}
+                        td {{student.lastName}}, {{student.firstName}} {{student.middleName}}

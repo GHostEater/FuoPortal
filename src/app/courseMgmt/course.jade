@@ -25,8 +25,8 @@ div(ng-controller="CourseController as model")
                     td {{course.unit}}
                     td {{course.type}}
                     td
-                        span(ng-show="course.semesterId == 1") 1st Semester
-                        span(ng-show="course.semesterId == 2") 2nd Semester
+                        span(ng-show="course.semester == 1") 1st Semester
+                        span(ng-show="course.semester == 2") 2nd Semester
                     td
                         div.sm-content(ng-repeat="pre in model.pres | orderBy: '+code' | filter: {code: course.code}")
                             small.text-success(ng-show="pre.active == 1") Active &nbsp

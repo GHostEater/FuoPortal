@@ -4,13 +4,35 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("HodAllocationController",function(Allocation,User,toastr,$modal){
+        .controller("HodAllocationController",function(Allocation,Lecturer,Session,Semester,lodash,User,toastr,$modal){
             var vm = this;
             vm.allocate = allocate;
             vm.remove = remove;
             Allocation.getMyAllocations(User.profile.id)
                 .then(function(data){
                     vm.allocations = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Lecturer.getOne(User.profile.id)
+                .then(function(data){
+                    vm.lecturer = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Session.getAll()
+                .then(function(data){
+                    vm.sessions = data;
+                    vm.session = lodash.findLast(data);
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Semester.get()
+                .then(function(data){
+                    vm.semester = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

@@ -40,13 +40,13 @@
                     toastr.warning("Could Not Connect");
                 });
 
-            function addCourse(code,unit,matricNo,levelId,semesterId,sessionId){
+            function addCourse(code,unit,matricNo,levelId,semester,sessionId){
                 var course = {
                     code: code,
                     unit: unit,
                     matricNo: matricNo,
                     levelId: levelId,
-                    semesterId: semesterId,
+                    semester: semester,
                     sessionId: sessionId
                 };
                 vm.counter += Number(unit);
@@ -74,7 +74,7 @@
             function submitCourseForm(){
                 if(vm.counter >= 15 && vm.counter <= 24){
                     for(var i=0; i < vm.regs.length; i++){
-                        CourseReg.registerCourse(vm.regs[i].code,vm.regs[i].matricNo,vm.regs[i].levelId,vm.regs[i].semesterId,vm.regs[i].sessionId)
+                        CourseReg.registerCourse(vm.regs[i].code,vm.regs[i].matricNo,vm.regs[i].levelId,vm.regs[i].semester,vm.regs[i].sessionId)
                             .then(function(){})
                             .catch(function(){toastr.error("Unable to Register Course");});
                     }

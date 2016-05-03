@@ -12,9 +12,7 @@
         <th>Course Code</th>
         <th>Course Title</th>
         <th>Unit</th>
-        <th>Semester</th>
         <th>Level</th>
-        <th>Prerequisite</th>
         <th>Actions</th>
       </thead>
       <tbody>
@@ -23,13 +21,8 @@
           <td>{{allocation.code}}</td>
           <td>{{allocation.title}}</td>
           <td>{{allocation.unit}}</td>
-          <td><span ng-show="allocation.semesterId == 1">1st Semester</span><span ng-show="allocation.semesterId == 2">2nd Semester</span></td>
           <td>{{allocation.level}}</td>
-          <td>{{allocation.prerequisiteFor}}</td>
-          <td>
-            <!-- TODO After Course Registration-->
-            <button class="btn btn-primary">View Details</button>
-          </td>
+          <td><a href="#/courseDetails/{{allocation.code}}" class="btn btn-primary">View Details</a></td>
         </tr>
       </tbody>
     </table>

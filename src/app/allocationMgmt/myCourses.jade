@@ -10,9 +10,7 @@ div(ng-controller="MyCoursesController as model")
                 th Course Code
                 th Course Title
                 th Unit
-                th Semester
                 th Level
-                th Prerequisite
                 th Actions
             tbody
                 tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter: model.searchTerm")
@@ -20,11 +18,6 @@ div(ng-controller="MyCoursesController as model")
                     td {{allocation.code}}
                     td {{allocation.title}}
                     td {{allocation.unit}}
-                    td
-                        span(ng-show="allocation.semesterId == 1") 1st Semester
-                        span(ng-show="allocation.semesterId == 2") 2nd Semester
                     td {{allocation.level}}
-                    td {{allocation.prerequisiteFor}}
                     td
-                        // TODO After Course Registration
-                        button.btn.btn-primary View Details
+                        a(href="#/courseDetails/{{allocation.code}}").btn.btn-primary View Details

@@ -28,7 +28,7 @@
           <td>{{course.title}}</td>
           <td>{{course.unit}}</td>
           <td>{{course.type}}</td>
-          <td><span ng-show="course.semesterId == 1">1st Semester</span><span ng-show="course.semesterId == 2">2nd Semester</span></td>
+          <td><span ng-show="course.semester == 1">1st Semester</span><span ng-show="course.semester == 2">2nd Semester</span></td>
           <td>
             <div ng-repeat="pre in model.pres | orderBy: '+code' | filter: {code: course.code}" class="sm-content"><small ng-show="pre.active == 1" class="text-success">Active &nbsp</small><small ng-show="pre.active == 0" class="text-danger">Inactive &nbsp</small><span>{{pre.prerequisite}}</span>
               <button ng-click="model.changeStatus(pre.id,pre.active)" class="btn btn-warning btn-sm">Change Status</button>

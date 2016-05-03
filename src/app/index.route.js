@@ -9,6 +9,7 @@
     $stateProvider
         .state('login',{url:'/',templateUrl:'app/login.html'})
         .state('home',{url:'/home',templateUrl:'app/home.html'})
+
         .state('co',{url:'/sysMgmt/co',templateUrl:'app/coMgmt/co.html'})
         .state('hod',{url:'/sysMgmt/hod',templateUrl:'app/hodMgmt/hod.html'})
         .state('student',{url:'/sysMgmt/student',templateUrl:'app/studentMgmt/student.html'})
@@ -23,9 +24,13 @@
         .state('modeOfEntry',{url:'/sysMgmt/modeOfEntry',templateUrl:'app/modeOfEntryMgmt/modeOfEntry.html'})
         .state('session',{url:'/sysMgmt/session',templateUrl:'app/sessionMgmt/session.html'})
         .state('level',{url:'/sysMgmt/level',templateUrl:'app/levelMgmt/level.html'})
+
         .state('myCourses',{url:'/MyCourses',templateUrl:'app/allocationMgmt/myCourses.html'})
         .state('courseAllocation',{url:'/CourseAllocation',templateUrl:'app/allocationMgmt/hodAllocation.html'})
-        .state('courseRegistration',{url:'/student/courseRegistration',templateUrl:'app/courseRegistration/courseRegister.html'});
+        .state('courseDetails',{url:'/courseDetails/:code',templateUrl:'app/allocationMgmt/courseDetails.html'})
+
+        .state('courseRegistration',{url:'/student/courseRegistration',templateUrl:'app/courseRegistration/courseRegister.html'})
+        .state('courseSlip',{url:'/student/courseSlip',templateUrl:'app/courseRegistration/courseSlip.html'});
 
     $urlRouterProvider.otherwise('/');
   }

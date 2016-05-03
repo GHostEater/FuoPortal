@@ -4,31 +4,44 @@ div(ng-controller="HodAllocationController as model")
     .col-sm-12
         .row.content
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.allocate()") Allocate Course
-        form.content.col-sm-4
-            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        .row
+            .col-sm-4
+                select.form-control(ng-model="model.sess.id")
+                    option(ng-repeat="sess in model.sessions" value="{{sess.id}}") {{sess.session}}
+            .col-sm-4
+                select.form-control(ng-model="model.semester.semester")
+                    option(value="1") 1st Semester
+                    option(value="2") 2nd Semester
+        .row
+            .col-sm-1
+                img(src="img/logo.png")
+            .col-sm-11.text-center
+                h2 FOUNTAIN UNIVERSITY, OSOGBO
+                h3 (University of Nasrul-Lahi-Il-Fatih Society)
+                h4 {{model.lecturer.college}}
+        .row
+            span.col-sm-4 Session: {{model.sess.session}}
+            span.col-sm-4.col-sm-offset-4 Semester: {{model.semester.semester}}
+                span(ng-show="model.semester.semester == 1") st Semester
+                span(ng-show="model.semester.semester == 2") nd Semester
+        span.row Department: {{model.lecturer.department}}
         table.table.table-striped.table-bordered
             thead
                 th S/N
                 th Course Code
                 th Course Title
                 th Unit
-                th Semester
                 th Level
-                th Prerequisite
                 th Lecturer
                 th Actions
             tbody
-                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter: model.searchTerm")
+                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.sess.id,semester:model.semester.semester}")
                     td {{key +1 }}
                     td {{allocation.code}}
                     td {{allocation.title}}
                     td {{allocation.unit}}
-                    td
-                        span(ng-show="allocation.semesterId == 1") 1st Semester
-                        span(ng-show="allocation.semesterId == 2") 2nd Semester
                     td {{allocation.level}}
-                    td {{allocation.prerequisiteFor}}
                     td {{allocation.lastName}}, {{allocation.firstName}} {{allocation.middleName}}
                     td
-                        button.btn.btn-primary View Details
+                        a(href="#/courseDetails/{{allocation.code}}").btn.btn-primary View Details
                         button.btn.btn-danger(ng-click="model.remove(allocation.id)") Delete

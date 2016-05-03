@@ -52,6 +52,8 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                             a(ui-sref="student") Student Management
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 5")
                     a(ui-sref="courseRegistration") Course Registration
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 5")
+                    a(ui-sref="courseSlip") Course Slip
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4")
                     a(ui-sref="myCourses") My Courses
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
