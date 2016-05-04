@@ -29,5 +29,6 @@ div(ng-controller="StudentController as model")
                     td {{student.email}}
                     td
                         button.btn.btn-primary(ng-click="model.view(student.matricNo)") View Details
+                        button.btn.btn-primary(ng-click="model.uploadImg(student.matricNo)") Upload Image
                         button.btn.btn-warning(ng-click="model.edit(student.matricNo)") Edit
                         button.btn.btn-danger(ng-click="model.remove(student.matricNo)") Delete

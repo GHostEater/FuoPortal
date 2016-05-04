@@ -1,0 +1,12 @@
+//Created by GHostEater on 04-May-16.
+.modal-header
+    h3.modal-title Upload Student Image
+.modal-body
+    form
+        .form-group
+            label.control-label.col-sm-2 Photo:
+            .col-sm-10
+                input.form-control(type="file" name="name" ng-file-select ng-model="model.file")
+.modal-footer
+    button.btn.btn-danger(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

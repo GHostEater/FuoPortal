@@ -8,6 +8,7 @@
             var vm = this;
             vm.view = view;
             vm.add = add;
+            vm.uploadImg = uploadImg;
             vm.edit = edit;
             vm.remove = remove;
             Student.getAll()
@@ -63,6 +64,29 @@
                 var options = {
                     templateUrl: 'app/studentMgmt/studentEdit.html',
                     controller: "StudentEditController",
+                    controllerAs: 'model',
+                    size: 'lg',
+                    resolve:{
+                        matricNo: function(){
+                            return matricNo;
+                        }
+                    }
+                };
+                $modal.open(options).result
+                    .then(function(){
+                        Student.getAll()
+                            .then(function(data){
+                                vm.students = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
+                            });
+                    });
+            }
+            function uploadImg(matricNo){
+                var options = {
+                    templateUrl: 'app/studentMgmt/studentUploadImg.html',
+                    controller: "StudentUploadImgController",
                     controllerAs: 'model',
                     size: 'lg',
                     resolve:{

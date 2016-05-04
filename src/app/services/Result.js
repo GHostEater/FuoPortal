@@ -21,6 +21,34 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
+        function getForCourse(code,sessionId,semester){
+            return $http.get(Host.host+'/result/result.php')
+                .then(function(response){
+                    return lodash.filter(response.data,{'code':code,sessionId:sessionId,semester:semester});
+                })
+                .catch(function(response){
+                    return $q.reject(response.status);
+                });
+        }
+        function uploadCA(code,matricNo,ca,sessionId,semester){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/result/addCA.php',
+                params:{
+                    code: code,
+                    matricNo: matricNo,
+                    ca: ca,
+                    sessionId: sessionId,
+                    semester: semester
+                }
+            })
+                .then(function(response){
+                    return response.status;
+                })
+                .catch(function(response){
+                    return $q.reject(response.status);
+                });
+        }
         function add(code,matricNo,ca,exam,final,grade,session,semester){
             return $http({
                 method: 'POST',
@@ -84,6 +112,8 @@ angular.module('fuoPortal')
         return{
             getAll: getAll,
             getOne: getOne,
+            getForCourse: getForCourse,
+            uploadCA: uploadCA,
             add: add,
             edit: edit,
             remove: remove

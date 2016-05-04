@@ -3,7 +3,7 @@ div(ng-controller="CourseDetailsController as model")
     .panel.panel-primary
         .panel-heading Course Details for {{model.course.code}} {{model.course.title}}
         .panel-body
-            h4 Registerred Students
+            h4 Registerred Students {{model.datas}}
             table.table.table-bordered.table-striped
                 thead
                     th S/N
@@ -19,7 +19,30 @@ div(ng-controller="CourseDetailsController as model")
                         th Final Score
                         th Grade
                 tbody
-                    tr(ng-repeat="(key,student) in model.students")
+                    tr(ng-repeat="(key,student) in model.students | orderBy: '+matricNo'")
                         td {{key+1}}
-                        td {{student.matricNo}}
-                        td {{student.lastName}}, {{student.firstName}} {{student.middleName}}
+                        td {{student.info.matricNo}}
+                        td {{student.info.lastName}}, {{student.info.firstName}} {{student.info.middleName}}
+                        td {{student.result.ca}}
+                        td {{student.result.exam}}
+                        td {{student.result.final}}
+                        td {{student.result.grade}}
+        .panel-footer.hidden-print
+            .row.content
+                csv-upload.col-sm-2(ng-model="model.ca")
+                button.col-sm-2.btn.btn-primary(ng-click="model.uploadCA()") Upload CA
+            .row.content
+                input.col-sm-2(type="file")
+                button.col-sm-2.btn.btn-primary Upload Exam
+            .row.content(ng-show="model.errorCA")
+                .panel.panel-danger
+                    .panel-heading Unregisterred Students
+                    .panel-body
+                        table.table.table-striped
+                            thead
+                                th Matric No
+                                th Score
+                            tbody
+                                tr(ng-repeat="err in model.errorCA")
+                                    td {{err.matricNo}}
+                                    td {{err.score}}
