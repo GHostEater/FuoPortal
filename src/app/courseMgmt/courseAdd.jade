@@ -37,11 +37,6 @@
             .col-sm-10
                 select.form-control(name="departmentId" required ng-model="model.departmentId")
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
-        .form-group
-            label.control-label.col-sm-2 Major
-            .col-sm-10
-                select.form-control(name="majorId" required ng-model="model.majorId")
-                    option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

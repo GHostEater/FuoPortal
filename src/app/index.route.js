@@ -21,6 +21,7 @@
         .state('department',{url:'/sysMgmt/department',templateUrl:'app/departmentMgmt/department.html'})
         .state('major',{url:'/sysMgmt/major',templateUrl:'app/majorMgmt/major.html'})
         .state('course',{url:'/sysMgmt/course',templateUrl:'app/courseMgmt/course.html'})
+        .state('courseToMajor',{url:'/sysMgmt/courseToMajor',templateUrl:'app/courseMgmt/courseToMajor.html'})
         .state('modeOfEntry',{url:'/sysMgmt/modeOfEntry',templateUrl:'app/modeOfEntryMgmt/modeOfEntry.html'})
         .state('session',{url:'/sysMgmt/session',templateUrl:'app/sessionMgmt/session.html'})
         .state('level',{url:'/sysMgmt/level',templateUrl:'app/levelMgmt/level.html'})

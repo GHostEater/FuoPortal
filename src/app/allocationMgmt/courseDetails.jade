@@ -32,17 +32,5 @@ div(ng-controller="CourseDetailsController as model")
                 csv-upload.col-sm-2(ng-model="model.ca")
                 button.col-sm-2.btn.btn-primary(ng-click="model.uploadCA()") Upload CA
             .row.content
-                input.col-sm-2(type="file")
-                button.col-sm-2.btn.btn-primary Upload Exam
-            .row.content(ng-show="model.errorCA")
-                .panel.panel-danger
-                    .panel-heading Unregisterred Students
-                    .panel-body
-                        table.table.table-striped
-                            thead
-                                th Matric No
-                                th Score
-                            tbody
-                                tr(ng-repeat="err in model.errorCA")
-                                    td {{err.matricNo}}
-                                    td {{err.score}}
+                csv-upload.col-sm-2(ng-model="model.exam")
+                button.col-sm-2.btn.btn-primary(ng-click="model.uploadExam()") Upload Exam

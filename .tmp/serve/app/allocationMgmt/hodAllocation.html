@@ -8,8 +8,8 @@
     </div>
     <div class="row hidden-print">
       <div class="col-sm-4">
-        <select ng-model="model.sess.id" class="form-control">
-          <option ng-repeat="sess in model.sessions" value="{{sess.id}}">{{sess.session}}</option>
+        <select ng-model="model.sess" ng-change="model.changeSession(model.sess)" class="form-control">
+          <option ng-repeat="session in model.sessions" value="{{session.id}}">{{session.session}}</option>
         </select>
       </div>
       <div class="col-sm-4">
@@ -19,7 +19,7 @@
         </select>
       </div>
     </div>
-    <div class="row">
+    <div class="row visible-print">
       <div class="col-sm-12"><img src="img/logo.png" class="center-block"></div>
       <div class="col-sm-12 text-center">
         <h2>FOUNTAIN UNIVERSITY, OSOGBO</h2>
@@ -39,7 +39,7 @@
         <th class="hidden-print">Actions</th>
       </thead>
       <tbody>
-        <tr ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.sess.id,semester:model.semester.semester}">
+        <tr ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.session.id,semester:model.semester.semester}">
           <td>{{key +1 }}</td>
           <td>{{allocation.code}}</td>
           <td>{{allocation.title}}</td>

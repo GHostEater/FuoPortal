@@ -6,13 +6,13 @@ div(ng-controller="HodAllocationController as model")
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.allocate()") Allocate Course
         .row.hidden-print
             .col-sm-4
-                select.form-control(ng-model="model.sess.id")
-                    option(ng-repeat="sess in model.sessions" value="{{sess.id}}") {{sess.session}}
+                select.form-control(ng-model="model.sess" ng-change="model.changeSession(model.sess)")
+                    option(ng-repeat="session in model.sessions" value="{{session.id}}") {{session.session}}
             .col-sm-4
                 select.form-control(ng-model="model.semester.semester")
                     option(value="1") 1st Semester
                     option(value="2") 2nd Semester
-        .row
+        .row.visible-print
             .col-sm-12
                 img.center-block(src="img/logo.png")
             .col-sm-12.text-center
@@ -35,7 +35,7 @@ div(ng-controller="HodAllocationController as model")
                 th Lecturer
                 th.hidden-print Actions
             tbody
-                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.sess.id,semester:model.semester.semester}")
+                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.session.id,semester:model.semester.semester}")
                     td {{key +1 }}
                     td {{allocation.code}}
                     td {{allocation.title}}

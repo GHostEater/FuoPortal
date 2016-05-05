@@ -49,6 +49,25 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
+        function uploadExam(code,matricNo,exam,sessionId,semester){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/result/addExam.php',
+                params:{
+                    code: code,
+                    matricNo: matricNo,
+                    exam: exam,
+                    sessionId: sessionId,
+                    semester: semester
+                }
+            })
+                .then(function(response){
+                    return response.status;
+                })
+                .catch(function(response){
+                    return $q.reject(response.status);
+                });
+        }
         function add(code,matricNo,ca,exam,final,grade,session,semester){
             return $http({
                 method: 'POST',
@@ -114,6 +133,7 @@ angular.module('fuoPortal')
             getOne: getOne,
             getForCourse: getForCourse,
             uploadCA: uploadCA,
+            uploadExam: uploadExam,
             add: add,
             edit: edit,
             remove: remove

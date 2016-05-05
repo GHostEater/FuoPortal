@@ -1,0 +1,52 @@
+//Created by GHostEater on 05-May-16.
+div(ng-controller="CourseToMajorController as model")
+    .col-sm-3
+        .panel.panel-primary
+            .panel-heading Major List
+            .panel-body
+                ul.nav.nav-pills.nav-stacked
+                    li.dropdown(ng-repeat="department in model.departments")
+                        a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") {{department.name}}
+                            span.caret
+                        ul.dropdown-menu
+                            li(ng-repeat="major in model.majors | filter:{departmentId:department.id}")
+                                a(ng-click="model.majorSelect(major.id,major.name)") {{major.name}}
+    .col-sm-9(ng-show="model.majorId")
+        .row.content
+            button.btn.btn-primary(ng-click="model.add(model.majorId)") Add Course To {{model.name}}
+        .panel.panel-primary
+            .panel-heading Courses for {{model.name}}
+            .panel-body
+                .panel.panel-info(ng-repeat="level in model.levels")
+                    .panel-heading {{level.level}} Level
+                    .panel-body
+                        h5 1st Semester
+                        .well
+                            table.table.table-striped
+                                thead
+                                    th Course Code
+                                    th Course Title
+                                    th Unit
+                                    th Actions
+                                tbody
+                                    tr(ng-repeat="course in model.courses | orderBy:'+code' | filter:{majorId:model.majorId,levelId:level.id,semester:'1'}")
+                                        td {{course.code}}
+                                        td {{course.title}}
+                                        td {{course.unit}}
+                                        td
+                                            button.btn.btn-danger(ng-click="model.remove(course.id)") Delete
+                        h5 2nd Semester
+                        .well
+                            table.table.table-striped
+                                thead
+                                    th Course Code
+                                    th Course Title
+                                    th Unit
+                                    th Actions
+                                tbody
+                                    tr(ng-repeat="course in model.courses | orderBy:'+code' | filter:{majorId:model.majorId,levelId:level.id,semester:'2'}")
+                                        td {{course.code}}
+                                        td {{course.title}}
+                                        td {{course.unit}}
+                                        td
+                                            button.btn.btn-danger(ng-click="model.remove(course.id)") Delete

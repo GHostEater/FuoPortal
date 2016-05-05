@@ -1,59 +1,64 @@
 /**
- * Created by GHostEater on 23-Apr-16.
+ * Created by GHostEater on 05-May-16.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("HodAllocationController",function(Allocation,Lecturer,Session,Semester,lodash,User,toastr,$modal){
+        .controller("CourseToMajorController",function(CourseReg,Level,Department,Major,toastr,$modal,lodash){
             var vm = this;
-            vm.allocate = allocate;
+            vm.majorSelect = majorSelect;
+            vm.add = add;
             vm.remove = remove;
-            Allocation.getMyAllocations(User.profile.id)
+            Department.getAll()
                 .then(function(data){
-                    vm.allocations = data;
+                    vm.departments = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            Lecturer.getOne(User.profile.id)
+            Major.getAll()
                 .then(function(data){
-                    vm.lecturer = data;
+                    vm.majors = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            Session.getAll()
+            CourseReg.getCourses()
                 .then(function(data){
-                    vm.sessions = data;
-                    vm.session = lodash.findLast(data);
-                    vm.sess = vm.session.id;
+                    vm.courses = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            vm.changeSession = function(id){
-                vm.session = lodash.find(vm.sessions,{id:id});
-            };
-            Semester.get()
+            Level.getAll()
                 .then(function(data){
-                    vm.semester = data;
+                    vm.levels = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
 
-            function allocate(){
+            function majorSelect(majorId,name){
+                vm.majorId = majorId;
+                vm.name = name;
+            }
+            function add(majorId){
                 var options = {
-                    templateUrl: 'app/allocationMgmt/allocate.html',
-                    controller: "AllocateController",
+                    templateUrl: 'app/courseMgmt/courseToMajorAdd.html',
+                    controller: "CourseToMajorAddController",
                     controllerAs: 'model',
-                    size: 'lg'
+                    size: 'lg',
+                    resolve:{
+                        majorId: function(){
+                            return majorId;
+                        }
+                    }
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Allocation.getMyAllocations(User.profile.id)
+                        CourseReg.getCourses()
                             .then(function(data){
-                                vm.allocations = data;
+                                vm.courses = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");
@@ -62,8 +67,8 @@
             }
             function remove(id){
                 var options = {
-                    templateUrl: 'app/allocationMgmt/allocationDelete.html',
-                    controller: "AllocationDeleteController",
+                    templateUrl: 'app/courseMgmt/courseToMajorDelete.html',
+                    controller: "CourseToMajorDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
@@ -74,9 +79,9 @@
                 };
                 $modal.open(options).result
                     .then(function(){
-                        Allocation.getMyAllocations(User.profile.id)
+                        CourseReg.getCourses()
                             .then(function(data){
-                                vm.allocations = data;
+                                vm.courses = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");

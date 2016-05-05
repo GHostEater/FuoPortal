@@ -7,7 +7,6 @@
         .controller("CourseDetailsController",function(Allocation,CourseReg,Result,Student,Session,Semester,User,lodash,toastr,$stateParams){
             var vm = this;
             vm.students = [];
-            vm.errorCA = [];
             Session.getAll()
                 .then(function(data){
                     vm.session = lodash.findLast(data);
@@ -60,17 +59,75 @@
                     Result.uploadCA($stateParams.code,vm.data.matricNo,vm.data.score,vm.session.id,vm.semester.semester)
                         .then(function(){
                             toastr.success("CA Uploaded");
+                            Result.getForCourse($stateParams.code,vm.session.id,vm.semester.semester)
+                                .then(function(data){
+                                    vm.results = data;
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                            CourseReg.getRegisterredStudents($stateParams.code,vm.semester.semester,vm.session.id)
+                                .then(function(data){
+                                    for(var i=0; i<data.length; i++){
+                                        Student.getOne(data[i].matricNo)
+                                            .then(function(data){
+                                                vm.students.push({
+                                                    info: data,
+                                                    result: lodash.find(vm.results,{matricNo:data.matricNo})
+                                                });
+                                            });
+                                    }
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
                         })
                         .catch(function(error){
-                            if(error === 402){
-                                toastr.error("CA for "+vm.data.matricNo+" Already Uploaded");
-                            }
-                            else if(error === 401){
-                                toastr.error("Student "+vm.data.matricNo+" Not Registerred");
-                            }
-                            else{
-                                toastr.warning("Could Not Connect");
-                            }
+                            //if(error === 402){
+                            //    toastr.error("CA for "+vm.data.matricNo+" Already Uploaded");
+                            //}
+                            //else if(error === 401){
+                            //    toastr.error("Student "+vm.data.matricNo+" Not Registerred");
+                            //}
+                            //else{
+                            //    toastr.warning("Could Not Connect");
+                            //}
+                        });
+                }
+            };
+            vm.uploadExam = function(){
+                for(var i = 0; i<(Number(vm.exam.data.length)-1); i++){
+                    vm.data = {
+                        matricNo: vm.exam.data[i][0],
+                        score: vm.exam.data[i][1]
+                    };
+                    Result.uploadExam($stateParams.code,vm.data.matricNo,vm.data.score,vm.session.id,vm.semester.semester)
+                        .then(function(){
+                            toastr.success("Exam Uploaded");
+                            Result.getForCourse($stateParams.code,vm.session.id,vm.semester.semester)
+                                .then(function(data){
+                                    vm.results = data;
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                            CourseReg.getRegisterredStudents($stateParams.code,vm.semester.semester,vm.session.id)
+                                .then(function(data){
+                                    for(var i=0; i<data.length; i++){
+                                        Student.getOne(data[i].matricNo)
+                                            .then(function(data){
+                                                vm.students.push({
+                                                    info: data,
+                                                    result: lodash.find(vm.results,{matricNo:data.matricNo})
+                                                });
+                                            });
+                                    }
+                                })
+                                .catch(function(){
+                                    toastr.warning("Could Not Connect");
+                                });
+                        })
+                        .catch(function(error){
                         });
                 }
             };

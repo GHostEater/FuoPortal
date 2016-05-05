@@ -1,0 +1,29 @@
+//Created by GHostEater on 05-May-16.
+.modal-header
+    h3.modal-title Add Course To {{model.major.name}}
+.modal-body
+    form(name="model.form").form-horizontal
+        div(ng-show="model.courseSelect == 0")
+            .row.content
+                form.content.col-sm-4
+                    input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+            .table-responsive
+                table.table.table-striped.table-condensed
+                    thead
+                        th Course Code
+                        th Course Title
+                        th Unit
+                        th Action
+                    tbody
+                        tr(ng-repeat="course in model.courses | orderBy:'+code' | filter:model.searchTerm" value="{{course.code}}")
+                            td {{course.code}}
+                            td {{course.title}}
+                            td {{course.unit}}
+                            td
+                                button.btn.btn-primary(ng-click="model.selectCourse(course.code)") Select
+        div(ng-show="model.courseSelect == 1")
+            h4 Selected Course: {{model.cours.code}} {{model.cours.title}}
+            button.btn.btn-danger(ng-click="model.deSelectCourse()") Remove Selection
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

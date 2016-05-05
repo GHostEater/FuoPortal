@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CourseEditController',function(Course,Level,Major,Department,toastr,code,$modalInstance){
+        .controller('CourseEditController',function(Course,Level,Department,toastr,code,$modalInstance){
             var vm = this;
             Course.getOne(code)
                 .then(function(data){
@@ -27,18 +27,11 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            Major.getAll()
-                .then(function(data){
-                    vm.majors = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
-                });
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
                     Course.edit(vm.course.code,vm.course.title,vm.course.unit,vm.course.semester,vm.course.levelId,
-                        vm.course.departmentId,vm.course.majorId,vm.course.type)
+                        vm.course.departmentId,vm.course.type)
                         .then(function(){
                             toastr.success("Course Changed");
                             $modalInstance.close();

@@ -51,11 +51,45 @@
                         return $q.reject(response.status);
                     });
             }
+            function addCourseToMajor(code,majorId,levelId){
+                return $http({
+                    method: 'POST',
+                    url: Host.host+'/courseRegistration/addRegistrableCourse.php',
+                    params:{
+                        code: code,
+                        levelId: levelId,
+                        majorId: majorId
+                    }
+                })
+                    .then(function(response){
+                        return response.status;
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
+            function removeCourseFromMajor(id){
+                return $http({
+                    method: 'POST',
+                    url: Host.host+'/courseRegistration/deleteRegistrableCourse.php',
+                    params:{
+                        id: id
+                    }
+                })
+                    .then(function(response){
+                        return response.status;
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
             return{
                 getCourses: getCourses,
                 registerCourse: registerCourse,
                 getRegisterredCourses: getRegisterredCourses,
-                getRegisterredStudents: getRegisterredStudents
+                getRegisterredStudents: getRegisterredStudents,
+                addCourseToMajor: addCourseToMajor,
+                removeCourseFromMajor: removeCourseFromMajor
             }
         });
 })();
