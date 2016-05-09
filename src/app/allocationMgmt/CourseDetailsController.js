@@ -68,6 +68,7 @@
                                 });
                             CourseReg.getRegisterredStudents($stateParams.code,vm.semester.semester,vm.session.id)
                                 .then(function(data){
+                                    vm.students = [];
                                     for(var i=0; i<data.length; i++){
                                         Student.getOne(data[i].matricNo)
                                             .then(function(data){
@@ -113,6 +114,7 @@
                                 });
                             CourseReg.getRegisterredStudents($stateParams.code,vm.semester.semester,vm.session.id)
                                 .then(function(data){
+                                    vm.students = [];
                                     for(var i=0; i<data.length; i++){
                                         Student.getOne(data[i].matricNo)
                                             .then(function(data){

@@ -21,7 +21,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(firstName,middleName,lastName,rankId,statusId,collegeId,departmentId,phoneNumber,email,address){
+        function add(firstName,middleName,lastName,rankId,statusId,collegeId,departmentId,phoneNumber,email,address,password){
             return $http({
                 method: 'POST',
                 url: Host.host+'/lecturer/add.php',
@@ -35,7 +35,8 @@ angular.module('fuoPortal')
                     departmentId: departmentId,
                     phoneNumber: phoneNumber,
                     email: email,
-                    address: address
+                    address: address,
+                    password: password
                 }
             })
                 .then(function(response){
@@ -45,7 +46,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(id,firstName,middleName,lastName,rankId,statusId,collegeId,departmentId,phoneNumber,email,address) {
+        function edit(id,firstName,middleName,lastName,rankId,statusId,collegeId,departmentId,phoneNumber,email,address,password) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/lecturer/edit.php',
@@ -54,13 +55,14 @@ angular.module('fuoPortal')
                     firstName: firstName,
                     middleName: middleName,
                     lastName: lastName,
-                    rank: rankId,
-                    status: statusId,
+                    rankId: rankId,
+                    statusId: statusId,
                     collegeId: collegeId,
                     departmentId: departmentId,
                     phoneNumber: phoneNumber,
                     email: email,
-                    address: address
+                    address: address,
+                    password: password
 
                 }
             })
