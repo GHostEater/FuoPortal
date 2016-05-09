@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("CourseRegisterController",function(Student,User,CourseReg,Session,Semester,toastr,lodash){
+        .controller("CourseRegisterController",function(Student,User,CourseReg,Session,Semester,$location,toastr,lodash){
             var vm = this;
             vm.addCourse = addCourse;
             vm.removeCourse = removeCourse;
@@ -75,9 +75,12 @@
                 if(vm.counter >= 15 && vm.counter <= 24){
                     for(var i=0; i < vm.regs.length; i++){
                         CourseReg.registerCourse(vm.regs[i].code,vm.regs[i].matricNo,vm.regs[i].levelId,vm.regs[i].semester,vm.regs[i].sessionId)
-                            .then(function(){})
+                            .then(function(){
+                                toastr.success('Course Registerred');
+                            })
                             .catch(function(){toastr.error("Unable to Register Course");});
                     }
+                    $location.url('/student/courseSlip');
                 }
             }
         });

@@ -26,7 +26,6 @@
 
             function selectCourse(code){
                 vm.cours = lodash.find(vm.courses,{code:code});
-                console.log(vm.cours);
                 vm.courseSelect = 1;
             }
             function deSelectCourse(){
