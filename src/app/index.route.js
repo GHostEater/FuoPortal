@@ -31,7 +31,8 @@
         .state('courseDetails',{url:'/courseDetails/:code',templateUrl:'app/allocationMgmt/courseDetails.html'})
 
         .state('courseRegistration',{url:'/student/courseRegistration',templateUrl:'app/courseRegistration/courseRegister.html'})
-        .state('courseSlip',{url:'/student/courseSlip',templateUrl:'app/courseRegistration/courseSlip.html'});
+        .state('courseSlip',{url:'/student/courseSlip',templateUrl:'app/courseRegistration/courseSlip.html'})
+        .state('myResult',{url:'/student/Result',templateUrl:'app/result/myResult.html'});
 
     $urlRouterProvider.otherwise('/');
   }
