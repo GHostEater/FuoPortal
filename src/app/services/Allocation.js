@@ -48,14 +48,16 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function allocate(lecturerId,code,allocatedBy){
+        function allocate(lecturerId,code,allocatedBy,semester,sessionId){
             return $http({
                 method: 'POST',
                 url: Host.host+'/allocation/allocate.php',
                 params:{
                     lecturerId: lecturerId,
                     code: code,
-                    allocatedBy: allocatedBy
+                    allocatedBy: allocatedBy,
+                    semester: semester,
+                    sessionId: sessionId
                 }
             })
                 .then(function(response){

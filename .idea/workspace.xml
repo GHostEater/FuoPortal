@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseRegistration/CourseRegisterController.js" afterPath="$PROJECT_DIR$/src/app/courseRegistration/CourseRegisterController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/courseMgmt/CourseToMajorAddController.js" afterPath="$PROJECT_DIR$/src/app/courseMgmt/CourseToMajorAddController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Allocation.js" afterPath="$PROJECT_DIR$/src/app/services/Allocation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.config.js" afterPath="$PROJECT_DIR$/src/app/index.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -31,41 +31,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lecturerEdit.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/lecturerMgmt/lecturerEdit.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courseToMajorAdd.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/courseMgmt/courseToMajorAdd.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <caret line="24" column="61" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="courseDetails.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-              <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseDetailsController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseDetailsController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.1523643" vertical-offset="743" max-vertical-offset="2414">
-              <caret line="116" column="53" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1683">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="allocate.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/allocate.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="680">
+              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllocateController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7311644" vertical-offset="529" max-vertical-offset="1411">
+              <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -83,8 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/hodMgmt/HodController.js" />
-        <option value="$PROJECT_DIR$/src/app/hodMgmt/hodAdd.jade" />
         <option value="$PROJECT_DIR$/src/app/hodMgmt/HodAddController.js" />
         <option value="$PROJECT_DIR$/src/app/hodMgmt/hod.jade" />
         <option value="$PROJECT_DIR$/src/app/hodMgmt/hodDelete.jade" />
@@ -127,13 +125,15 @@
         <option value="$PROJECT_DIR$/src/app/allocationMgmt/hodAllocation.jade" />
         <option value="$PROJECT_DIR$/src/app/services/Result.js" />
         <option value="$PROJECT_DIR$/src/app/allocationMgmt/allocate.jade" />
-        <option value="$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js" />
         <option value="$PROJECT_DIR$/src/app/courseRegistration/courseSlip.jade" />
         <option value="$PROJECT_DIR$/src/app/services/lecturer.js" />
         <option value="$PROJECT_DIR$/src/app/index.config.js" />
         <option value="$PROJECT_DIR$/src/app/courseMgmt/CourseToMajorAddController.js" />
         <option value="$PROJECT_DIR$/src/app/courseRegistration/CourseRegisterController.js" />
         <option value="$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade" />
+        <option value="$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js" />
+        <option value="$PROJECT_DIR$/src/app/services/Allocation.js" />
+        <option value="$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js" />
       </list>
     </option>
   </component>
@@ -578,7 +578,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462802102629</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="resultUpload">
+      <created>1462805439036</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1462805439036</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -642,13 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/services/Semester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23287672" vertical-offset="0" max-vertical-offset="584">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/MyCoursesController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
@@ -899,39 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/Allocation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5650685" vertical-offset="330" max-vertical-offset="1955">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/allocate.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="680">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding>
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1461420543413" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="1173">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/lecturerMgmt/LecturerAddController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.21190894" vertical-offset="121" max-vertical-offset="1020">
@@ -1015,15 +981,47 @@
     <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/HeaderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/allocate.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="680">
+          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1523643" vertical-offset="743" max-vertical-offset="2414">
-          <caret line="116" column="53" selection-start-line="116" selection-start-column="53" selection-end-line="116" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1683">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/Allocation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2208904" vertical-offset="290" max-vertical-offset="1989">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7311644" vertical-offset="529" max-vertical-offset="1411">
+          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
           <folding />
         </state>
       </provider>

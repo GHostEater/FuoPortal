@@ -4,7 +4,7 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('AllocateController',function(Allocation,toastr,$modalInstance,User,Lecturer){
+        .controller('AllocateController',function(Allocation,toastr,$modalInstance,lodash,User,Lecturer,Session,Semester){
             var vm = this;
             vm.lecturerSelect = 0;
             vm.selectLecturer = selectLecturer;
@@ -30,6 +30,20 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
+            Session.getAll()
+                .then(function(data){
+                    vm.session = lodash.findLast(data);
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Semester.get()
+                .then(function(data){
+                    vm.semester = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
 
             function selectLecturer(id){
                 Lecturer.getOne(id)
@@ -47,7 +61,7 @@
             }
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Allocation.allocate(vm.lecturer.id,vm.code,User.profile.id)
+                    Allocation.allocate(vm.lecturer.id,vm.code,User.profile.id,vm.semester.semester,vm.session.id)
                         .then(function(){
                             toastr.success("Course Allocated");
                             $modalInstance.close();
