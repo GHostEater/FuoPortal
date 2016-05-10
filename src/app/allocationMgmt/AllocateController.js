@@ -61,14 +61,28 @@
             }
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Allocation.allocate(vm.lecturer.id,vm.code,User.profile.id,vm.semester.semester,vm.session.id)
-                        .then(function(){
-                            toastr.success("Course Allocated");
-                            $modalInstance.close();
-                        })
-                        .catch(function(){
-                            toastr.error("Unable to Allocate Course");
-                        });
+                    if(vm.position == 1){
+                        Allocation.allocateCoordinator(vm.lecturer.id,vm.code,User.profile.id,
+                            vm.semester.semester,vm.session.id,vm.position)
+                            .then(function(){
+                                toastr.success("Course Allocated");
+                                $modalInstance.close();
+                            })
+                            .catch(function(){
+                                toastr.error("Course Already Has Coordinator");
+                            });
+                    }
+                    else if(vm.position == 2){
+                        Allocation.allocateAssisting(vm.lecturer.id,vm.code,User.profile.id,
+                            vm.semester.semester,vm.session.id,vm.position)
+                            .then(function(){
+                                toastr.success("Course Allocated");
+                                $modalInstance.close();
+                            })
+                            .catch(function(){
+                                toastr.error("Unable to Allocate Course");
+                            });
+                    }
                 }
                 else{
                     toastr.error("Errors in form");

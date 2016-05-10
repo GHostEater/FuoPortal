@@ -62,6 +62,8 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                     a(ui-sref="myCourses") My Courses
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
                     a(ui-sref="courseAllocation") Course Allocation
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
+                    a(ui-sref="resultComputation") Result Computation
             .navbar-right.navbar-form(ng-show="model.user.loggedIn")
                 span.text-danger Hello {{model.user.name}} {{model.user.firstName}} {{model.user.middleName}} {{model.user.lastName}}
                 button.btn.btn-danger(ng-click = "model.logOut()") Logout

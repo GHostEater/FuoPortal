@@ -1,0 +1,23 @@
+//Created by GHostEater on 10-May-16.
+div(ng-controller="ResultComputationController as model")
+    .row.content.hidden-print
+        button.btn.btn-warning.btn-lg(ng-click="model.processResults()") Process Results
+    .panel.panel-info(ng-repeat="student in model.students")
+        .panel-heading {{student.info.lastName}}, {{student.info.firstName}} {{student.info.middleName}}
+        .panel-body
+            .well
+                table.table.table-striped
+                    thead
+                        th Course Code
+                        th Course Title
+                        th Unit
+                        th Grade
+                    tbody
+                        tr(ng-repeat="result in student.results | orderBy:'+code'")
+                            td {{result.code}}
+                            td {{result.title}}
+                            td {{result.unit}}
+                            td {{result.grade}}
+                span TNU: {{student.tnu}}&nbsp
+                span TCP: {{student.tcp}}&nbsp
+                span GPA: {{student.gpa | number:2}}

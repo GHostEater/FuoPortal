@@ -35,6 +35,7 @@ Created by GHostEater on 23-Jan-16.
         <li ui-sref-active="active" ng-show="model.user.sysRank == 5"><a ui-sref="myResult">Result</a></li>
         <li ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4"><a ui-sref="myCourses">My Courses</a></li>
         <li ui-sref-active="active" ng-show="model.user.sysRank == 3"><a ui-sref="courseAllocation">Course Allocation</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 3"><a ui-sref="resultComputation">Result Computation</a></li>
       </ul>
       <div ng-show="model.user.loggedIn" class="navbar-right navbar-form"><span class="text-danger">Hello {{model.user.name}} {{model.user.firstName}} {{model.user.middleName}} {{model.user.lastName}}</span>
         <button ng-click="model.logOut()" class="btn btn-danger">Logout</button>

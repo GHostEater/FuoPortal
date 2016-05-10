@@ -48,16 +48,17 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function allocate(lecturerId,code,allocatedBy,semester,sessionId){
+        function allocateCoordinator(lecturerId,code,allocatedBy,semester,sessionId,position){
             return $http({
                 method: 'POST',
-                url: Host.host+'/allocation/allocate.php',
+                url: Host.host+'/allocation/allocateCoordinator.php',
                 params:{
                     lecturerId: lecturerId,
                     code: code,
                     allocatedBy: allocatedBy,
                     semester: semester,
-                    sessionId: sessionId
+                    sessionId: sessionId,
+                    position: position
                 }
             })
                 .then(function(response){
@@ -67,22 +68,24 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function getAll(){
-            return $http.get(Host.host+'/allocation/allocation.php')
+        function allocateAssisting(lecturerId,code,allocatedBy,semester,sessionId,position){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/allocation/allocateAssisting.php',
+                params:{
+                    lecturerId: lecturerId,
+                    code: code,
+                    allocatedBy: allocatedBy,
+                    semester: semester,
+                    sessionId: sessionId,
+                    position: position
+                }
+            })
                 .then(function(response){
                     return response.data;
                 })
                 .catch(function(reponse){
                     return $q.reject(reponse.status);
-                });
-        }
-        function getOne(lecturerId){
-            return $http.get(Host.host+'/allocation/allocation.php')
-                .then(function(response){
-                    return lodash.find(response.data,{'lecturerId':lecturerId});
-                })
-                .catch(function(response){
-                    return $q.reject(response.status);
                 });
         }
         function remove(id) {
@@ -101,12 +104,11 @@ angular.module('fuoPortal')
                 });
         }
         return{
-            getAll: getAll,
             getMyAllocations: getMyAllocations,
             getMyCourses: getMyCourses,
             getCourses: getCourses,
-            getOne: getOne,
-            allocate: allocate,
+            allocateCoordinator: allocateCoordinator,
+            allocateAssisting: allocateAssisting,
             remove: remove
         }
     });

@@ -33,6 +33,7 @@ div(ng-controller="HodAllocationController as model")
                 th Unit
                 th Level
                 th Lecturer
+                th Position
                 th.hidden-print Actions
             tbody
                 tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.session.id,semester:model.semester.semester}")
@@ -42,6 +43,9 @@ div(ng-controller="HodAllocationController as model")
                     td {{allocation.unit}}
                     td {{allocation.level}}
                     td {{allocation.lastName}}, {{allocation.firstName}} {{allocation.middleName}}
+                    td
+                        span(ng-show="allocation.position == 1") Coordinator
+                        span(ng-show="allocation.position == 2") Assissting Lecturer
                     td.hidden-print
                         a(href="#/courseDetails/{{allocation.code}}").btn.btn-primary View Details
                         button.btn.btn-danger(ng-click="model.remove(allocation.id)") Delete

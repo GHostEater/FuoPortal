@@ -36,6 +36,7 @@
         <th>Unit</th>
         <th>Level</th>
         <th>Lecturer</th>
+        <th>Position</th>
         <th class="hidden-print">Actions</th>
       </thead>
       <tbody>
@@ -46,6 +47,7 @@
           <td>{{allocation.unit}}</td>
           <td>{{allocation.level}}</td>
           <td>{{allocation.lastName}}, {{allocation.firstName}} {{allocation.middleName}}</td>
+          <td><span ng-show="allocation.position == 1">Coordinator</span><span ng-show="allocation.position == 2">Assissting Lecturer</span></td>
           <td class="hidden-print"><a href="#/courseDetails/{{allocation.code}}" class="btn btn-primary">View Details</a>
             <button ng-click="model.remove(allocation.id)" class="btn btn-danger">Delete</button>
           </td>

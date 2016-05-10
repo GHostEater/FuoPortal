@@ -29,6 +29,7 @@
         .state('myCourses',{url:'/MyCourses',templateUrl:'app/allocationMgmt/myCourses.html'})
         .state('courseAllocation',{url:'/CourseAllocation',templateUrl:'app/allocationMgmt/hodAllocation.html'})
         .state('courseDetails',{url:'/courseDetails/:code',templateUrl:'app/allocationMgmt/courseDetails.html'})
+        .state('resultComputation',{url:'/resultComputation',templateUrl:'app/result/resultComputation.html'})
 
         .state('courseRegistration',{url:'/student/courseRegistration',templateUrl:'app/courseRegistration/courseRegister.html'})
         .state('courseSlip',{url:'/student/courseSlip',templateUrl:'app/courseRegistration/courseSlip.html'})
