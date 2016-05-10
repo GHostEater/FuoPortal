@@ -25,7 +25,7 @@
       <tbody>
         <tr ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+code' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
-          <td>{{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}</td>
+          <td>{{lecturer.lastName | uppercase}}, {{lecturer.firstName}} {{lecturer.middleName}}</td>
           <td>{{lecturer.rank}}</td>
           <td>{{lecturer.status}}</td>
           <td>{{lecturer.college}}</td>

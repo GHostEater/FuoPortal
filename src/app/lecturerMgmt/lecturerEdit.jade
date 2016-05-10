@@ -5,53 +5,46 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 First Name
             .col-sm-10
-                input.form-control(type="text" name="firstName" required ng-model="model.lecturer.firstName")
+                input.form-control(type="text" name="firstName" required ng-model="model.lecturer.firstName" placeholder="First Name")
         .form-group
-            label.control-label.col-sm-2 Middle Name
             .col-sm-10
-                input.form-control(type="text" name="middleName" required ng-model="model.lecturer.middleName")
+                input.form-control(type="text" name="middleName" required ng-model="model.lecturer.middleName" placeholder="Middle Name")
         .form-group
-            label.control-label.col-sm-2 Surname
             .col-sm-10
-                input.form-control(type="text" name="lastName" required ng-model="model.lecturer.lastName")
+                input.form-control(type="text" name="lastName" required ng-model="model.lecturer.lastName" placeholder="Last Name")
         .form-group
-            label.control-label.col-sm-2 Rank
             .col-sm-10
                 select.form-control(name="rankId" required ng-model="model.lecturer.rankId")
+                    option(value="") Lecturer Rank
                     option(ng-repeat="rank in model.ranks" value="{{rank.id}}") {{rank.rank}}
         .form-group
-            label.control-label.col-sm-2 Status
             .col-sm-10
                 select.form-control(name="statusId" required ng-model="model.lecturer.statusId")
+                    option(value="") Lecturer Status
                     option(ng-repeat="status in model.statuss" value="{{status.id}}") {{status.status}}
         .form-group
-            label.control-label.col-sm-2 College
             .col-sm-10
                 select.form-control(name="collegeId" required ng-model="model.lecturer.collegeId")
+                    option(value="") College
                     option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
         .form-group
-            label.control-label.col-sm-2 Department
             .col-sm-10
                 select.form-control(name="departmentId" required ng-model="model.lecturer.departmentId")
+                    option(value="") Department
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
         .form-group
-            label.control-label.col-sm-2 Phone Number
             .col-sm-10
-                input.form-control(type="text" name="phoneNumber" required ng-model="model.lecturer.phoneNumber")
+                input.form-control(type="text" name="phoneNumber" required ng-model="model.lecturer.phoneNumber" placeholder="Phone Number")
         .form-group
-            label.control-label.col-sm-2 E-mail
             .col-sm-10
-                input.form-control(type="text" name="email" required ng-model="model.lecturer.email")
+                input.form-control(type="text" name="email" required ng-model="model.lecturer.email" placeholder="E-mail Address")
         .form-group
-            label.control-label.col-sm-2 Address
             .col-sm-10
-                input.form-control(type="text" name="address" required ng-model="model.lecturer.address")
+                input.form-control(type="text" name="address" required ng-model="model.lecturer.address" placeholder="Address")
         .form-group
-            label.control-label.col-sm-2 Password
             .col-sm-10
-                input.form-control(type="password" name="password" required ng-model="model.lecturer.password")
+                input.form-control(type="password" name="password" required ng-model="model.lecturer.password" placeholder="Password")
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

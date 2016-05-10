@@ -4,14 +4,14 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 Lecturer
             .col-sm-10
                 select.form-control(name="lecturerId" required ng-model="model.lecturerId")
+                    option(value="") Lecturer
                     option(ng-repeat="lecturer in model.lecturers" value="{{lecturer.id}}") {{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}
         .form-group
-            label.control-label.col-sm-2 Department
             .col-sm-10
                 select.form-control(name="departmentId" required ng-model="model.departmentId")
+                    option(value="") Department
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
     .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm

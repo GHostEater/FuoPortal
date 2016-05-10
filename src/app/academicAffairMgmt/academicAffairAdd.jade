@@ -4,25 +4,20 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 First Name
             .col-sm-10
-                input.form-control(type="text" name="firstName" required ng-model="model.firstName")
+                input.form-control(type="text" name="firstName" required ng-model="model.firstName" placeholder="First Name")
         .form-group
-            label.control-label.col-sm-2 Middle Name
             .col-sm-10
-                input.form-control(type="text" name="middleName" required ng-model="model.middleName")
+                input.form-control(type="text" name="middleName" required ng-model="model.middleName" placeholder="Middle Name")
         .form-group
-            label.control-label.col-sm-2 Last Name
             .col-sm-10
-                input.form-control(type="text" name="lastName" required ng-model="model.lastName")
+                input.form-control(type="text" name="lastName" required ng-model="model.lastName" placeholder="Last Name")
         .form-group
-            label.control-label.col-sm-2 E-mail
             .col-sm-10
-                input.form-control(type="text" name="email" required ng-model="model.email")
+                input.form-control(type="text" name="email" required ng-model="model.email" placeholder="E-mail")
         .form-group
-            label.control-label.col-sm-2 Password
             .col-sm-10
-                input.form-control(type="password" name="password" required ng-model="model.password")
+                input.form-control(type="password" name="password" required ng-model="model.password" placeholder="Password")
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

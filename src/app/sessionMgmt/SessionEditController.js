@@ -8,7 +8,7 @@
             var vm = this;
             Session.getOne(id)
                 .then(function(data){
-                    vm.sessions = data;
+                    vm.session = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

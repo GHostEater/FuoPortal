@@ -21,7 +21,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session){
+        function add(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session,password){
             return $http({
                 method: 'POST',
                 url: Host.host+'/student/add.php',
@@ -46,7 +46,8 @@ angular.module('fuoPortal')
                     majorId: majorId,
                     levelId: levelId,
                     modeOfEntryId: modeOfEntryId,
-                    session: session
+                    session: session,
+                    password: password
                 }
             })
                 .then(function(response){
@@ -56,7 +57,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session) {
+        function edit(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session,password) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/student/edit.php',
@@ -81,7 +82,8 @@ angular.module('fuoPortal')
                     majorId: majorId,
                     levelId: levelId,
                     modeOfEntryId: modeOfEntryId,
-                    session: session
+                    session: session,
+                    password: password
                 }
             })
                 .then(function(response){

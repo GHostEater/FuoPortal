@@ -8,23 +8,23 @@
   <form name="model.form" class="form-horizontal">
     <div class="form-group">
       <div class="col-sm-4">
-        <input type="text" name="matricNo" required ng-model="model.student.matricNo" placeholder="Matric Number" class="form-control">
+        <input type="text" name="matricNo" required ng-model="model.matricNo" placeholder="Matric Number" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-3">
-        <input type="text" name="firstName" required ng-model="model.student.firstName" placeholder="First Name" class="form-control">
+        <input type="text" name="firstName" required ng-model="model.firstName" placeholder="First Name" class="form-control">
       </div>
       <div class="col-sm-3">
-        <input type="text" name="middleName" required ng-model="model.student.middleName" placeholder="Middle Name" class="form-control">
+        <input type="text" name="middleName" required ng-model="model.middleName" placeholder="Middle Name" class="form-control">
       </div>
       <div class="col-sm-3">
-        <input type="text" name="lastName" required ng-model="model.student.lastName" placeholder="Surname" class="form-control">
+        <input type="text" name="lastName" required ng-model="model.lastName" placeholder="Surname" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <select name="sex" required ng-model="model.student.sex" class="form-control">
+        <select name="sex" required ng-model="model.sex" class="form-control">
           <option value="">Select Sex</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -33,49 +33,49 @@
     </div>
     <div class="form-group">
       <div class="col-sm-6">
-        <input type="email" name="email" required ng-model="model.student.email" placeholder="E-mail" class="form-control">
+        <input type="email" name="email" required ng-model="model.email" placeholder="E-mail" class="form-control">
       </div>
       <div class="col-sm-6">
-        <input type="number" name="phoneNumber" required ng-model="model.student.phoneNumber" placeholder="Phone Number" class="form-control">
+        <input type="number" name="phoneNumber" required ng-model="model.phoneNumber" placeholder="Phone Number" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <input type="date" name="dateBirth" required ng-model="model.student.dateBirth" placeholder="Date of Birth" class="form-control">
+        <input type="date" name="dateBirth" required ng-model="model.dateBirth" placeholder="Date of Birth" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-4">
-        <input type="text" name="nationality" required ng-model="model.student.nationality" placeholder="Nationality" class="form-control">
+        <input type="text" name="nationality" required ng-model="model.nationality" placeholder="Nationality" class="form-control">
       </div>
       <div class="col-sm-4">
-        <input type="text" name="stateOrigin" required ng-model="model.student.stateOrigin" placeholder="State Of Origin" class="form-control">
+        <input type="text" name="stateOrigin" required ng-model="model.stateOrigin" placeholder="State Of Origin" class="form-control">
       </div>
       <div class="col-sm-4">
-        <input type="text" name="lga" required ng-model="model.student.lga" placeholder="Local Government Area" class="form-control">
+        <input type="text" name="lga" required ng-model="model.lga" placeholder="Local Government Area" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <input type="text" name="religion" required ng-model="model.student.religion" placeholder="Religion" class="form-control">
+        <input type="text" name="religion" required ng-model="model.religion" placeholder="Religion" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <input type="text" name="address" required ng-model="model.student.address" placeholder="Address" class="form-control">
+        <input type="text" name="address" required ng-model="model.address" placeholder="Address" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <input type="text" name="nextOfKin" required ng-model="model.student.nextOfKin" placeholder="Next of Kin" class="form-control">
+        <input type="text" name="nextOfKin" required ng-model="model.nextOfKin" placeholder="Next of Kin" class="form-control">
       </div>
       <div class="col-sm-10">
-        <input type="text" name="nextOfKinAddress" required ng-model="model.student.nextOfKinAddress" placeholder="Next of Kin Address" class="form-control">
+        <input type="text" name="nextOfKinAddress" required ng-model="model.nextOfKinAddress" placeholder="Next of Kin Address" class="form-control">
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <select name="collegeId" required ng-model="model.student.collegeId" class="form-control">
+        <select name="collegeId" required ng-model="model.collegeId" class="form-control">
           <option value="">Select College</option>
           <option ng-repeat="college in model.colleges" value="{{college.id}}">{{college.acronym}}</option>
         </select>
@@ -83,19 +83,19 @@
     </div>
     <div class="form-group">
       <div class="col-sm-4">
-        <select name="departmentId" required ng-model="model.student.departmentId" class="form-control">
+        <select name="departmentId" required ng-model="model.departmentId" class="form-control">
           <option value="">Select Department</option>
           <option ng-repeat="department in model.departments" value="{{department.id}}">{{department.name}}</option>
         </select>
       </div>
       <div class="col-sm-4">
-        <select name="majorId" required ng-model="model.student.majorId" class="form-control">
+        <select name="majorId" required ng-model="model.majorId" class="form-control">
           <option value="">Select Major</option>
           <option ng-repeat="major in model.majors" value="{{major.id}}">{{major.name}}</option>
         </select>
       </div>
       <div class="col-sm-4">
-        <select name="levelId" required ng-model="model.student.levelId" class="form-control">
+        <select name="levelId" required ng-model="model.levelId" class="form-control">
           <option value="">Select Level</option>
           <option ng-repeat="level in model.levels" value="{{level.id}}">{{level.level}}</option>
         </select>
@@ -103,7 +103,7 @@
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <select name="modeOfEntryId" required ng-model="model.student.modeOfEntryId" class="form-control">
+        <select name="modeOfEntryId" required ng-model="model.modeOfEntryId" class="form-control">
           <option value="">Select Mode of Entry</option>
           <option ng-repeat="modeOfEntry in model.modeOfEntries" value="{{modeOfEntry.id}}">{{modeOfEntry.modeOfEntry}}</option>
         </select>
@@ -111,7 +111,7 @@
     </div>
     <div class="form-group">
       <div class="col-sm-10">
-        <input type="password" name="password" required ng-model="model.student.password" placeholder="Password" class="form-control">
+        <input type="password" name="password" required ng-model="model.password" placeholder="Password" class="form-control">
       </div>
     </div>
   </form>

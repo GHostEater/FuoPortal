@@ -2,19 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/ResultComputation.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/ResultComputationController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/AllocateController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Allocation.js" afterPath="$PROJECT_DIR$/src/app/services/Allocation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Result.js" afterPath="$PROJECT_DIR$/src/app/services/Result.js" />
+      <change type="DELETED" beforePath="C:\Project\fuoPortal\src\app\academicAffairMgmt\academicAffairEdit.jade" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/sessionMgmt/SessionEditController.js" afterPath="$PROJECT_DIR$/src/app/sessionMgmt/SessionEditController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Student.js" afterPath="$PROJECT_DIR$/src/app/services/Student.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" afterPath="$PROJECT_DIR$/src/app/studentMgmt/StudentAddController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairAdd.jade" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairAdd.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocate.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/allocate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/allocate.jade" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/allocate.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" afterPath="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/coEdit.jade" afterPath="$PROJECT_DIR$/src/app/coMgmt/coEdit.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/collegeMgmt/collegeAdd.jade" afterPath="$PROJECT_DIR$/src/app/collegeMgmt/collegeAdd.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/collegeEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/collegeMgmt/collegeEdit.jade" afterPath="$PROJECT_DIR$/src/app/collegeMgmt/collegeEdit.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/course.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/courseMgmt/courseEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/footer.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/layout/header.jade" afterPath="$PROJECT_DIR$/src/app/layout/header.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/hodMgmt/hodAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/hodMgmt/hodAdd.jade" afterPath="$PROJECT_DIR$/src/app/hodMgmt/hodAdd.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/hodAllocation.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/hodAllocation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/hodAllocation.jade" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/hodAllocation.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.route.js" afterPath="$PROJECT_DIR$/src/app/index.route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerAdd.jade" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerAdd.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturerEdit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerEdit.jade" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturerEdit.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/myCourses.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/myCourses.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/student.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/student.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/student.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/student.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/studentMgmt/studentAdd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/studentAdd.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/studentAdd.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -53,7 +74,7 @@
       <file leaf-file-name="ResultComputation.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/result/ResultComputation.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="476">
               <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
               <folding />
             </state>
@@ -63,7 +84,7 @@
       <file leaf-file-name="ResultComputationController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/result/ResultComputationController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8681507" vertical-offset="921" max-vertical-offset="1598">
+            <state vertical-scroll-proportion="1.2675" vertical-offset="921" max-vertical-offset="1598">
               <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
               <folding />
             </state>
@@ -203,154 +224,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="result" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FuoPortal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="allocationMgmt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -360,7 +233,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="js.buildTools.gulp.node_interpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="C:\Users\GHostEater\AppData\Roaming\npm\node_modules\gulp" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="C:\Users\Bello J\AppData\Roaming\npm\node_modules\gulp" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
   </component>
@@ -391,6 +264,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -398,22 +274,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
-    <configuration default="false" name="Serve" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
-      <tasks>
-        <task>serve</task>
-      </tasks>
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
-      <RunnerSettings RunnerId="Js.BuildTools.Gulp" />
-      <ConfigurationWrapper RunnerId="Js.BuildTools.Gulp" />
       <method />
     </configuration>
     <configuration default="false" name="Build" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -429,9 +289,22 @@
       <ConfigurationWrapper RunnerId="Js.BuildTools.Gulp" />
       <method />
     </configuration>
+    <configuration default="false" name="Serve" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>serve</task>
+      </tasks>
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <RunnerSettings RunnerId="Js.BuildTools.Gulp" />
+      <ConfigurationWrapper RunnerId="Js.BuildTools.Gulp" />
+      <method />
+    </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Gulp.js.Serve" />
-      <item index="1" class="java.lang.String" itemvalue="Gulp.js.Build" />
+      <item index="0" class="java.lang.String" itemvalue="Gulp.js.Build" />
+      <item index="1" class="java.lang.String" itemvalue="Gulp.js.Serve" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -641,8 +514,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -656,16 +529,16 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27382752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2737921" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32598424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -901,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1436077" vertical-offset="653" max-vertical-offset="1224">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.642732" vertical-offset="959" max-vertical-offset="1564">
           <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="584">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55308217" vertical-offset="0" max-vertical-offset="1564">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53424656" vertical-offset="164" max-vertical-offset="816">
           <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35726795" vertical-offset="0" max-vertical-offset="765">
           <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1010" max-vertical-offset="1649">
           <caret line="75" column="77" selection-start-line="75" selection-start-column="77" selection-end-line="75" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9126712" vertical-offset="79" max-vertical-offset="782">
           <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32020548" vertical-offset="765" max-vertical-offset="2023">
           <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.85113835" vertical-offset="41" max-vertical-offset="799">
           <caret line="31" column="102" selection-start-line="31" selection-start-column="102" selection-end-line="31" selection-end-column="102" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9404553" vertical-offset="619" max-vertical-offset="1275">
           <caret line="68" column="69" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +931,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/result/ResultComputationController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8681507" vertical-offset="921" max-vertical-offset="1598">
+        <state vertical-scroll-proportion="1.2675" vertical-offset="921" max-vertical-offset="1598">
           <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
           <folding />
         </state>

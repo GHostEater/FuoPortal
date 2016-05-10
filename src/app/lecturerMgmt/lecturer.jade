@@ -21,7 +21,7 @@ div(ng-controller="LecturerController as model")
             tbody
                 tr(ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+code' | filter: model.searchTerm")
                     td {{key + 1}}
-                    td {{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}
+                    td {{lecturer.lastName | uppercase}}, {{lecturer.firstName}} {{lecturer.middleName}}
                     td {{lecturer.rank}}
                     td {{lecturer.status}}
                     td {{lecturer.college}}

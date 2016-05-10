@@ -5,30 +5,25 @@
     form(name="model.form").form-horizontal
 
         .form-group
-            label.control-label.col-sm-2 First Name
             .col-sm-10
-                input.form-control(type="text" name="firstName" required ng-model="model.co.firstName")
+                input.form-control(type="text" name="firstName" required ng-model="model.co.firstName" placeholder="First Name")
         .form-group
-            label.control-label.col-sm-2 Middle Name
             .col-sm-10
-                input.form-control(type="text" name="middleName" required ng-model="model.co.middleName")
+                input.form-control(type="text" name="middleName" required ng-model="model.co.middleName" placeholder="Middle name")
         .form-group
-            label.control-label.col-sm-2 Last Name
             .col-sm-10
-                input.form-control(type="text" name="lastName" required ng-model="model.co.lastName")
+                input.form-control(type="text" name="lastName" required ng-model="model.co.lastName" placeholder="Last Name")
         .form-group
-            label.control-label.col-sm-2 College
             .col-sm-10
                 select.form-control( name="collegeId" required ng-model="model.co.collegeId")
+                    option(value="") College
                     option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
         .form-group
-            label.control-label.col-sm-2 E-mail
             .col-sm-10
-                input.form-control(type="text" name="email" required ng-model="model.co.email")
+                input.form-control(type="text" name="email" required ng-model="model.co.email" placeholder="E-mail Address")
         .form-group
-            label.control-label.col-sm-2 Password
             .col-sm-10
-                input.form-control(type="password" name="password" required ng-model="model.co.password")
+                input.form-control(type="password" name="password" required ng-model="model.co.password" placeholder="Password")
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

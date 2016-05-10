@@ -20,7 +20,7 @@ div(ng-controller="StudentController as model")
                 tr(ng-repeat="(key,student) in model.students | orderBy: '+lastName' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{student.matricNo}}
-                    td {{student.lastName}}, {{student.firstName}} {{student.middleName}}
+                    td {{student.lastName | uppercase}}, {{student.firstName}} {{student.middleName}}
                     td {{student.college}}
                     td {{student.department}}
                     td {{student.major}}

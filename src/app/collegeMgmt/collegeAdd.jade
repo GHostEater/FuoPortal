@@ -4,13 +4,11 @@
 .modal-body
     form(name="model.form").form-horizontal
         .form-group
-            label.control-label.col-sm-2 College Name
             .col-sm-10
-                input.form-control(type="text" name="name" required ng-model="model.name")
+                input.form-control(type="text" name="name" required ng-model="model.name" placeholder="College name")
         .form-group
-            label.control-label.col-sm-2 Acronym
             .col-sm-10
-                input.form-control(type="text" name="acronym" required ng-model="model.acronym")
+                input.form-control(type="text" name="acronym" required ng-model="model.acronym" placeholder="Acronym")
     .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

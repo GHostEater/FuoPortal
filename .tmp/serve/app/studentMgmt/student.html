@@ -24,7 +24,7 @@
         <tr ng-repeat="(key,student) in model.students | orderBy: '+lastName' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
           <td>{{student.matricNo}}</td>
-          <td>{{student.lastName}}, {{student.firstName}} {{student.middleName}}</td>
+          <td>{{student.lastName | uppercase}}, {{student.firstName}} {{student.middleName}}</td>
           <td>{{student.college}}</td>
           <td>{{student.department}}</td>
           <td>{{student.major}}</td>
