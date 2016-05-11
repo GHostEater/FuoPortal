@@ -1,0 +1,21 @@
+//Created by GHostEater on 11-May-16.
+div(ng-controller="AdminLoginController as login")
+    .row
+        section.col-sm-4.col-sm-offset-4
+            form(name="login.form")
+                .panel.panel-success
+                    .panel-heading Admin Login
+                    .panel-body
+                        select.form-control(required ng-model="login.position")
+                            option(value="") Select Position
+                            option(value="1") Admin
+                            option(value="2") College Officer
+                            option(value="3") Lecturer
+                            option(value="4") Academic Affairs
+                            option(value="5") Bursary Unit
+                            option(value="6") Student Affairs
+                        small.text-danger(ng-show="login.userError === true") Username is Incorrect
+                        input.form-control(type="text" ng-model="login.username" placeholder="Username")
+                        small.text-danger(ng-show="login.passError === true") Password is Incorrect
+                        input.form-control(type="password" ng-model="login.password" placeholder="Password")
+                        button.btn.btn-primary.form-control(ng-click="login.login(login.username,login.password,login.position)") Login

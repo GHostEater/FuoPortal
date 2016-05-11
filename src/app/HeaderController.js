@@ -10,6 +10,7 @@ angular.module('fuoPortal')
 
         vm.logOut = function(){
             User.logOut();
+            vm.user = User.profile;
             $window.location.reload();
         };
     })

@@ -5,10 +5,10 @@
     'use strict';
 angular.module('fuoPortal')
     .factory("Auth",function(Host,$http,$q){
-        function login(username,password){
+        function studentLogin(username,password){
             return $http({
                     method: 'POST',
-                    url: Host.host+'/login.php',
+                    url: Host.host+'/studentLogin.php',
                     params:{
                         username: username,
                         password: password
@@ -21,8 +21,26 @@ angular.module('fuoPortal')
                         return $q.reject(response.status);
                     });
         }
+        function adminLogin(username,password,position){
+            return $http({
+                method: 'POST',
+                url: Host.host+'/adminLogin.php',
+                params:{
+                    username: username,
+                    password: password,
+                    position: position
+                }
+            })
+                .then(function(response){
+                    return response.data;
+                })
+                .catch(function(response){
+                    return $q.reject(response.status);
+                });
+        }
         return{
-            login: login
+            adminLogin: adminLogin,
+            studentLogin: studentLogin
         };
     });
 })();

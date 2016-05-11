@@ -5,9 +5,11 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+      $locationProvider.html5Mode(true);
     $stateProvider
-        .state('login',{url:'/',templateUrl:'app/login.html'})
+        .state('studentLogin',{url:'/',templateUrl:'app/studentLogin.html'})
+        .state('adminLogin',{url:'/admin',templateUrl:'app/adminLogin.html'})
         .state('home',{url:'/home',templateUrl:'app/home.html'})
 
         .state('co',{url:'/sysMgmt/co',templateUrl:'app/coMgmt/co.html'})

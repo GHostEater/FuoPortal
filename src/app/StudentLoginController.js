@@ -4,7 +4,7 @@
 (function () {
     'use strict';
 angular.module('fuoPortal')
-    .controller("LoginController",function(Auth,$location,User,toastr){
+    .controller("StudentLoginController",function(Auth,$location,User,toastr){
         var vm = this;
         vm.user = User.profile;
         vm.login = login;
@@ -15,7 +15,7 @@ angular.module('fuoPortal')
         function login(username,password){
             vm.userError = false;
             vm.passError = false;
-            Auth.login(username,password)
+            Auth.studentLogin(username,password)
                 .then(function(data){
                     User.setUser(data.name,data.firstName,data.middleName,data.lastName,data.id,data.sysRank);
                     toastr.success("Login Successful");
