@@ -2,83 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="492067d6-977a-4e30-ac58-58163c44e785" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/AllocationController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/BroadSheetController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/EditCaController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/EditExamController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/examOfficerMgmt/ExamOfficerAddController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/examOfficerMgmt/ExamOfficerController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/examOfficerMgmt/ExamOfficerDeleteController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/ForAssignLevelAdviserController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/services/LevelAdviser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/LevelAdviserCourseSlipController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/MyTranscriptController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/ResultBroadSheetController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/StudentLevelAdviserController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairEdit.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/allocation.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/broadSheet.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/semesterMgmt/changeSemester.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/editCa.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/editExam.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/examOfficerMgmt/examOfficer.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/examOfficerMgmt/examOfficerAdd.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/examOfficerMgmt/examOfficerDelete.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/forAssignLevelAdviser.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/levelAdviser.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/levelAdviserAdd.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/levelAdviserCourseSlip.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/levelAdviserDelete.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/myTranscript.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/result/resultBroadSheet.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/levelAdviserMgmt/studentLevelAdviser.jade" />
-      <change type="DELETED" beforePath="C:\Project\fuoPortal\src\app\services\SessionChecker.js" afterPath="" />
-      <change type="MOVED" beforePath="C:\Project\fuoPortal\src\app\StudentLoginController.js" afterPath="$PROJECT_DIR$/src/app/LoginController.js" />
-      <change type="MOVED" beforePath="C:\Project\fuoPortal\src\app\studentLogin.jade" afterPath="$PROJECT_DIR$/src/app/Login.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/AcademicAffair.js" afterPath="$PROJECT_DIR$/src/app/services/AcademicAffair.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/AcademicAffairAddController.js" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/AcademicAffairAddController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/AcademicAffairDeleteController.js" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/AcademicAffairDeleteController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Auth.js" afterPath="$PROJECT_DIR$/src/app/services/Auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/CoAddController.js" afterPath="$PROJECT_DIR$/src/app/coMgmt/CoAddController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/CoEditController.js" afterPath="$PROJECT_DIR$/src/app/coMgmt/CoEditController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/CourseDetailsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/HomeController.js" afterPath="$PROJECT_DIR$/src/app/HomeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/result/MyResultController.js" afterPath="$PROJECT_DIR$/src/app/result/MyResultController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Result.js" afterPath="$PROJECT_DIR$/src/app/services/Result.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/result/ResultComputation.jade" afterPath="$PROJECT_DIR$/src/app/result/ResultComputation.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/result/ResultComputationController.js" afterPath="$PROJECT_DIR$/src/app/result/ResultComputationController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Semester.js" afterPath="$PROJECT_DIR$/src/app/services/Semester.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/services/Student.js" afterPath="$PROJECT_DIR$/src/app/services/Student.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffair.jade" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffair.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairDelete.jade" afterPath="$PROJECT_DIR$/src/app/academicAffairMgmt/academicAffairDelete.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/co.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/co.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/co.jade" afterPath="$PROJECT_DIR$/src/app/coMgmt/co.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coAdd.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coAdd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" afterPath="$PROJECT_DIR$/src/app/coMgmt/coAdd.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coEdit.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/coMgmt/coEdit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/coMgmt/coEdit.jade" afterPath="$PROJECT_DIR$/src/app/coMgmt/coEdit.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/college.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/collegeMgmt/college.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/collegeMgmt/college.jade" afterPath="$PROJECT_DIR$/src/app/collegeMgmt/college.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/courseDetails.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/layout/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/layout/header.jade" afterPath="$PROJECT_DIR$/src/app/layout/header.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/hodAllocation.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/hodAllocation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/hodAllocation.jade" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/hodAllocation.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/home.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/home.jade" afterPath="$PROJECT_DIR$/src/app/home.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/index.html" afterPath="$PROJECT_DIR$/.tmp/serve/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.route.js" afterPath="$PROJECT_DIR$/src/app/index.route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/index.run.js" afterPath="$PROJECT_DIR$/src/app/index.run.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/lecturerMgmt/lecturer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" afterPath="$PROJECT_DIR$/src/app/lecturerMgmt/lecturer.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/myCourses.html" afterPath="$PROJECT_DIR$/.tmp/serve/app/allocationMgmt/myCourses.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/allocationMgmt/myCourses.jade" afterPath="$PROJECT_DIR$/src/app/allocationMgmt/myCourses.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/result/myResult.jade" afterPath="$PROJECT_DIR$/src/app/result/myResult.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/studentMgmt/studentView.jade" afterPath="$PROJECT_DIR$/src/app/studentMgmt/studentView.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FuoPortal.iws" />
@@ -107,7 +31,7 @@
       <file leaf-file-name="broadSheet.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/result/broadSheet.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46891192" vertical-offset="788" max-vertical-offset="1989">
+            <state vertical-scroll-proportion="0.30471382" vertical-offset="788" max-vertical-offset="1989">
               <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
               <folding />
             </state>
@@ -747,12 +671,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462908683373</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="commit">
+      <created>1464681325689</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1464681325689</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -761,7 +691,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26626325" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32755905" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1171,7 +1101,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/result/broadSheet.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46891192" vertical-offset="788" max-vertical-offset="1989">
+        <state vertical-scroll-proportion="0.30471382" vertical-offset="788" max-vertical-offset="1989">
           <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
           <folding />
         </state>
