@@ -23,7 +23,7 @@
         <th>Actions</th>
       </thead>
       <tbody>
-        <tr ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+code' | filter: model.searchTerm">
+        <tr ng-repeat="(key,lecturer) in model.lecturers | orderBy: '+name' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
           <td>{{lecturer.lastName | uppercase}}, {{lecturer.firstName}} {{lecturer.middleName}}</td>
           <td>{{lecturer.rank}}</td>

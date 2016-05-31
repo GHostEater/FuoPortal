@@ -15,8 +15,8 @@
         .form-group
             .col-sm-10
                 select.form-control(name="collegeId" required ng-model="model.collegeId")
-                    option(value="") college
-                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
+                    option(value="") College
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
         .form-group
             .col-sm-10
                 input.form-control(type="text" name="email" required ng-model="model.email" placeholder="E-mail Address")

@@ -10,11 +10,11 @@
             vm.ok = function(){
                 AcademicAffair.remove(id)
                     .then(function(){
-                        toastr.success("Academic Affairs Officer Removed");
+                        toastr.success("Academic Affair Officer Removed");
                         $modalInstance.close();
                     })
                     .catch(function(){
-                        toastr.error("Unable to Remove Academic Affairs Officer");
+                        toastr.error("Unable to Remove Academic Affair Officer");
                     });
             };
         });

@@ -13,6 +13,7 @@ Created by GHostEater on 23-Jan-16.
         <li ui-sref-active="active"><a ui-sref="home"><span class="glyphicon glyphicon-home">&nbsp</span><span>Home</span></a></li>
         <li ng-show="model.user.sysRank == 1" class="dropdown"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span class="glyphicon glyphicon-wrench">&nbsp</span><span>System Management</span><span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li ui-sref-active="active"><a ui-sref="academicAffair">Academic Affair Management</a></li>
             <li ui-sref-active="active"><a ui-sref="college">College Management</a></li>
             <li ui-sref-active="active"><a ui-sref="department">Department Management</a></li>
             <li ui-sref-active="active"><a ui-sref="major">Major Management</a></li>
@@ -21,23 +22,33 @@ Created by GHostEater on 23-Jan-16.
             <li ui-sref-active="active"><a ui-sref="level">Level Management</a></li>
             <li ui-sref-active="active"><a ui-sref="modeOfEntry">Mode of Entry Management</a></li>
             <li ui-sref-active="active"><a ui-sref="session">Session Management</a></li>
+            <li ui-sref-active="active"><a ui-sref="semester">Semester Management</a></li>
             <li ui-sref-active="active"><a ui-sref="lecturer">Lecturer Management</a></li>
             <li ui-sref-active="active"><a ui-sref="lecturerRank">Lecturer Rank Management</a></li>
             <li ui-sref-active="active"><a ui-sref="lecturerStatus">Lecturer Status Management</a></li>
+            <li ui-sref-active="active"><a ui-sref="levelAdviser">Level Adviser Mgmt</a></li>
+            <li ui-sref-active="active"><a ui-sref="examOfficer">Exam Officer Mgmt</a></li>
             <li ui-sref-active="active"><a ui-sref="co">College Officer Management</a></li>
             <li ui-sref-active="active"><a ui-sref="hod">HOD Management</a></li>
-            <li ui-sref-active="active"><a ui-sref="academicAffairs">Academic Affairs Management</a></li>
             <li ui-sref-active="active"><a ui-sref="student">Student Management</a></li>
           </ul>
         </li>
         <li ui-sref-active="active" ng-show="model.user.sysRank == 5"><a ui-sref="courseRegistration">Course Registration</a></li>
         <li ui-sref-active="active" ng-show="model.user.sysRank == 5"><a ui-sref="courseSlip">Course Slip</a></li>
         <li ui-sref-active="active" ng-show="model.user.sysRank == 5"><a ui-sref="myResult">Result</a></li>
-        <li ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4"><a ui-sref="myCourses">My Courses</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4 || model.user.sysRank == 9 || model.user.sysRank == 10"><a ui-sref="myCourses">My Courses</a></li>
         <li ui-sref-active="active" ng-show="model.user.sysRank == 3"><a ui-sref="courseAllocation">Course Allocation</a></li>
-        <li ui-sref-active="active" ng-show="model.user.sysRank == 3"><a ui-sref="resultComputation">Result Computation</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 9"><a ui-sref="resultComputation">Result Computation</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 9"><a ui-sref="courseToMajor">Course To Major Management</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 3"><a ui-sref="examOfficer">Exam Officer Mgmt</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 3"><a ui-sref="levelAdviser">Level Adviser Mgmt</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 10"><a ui-sref="studentLevelAdviser">Student Level Adviser</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9 || model.user.sysRank == 2"><a ui-sref="broadSheet">Broad Sheet</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9|| model.user.sysRank == 2"><a ui-sref="resultBroadSheet">Result Broad Sheet</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 2"><a ui-sref="student">Student Management</a></li>
+        <li ui-sref-active="active" ng-show="model.user.sysRank == 2"><a ui-sref="course">Course Management</a></li>
       </ul>
-      <div ng-show="model.user.loggedIn" class="navbar-right navbar-form"><span class="text-danger">Hello {{model.user.name}} {{model.user.firstName}} {{model.user.middleName}} {{model.user.lastName}}</span>
+      <div ng-show="model.user.loggedIn" class="navbar-right navbar-form"><span class="text-danger">Hello {{model.user.name}} {{model.user.lastName | uppercase}}, {{model.user.firstName}} {{model.user.middleName}}</span>
         <button ng-click="model.logOut()" class="btn btn-danger">Logout</button>
       </div>
     </div>

@@ -23,6 +23,8 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                         span.caret
                     ul.dropdown-menu
                         li(ui-sref-active="active")
+                            a(ui-sref="academicAffair") Academic Affair Management
+                        li(ui-sref-active="active")
                             a(ui-sref="college") College Management
                         li(ui-sref-active="active")
                             a(ui-sref="department") Department Management
@@ -39,17 +41,21 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                         li(ui-sref-active="active")
                             a(ui-sref="session") Session Management
                         li(ui-sref-active="active")
+                            a(ui-sref="semester") Semester Management
+                        li(ui-sref-active="active")
                             a(ui-sref="lecturer") Lecturer Management
                         li(ui-sref-active="active")
                             a(ui-sref="lecturerRank") Lecturer Rank Management
                         li(ui-sref-active="active")
                             a(ui-sref="lecturerStatus") Lecturer Status Management
                         li(ui-sref-active="active")
+                            a(ui-sref="levelAdviser") Level Adviser Mgmt
+                        li(ui-sref-active="active")
+                            a(ui-sref="examOfficer") Exam Officer Mgmt
+                        li(ui-sref-active="active")
                             a(ui-sref="co") College Officer Management
                         li(ui-sref-active="active")
                             a(ui-sref="hod") HOD Management
-                        li(ui-sref-active="active")
-                            a(ui-sref="academicAffairs") Academic Affairs Management
                         li(ui-sref-active="active")
                             a(ui-sref="student") Student Management
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 5")
@@ -58,12 +64,28 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                     a(ui-sref="courseSlip") Course Slip
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 5")
                     a(ui-sref="myResult") Result
-                li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4")
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 4 || model.user.sysRank == 9 || model.user.sysRank == 10")
                     a(ui-sref="myCourses") My Courses
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
                     a(ui-sref="courseAllocation") Course Allocation
-                li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 9")
                     a(ui-sref="resultComputation") Result Computation
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 9")
+                    a(ui-sref="courseToMajor") Course To Major Management
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
+                    a(ui-sref="examOfficer") Exam Officer Mgmt
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
+                    a(ui-sref="levelAdviser") Level Adviser Mgmt
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 10")
+                    a(ui-sref="studentLevelAdviser") Student Level Adviser
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9 || model.user.sysRank == 2")
+                    a(ui-sref="broadSheet") Broad Sheet
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9|| model.user.sysRank == 2")
+                    a(ui-sref="resultBroadSheet") Result Broad Sheet
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 2")
+                    a(ui-sref="student") Student Management
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 2")
+                    a(ui-sref="course") Course Management
             .navbar-right.navbar-form(ng-show="model.user.loggedIn")
-                span.text-danger Hello {{model.user.name}} {{model.user.firstName}} {{model.user.middleName}} {{model.user.lastName}}
+                span.text-danger Hello {{model.user.name}} {{model.user.lastName | uppercase}}, {{model.user.firstName}} {{model.user.middleName}}
                 button.btn.btn-danger(ng-click = "model.logOut()") Logout

@@ -1,0 +1,17 @@
+//   Created by Bello J on 5/17/2016.
+.modal-header
+    h3.modal-title Assigning Students To {{model.lecturer.lastName}}, {{model.lecturer.firstName}} {{model.lecturer.middleName}}
+.modal-body
+    table.table.table-striped.table-bordered
+        thead
+            th S/N
+            th Matric No
+            th Name
+        tbody
+            tr(ng-repeat="(key,student) in model.students | orderBy: '+matricNo'")
+                td {{key + 1}}
+                td {{student.matricNo}}
+                td {{student.lastName}}, {{student.firstName}} {{student.middleName}}
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

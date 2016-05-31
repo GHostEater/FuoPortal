@@ -1,0 +1,8 @@
+//
+   Created by Bello J on 5/18/2016.
+div(ng-controller="ChangeSemesterController as model")
+    button.btn.btn-danger(ng-click="model.changeSemester()") Change Semester
+    h3 {{model.semester.semester}}
+        span(ng-show="model.semester.semester == 1") st Semester
+        span(ng-show="model.semester.semester == 2") nd Semester
+

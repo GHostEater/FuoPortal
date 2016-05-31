@@ -1,6 +1,6 @@
 //   Created by Bello J on 4/22/2016.
 .modal-header
-    h3.modal-title Edit Co
+    h3.modal-title Edit College Officer
 .modal-body
     form(name="model.form").form-horizontal
 
@@ -15,9 +15,9 @@
                 input.form-control(type="text" name="lastName" required ng-model="model.co.lastName" placeholder="Last Name")
         .form-group
             .col-sm-10
-                select.form-control( name="collegeId" required ng-model="model.co.collegeId")
+                select.form-control(name="collegeId" required ng-model="model.collegeId")
                     option(value="") College
-                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
         .form-group
             .col-sm-10
                 input.form-control(type="text" name="email" required ng-model="model.co.email" placeholder="E-mail Address")

@@ -4,18 +4,26 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CoAddController',function(Co,toastr,$modalInstance){
+        .controller('CoAddController',function(Co,College,toastr,$modalInstance){
             var vm = this;
+
+            College.getAll()
+                .then(function(data){
+                    vm.colleges = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    Co.add(vm.lecturerId,vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.email,vm.password)
+                    Co.add(vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.email,vm.password)
                         .then(function(){
-                            toastr.success("Co Added");
+                            toastr.success("College Officer Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Co");
+                            toastr.error("Unable to Add College Officer");
                         });
                 }
                 else{

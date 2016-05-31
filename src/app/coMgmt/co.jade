@@ -8,22 +8,16 @@ div(ng-controller="CoController as model")
         table.table.table-striped.table-bordered
             thead
                 th S/N
-                th First Name
-                th Middle Name
-                th Last Name
+                th Name
                 th College
                 th E-mail
-                th Address
+                th Actions
             tbody
-                tr(ng-repeat="(key,co) in model.cos | orderBy: '+code' | filter: model.searchTerm")
+                tr(ng-repeat="(key,co) in model.cos | orderBy: '+lastName' | filter: model.searchTerm")
                     td {{key + 1}}
-                    td {{co.firstName}}
-                    td {{co.middleName}}
-                    td {{co.lastName}}
-                    td
-                        span(ng-show="co.collegeId == 1") College Of Management and Social Sciences
-                        span(ng-show="co.collegeId == 2") College Of Natural and Applied Sciences
-                    td {{lecturer.email}}
+                    td {{co.lastName | uppercase}}, {{co.firstName}} {{co.middleName}}
+                    td {{co.college}}
+                    td {{co.email}}
                     td
                         button.btn.btn-warning(ng-click="model.edit(co.id)") Edit
                         button.btn.btn-danger(ng-click="model.remove(co.id)") Delete

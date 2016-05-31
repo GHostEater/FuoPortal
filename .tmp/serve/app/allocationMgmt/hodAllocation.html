@@ -1,6 +1,5 @@
 
-<!--Created by GHostEater on 23-Apr-16.
--->
+<!--   Created by GHostEater on 23-Apr-16.-->
 <div ng-controller="HodAllocationController as model">
   <div class="col-sm-12">
     <div class="row content hidden-print">
@@ -25,6 +24,10 @@
         <h2>FOUNTAIN UNIVERSITY, OSOGBO</h2>
         <h3>(University of Nasrul-Lahi-Il-Fatih Society)</h3>
         <h4>{{model.lecturer.college}}</h4>
+        <h4>{{model.lecturer.department}}</h4>
+      </div>
+      <div class="col-sm-12">
+        <h5>The Details of the Allocation of Courses for</h5>
       </div>
     </div>
     <div class="row"><span class="col-sm-4">Session: {{model.session.session}}</span><span class="col-sm-4 col-sm-offset-4">Semester: {{model.semester.semester}}<span ng-show="model.semester.semester == 1">st Semester</span><span ng-show="model.semester.semester == 2">nd Semester</span></span></div><span class="row">Department: {{model.lecturer.department}}</span>
@@ -48,7 +51,7 @@
           <td>{{allocation.level}}</td>
           <td>{{allocation.lastName}}, {{allocation.firstName}} {{allocation.middleName}}</td>
           <td><span ng-show="allocation.position == 1">Coordinator</span><span ng-show="allocation.position == 2">Assissting Lecturer</span></td>
-          <td class="hidden-print"><a href="#/courseDetails/{{allocation.code}}" class="btn btn-primary">View Details</a>
+          <td class="hidden-print"><a href="/courseDetails/{{allocation.code}}" class="btn btn-primary">View Details</a>
             <button ng-click="model.remove(allocation.id)" class="btn btn-danger">Delete</button>
           </td>
         </tr>

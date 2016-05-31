@@ -14,8 +14,18 @@
                         return $q.reject(response.status);
                     });
             }
+            function change(){
+                return $http.get(Host.host+'/semester/change.php')
+                    .then(function(response){
+                        return response.data;
+                    })
+                    .catch(function(response){
+                        return $q.reject(response.status);
+                    });
+            }
             return{
-                get: get
+                get: get,
+                change: change
             }
         });
 })();

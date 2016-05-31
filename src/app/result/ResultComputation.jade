@@ -2,6 +2,7 @@
 div(ng-controller="ResultComputationController as model")
     .row.content.hidden-print
         button.btn.btn-warning.btn-lg(ng-click="model.processResults()") Process Results
+        button.btn.btn-warning.btn-lg(ng-click="model.releaseResults()") Release Results
     .panel.panel-info(ng-repeat="student in model.students")
         .panel-heading {{student.info.lastName}}, {{student.info.firstName}} {{student.info.middleName}}
         .panel-body
@@ -11,13 +12,18 @@ div(ng-controller="ResultComputationController as model")
                         th Course Code
                         th Course Title
                         th Unit
+                        th Score 100%
                         th Grade
-                    tbody
+                     tbody
                         tr(ng-repeat="result in student.results | orderBy:'+code'")
                             td {{result.code}}
                             td {{result.title}}
                             td {{result.unit}}
+                            td {{result.final}}
                             td {{result.grade}}
                 span TNU: {{student.tnu}}&nbsp
                 span TCP: {{student.tcp}}&nbsp
-                span GPA: {{student.gpa | number:2}}
+                span GPA: {{student.gpa | number:2}}&nbsp
+                span CTNU: {{student.ctnu}}&nbsp
+                span CTCP: {{student.ctcp}}&nbsp
+                span CGPA: {{student.cgpa | number:2}}

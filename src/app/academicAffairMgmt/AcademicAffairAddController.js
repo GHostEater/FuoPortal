@@ -11,11 +11,11 @@
                 if(vm.form.$valid){
                     AcademicAffair.add(vm.firstName,vm.middleName,vm.lastName,vm.email,vm.password)
                         .then(function(){
-                            toastr.success("Academic Affairs Officer Added");
+                            toastr.success("Academic Affair Officer Added");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Add Academic Affairs Officer");
+                            toastr.error("Unable to Add Academic Affair Officer");
                         });
                 }
                 else{

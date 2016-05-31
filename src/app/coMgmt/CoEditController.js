@@ -4,11 +4,11 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('CoEditController',function(Co,College,toastr,lecturerId,$modalInstance){
+        .controller('CoEditController',function(Co,College,toastr,id,$modalInstance){
             var vm = this;
-            Co.getOne(lecturerId)
+            Co.getOne(id)
                 .then(function(data){
-                    vm.cos = data;
+                    vm.co = data;
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");
@@ -23,13 +23,13 @@
 
             vm.ok = function(){
                 if(vm.form.$dirty && vm.form.$valid){
-                    Co.edit(vm.lecturerId,vm.firstName,vm.middleName,vm.lastName,vm.collegeId,vm.email,vm.password)
+                    Co.edit(id,vm.co.firstName,vm.co.middleName,vm.co.lastName,vm.co.collegeId,vm.co.email,vm.co.password)
                         .then(function(){
-                            toastr.success("Co Changed");
+                            toastr.success("College Officer Changed");
                             $modalInstance.close();
                         })
                         .catch(function(){
-                            toastr.error("Unable to Change Co");
+                            toastr.error("Unable to Change College Officer");
                         });
                 }
                 else if(vm.form.$pristine && vm.form.$valid){

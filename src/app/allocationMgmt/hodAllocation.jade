@@ -1,5 +1,4 @@
-//
-   Created by GHostEater on 23-Apr-16.
+//   Created by GHostEater on 23-Apr-16.
 div(ng-controller="HodAllocationController as model")
     .col-sm-12
         .row.content.hidden-print
@@ -19,6 +18,9 @@ div(ng-controller="HodAllocationController as model")
                 h2 FOUNTAIN UNIVERSITY, OSOGBO
                 h3 (University of Nasrul-Lahi-Il-Fatih Society)
                 h4 {{model.lecturer.college}}
+                h4 {{model.lecturer.department}}
+            .col-sm-12
+                h5 The Details of the Allocation of Courses for
         .row
             span.col-sm-4 Session: {{model.session.session}}
             span.col-sm-4.col-sm-offset-4 Semester: {{model.semester.semester}}
@@ -47,5 +49,5 @@ div(ng-controller="HodAllocationController as model")
                         span(ng-show="allocation.position == 1") Coordinator
                         span(ng-show="allocation.position == 2") Assissting Lecturer
                     td.hidden-print
-                        a(href="#/courseDetails/{{allocation.code}}").btn.btn-primary View Details
+                        a(href="/courseDetails/{{allocation.code}}").btn.btn-primary View Details
                         button.btn.btn-danger(ng-click="model.remove(allocation.id)") Delete

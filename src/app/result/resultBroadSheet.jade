@@ -1,0 +1,91 @@
+//   Created by Bello J on 5/24/2016.
+div(ng-controller="ResultBroadSheetController as model")
+    .row
+        span.col-sm-4
+            img(src="img/logo.png")
+        span.col-sm-8
+            h2 FOUNTAIN UNIVERSITY, OSOGBO
+            h3 (University of Nasrul-Lahi-Il-Fatih Society)
+            h3 {{model.session.session}} &nbsp
+                span(ng-show="model.semester.semester == 1") 1st Semester Examination Results
+                span(ng-show="model.semester.semester == 2") 2nd Semester Examination Results
+    .row
+        span Department: {{model.lecturer.department}}  Level: {{model.level.level}}
+    .row
+        span Programmme: B.Sc &nbsp
+        span(ng-show="model.lecturer.college.id == 2") (Hons.)
+        span {{model.major.name}}
+    .row.hidden-print
+        .col-sm-2
+            select.form-control(ng-model="model.lvl" ng-change="model.changeLevel(model.lvl)")
+                option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
+        .col-sm-2
+            select.form-control(ng-model="model.mj" ng-change="model.changeMajor(model.mj)")
+                option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
+        .col-sm-2
+            select.form-control(ng-model="model.sess" ng-change="model.changeSession(model.sess)")
+                option(ng-repeat="session in model.sessions" value="{{session.id}}") {{session.session}}
+        .col-sm-2
+            select.form-control(ng-model="model.semester.semester")
+                option(value="1") 1st Semester
+                option(value="2") 2nd Semester
+    .panel.panel-info
+        .panel-body
+            .well
+                //pre {{model.gps | json}}
+                table.table.table-striped.table-bordered
+                    thead
+                        th S/N
+                        th Matric No
+                        th Courses
+                        th Outstanding
+                        th(colspan=3) Previous
+                        th(colspan=3) Present
+                        th(colspan=3) FINAL
+                        th Remark
+                        tr
+                            th
+                            th
+                            th
+                            th
+                            th TCP
+                            th TNU
+                            th CGPA
+                            th TCP
+                            th TNU
+                            th GPA
+                            th CTCP
+                            th CTNU
+                            th CGPA
+                    tbody
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id,majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id}}")
+                            td {{key + 1}}
+                            td {{gp.gp.matricNo}}
+                            td
+                                div(ng-repeat="res in gp.result | filter:{sessionId:model.session.id,semester:model.semester.semester}")
+                                    div.col-sm-6
+                                        span {{res.code}} &nbsp
+                                        span {{res.unit}} &nbsp
+                                        span {{res.final}} &nbsp
+                                        span {{res.grade}},
+                            td
+                                div(ng-repeat="res in gp.resultFail | filter:{sessionId:model.session.id,semester:model.semester.semester}")
+                                    div.col-sm-6
+                                        span {{res.code}} &nbsp
+                                        span {{res.unit}} &nbsp
+                                        span {{res.final}} &nbsp
+                                        span {{res.grade}},
+                            td {{gp.gp.prev_ctcp | number:2}}
+                            td {{gp.gp.prev_ctnu | number:2}}
+                            td {{gp.gp.prev_cgpa | number:2}}
+                            td {{gp.gp.tcp}}
+                            td {{gp.gp.tnu}}
+                            td {{gp.gp.gpa}}
+                            td {{gp.gp.ctcp}}
+                            td {{gp.gp.ctnu}}
+                            td {{gp.gp.cgpa}}
+                            td
+                                span(ng-show="gp.resultFail.length == 0") PASS
+                                span(ng-show="gp.resultFail.length > 0 && gp.gp.statusId == 2") PCSO
+                                span(ng-show="gp.resultFail.length > 0 && gp.gp.statusId == 3") PROBATION
+                                span(ng-show="gp.resultFail.length > 0 && gp.gp.statusId == 4") WITHDRAWAL

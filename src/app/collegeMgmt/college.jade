@@ -12,7 +12,7 @@ div(ng-controller="CollegeController as model")
                 th Acronym
                 th Actions
             tbody
-                tr(ng-repeat="(key,college) in model.colleges | orderBy: '+code' | filter: model.searchTerm")
+                tr(ng-repeat="(key,college) in model.colleges | orderBy: '+name' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{college.name}}
                     td {{college.acronym}}

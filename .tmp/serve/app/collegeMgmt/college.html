@@ -16,7 +16,7 @@
         <th>Actions</th>
       </thead>
       <tbody>
-        <tr ng-repeat="(key,college) in model.colleges | orderBy: '+code' | filter: model.searchTerm">
+        <tr ng-repeat="(key,college) in model.colleges | orderBy: '+name' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
           <td>{{college.name}}</td>
           <td>{{college.acronym}}</td>

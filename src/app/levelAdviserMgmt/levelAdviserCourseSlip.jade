@@ -1,0 +1,36 @@
+//   Created by Bello J on 5/17/2016.
+div(ng-controller="LevelAdviserCourseSlipController as model")
+    .col-sm-12
+        .row.visible-print
+            .col-sm-1
+                img(src="img/logo.png")
+            .col-sm-11.text-center
+                h2 FOUNTAIN UNIVERSITY, OSOGBO
+                h3 (University of Nasrul-Lahi-Il-Fatih Society)
+                h4 {{model.college.name}}
+        .row.visible-print
+            span.col-sm-4 Session: {{model.session.session}}
+            span.col-sm-4.col-sm-offset-4 Semester: {{model.semester.semester}}
+                span(ng-show="model.semester.semester == 1") st Semester
+                span(ng-show="model.semester.semester == 2") nd Semester
+        div.visible-print
+            span.row Department: {{model.student.department}}
+            span.row Major: {{model.student.major}}
+            span.row Name:&nbsp
+                b {{model.student.lastName | uppercase}},&nbsp
+                span {{model.student.firstName}} {{model.student.middleName}}
+            span.row Matric Number: {{model.student.matricNo}}
+        table.table.table-striped.table-bordered.table-condensed
+            thead
+                th Course Code
+                th Course Title
+                th Unit
+                th Type
+            tbody
+                tr(ng-repeat="course in model.courses | orderBy: '+code'")
+                    td {{course.code}}
+                    td {{course.title}}
+                    td {{course.unit}}
+                    td {{course.type}}
+
+        span.row Total Units Registerred: {{model.counter}}

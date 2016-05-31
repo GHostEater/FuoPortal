@@ -1,0 +1,24 @@
+//   Created by Bello J on 5/22/2016.
+.modal-header
+    h3.modal-title Edit Academic Affair Officer
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="firstName" required ng-model="model.academicAffair.firstName" placeholder="First Name")
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="middleName" required ng-model="model.academicAffair.middleName" placeholder="Middle name")
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="lastName" required ng-model="model.academicAffair.lastName" placeholder="Last Name")
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="email" required ng-model="model.academicAffair.email" placeholder="E-mail Address")
+        .form-group
+            .col-sm-10
+                input.form-control(type="password" name="password" required ng-model="model.academicAffair.password" placeholder="Password")
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel
+

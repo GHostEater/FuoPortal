@@ -6,8 +6,10 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock(User,$rootScope){
-      $rootScope.user = User.profile;
+  function runBlock(User,$location){
+      if (!User.profile.loggedIn){
+          $location.url('/');
+      }
 
   }
 

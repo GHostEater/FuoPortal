@@ -1,0 +1,11 @@
+//   Created by Bello J on 5/23/2016.
+.modal-header
+    h3.modal-title Edit Ca Score
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="ca" required ng-model="model.result.ca" placeholder="Ca Score")
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

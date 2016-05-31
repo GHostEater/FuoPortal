@@ -30,7 +30,7 @@ if($n_rows > 0){
                 'id' => $row['sn'],
                 'username' => $row['username'],
                 'name' => $row['name'],
-                'systemRank' => 1
+                'sysRank' => 1
             ];
         }
         header("HTTP/1.0 201 Success");
@@ -41,12 +41,12 @@ if($n_rows > 0){
     }
 }
 else{
-    $query = "SELECT * FROM student_info WHERE matric_no = '$username'";
+    $query = "SELECT * FROM student_info WHERE matricNo = '$username'";
     $result = mysqli_query($con,$query)or die("Unable To Execute");
     $n_rows = mysqli_num_rows($result);
 
     if($n_rows > 0){
-        $query2 = "SELECT * FROM student_info WHERE matric_no = '$username' AND password = '$password'";
+        $query2 = "SELECT * FROM student_info WHERE matricNo = '$username' AND password = '$password'";
         $result2 = mysqli_query($con,$query2)or die("Unable To Execute");
         $n_rows2 = mysqli_num_rows($result2);
 
@@ -75,11 +75,11 @@ else{
                             $major = $row5['name'];
 
                             $loginArr = [
-                                'id' => $row['matric_no'],
-                                'matric_no' => $row['matric_no'],
-                                'lastName' => $row['last_name'],
-                                'middleName' => $row['middle_name'],
-                                'firstName' => $row['first_name'],
+                                'id' => $row['matricNo'],
+                                'matricNo' => $row['matricNo'],
+                                'lastName' => $row['lastName'],
+                                'middleName' => $row['middleName'],
+                                'firstName' => $row['firstName'],
                                 'college' => $college,
                                 'department' => $department,
                                 'major' => $major,
@@ -88,7 +88,8 @@ else{
                                 'session' => $row['session'],
                                 'dateBirth' => $row['dob'],
                                 'email' => $row['email'],
-                                'address' => $row['address']
+                                'address' => $row['address'],
+                                'sysRank' => 5
                             ];
                         }
                     }
@@ -113,11 +114,47 @@ else{
 
             if($n_rows2 > 0){
                 while($row = mysqli_fetch_assoc($result2)){
-                    $loginArr = [
-                        'id' => $row['sn'],
-                        'username' => $row['username'],
-                        'name' => $row['name']
-                    ];
+                    $collegeId = $row['collegeId'];
+                    $departmentId = $row['departmentId'];
+                    $lecturerId = $row['sn'];
+
+                    $query3 = "select * from college where sn = '$collegeId'";
+                    $result3 = mysqli_query($con,$query3)or die("Unable To Execute");
+
+                    while($row3 = mysqli_fetch_assoc($result3)){
+                        $query4 = "select * from department where sn = '$departmentId'";
+                        $result4 = mysqli_query($con,$query4)or die("Unable To Execute");
+
+                        while($row4 = mysqli_fetch_assoc($result4)){
+
+                            $query10 = "SELECT * FROM hod_info WHERE lecturerId='$lecturerId'";
+                            $result10 = mysqli_query($con,$query10)or die("Unable To Execute");
+                            $n_rows10 = mysqli_num_rows($result10);
+
+                            if($n_rows10 > 0){
+                                $sysRank = 3;
+                            }
+                            else{
+                                $sysRank = 4;
+                            }
+                            $college = $row3['name'];
+                            $department = $row4['name'];
+
+                            $loginArr = [
+                                'id' => $row['sn'],
+                                'firstName' => $row['firstName'],
+                                'middleName' => $row['middleName'],
+                                'lastName' => $row['lastName'],
+                                'rank' => $row['rank'],
+                                'status' => $row['status'],
+                                'college' => $college,
+                                'department' => $department,
+                                'phoneNumber' => $row['phone_number'],
+                                'email' => $row['email'],
+                                'sysRank' => $sysRank
+                            ];
+                        }
+                    }
                 }
                 header("HTTP/1.0 201 Success");
                 echo json_encode($loginArr);

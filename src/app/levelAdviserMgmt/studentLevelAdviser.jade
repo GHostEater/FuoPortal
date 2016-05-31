@@ -1,0 +1,33 @@
+//   Created by Bello J on 5/22/2016.
+div(ng-controller="StudentLevelAdviserController as model")
+    .col-sm-12
+        .row.content
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+    table.table.table-condensed.table-striped.table-bordered
+        thead
+            th S/N
+            th Matric No
+            th Name
+            th College
+            th Departmart
+            th Major
+            th Level
+            th Mode of Entry
+            th E-mail
+            th Actions
+        tbody
+            tr(ng-repeat="(key,student) in model.students | orderBy: '+lastName'")
+                td {{key + 1}}
+                td {{student.matricNo}}
+                td {{student.lastName | uppercase}}, {{student.firstName}} {{student.middleName}}
+                td {{student.college}}
+                td {{student.department}}
+                td {{student.major}}
+                td {{student.level}}
+                td {{student.modeOfEntry}}
+                td {{student.email}}
+                td
+                    button.btn.btn-primary(ng-click="model.view(student.matricNo)") View Details
+                    a.btn.btn-primary(href="/student/levelAdviserCourseSlip/{{student.id}}") View Course Registration Detail
+                    a.btn.btn-primary(href="/lecturer/myTranscript/{{student.id}}") View Transcript

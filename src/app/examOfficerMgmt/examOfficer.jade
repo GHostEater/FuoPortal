@@ -1,0 +1,20 @@
+//   Created by Bello J on 5/12/2016.
+div(ng-controller="ExamOfficerController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-4.btn.btn-lg.btn-primary(ng-click="model.add()") Add Exam Officer for the Department
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Name
+                th Department
+                th Actions
+            tbody
+                tr(ng-repeat="(key,examOfficer) in model.examOfficers | orderBy: '+department' | filter: model.searchTerm")
+                    td {{key + 1}}
+                    td {{examOfficer.lastName}}, {{examOfficer.firstName}} {{examOfficer.middleName}}
+                    td {{examOfficer.department}}
+                    td
+                        button.btn.btn-danger(ng-click="model.remove(examOfficer.id)") Delete

@@ -1,0 +1,48 @@
+//   Created by Bello J on 5/25/2016.
+div(ng-controller="AllocationController as model")
+    .col-sm-12
+        .row.content.hidden-print
+            button.col-sm-4.btn.btn-lg.btn-primary(ng-click="allocate()") Allocation Courses For Department
+        .row.hidden-print
+            .col-sm-4
+                select.form-control(ng-model="model.sess" ng-change="model.changeSession(model.sess)")
+                    option(ng-repeat="session in model.sessions" value="{{session.id}}") {{session.session}}
+            .col-sm-4
+                select.form-control(ng-model="model.semester.semester")
+                    option(value="1") 1st Semester
+                    option(value="2") 2nd Semester
+        .row.visible-print
+            .col-sm-12
+                img.center-block(src="img/logo.png")
+            .col-sm-12.text-center
+                h2 FOUNTAIN UNIVERSITY, OSOGBO
+                h3 (University of Nasrul-Lahi-Il-Fatih Society)
+                h4 {{model.lecturer.college}}
+                h4 {{model.lecturer.department}}
+            .col-sm-12
+                h5 The Details of the Allocation of Courses for
+        .row
+            span.col-sm-4 Session: {{model.session.session}}
+            span.col-sm-4.col-sm-offset-4 Semester: {{model.semester.semester}}
+                span(ng-show="model.semester.semester == 1") st Semester
+                span(ng-show="model.semester.semester == 2") nd Semester
+        span.row Department: {{model.lecturer.department}}
+        table.table.table-striped.table-bordered
+            thead
+                th S/N
+                th Course Code
+                th Course Title
+                th Unit
+                th Level
+                th Lecturer
+                th Position
+                th.hidden-print Actions
+            tbody
+                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.session.id,semester:model.semester.semester}")
+                    td {{key +1 }}
+                    td {{allocation.code}}
+                    td {{allocation.title}}
+                    td {{allocation.unit}}
+                    td {{allocation.level}}
+                    td {{allocation.lastName}}, {{allocation.firstName}} {{allocation.middleName}}
+

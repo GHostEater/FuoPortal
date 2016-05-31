@@ -21,6 +21,15 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
+        function getOneById(id){
+            return $http.get(Host.host+'/student/student.php')
+                .then(function(response){
+                    return lodash.find(response.data,{'id':id});
+                })
+                .catch(function(response){
+                    return $q.reject(response.status);
+                });
+        }
         function add(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session,password){
             return $http({
                 method: 'POST',
@@ -111,6 +120,7 @@ angular.module('fuoPortal')
         return{
             getAll: getAll,
             getOne: getOne,
+            getOneById: getOneById,
             add: add,
             edit: edit,
             remove: remove

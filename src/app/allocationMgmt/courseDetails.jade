@@ -16,8 +16,9 @@ div(ng-controller="CourseDetailsController as model")
                         th
                         th CA
                         th Exam
-                        th Final Score
+                        th Score 100%
                         th Grade
+                        th Actions
                 tbody
                     tr(ng-repeat="(key,student) in model.students | orderBy: '+matricNo'")
                         td {{key+1}}
@@ -27,7 +28,10 @@ div(ng-controller="CourseDetailsController as model")
                         td {{student.result.exam}}
                         td {{student.result.final}}
                         td {{student.result.grade}}
-        .panel-footer.hidden-print
+                        td
+                            button.btn.btn-warning(ng-click="model.editCa(student.result.id)") Edit Ca
+                            button.btn.btn-warning(ng-click="model.editExam(student.result.id)") Edit Exam
+        .panel-footer.hidden-print(ng-show="model.course.position == 1")
             .row.content
                 csv-upload.col-sm-2(ng-model="model.ca")
                 button.col-sm-2.btn.btn-primary(ng-click="model.uploadCA()") Upload CA

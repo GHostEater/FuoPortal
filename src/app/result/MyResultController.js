@@ -8,7 +8,7 @@
             var vm = this;
             Result.getAll()
                 .then(function(data){
-                    vm.results = lodash.filter(data,{matricNo:User.profile.id});
+                    vm.results = lodash.filter(data,{matricNo:User.profile.id,rel:'1'});
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

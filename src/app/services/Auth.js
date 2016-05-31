@@ -5,10 +5,10 @@
     'use strict';
 angular.module('fuoPortal')
     .factory("Auth",function(Host,$http,$q){
-        function studentLogin(username,password){
+        function login(username,password){
             return $http({
                     method: 'POST',
-                    url: Host.host+'/studentLogin.php',
+                    url: Host.host+'/login.php',
                     params:{
                         username: username,
                         password: password
@@ -40,7 +40,7 @@ angular.module('fuoPortal')
         }
         return{
             adminLogin: adminLogin,
-            studentLogin: studentLogin
+            login: login
         };
     });
 })();

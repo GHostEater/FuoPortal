@@ -17,12 +17,14 @@ div(ng-controller="MyResultController as model")
                                 th Course Code
                                 th Course Title
                                 th Unit
+                                th Final
                                 th Grade
                             tbody
                                 tr(ng-repeat="result in model.results | orderBy:'+code' | filter:{sessionId:model.session.id,semester:'1'}")
                                     td {{result.code}}
                                     td {{result.title}}
                                     td {{result.unit}}
+                                    td {{result.final}}
                                     td {{result.grade}}
                     h5 2nd Semester
                     .well
@@ -31,10 +33,12 @@ div(ng-controller="MyResultController as model")
                                 th Course Code
                                 th Course Title
                                 th Unit
+                                th Final
                                 th Grade
                             tbody
                                 tr(ng-repeat="result in model.results | orderBy:'+code' | filter:{semester:'2'}")
                                     td {{result.code}}
                                     td {{result.title}}
                                     td {{result.unit}}
+                                    td {{result.final}}
                                     td {{result.grade}}
