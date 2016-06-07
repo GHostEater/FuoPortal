@@ -39,7 +39,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function processResult(matricNo,tcp,ctcp,tnu,ctnu,gpa,cgpa,prev_cgpa,prev_ctcp,prev_ctnu,sessionId,semester){
+        function processResult(matricNo,tcp,ctcp,tnu,ctnu,gpa,cgpa,prev_cgpa,prev_ctcp,prev_ctnu,prev_tce,tce,sessionId,semester){
             return $http({
                 method: 'POST',
                 url: Host.host + '/result/addGPA.php',
@@ -54,6 +54,8 @@ angular.module('fuoPortal')
                     prev_cgpa: prev_cgpa,
                     prev_ctcp: prev_ctcp,
                     prev_ctnu: prev_ctnu,
+                    prev_tce: prev_tce,
+                    tce: tce,
                     sessionId: sessionId,
                     semester: semester
                 }

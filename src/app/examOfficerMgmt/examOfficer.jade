@@ -9,12 +9,10 @@ div(ng-controller="ExamOfficerController as model")
             thead
                 th S/N
                 th Name
-                th Department
                 th Actions
             tbody
-                tr(ng-repeat="(key,examOfficer) in model.examOfficers | orderBy: '+department' | filter: model.searchTerm")
+                tr(ng-repeat="(key,examOfficer) in model.examOfficers | orderBy: '+lastName' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{examOfficer.lastName}}, {{examOfficer.firstName}} {{examOfficer.middleName}}
-                    td {{examOfficer.department}}
                     td
                         button.btn.btn-danger(ng-click="model.remove(examOfficer.id)") Delete

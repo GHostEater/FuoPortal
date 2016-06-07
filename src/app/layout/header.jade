@@ -87,5 +87,7 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 2")
                     a(ui-sref="course") Course Management
             .navbar-right.navbar-form(ng-show="model.user.loggedIn")
-                span.text-danger Hello {{model.user.name}} {{model.user.lastName | uppercase}}, {{model.user.firstName}} {{model.user.middleName}}
+                span.text-danger Hello {{model.user.name}} &nbsp
+                    span(ng-show="model.user.sysRank != 1") {{model.user.lastName | uppercase}}, {{model.user.firstName}} {{model.user.middleName}} &nbsp
+                    span(ng-show="model.user.sysRank == 5") {{model.user.level}} Level
                 button.btn.btn-danger(ng-click = "model.logOut()") Logout

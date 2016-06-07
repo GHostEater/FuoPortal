@@ -14,7 +14,7 @@ div(ng-controller="ResultComputationController as model")
                         th Unit
                         th Score 100%
                         th Grade
-                     tbody
+                    tbody
                         tr(ng-repeat="result in student.results | orderBy:'+code'")
                             td {{result.code}}
                             td {{result.title}}
@@ -26,4 +26,5 @@ div(ng-controller="ResultComputationController as model")
                 span GPA: {{student.gpa | number:2}}&nbsp
                 span CTNU: {{student.ctnu}}&nbsp
                 span CTCP: {{student.ctcp}}&nbsp
-                span CGPA: {{student.cgpa | number:2}}
+                span CGPA: {{student.cgpa | number:2}}&nbsp
+                span TCE: {{student.tce}}

@@ -1,41 +1,41 @@
 /**
- * Created by Bello J on 5/12/2016.
+ * Created by GHostEater on 07-Jun-16.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("ExamOfficerController",function(toastr,$modal,ExamOfficer,Lecturer,lodash,User){
+        .controller("LevelAdviserController", function(toastr,$modal,LevelAdviser,Lecturer,lodash,User){
             var vm = this;
             vm.add = add;
             vm.remove = remove;
             Lecturer.getOne(User.profile.id)
                 .then(function(data){
                     vm.lecturer = data;
-                    ExamOfficer.getAll()
+                    LevelAdviser.getAll()
                         .then(function(data){
-                            vm.examOfficers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
+                            vm.levelAdvisers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
                         });
                 });
 
             function add(){
                 var options = {
-                    templateUrl: 'app/examOfficerMgmt/examOfficerAdd.html',
-                    controller: "ExamOfficerAddController",
+                    templateUrl: 'app/levelAdviserMgmt/levelAdviserAdd.html',
+                    controller: "LevelAdviserAddController",
                     controllerAs: 'model',
                     size: 'lg'
                 };
                 $modal.open(options).result
                     .then(function(){
-                        ExamOfficer.getAll()
+                        LevelAdviser.getAll()
                             .then(function(data){
-                                vm.examOfficers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
+                                vm.levelAdvisers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
                             });
                     });
             }
             function remove(id){
                 var options = {
-                    templateUrl: 'app/examOfficerMgmt/examOfficerDelete.html',
-                    controller: "ExamOfficerDeleteController",
+                    templateUrl: 'app/levelAdviserMgmt/levelAdviserDelete.html',
+                    controller: "LevelAdviserDeleteController",
                     controllerAs: 'model',
                     size: 'sm',
                     resolve:{
@@ -46,9 +46,9 @@
                 };
                 $modal.open(options).result
                     .then(function(){
-                        ExamOfficer.getAll()
+                        LevelAdviser.getAll()
                             .then(function(data){
-                                vm.examOfficers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
+                                vm.levelAdvisers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
                             });
                     });
             }

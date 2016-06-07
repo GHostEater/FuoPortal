@@ -1,7 +1,11 @@
 div(ng-controller="StudentController as model")
-    .col-sm-12
+    .col-sm-12.hidden-print
         .row.content
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Student
+            .col-sm-3
+                .well
+                    csv-upload(ng-model="model.ca")
+                    button.btn.btn-primary(ng-click="model.uploadStudents()") Upload Students
         form.content.col-sm-4
             input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
         table.table.table-condensed.table-striped.table-bordered

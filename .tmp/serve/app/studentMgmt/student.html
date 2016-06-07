@@ -1,8 +1,14 @@
 
 <div ng-controller="StudentController as model">
-  <div class="col-sm-12">
+  <div class="col-sm-12 hidden-print">
     <div class="row content">
       <button ng-click="model.add()" class="col-sm-2 btn btn-lg btn-primary">Add Student</button>
+      <div class="col-sm-3">
+        <div class="well">
+          <csv-upload ng-model="model.ca"></csv-upload>
+          <button ng-click="model.uploadStudents()" class="btn btn-primary">Upload Students</button>
+        </div>
+      </div>
     </div>
     <form class="content col-sm-4">
       <input type="text" placeholder="Search" ng-model="model.searchTerm" class="form-control">

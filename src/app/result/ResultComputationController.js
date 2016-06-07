@@ -59,6 +59,7 @@
                                                 var ctcp = 0;
                                                 var ctnu = 0;
                                                 var cgpa = 0;
+                                                var tce = 0;
                                                 var dat = {};
 
                                                 if(!vm.last){
@@ -67,6 +68,11 @@
                                                     }
                                                     for(var k=0; k<vm.result.length; k++){
                                                         tcp +=  Number(vm.result[k].gp) * Number(vm.result[k].unit);
+                                                    }
+                                                    for(var y=0; y<vm.result.length; y++){
+                                                        if(vm.result[y].grade != 'F'){
+                                                            tce += Number(vm.result[y].gp);
+                                                        }
                                                     }
                                                     gpa = tcp/tnu;
                                                     ctcp = tcp;
@@ -79,11 +85,13 @@
                                                         ctnu: ctnu,
                                                         tcp: tcp,
                                                         ctcp: ctcp,
+                                                        tce: tce,
                                                         gpa: gpa,
                                                         cgpa: cgpa,
                                                         prev_cgpa: 0.00,
                                                         prev_ctcp: 0.00,
-                                                        prev_ctnu: 0.00
+                                                        prev_ctnu: 0.00,
+                                                        prev_tce: 0
                                                     };
                                                     if(!lodash.find(vm.students,{info:{matricNo:dat.info.matricNo}})){
                                                         vm.students.push(dat);
@@ -96,9 +104,15 @@
                                                     for(var m=0; m<vm.result.length; m++){
                                                         tcp +=  Number(vm.result[m].gp) * Number(vm.result[m].unit);
                                                     }
+                                                    for(var z=0; z<vm.result.length; z++){
+                                                        if(vm.result[z].grade != 'F'){
+                                                            tce += Number(vm.result[z].gp);
+                                                        }
+                                                    }
                                                     gpa = tcp/tnu;
-                                                    ctcp = tcp+Number(vm.last.tcp || 0);
-                                                    ctnu = tnu+Number(vm.last.tnu || 0);
+                                                    tce += Number(vm.last.tce);
+                                                    ctcp = tcp+Number(vm.last.tcp);
+                                                    ctnu = tnu+Number(vm.last.tnu);
                                                     cgpa = ctcp/ctnu;
                                                     dat = {
                                                         info: vm.s,
@@ -106,12 +120,14 @@
                                                         tnu: tnu,
                                                         ctnu: ctnu,
                                                         tcp: tcp,
+                                                        tce: tce,
                                                         ctcp: ctcp,
                                                         gpa: gpa,
                                                         cgpa: cgpa,
                                                         prev_cgpa: vm.last.cgpa,
                                                         prev_ctcp: vm.last.ctcp,
-                                                        prev_ctnu: vm.last.ctnu
+                                                        prev_ctnu: vm.last.ctnu,
+                                                        prev_tce: vm.last.tce
                                                     };
                                                     if(!lodash.find(vm.students,{info:{matricNo:dat.info.matricNo}})){
                                                         vm.students.push(dat);

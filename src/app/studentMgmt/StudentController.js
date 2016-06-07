@@ -9,6 +9,7 @@
             vm.view = view;
             vm.add = add;
             vm.uploadImg = uploadImg;
+            vm.uploadStudents = uploadStudents;
             vm.edit = edit;
             vm.remove = remove;
             Student.getAll()
@@ -41,6 +42,19 @@
                                 toastr.warning("Could Not Connect To Server");
                             });
                     });
+            }
+            function uploadStudents(){
+                for(var i=0; i<vm.std.data.length-1; i++){
+                    var data = {
+                        matricNo: vm.std.data[i][0],
+                        password: vm.std.data[i][1],
+                        levelId: vm.std.data[i][3]
+                    };
+                    Student.add(data.matricNo,data.password,data.levelId)
+                        .then(function(){
+                            toastr.success("Student Added");
+                        });
+                }
             }
             function add(){
                 var options = {

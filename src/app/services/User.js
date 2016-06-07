@@ -16,6 +16,7 @@ angular.module('fuoPortal')
                 lastName: '',
                 id: '',
                 sysRank: '',
+                level: '',
                 get loggedIn(){
                     return this.id;
                 }
@@ -28,17 +29,19 @@ angular.module('fuoPortal')
                 user.lastName = localUser.lastName;
                 user.id = localUser.id;
                 user.sysRank = localUser.sysRank;
+                user.level = localUser.level;
             }
             return user;
         }
 
-        function setUser(name,firstName,middleName,lastName,id,sysRank){
+        function setUser(name,firstName,middleName,lastName,id,sysRank,level){
             profile.name = name;
             profile.firstName = firstName;
             profile.middleName = middleName;
             profile.lastName = lastName;
             profile.id = id;
             profile.sysRank = sysRank;
+            profile.level = level;
 
             localStorage.add(USER_INFO,profile);
         }
