@@ -5,7 +5,7 @@
     'use strict';
     angular.module('fuoPortal')
         .factory('Host',function(){
-            var host = 'http://localhost/fuoPortal';
+            var host = 'http://localhost/fuoportal';
             return{
                 host: host
             }

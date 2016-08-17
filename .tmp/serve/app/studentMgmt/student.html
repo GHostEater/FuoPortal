@@ -1,11 +1,11 @@
 
 <div ng-controller="StudentController as model">
-  <div class="col-sm-12 hidden-print">
+  <div class="col-sm-12">
     <div class="row content">
       <button ng-click="model.add()" class="col-sm-2 btn btn-lg btn-primary">Add Student</button>
       <div class="col-sm-3">
         <div class="well">
-          <csv-upload ng-model="model.ca"></csv-upload>
+          <csv-upload ng-model="model.std"></csv-upload>
           <button ng-click="model.uploadStudents()" class="btn btn-primary">Upload Students</button>
         </div>
       </div>
@@ -27,7 +27,7 @@
         <th>Actions</th>
       </thead>
       <tbody>
-        <tr ng-repeat="(key,student) in model.students | orderBy: '+lastName' | filter: model.searchTerm">
+        <tr ng-repeat="(key,student) in model.students | orderBy: '+matricNo' | filter: model.searchTerm">
           <td>{{key + 1}}</td>
           <td>{{student.matricNo}}</td>
           <td>{{student.lastName | uppercase}}, {{student.firstName}} {{student.middleName}}</td>

@@ -16,27 +16,37 @@
             .col-sm-10
                 input.form-control(type="text" name="unit" required ng-model="model.unit")
         .form-group
-            label.control-label.col-sm-2 Type
+            label.control-label.col-sm-2 Status
             .col-sm-10
                 select.form-control(name="type" required ng-model="model.type")
+                    option(value="") Select Status
                     option(value="E") Elective
                     option(value="C") Cumpulsory
         .form-group
             label.control-label.col-sm-2 Semester
             .col-sm-10
                 select.form-control(name="semester" required ng-model="model.semester")
+                    option(value="") Select Semester
                     option(value="1") 1st Semester
                     option(value="2") 2nd Semester
         .form-group
             label.control-label.col-sm-2 Level
             .col-sm-10
                 select.form-control(name="levelId" required ng-model="model.levelId")
+                    option(value="") Select Level
                     option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
         .form-group
             label.control-label.col-sm-2 Department
             .col-sm-10
                 select.form-control(name="departmentId" required ng-model="model.departmentId")
+                    option(value="") Select Department
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
+        .form-group
+            label.control-label.col-sm-2 College
+            .col-sm-10
+                select.form-control(name="collegeId" required ng-model="model.collegeId")
+                    option(value="") Select College
+                    option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.name}}
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

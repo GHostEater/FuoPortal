@@ -63,7 +63,7 @@
                 if(vm.form.$valid){
                     if(vm.position == 1){
                         Allocation.allocateCoordinator(vm.lecturer.id,vm.code,User.profile.id,
-                            vm.semester.semester,vm.session.id,vm.position)
+                            vm.semester.semester,vm.session.id,vm.position,vm.profile.departmentId,vm.profile.collegeId)
                             .then(function(){
                                 toastr.success("Course Allocated");
                                 $modalInstance.close();
@@ -74,7 +74,7 @@
                     }
                     else if(vm.position == 2){
                         Allocation.allocateAssisting(vm.lecturer.id,vm.code,User.profile.id,
-                            vm.semester.semester,vm.session.id,vm.position)
+                            vm.semester.semester,vm.session.id,vm.position,vm.profile.departmentId,vm.profile.collegeId)
                             .then(function(){
                                 toastr.success("Course Allocated");
                                 $modalInstance.close();

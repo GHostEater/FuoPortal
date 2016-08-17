@@ -35,22 +35,22 @@
     <div ng-show="model.lecturerSelect == 1">
       <h4>Selected Lecturer: {{model.lecturer.lastName}}, {{model.lecturer.firstName}} {{model.lecturer.middleName}}</h4>
       <button ng-click="model.deSelectLecturer()" class="btn btn-danger">Remove Selection</button>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-10">
-        <select name="code" required ng-model="model.code" class="form-control">
-          <option value="">Course Code</option>
-          <option ng-repeat="course in model.courses" value="{{course.code}}">{{course.code}}</option>
-        </select>
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select name="code" required ng-model="model.code" class="form-control">
+            <option value="">Course Code</option>
+            <option ng-repeat="course in model.courses" value="{{course.code}}">{{course.code}}</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-10">
-        <select name="position" required ng-model="model.position" class="form-control">
-          <option value="">Position</option>
-          <option value="1">Coordinator</option>
-          <option value="2">Assisting Lecturer</option>
-        </select>
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select name="position" required ng-model="model.position" class="form-control">
+            <option value="">Position</option>
+            <option value="1">Coordinator</option>
+            <option value="2">Assisting Lecturer</option>
+          </select>
+        </div>
       </div>
     </div>
   </form>

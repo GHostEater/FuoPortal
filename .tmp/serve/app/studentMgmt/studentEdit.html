@@ -6,12 +6,12 @@
 </div>
 <div class="modal-body">
   <form name="model.form" class="form-horizontal">
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 5" class="form-group">
       <div class="col-sm-4">
         <input type="text" name="matricNo" required ng-model="model.student.matricNo" placeholder="Matric Number" class="form-control">
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-3">
         <input type="text" name="firstName" required ng-model="model.student.firstName" placeholder="First Name" class="form-control">
       </div>
@@ -22,68 +22,100 @@
         <input type="text" name="lastName" required ng-model="model.student.lastName" placeholder="Surname" class="form-control">
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
         <select name="sex" required ng-model="model.student.sex" class="form-control">
-          <option value="">Select Sex</option>
+          <option value="">Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
         </select>
       </div>
     </div>
-    <div class="form-group">
-      <div class="col-sm-6">
-        <input type="email" name="email" required ng-model="model.student.email" placeholder="E-mail" class="form-control">
-      </div>
-      <div class="col-sm-6">
-        <input type="number" name="phoneNumber" required ng-model="model.student.phoneNumber" placeholder="Phone Number" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
-        <input type="date" name="dateBirth" required ng-model="model.student.dateBirth" placeholder="Date of Birth" class="form-control">
+        <select name="bloodGroup" required ng-model="model.student.bloodGroup" class="form-control">
+          <option value="">Select Blood Group</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
+      <div class="col-sm-10">
+        <select name="genotype" required ng-model="model.student.genotype" class="form-control">
+          <option value="">Select Genotype</option>
+          <option value="AA">AA</option>
+          <option value="AS">AS</option>
+          <option value="SS">SS</option>
+          <option value="CS">CS</option>
+        </select>
+      </div>
+    </div>
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
+      <div class="col-sm-6">
+        <input type="text" name="email" required ng-model="model.student.email" placeholder="E-mail" class="form-control">
+      </div>
       <div class="col-sm-4">
+        <input type="text" name="phoneNumber" required ng-model="model.student.phoneNumber" placeholder="Phone Number" class="form-control">
+      </div>
+    </div>
+    <div ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10" class="form-group">
+      <div class="col-sm-10">
+        <input type="text" name="dateBirth" required ng-model="model.student.dateBirth" placeholder="Date of Birth" class="form-control">
+      </div>
+    </div>
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
+      <div class="col-sm-3">
         <input type="text" name="nationality" required ng-model="model.student.nationality" placeholder="Nationality" class="form-control">
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <input type="text" name="stateOrigin" required ng-model="model.student.stateOrigin" placeholder="State Of Origin" class="form-control">
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-3">
+        <input type="text" name="town" required ng-model="model.student.town" placeholder="Town" class="form-control">
+      </div>
+      <div class="col-sm-3">
         <input type="text" name="lga" required ng-model="model.student.lga" placeholder="Local Government Area" class="form-control">
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
         <input type="text" name="religion" required ng-model="model.student.religion" placeholder="Religion" class="form-control">
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
         <input type="text" name="address" required ng-model="model.student.address" placeholder="Address" class="form-control">
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
         <input type="text" name="nextOfKin" required ng-model="model.student.nextOfKin" placeholder="Next of Kin" class="form-control">
       </div>
       <div class="col-sm-10">
         <input type="text" name="nextOfKinAddress" required ng-model="model.student.nextOfKinAddress" placeholder="Next of Kin Address" class="form-control">
       </div>
-    </div>
-    <div class="form-group">
       <div class="col-sm-10">
-        <select name="collegeId" required ng-model="model.student.collegeId" class="form-control">
+        <input type="text" name="parentNo" required ng-model="model.student.parentNo" placeholder="Next of Phone Number" class="form-control">
+      </div>
+    </div>
+    <div ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10" class="form-group">
+      <div class="col-sm-10">
+        <select name="collegeId" required ng-model="model.student.collegeId" ng-change="model.changeCollege()" class="form-control">
           <option value="">Select College</option>
           <option ng-repeat="college in model.colleges" value="{{college.id}}">{{college.acronym}}</option>
         </select>
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10" class="form-group">
       <div class="col-sm-4">
-        <select name="departmentId" required ng-model="model.student.departmentId" class="form-control">
+        <select name="departmentId" required ng-model="model.student.departmentId" ng-change="model.changeDepartment()" class="form-control">
           <option value="">Select Department</option>
           <option ng-repeat="department in model.departments" value="{{department.id}}">{{department.name}}</option>
         </select>
@@ -101,7 +133,7 @@
         </select>
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
         <select name="modeOfEntryId" required ng-model="model.student.modeOfEntryId" class="form-control">
           <option value="">Select Mode of Entry</option>
@@ -109,9 +141,34 @@
         </select>
       </div>
     </div>
-    <div class="form-group">
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
+      <div class="col-sm-10">
+        <select name="oLevel" required ng-model="model.student.oLevel" class="form-control">
+          <option value="">Select O' Level Type</option>
+          <option value="WAEC">WAEC</option>
+          <option value="NECO">NECO</option>
+          <option value="WAEC/GCE">WAEC/GCE</option>
+          <option value="NECO/GCE">NECO/GCE</option>
+          <option value="WAEC/NECO">WAEC/NECO</option>
+        </select>
+      </div>
+    </div>
+    <div ng-hide="model.user.sysRank == 10" class="form-group">
       <div class="col-sm-10">
         <input type="password" name="password" required ng-model="model.student.password" placeholder="Password" class="form-control">
+      </div>
+    </div>
+    <div ng-hide="model.user.sysRank == 2 || model.user.sysRank == 5" class="form-group">
+      <div class="col-sm-10">
+        <select name="status" required ng-model="model.student.status" class="form-control">
+          <option value="">Select Student Status</option>
+          <option value="0">Normal</option>
+          <option value="1">Exchange</option>
+          <option value="2">Leave</option>
+          <option value="3">Sick</option>
+          <option value="4">Suspension</option>
+          <option value="5">Withdrawn</option>
+        </select>
       </div>
     </div>
   </form>

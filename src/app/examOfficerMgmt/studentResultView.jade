@@ -1,0 +1,40 @@
+//
+   Created by Bello J on 6/12/2016.
+div(ng-controller="StudentResultViewController as model")
+    .panel.panel-info(ng-repeat="(key,res) in model.results | orderBy:'-key' | limitTo: '2'")
+        .panel-heading
+            h3.panel-title
+                span(ng-repeat="session in model.sessions | filter:{id:res.gp.sessionId}") {{session.session}} Session &nbsp
+                span(ng-show="res.gp.semester == 1") 1st Semester
+                span(ng-show="res.gp.semester == 2") 2nd Semester
+        .panel-body
+            .well
+                table.table.table-striped
+                    thead
+                        th Code
+                        th Course Title
+                        th Unit
+                        th CA
+                        th Exam
+                        th Score 100%
+                        th Grade
+                        th Actions
+                    tbody
+                        tr(ng-repeat="result in res.result | orderBy:'+code'")
+                            td {{result.code}}
+                            td {{result.title}}
+                            td {{result.unit}}
+                            td {{result.ca}}
+                            td {{result.exam}}
+                            td {{result.final}}
+                            td {{result.grade}}
+                            td
+                                button.btn.btn-warning(ng-click="model.editCa(result.id)") Edit Ca
+                                button.btn.btn-warning(ng-click="model.editExam(result.id)") Edit Exam
+                span TCE: {{res.gp.tce}}&nbsp
+                span TNU: {{res.gp.tnu}}&nbsp
+                span TCP: {{res.gp.tcp}}&nbsp
+                span GPA: {{res.gp.gpa | number:2}}&nbsp
+                span CPGA: {{res.gp.cgpa | number:2}}
+                .row
+                    button.btn.btn-primary.btn-lg(ng-click="model.processResult(res.gp.id)") Re-Process Result

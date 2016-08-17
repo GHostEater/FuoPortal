@@ -4,56 +4,80 @@
     h3.modal-title Edit Student
 .modal-body
     form(name="model.form").form-horizontal
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 5")
             .col-sm-4
                 input.form-control(type="text" name="matricNo" required ng-model="model.student.matricNo" placeholder="Matric Number")
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-3
                 input.form-control(type="text" name="firstName" required ng-model="model.student.firstName" placeholder="First Name")
             .col-sm-3
                 input.form-control(type="text" name="middleName" required ng-model="model.student.middleName" placeholder="Middle Name")
             .col-sm-3
                 input.form-control(type="text" name="lastName" required ng-model="model.student.lastName" placeholder="Surname")
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-10
                 select.form-control(name="sex" required ng-model="model.student.sex")
-                    option(value="") Select Sex
+                    option(value="") Select Gender
                     option(value="Male") Male
                     option(value="Female") Female
-        .form-group
-            .col-sm-6
-                input.form-control(type="email" name="email" required ng-model="model.student.email" placeholder="E-mail")
-            .col-sm-6
-                input.form-control(type="number" name="phoneNumber" required ng-model="model.student.phoneNumber" placeholder="Phone Number")
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-10
-                input.form-control(type="date" name="dateBirth" required ng-model="model.student.dateBirth" placeholder="Date of Birth")
-        .form-group
+                select.form-control(name="bloodGroup" required ng-model="model.student.bloodGroup")
+                    option(value="") Select Blood Group
+                    option(value="O+") O+
+                    option(value="O-") O-
+                    option(value="A+") A+
+                    option(value="A-") A-
+                    option(value="B+") B+
+                    option(value="B-") B-
+                    option(value="AB+") AB+
+                    option(value="AB-") AB-
+        .form-group(ng-hide="model.user.sysRank == 10")
+            .col-sm-10
+                select.form-control(name="genotype" required ng-model="model.student.genotype")
+                    option(value="") Select Genotype
+                    option(value="AA") AA
+                    option(value="AS") AS
+                    option(value="SS") SS
+                    option(value="CS") CS
+        .form-group(ng-hide="model.user.sysRank == 10")
+            .col-sm-6
+                input.form-control(type="text" name="email" required ng-model="model.student.email" placeholder="E-mail")
             .col-sm-4
+                input.form-control(type="text" name="phoneNumber" required ng-model="model.student.phoneNumber" placeholder="Phone Number")
+        .form-group(ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10")
+            .col-sm-10
+                input.form-control(type="text" name="dateBirth" required ng-model="model.student.dateBirth" placeholder="Date of Birth")
+        .form-group(ng-hide="model.user.sysRank == 10")
+            .col-sm-3
                 input.form-control(type="text" name="nationality" required ng-model="model.student.nationality" placeholder="Nationality")
-            .col-sm-4
+            .col-sm-3
                 input.form-control(type="text" name="stateOrigin" required ng-model="model.student.stateOrigin" placeholder="State Of Origin")
-            .col-sm-4
+            .col-sm-3
+                input.form-control(type="text" name="town" required ng-model="model.student.town" placeholder="Town")
+            .col-sm-3
                 input.form-control(type="text" name="lga" required ng-model="model.student.lga" placeholder="Local Government Area")
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-10
                 input.form-control(type="text" name="religion" required ng-model="model.student.religion" placeholder="Religion")
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-10
                 input.form-control(type="text" name="address" required ng-model="model.student.address" placeholder="Address")
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-10
                 input.form-control(type="text" name="nextOfKin" required ng-model="model.student.nextOfKin" placeholder="Next of Kin")
             .col-sm-10
                 input.form-control(type="text" name="nextOfKinAddress" required ng-model="model.student.nextOfKinAddress" placeholder="Next of Kin Address")
-        .form-group
             .col-sm-10
-                select.form-control(name="collegeId" required ng-model="model.student.collegeId")
+                input.form-control(type="text" name="parentNo" required ng-model="model.student.parentNo" placeholder="Next of Phone Number")
+        .form-group(ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10")
+            .col-sm-10
+                select.form-control(name="collegeId" required ng-model="model.student.collegeId" ng-change="model.changeCollege()")
                     option(value="") Select College
                     option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10")
             .col-sm-4
-                select.form-control(name="departmentId" required ng-model="model.student.departmentId")
+                select.form-control(name="departmentId" required ng-model="model.student.departmentId" ng-change="model.changeDepartment()")
                     option(value="") Select Department
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
             .col-sm-4
@@ -64,14 +88,33 @@
                 select.form-control(name="levelId" required ng-model="model.student.levelId")
                     option(value="") Select Level
                     option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 5 || model.user.sysRank == 10")
             .col-sm-10
                 select.form-control(name="modeOfEntryId" required ng-model="model.student.modeOfEntryId")
                     option(value="") Select Mode of Entry
                     option(ng-repeat="modeOfEntry in model.modeOfEntries" value="{{modeOfEntry.id}}") {{modeOfEntry.modeOfEntry}}
-        .form-group
+        .form-group(ng-hide="model.user.sysRank == 10")
+            .col-sm-10
+                select.form-control(name="oLevel" required ng-model="model.student.oLevel")
+                    option(value="") Select O' Level Type
+                    option(value="WAEC") WAEC
+                    option(value="NECO") NECO
+                    option(value="WAEC/GCE") WAEC/GCE
+                    option(value="NECO/GCE") NECO/GCE
+                    option(value="WAEC/NECO") WAEC/NECO
+        .form-group(ng-hide="model.user.sysRank == 10")
             .col-sm-10
                 input.form-control(type="password" name="password" required ng-model="model.student.password" placeholder="Password")
+        .form-group(ng-hide="model.user.sysRank == 2 || model.user.sysRank == 5")
+            .col-sm-10
+                select.form-control(name="status" required ng-model="model.student.status")
+                    option(value="") Select Student Status
+                    option(value="0") Normal
+                    option(value="1") Exchange
+                    option(value="2") Leave
+                    option(value="3") Sick
+                    option(value="4") Suspension
+                    option(value="5") Withdrawn
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

@@ -1,0 +1,17 @@
+//
+   Created by Bello J on 6/25/2016.
+.modal-header
+    h3.modal-title Edit Hostel
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="name" required ng-model="model.hostel.name" placeholder="Name")
+        .form-group
+            .col-sm-10
+                select.form-control(name="sex" required ng-model="model.hostel.sex")
+                    option(value="Male") Male
+                    option(value="Female") Female
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

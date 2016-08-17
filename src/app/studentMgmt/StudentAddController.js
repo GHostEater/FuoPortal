@@ -4,53 +4,46 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('StudentAddController',function(Student,toastr,Major,College,Department,ModeOfEntry,Level,$modalInstance){
+        .controller('StudentAddController',function(Student,toastr,Major,College,Department,ModeOfEntry,Level,$modalInstance,lodash){
             var vm = this;
             vm.collegeId = "";
             vm.departmentId = '';
             vm.majorId = '';
             vm.levelId = '';
-            vm.modeOfEntry = '';
+            vm.modeOfEntryId = '';
             Major.getAll()
                 .then(function(data){
-                    vm.majors = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
+                    vm.mjs = data;
                 });
             Department.getAll()
                 .then(function(data){
-                    vm.departments = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
+                    vm.depts = data;
                 });
             College.getAll()
                 .then(function(data){
                     vm.colleges = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
                 });
             Level.getAll()
                 .then(function(data){
                     vm.levels = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
                 });
             ModeOfEntry.getAll()
                 .then(function(data){
                     vm.modeOfEntries = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
                 });
+            vm.changeDepartment = function(){
+                vm.majors = lodash.filter(vm.mjs,{departmentId:vm.departmentId});
+            };
+            vm.changeCollege = function(){
+                vm.departments = lodash.filter(vm.depts,{collegeId:vm.collegeId});
+            };
+
             vm.ok = function(){
                 if(vm.form.$valid){
                     Student.add(vm.matricNo,vm.firstName,vm.middleName,vm.lastName,vm.sex,vm.email,vm.phoneNumber,vm.dateBirth,
                         vm.nationality,vm.stateOrigin,vm.lga,vm.religion,vm.address,vm.nextOfKin,vm.nextOfKinAddress,vm.collegeId,
-                        vm.departmentId,vm.majorId,vm.levelId,vm.modeOfEntryId,vm.session,vm.password)
+                        vm.departmentId,vm.majorId,vm.levelId,vm.modeOfEntryId,vm.session,vm.password,0,vm.town,
+                        vm.genotype,vm.bloodGroup,vm.oLevel,vm.parentNo)
                         .then(function(){
                             toastr.success("Student Added");
                             $modalInstance.close();

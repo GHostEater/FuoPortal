@@ -17,9 +17,11 @@ div(ng-controller="CourseRegisterController as model")
                             td {{reg.code}}
                             td {{reg.unit}}
                             td
-                                button.btn.btn-danger(ng-click="model.removeCourse(reg.code,reg.unit)") Remove
+                                button.btn.btn-danger(ng-click="model.removeCourse(reg.code,reg.unit,reg.from)" ng-hide="reg.status == 1") Remove
             .panel-footer
                 button(ng-show="model.counter >= 15" ng-click="model.submitCourseForm()").btn.btn-primary Submit Course Form
+                button(ng-show="model.student.level == 300 && model.semester.semester == 2 && model.counter >= 6" ng-click="model.submitCourseForm()").btn.btn-primary Submit Course Form
+                button(ng-show="model.student.level == 400 && model.counter >= 1" ng-click="model.submitCourseForm()").btn.btn-primary Submit Course Form
 
     .col-sm-8
         .panel.panel-primary
@@ -39,4 +41,23 @@ div(ng-controller="CourseRegisterController as model")
                             td {{course.unit}}
                             td {{course.type}}
                             td
-                                button.btn.btn-success(ng-click="model.addCourse(course.code,course.unit,model.student.matricNo,model.student.levelId,model.semester.semester,model.session.id)") Add
+                                button.btn.btn-success(ng-click="model.addCourse(course.code,course.unit,model.student.matricNo,model.student.levelId,model.semester.semester,model.session.id,0)") Add
+    .col-sm-6.col-sm-offset-4(ng-show="model.outstandings.length>0")
+        .panel.panel-danger
+            .panel-heading Outstanding Courses
+            .panel-body
+                table.table.table-striped.table-condensed
+                    thead
+                        th Course Code
+                        th Course Title
+                        th Unit
+                        th Type
+                        th Actions
+                    tbody
+                        tr(ng-repeat="course in model.outstandings | orderBy: '+code' | filter: {majorId: model.student.majorId, semester: model.semester.semester}")
+                            td {{course.code}}
+                            td {{course.title}}
+                            td {{course.unit}}
+                            td {{course.type}}
+                            td
+                                button.btn.btn-success(ng-click="model.addCourse(course.code,course.unit,model.student.matricNo,model.student.levelId,model.semester.semester,model.session.id,1)") Add

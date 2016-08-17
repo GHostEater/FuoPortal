@@ -2,7 +2,7 @@
  * Created by Bello J on 4/20/2016.
  */
 angular.module('fuoPortal')
-    .factory("Result",function(Host,$http,$q,lodash){
+    .factory("Result",function(Host,$http,$q,lodash,Allocation,Student,Session,Semester,CourseReg){
         function getAll(){
             return $http.get(Host.host+'/result/result.php')
                 .then(function(response){
@@ -37,6 +37,40 @@ angular.module('fuoPortal')
                 })
                 .catch(function(response){
                     return $q.reject(response.status);
+                });
+        }
+        function getRegisteredStudentsAndRawResults(code,user){
+            var vm = {};
+            vm.students = [];
+            Allocation.getMyCourses(user)
+                .then(function(data){
+                    vm.courses = data;
+                    vm.course = lodash.find(data,{code: code});
+                    Session.getAll()
+                        .then(function(data){
+                            vm.session = lodash.findLast(data);
+                            Semester.get()
+                                .then(function(data){
+                                    vm.semester = data;
+                                    getForCourse(code,vm.session.id,vm.semester.semester)
+                                        .then(function(data){
+                                            vm.results = data;
+                                        });
+                                    CourseReg.getRegisterredStudents(code,vm.semester.semester,vm.session.id)
+                                        .then(function(data){
+                                            for(var i=0; i<data.length; i++){
+                                                Student.getOne(data[i].matricNo)
+                                                    .then(function(data){
+                                                        vm.students.push({
+                                                            info: data,
+                                                            result: lodash.find(vm.results,{matricNo:data.matricNo})
+                                                        });
+                                                    });
+                                            }
+                                            return vm.students
+                                        });
+                                });
+                        });
                 });
         }
         function processResult(matricNo,tcp,ctcp,tnu,ctnu,gpa,cgpa,prev_cgpa,prev_ctcp,prev_ctnu,prev_tce,tce,sessionId,semester){
@@ -185,12 +219,12 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function remove(code) {
+        function removeGP(id) {
             return $http({
                 method: 'POST',
-                url: Host.host + '/result/delete.php',
+                url: Host.host + '/result/deleteGP.php',
                 params: {
-                    code: code
+                    id: id
                 }
             })
                 .then(function (response) {
@@ -208,12 +242,13 @@ angular.module('fuoPortal')
             getOne: getOne,
             processResult: processResult,
             getForCourse: getForCourse,
+            getRegisteredStudentsAndRawResults: getRegisteredStudentsAndRawResults,
             uploadCA: uploadCA,
             uploadExam: uploadExam,
             editCa: editCa,
             editExam: editExam,
             release: release,
             releaseGP: releaseGP,
-            remove: remove
+            removeGP: removeGP
         }
     });

@@ -4,14 +4,12 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('EditExamController',function(Result,toastr,id,$modalInstance){
+        .controller('EditExamController',function(Result,AcademicAffair,User,toastr,id,$modalInstance){
             var vm = this;
             Result.getOne(id)
                 .then(function(data){
                     vm.result = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
+                    vm.prevScore = vm.result.exam;
                 });
 
             vm.ok = function(){
@@ -19,7 +17,15 @@
                     Result.editExam(vm.result.id,vm.result.exam)
                         .then(function(){
                             toastr.success("Exam Changed");
-                            $modalInstance.close();
+                            var date = new Date();
+                            AcademicAffair.logEdit(vm.result.id,'Exam',vm.prevScore,vm.result.exam,date,User.profile.id)
+                                .then(function(){
+                                    toastr.success('Edit Logged');
+                                    $modalInstance.close();
+                                })
+                                .catch(function(){
+                                    toastr.error('Unable to Log Edit... Try Again');
+                                });
                         })
                         .catch(function(){
                             toastr.error("Unable to Change Exam");

@@ -4,11 +4,17 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("CourseToMajorController",function(CourseReg,Level,Department,Major,toastr,$modal,lodash){
+        .controller("CourseToMajorController",function(CourseReg,Co,User,Level,Department,Major,toastr,$modal,lodash){
             var vm = this;
             vm.majorSelect = majorSelect;
             vm.add = add;
             vm.remove = remove;
+            if(User.profile.sysRank == 2){
+                Co.getOne(User.profile.id)
+                    .then(function(data){
+                        vm.co = data;
+                    });
+            }
             Department.getAll()
                 .then(function(data){
                     vm.departments = data;

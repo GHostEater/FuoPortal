@@ -1,22 +1,21 @@
 /**
- * Created by GHostEater on 07-Jun-16.
+ * Created by Bello J on 5/12/2016.
  */
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("LevelAdviserController", function(toastr,$modal,LevelAdviser,Lecturer,lodash,User){
+        .controller("LevelAdviserController",function(toastr,$modal,LevelAdviser){
             var vm = this;
             vm.add = add;
+            vm.assignStudent = assignStudent;
             vm.remove = remove;
-            Lecturer.getOne(User.profile.id)
+            LevelAdviser.getAll()
                 .then(function(data){
-                    vm.lecturer = data;
-                    LevelAdviser.getAll()
-                        .then(function(data){
-                            vm.levelAdvisers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
-                        });
+                    vm.levelAdvisers = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
                 });
-
             function add(){
                 var options = {
                     templateUrl: 'app/levelAdviserMgmt/levelAdviserAdd.html',
@@ -28,7 +27,33 @@
                     .then(function(){
                         LevelAdviser.getAll()
                             .then(function(data){
-                                vm.levelAdvisers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
+                                vm.levelAdvisers = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
+                            });
+                    });
+            }
+            function assignStudent(id){
+                var options = {
+                    templateUrl: 'app/levelAdviserMgmt/forAssignLevelAdviser.html',
+                    controller: "ForAssignLevelAdviserController",
+                    controllerAs: 'model',
+                    size: 'lg',
+                    resolve:{
+                        id: function(){
+                            return id;
+                        }
+                    }
+                };
+                $modal.open(options).result
+                    .then(function(){
+                        LevelAdviser.getAll()
+                            .then(function(data){
+                                vm.levelAdvisers = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
                             });
                     });
             }
@@ -48,7 +73,10 @@
                     .then(function(){
                         LevelAdviser.getAll()
                             .then(function(data){
-                                vm.levelAdvisers = lodash.filter(data,{departmentId:vm.lecturer.departmentId})
+                                vm.levelAdvisers = data;
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
                             });
                     });
             }

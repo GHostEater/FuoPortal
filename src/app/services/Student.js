@@ -30,7 +30,9 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function add(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session,password){
+        function add(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,
+                     lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,
+                     session,password,status,town,genotype,bloodGroup,oLevel,parentNo){
             return $http({
                 method: 'POST',
                 url: Host.host+'/student/add.php',
@@ -56,7 +58,13 @@ angular.module('fuoPortal')
                     levelId: levelId,
                     modeOfEntryId: modeOfEntryId,
                     session: session,
-                    password: password
+                    password: password,
+                    status: status,
+                    town: town,
+                    genotype: genotype,
+                    bloodGroup: bloodGroup,
+                    oLevel: oLevel,
+                    parentNo: parentNo
                 }
             })
                 .then(function(response){
@@ -66,11 +74,14 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function edit(matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,session,password) {
+        function edit(id,matricNo,firstName,middleName,lastName,sex,email,phoneNumber,dateBirth,nationality,stateOrigin,lga,
+                      religion,address,nextOfKin,nextOfKinAddress,collegeId,departmentId,majorId,levelId,modeOfEntryId,
+                      session,password,status,town,genotype,bloodGroup,oLevel,parentNo) {
             return $http({
                 method: 'POST',
                 url: Host.host + '/student/edit.php',
                 params: {
+                    id: id,
                     matricNo: matricNo,
                     firstName: firstName,
                     middleName: middleName,
@@ -92,7 +103,13 @@ angular.module('fuoPortal')
                     levelId: levelId,
                     modeOfEntryId: modeOfEntryId,
                     session: session,
-                    password: password
+                    password: password,
+                    status: status,
+                    town: town,
+                    genotype: genotype,
+                    bloodGroup: bloodGroup,
+                    oLevel: oLevel,
+                    parentNo: parentNo
                 }
             })
                 .then(function(response){

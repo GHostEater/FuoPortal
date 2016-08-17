@@ -5,10 +5,13 @@ div(ng-controller="CourseSlipController as model")
         .row.visible-print
             .col-sm-1
                 img(src="img/logo.png")
-            .col-sm-11.text-center
+            .col-sm-10.text-center
                 h2 FOUNTAIN UNIVERSITY, OSOGBO
                 h3 (University of Nasrul-Lahi-Il-Fatih Society)
                 h4 {{model.college.name}}
+        .row.visible-print
+            .col-sm-2.col-sm-offset-10
+                img.img-responsive(ng-src="{{model.host}}/img/students/{{model.student.img}}" width="150" height="150")
         .row.visible-print
             span.col-sm-4 Session: {{model.session.session}}
             span.col-sm-4.col-sm-offset-4 Semester: {{model.semester.semester}}
@@ -34,4 +37,13 @@ div(ng-controller="CourseSlipController as model")
                     td {{course.unit}}
                     td {{course.type}}
 
-        span.row Total Units Registerred: {{model.counter}}
+        span.row Total Units Registered: {{model.counter}}
+    .row.visible-print
+        .col-sm-5
+            span ________________________&nbsp
+            br
+            span Student's Signature/Date
+        .col-sm-5.col-sm-offset-2
+            span ____________________________&bnsp
+            br
+            span Level Adviser Signature/Date

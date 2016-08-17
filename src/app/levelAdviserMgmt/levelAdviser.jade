@@ -9,14 +9,12 @@ div(ng-controller="LevelAdviserController as model")
             thead
                 th S/N
                 th Name
-                th Department
                 th Level
                 th Actions
             tbody
                 tr(ng-repeat="(key,levelAdviser) in model.levelAdvisers | orderBy: '+department' | filter: model.searchTerm")
                     td {{key + 1}}
                     td {{levelAdviser.lastName}}, {{levelAdviser.firstName}} {{levelAdviser.middleName}}
-                    td {{levelAdviser.department}}
                     td {{levelAdviser.level}}
                     td
                         button.btn.btn-primary(ng-click="model.assignStudent(levelAdviser.id)") Assign Students

@@ -15,6 +15,12 @@
                     th Sex
                     td {{model.student.sex}}
                 tr
+                    th Genotype
+                    td {{model.student.genotype}}
+                tr
+                    th Blood Group
+                    td {{model.student.bloodGroup}}
+                tr
                     th E-Mail
                     td {{model.student.email}}
                 tr
@@ -30,6 +36,9 @@
                     th State of Origin
                     td {{model.student.stateOrigin}}
                 tr
+                    th Town
+                    td {{model.student.town}}
+                tr
                     th Local Government Area
                     td {{model.student.lga}}
                 tr
@@ -44,6 +53,8 @@
                         span {{model.student.nextOfKin}}
                         hr
                         span {{model.student.nextOfKinAddress}}
+                        hr
+                        span {{model.student.parentNo}}
         .col-sm-6
             img.img-responsive(ng-src="{{model.host}}/img/students/{{model.student.img}}" width="150" height="150")
             table.table.table-bordered.table-striped
@@ -62,5 +73,8 @@
                 tr
                     th Mode of Entry
                     td {{model.student.modeOfEntry}}
+                tr
+                    th O'Level Result
+                    td {{model.student.oLevel}}
 .modal-footer
     button.btn.btn-default(ng-click="$dismiss()") Close

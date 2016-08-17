@@ -5,7 +5,7 @@ div(ng-controller="CourseToMajorController as model")
             .panel-heading Major List
             .panel-body
                 ul.nav.nav-pills.nav-stacked
-                    li.dropdown(ng-repeat="department in model.departments")
+                    li.dropdown(ng-repeat="department in model.departments | filter:{collegeId:model.co.collegeId}")
                         a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") {{department.name}}
                             span.caret
                         ul.dropdown-menu

@@ -4,9 +4,10 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("CourseSlipController",function(CourseReg,College,Student,Semester,toastr,lodash,Session,User){
+        .controller("CourseSlipController",function(CourseReg,Host,College,Student,Semester,toastr,lodash,Session,User){
             var vm = this;
             vm.counter = 0;
+            vm.host = Host.host;
             Session.getAll()
                 .then(function(data){
                     vm.session = lodash.findLast(data);

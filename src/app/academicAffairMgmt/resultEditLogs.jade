@@ -1,0 +1,33 @@
+//Created by GHostEater on 17-Aug-16.
+div(ng-controller="ResultEditLogsController as model")
+    form.content.col-sm-4
+        input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+    table.table.table-condensed.table-striped.table-bordered
+        thead
+            th S/N
+            th Result Type
+            th Previous Score
+            th New Score
+            th Lecturer
+            th Student
+            th Date Edited
+            th Session
+            th Semester
+        tbody
+            tr(ng-repeat="(key,log) in model.logs | orderBy: '+session' | filter: model.searchTerm")
+                td {{key + 1}}
+                td {{log.type}}
+                td {{log.prevScore}}
+                td {{log.newScore}}
+                td {{log.editedBy}}
+                    br
+                    span {{log.lectCollege}}
+                    br
+                    span {{log.lectDept}}
+                td {{log.student}}
+                    br
+                    span {{log.matricNo}}
+                td {{log.dateEdited | date:'dd-MMM-yyyy hh:mm:ssa'}}
+                td {{log.session}}
+                td(ng-show="log.semester == 1") 1st Semester
+                td(ng-show="log.semester == 2") 2nd Semester

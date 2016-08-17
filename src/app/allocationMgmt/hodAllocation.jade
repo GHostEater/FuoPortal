@@ -1,13 +1,13 @@
 //   Created by GHostEater on 23-Apr-16.
 div(ng-controller="HodAllocationController as model")
     .col-sm-12
-        .row.content.hidden-print
+        .row.content.hidden-print(ng-show="model.user.sysRank == 3")
             button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.allocate()") Allocate Course
         .row.hidden-print
-            .col-sm-4
+            .col-sm-2
                 select.form-control(ng-model="model.sess" ng-change="model.changeSession(model.sess)")
                     option(ng-repeat="session in model.sessions" value="{{session.id}}") {{session.session}}
-            .col-sm-4
+            .col-sm-2
                 select.form-control(ng-model="model.semester.semester")
                     option(value="1") 1st Semester
                     option(value="2") 2nd Semester
@@ -21,12 +21,14 @@ div(ng-controller="HodAllocationController as model")
                 h4 {{model.lecturer.department}}
             .col-sm-12
                 h5 The Details of the Allocation of Courses for
+        .row.content
+        button.btn.btn-primary(ng-click="model.print()") Print
         .row
             span.col-sm-4 Session: {{model.session.session}}
             span.col-sm-4.col-sm-offset-4 Semester: {{model.semester.semester}}
                 span(ng-show="model.semester.semester == 1") st Semester
                 span(ng-show="model.semester.semester == 2") nd Semester
-        span.row Department: {{model.lecturer.department}}
+        span.row Department: {{model.department.name}}
         table.table.table-striped.table-bordered
             thead
                 th S/N
@@ -38,7 +40,8 @@ div(ng-controller="HodAllocationController as model")
                 th Position
                 th.hidden-print Actions
             tbody
-                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.session.id,semester:model.semester.semester}")
+                tr(ng-repeat="(key,allocation) in model.allocations | orderBy: '+code' | filter:{sessionId:model.session.id" +
+                ",semester:model.semester.semester,departmentId:model.department.id,collegeId:model.college.id}")
                     td {{key +1 }}
                     td {{allocation.code}}
                     td {{allocation.title}}
@@ -51,3 +54,10 @@ div(ng-controller="HodAllocationController as model")
                     td.hidden-print
                         a(href="/courseDetails/{{allocation.code}}").btn.btn-primary View Details
                         button.btn.btn-danger(ng-click="model.remove(allocation.id)") Delete
+    .row
+        .col-sm-12
+            span {{model.lecturer.lastName | uppercase}}, {{model.lecturer.firstName}} {{model.lecturer.middleName}}
+            br
+            span ___________________________________&nbsp
+            br
+            span Head of {{model.department.name}}'s Signature/Date&nbsp

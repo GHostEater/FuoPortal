@@ -83,13 +83,29 @@
                         return $q.reject(response.status);
                     });
             }
+            function removeRegisteredCourse(id){
+                return $http({
+                    method: 'POST',
+                    url: Host.host + '/courseRegistration/delete.php',
+                    params: {
+                        id: id
+                    }
+                })
+                    .then(function (response) {
+                        return response.status;
+                    })
+                    .catch(function (response) {
+                        return $q.reject(response.status);
+                    });
+            }
             return{
                 getCourses: getCourses,
                 registerCourse: registerCourse,
                 getRegisterredCourses: getRegisterredCourses,
                 getRegisterredStudents: getRegisterredStudents,
                 addCourseToMajor: addCourseToMajor,
-                removeCourseFromMajor: removeCourseFromMajor
+                removeCourseFromMajor: removeCourseFromMajor,
+                removeRegisteredCourse: removeRegisteredCourse
             }
         });
 })();

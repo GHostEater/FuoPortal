@@ -4,14 +4,12 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('EditCaController',function(Result,toastr,id,$modalInstance){
+        .controller('EditCaController',function(Result,AcademicAffair,toastr,id,$modalInstance,User){
             var vm = this;
             Result.getOne(id)
                 .then(function(data){
                     vm.result = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
+                    vm.prevScore = vm.result.ca;
                 });
 
             vm.ok = function(){
@@ -19,7 +17,15 @@
                     Result.editCa(vm.result.id,vm.result.ca)
                         .then(function(){
                             toastr.success("Ca Changed");
-                            $modalInstance.close();
+                            var date = new Date();
+                            AcademicAffair.logEdit(vm.result.id,'CA',vm.prevScore,vm.result.ca,date,User.profile.id)
+                                .then(function(){
+                                    toastr.success('Edit Logged');
+                                    $modalInstance.close();
+                                })
+                                .catch(function(){
+                                    toastr.error('Unable to Log Edit... Try Again');
+                                });
                         })
                         .catch(function(){
                             toastr.error("Unable to Change Ca");

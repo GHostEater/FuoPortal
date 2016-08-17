@@ -4,26 +4,24 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller('ExamOfficerAddController',function(ExamOfficer,Lecturer,Department,toastr,$modalInstance){
+        .controller('ExamOfficerAddController',function(ExamOfficer,Lecturer,User,Department,toastr,$modalInstance){
             var vm = this;
             Lecturer.getAll()
                 .then(function(data){
                     vm.lecturers = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
+                });
+            Lecturer.getOne(User.profile.id)
+                .then(function(data){
+                    vm.hod = data;
                 });
             Department.getAll()
                 .then(function(data){
                     vm.departments = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
                 });
 
             vm.ok = function(){
                 if(vm.form.$valid){
-                    ExamOfficer.add(vm.lecturerId,vm.departmentId)
+                    ExamOfficer.add(vm.lecturerId,vm.hod.departmentId)
                         .then(function(){
                             toastr.success("Exam Officer Added");
                             $modalInstance.close();

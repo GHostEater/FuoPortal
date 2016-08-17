@@ -1,6 +1,4 @@
-//
-   Created by GHostEater on 23-Jan-16.
-
+//   Created by GHostEater on 23-Jan-16.
 nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
     .container-fluid
         .navbar-header
@@ -57,6 +55,12 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                         li(ui-sref-active="active")
                             a(ui-sref="hod") HOD Management
                         li(ui-sref-active="active")
+                            a(ui-sref="studentAffair") Student Affair Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="hostel") Hostel Management
+                        li(ui-sref-active="active")
+                            a(ui-sref="room") Room Management
+                        li(ui-sref-active="active")
                             a(ui-sref="student") Student Management
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 5")
                     a(ui-sref="courseRegistration") Course Registration
@@ -68,24 +72,42 @@ nav.navbar.navbar-inverse(ng-controller = "HeaderController as model")
                     a(ui-sref="myCourses") My Courses
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
                     a(ui-sref="courseAllocation") Course Allocation
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 6")
+                    a(ui-sref="editLogs") Result Edit Logs
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 1 || model.user.sysRank == 2 || model.user.sysRank == 6")
+                    a(ui-sref="adminCourseAllocation") Course Allocation
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3 || model.user.sysRank == 9")
                     a(ui-sref="resultComputation") Result Computation
-                li(ui-sref-active="active" ng-show="model.user.sysRank == 9")
-                    a(ui-sref="courseToMajor") Course To Major Management
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 2")
+                    a(ui-sref="courseToMajor") Course To Major Mgt
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
                     a(ui-sref="examOfficer") Exam Officer Mgmt
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
                     a(ui-sref="levelAdviser") Level Adviser Mgmt
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 10")
                     a(ui-sref="studentLevelAdviser") Student Level Adviser
-                li(ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9 || model.user.sysRank == 2")
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9")
                     a(ui-sref="broadSheet") Broad Sheet
-                li(ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9|| model.user.sysRank == 2")
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 10 || model.user.sysRank == 9")
                     a(ui-sref="resultBroadSheet") Result Broad Sheet
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 2 || model.user.sysRank == 6")
+                    a(ui-sref="adminBroadSheet") Broad Sheet
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 2 || model.user.sysRank == 6")
+                    a(ui-sref="adminResultBroadSheet") Result Broad Sheet
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 2")
-                    a(ui-sref="student") Student Management
+                    a(ui-sref="student") Student Mgt
                 li(ui-sref-active="active" ng-show="model.user.sysRank == 2")
-                    a(ui-sref="course") Course Management
+                    a(ui-sref="course") Course Mgt
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 3")
+                    a(ui-sref="studentList") Student List
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 6 || model.user.sysRank == 2")
+                    a(ui-sref="adminStudentList") Student List
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 8")
+                    a(ui-sref="hostel") Hostel Management
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 8")
+                    a(ui-sref="room") Room Management
+                li(ui-sref-active="active" ng-show="model.user.sysRank == 8")
+                    a(ui-sref="roomAllocation") Room Allocation
             .navbar-right.navbar-form(ng-show="model.user.loggedIn")
                 span.text-danger Hello {{model.user.name}} &nbsp
                     span(ng-show="model.user.sysRank != 1") {{model.user.lastName | uppercase}}, {{model.user.firstName}} {{model.user.middleName}} &nbsp

@@ -15,10 +15,12 @@
         <th>Course Code</th>
         <th>Course Title</th>
         <th>Unit</th>
-        <th>Type</th>
+        <th>Status</th>
         <th>Semester</th>
         <th>Prerequisites</th>
         <th>Level</th>
+        <th>Department</th>
+        <th>College</th>
         <th>Actions</th>
       </thead>
       <tbody>
@@ -36,6 +38,8 @@
             </div>
           </td>
           <td>{{course.level}}</td>
+          <td>{{course.department}}</td>
+          <td>{{course.college}}</td>
           <td>
             <button ng-click="model.addPre(course.code)" class="btn btn-primary">Add Prerequisites</button>
             <button ng-click="model.edit(course.code)" class="btn btn-warning btn-primary">Edit</button>

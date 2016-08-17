@@ -1,0 +1,25 @@
+//
+   Created by Bello J on 6/25/2016.
+div(ng-controller="RoomController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Room
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        div.col-sm-9
+            table.table.table-striped.table-bordered.table-condensed
+                thead
+                    th S/N
+                    th Name
+                    th Hostel
+                    th Gender
+                    th Actions
+                tbody
+                    tr(ng-repeat="(key,room) in model.rooms | orderBy: '+hostel' | filter: model.searchTerm")
+                        td {{key + 1}}
+                        td {{room.name}}
+                        td {{room.hostel}}
+                        td {{room.sex}}
+                        td
+                            button.btn.btn-warning(ng-click="model.edit(room.id)") Edit
+                            button.btn.btn-danger(ng-click="model.remove(room.id)") Delete

@@ -1,0 +1,16 @@
+//
+   Created by Bello J on 6/25/2016.
+.modal-header
+    h3.modal-title Edit Room
+.modal-body
+    form(name="model.form").form-horizontal
+        .form-group
+            .col-sm-10
+                input.form-control(type="text" name="name" required ng-model="model.room.name" placeholder="Name")
+        .form-group
+            .col-sm-10
+                select.form-control(name="hostelId" required ng-model="model.room.hostelId")
+                    option(ng-repeat="hostel in model.hostels" value="{{hostel.id}}") {{hostel.name}} {{hostel.sex}}
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

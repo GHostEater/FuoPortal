@@ -4,8 +4,9 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("CourseController",function(toastr,$modal,Course,Prerequisite){
+        .controller("CourseController",function(User,lodash,toastr,$modal,Course,College,Co,Prerequisite){
             var vm = this;
+            vm.user = User.profile;
             vm.add = add;
             vm.edit = edit;
             vm.remove = remove;
@@ -14,7 +15,16 @@
             vm.removePre = removePre;
             Course.getAll()
                 .then(function(data){
-                    vm.courses = data;
+                    vm.cous = data;
+                    if(User.profile.sysRank == 2){
+                        Co.getOne(User.profile.id)
+                            .then(function(data){
+                                vm.courses = lodash.filter(vm.cous,{collegeId:data.collegeId});
+                            });
+                    }
+                    else{
+                        vm.courses = data;
+                    }
                 })
                 .catch(function(){
                     toastr.warning("Could Not Connect");

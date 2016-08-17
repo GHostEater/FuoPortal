@@ -12,10 +12,12 @@ div(ng-controller="CourseController as model")
                 th Course Code
                 th Course Title
                 th Unit
-                th Type
+                th Status
                 th Semester
                 th Prerequisites
                 th Level
+                th Department
+                th College
                 th Actions
             tbody
                 tr(ng-repeat="(key,course) in model.courses | orderBy: '+code' | filter: model.searchTerm")
@@ -35,6 +37,8 @@ div(ng-controller="CourseController as model")
                             button(ng-click="model.changeStatus(pre.id,pre.active)").btn.btn-warning.btn-sm Change Status
                             button(ng-click="model.removePre(pre.id)").btn.btn-danger.btn-sm Remove
                     td {{course.level}}
+                    td {{course.department}}
+                    td {{course.college}}
                     td
                         button.btn.btn-primary(ng-click="model.addPre(course.code)") Add Prerequisites
                         button.btn.btn-warning.btn-primary(ng-click="model.edit(course.code)") Edit

@@ -24,17 +24,17 @@
         div(ng-show="model.lecturerSelect == 1")
             h4 Selected Lecturer: {{model.lecturer.lastName}}, {{model.lecturer.firstName}} {{model.lecturer.middleName}}
             button.btn.btn-danger(ng-click="model.deSelectLecturer()") Remove Selection
-        .form-group
-            .col-sm-10
-                select.form-control(name="code" required ng-model="model.code")
-                    option(value='') Course Code
-                    option(ng-repeat="course in model.courses" value="{{course.code}}") {{course.code}}
-        .form-group
-            .col-sm-10
-                select.form-control(name="position" required ng-model="model.position")
-                    option(value="") Position
-                    option(value="1") Coordinator
-                    option(value="2") Assisting Lecturer
+            .form-group
+                .col-sm-10
+                    select.form-control(name="code" required ng-model="model.code")
+                        option(value='') Course Code
+                        option(ng-repeat="course in model.courses" value="{{course.code}}") {{course.code}}
+            .form-group
+                .col-sm-10
+                    select.form-control(name="position" required ng-model="model.position")
+                        option(value="") Position
+                        option(value="1") Coordinator
+                        option(value="2") Assisting Lecturer
 .modal-footer
     button.btn.btn-primary(ng-click="model.ok()") Confirm
     button.btn.btn-default(ng-click="$dismiss()") Cancel

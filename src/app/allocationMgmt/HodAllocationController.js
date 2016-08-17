@@ -4,8 +4,9 @@
 (function () {
     'use strict';
     angular.module('fuoPortal')
-        .controller("HodAllocationController",function(Allocation,Lecturer,Session,Semester,lodash,User,toastr,$modal){
+        .controller("HodAllocationController",function(Allocation,Lecturer,Session,Semester,lodash,User,toastr,$modal,$window){
             var vm = this;
+            vm.user = User.profile;
             vm.allocate = allocate;
             vm.remove = remove;
             Allocation.getMyAllocations(User.profile.id)
@@ -22,26 +23,6 @@
                 .catch(function(){
                     toastr.warning("Could Not Connect");
                 });
-            Session.getAll()
-                .then(function(data){
-                    vm.sessions = data;
-                    vm.session = lodash.findLast(data);
-                    vm.sess = vm.session.id;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
-                });
-            vm.changeSession = function(id){
-                vm.session = lodash.find(vm.sessions,{id:id});
-            };
-            Semester.get()
-                .then(function(data){
-                    vm.semester = data;
-                })
-                .catch(function(){
-                    toastr.warning("Could Not Connect");
-                });
-
             function allocate(){
                 var options = {
                     templateUrl: 'app/allocationMgmt/allocate.html',
@@ -83,5 +64,27 @@
                             });
                     });
             }
+            Session.getAll()
+                .then(function(data){
+                    vm.sessions = data;
+                    vm.session = lodash.findLast(data);
+                    vm.sess = vm.session.id;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            Semester.get()
+                .then(function(data){
+                    vm.semester = data;
+                })
+                .catch(function(){
+                    toastr.warning("Could Not Connect");
+                });
+            vm.changeSession = function(id){
+                vm.session = lodash.find(vm.sessions,{id:id});
+            };
+            vm.print = function(){
+                $window.print();
+            };
         });
 })();

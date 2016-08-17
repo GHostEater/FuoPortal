@@ -1,7 +1,6 @@
 //
    Created by GHostEater on 15-Apr-16.
 div(ng-controller="HomeController as model")
-    h3 Home
     div(ng-show="model.user.sysRank == 1")
         p You are an Admin
     div(ng-show="model.user.sysRank == 2")
@@ -22,4 +21,54 @@ div(ng-controller="HomeController as model")
         p You are an Exam Officer
     div(ng-show="model.user.sysRank == 10")
         p You are a Level Adviser
+    div(ng-show="model.user.sysRank == 5")
 
+    button.btn.btn-primary(ng-show="model.user.sysRank == 5" ng-click="model.studentEdit(model.student.matricNo)") Edit Info & Password
+
+    div(ng-show="model.user.sysRank == 6")
+        .row
+            section.col-sm-6
+                .panel.panel-info
+                    .panel-heading
+                        .panel-title Pending Requests
+                    .panel-body
+                        table.table.table-condensed.table-striped.table-bordered
+                            thead
+                                th S/N
+                                th Name
+                                th Department
+                                th College
+                                th Actions
+                            tbody
+                                tr(ng-repeat="(key,request) in model.requests | orderBy: '+status' | filter:{status:0}")
+                                    td {{key + 1}}
+                                    td {{request.name}}
+                                    td {{request.department}}
+                                    td {{request.college}}
+                                    td
+                                        button.btn.btn-sm.btn-success(ng-click="model.process(request.id,1,model.user.id)") Approve
+                                        button.btn.btn-sm.btn-danger(ng-click="model.process(request.id,2,model.user.id)") Decline
+            section.col-sm-6
+                .panel.panel-warning
+                    .panel-heading
+                        .panel-title Approved Requests
+                    .panel-body
+                        table.table.table-condensed.table-striped.table-bordered
+                            thead
+                                th S/N
+                                th Name
+                                th Department
+                                th College
+                                th Date
+                                th Handled By
+                                th Actions
+                            tbody
+                                tr(ng-repeat="(key,request) in model.requests | orderBy: '+status' | filter:{status:1}")
+                                    td {{key + 1}}
+                                    td {{request.name}}
+                                    td {{request.department}}
+                                    td {{request.college}}
+                                    td {{request.date | date:'dd-MMM-yyyy hh:mm:ss a'}}
+                                    td {{request.handledBy}}
+                                    td
+                                        button.btn.btn-sm.btn-danger(ng-click="model.disable(request.id)") Disable Edit

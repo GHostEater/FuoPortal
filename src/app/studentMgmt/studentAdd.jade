@@ -21,6 +21,26 @@
                     option(value="Male") Male
                     option(value="Female") Female
         .form-group
+            .col-sm-10
+                select.form-control(name="bloodGroup" required ng-model="model.bloodGroup")
+                    option(value="") Select Blood Group
+                    option(value="O+") O+
+                    option(value="O-") O-
+                    option(value="A+") A+
+                    option(value="A-") A-
+                    option(value="B+") B+
+                    option(value="B-") B-
+                    option(value="AB+") AB+
+                    option(value="AB-") AB-
+        .form-group
+            .col-sm-10
+                select.form-control(name="genotype" required ng-model="model.genotype")
+                    option(value="") Select Genotype
+                    option(value="AA") AA
+                    option(value="AS") AS
+                    option(value="SS") SS
+                    option(value="CS") CS
+        .form-group
             .col-sm-6
                 input.form-control(type="email" name="email" required ng-model="model.email" placeholder="E-mail")
             .col-sm-6
@@ -29,11 +49,13 @@
             .col-sm-10
                 input.form-control(type="date" name="dateBirth" required ng-model="model.dateBirth" placeholder="Date of Birth")
         .form-group
-            .col-sm-4
+            .col-sm-3
                 input.form-control(type="text" name="nationality" required ng-model="model.nationality" placeholder="Nationality")
-            .col-sm-4
+            .col-sm-3
                 input.form-control(type="text" name="stateOrigin" required ng-model="model.stateOrigin" placeholder="State Of Origin")
-            .col-sm-4
+            .col-sm-3
+                input.form-control(type="text" name="town" required ng-model="model.town" placeholder="Town")
+            .col-sm-3
                 input.form-control(type="text" name="lga" required ng-model="model.lga" placeholder="Local Government Area")
         .form-group
             .col-sm-10
@@ -46,14 +68,16 @@
                 input.form-control(type="text" name="nextOfKin" required ng-model="model.nextOfKin" placeholder="Next of Kin")
             .col-sm-10
                 input.form-control(type="text" name="nextOfKinAddress" required ng-model="model.nextOfKinAddress" placeholder="Next of Kin Address")
+            .col-sm-10
+                input.form-control(type="text" name="parentNo" required ng-model="model.parentNo" placeholder="Next of Kin Phone Number")
         .form-group
             .col-sm-10
-                select.form-control(name="collegeId" required ng-model="model.collegeId")
+                select.form-control(name="collegeId" required ng-model="model.collegeId" ng-change="model.changeCollege()")
                     option(value="") Select College
                     option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
         .form-group
             .col-sm-4
-                select.form-control(name="departmentId" required ng-model="model.departmentId")
+                select.form-control(name="departmentId" required ng-model="model.departmentId" ng-change="model.changeDepartment()")
                     option(value="") Select Department
                     option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
             .col-sm-4
@@ -69,6 +93,15 @@
                 select.form-control(name="modeOfEntryId" required ng-model="model.modeOfEntryId")
                     option(value="") Select Mode of Entry
                     option(ng-repeat="modeOfEntry in model.modeOfEntries" value="{{modeOfEntry.id}}") {{modeOfEntry.modeOfEntry}}
+        .form-group
+            .col-sm-10
+                select.form-control(name="oLevel" required ng-model="model.oLevel")
+                    option(value="") Select O'Level Result Type
+                    option(value="WAEC") WAEC
+                    option(value="NECO") NECO
+                    option(value="WAEC/GCE") WAEC/GCE
+                    option(value="NECO/GCE") NECO/GCE
+                    option(value="WAEC/NECO") WAEC/NECO
         .form-group
             .col-sm-10
                 input.form-control(type="password" name="password" required ng-model="model.password" placeholder="Password")

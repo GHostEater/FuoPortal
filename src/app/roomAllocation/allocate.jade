@@ -1,0 +1,73 @@
+//
+   Created by Bello J on 6/28/2016.
+.modal-header
+    h3.modal-title Allocate Room {{model.session.session}}
+.modal-body
+    div(ng-show="model.studentSelect == 0")
+        .row.content
+            form.content.col-sm-4
+                input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm1")
+        .table-responsive
+            table.table.table-striped.table-condensed
+                thead
+                    th Matric No
+                    th Name
+                    th College
+                    th Department
+                    th Action
+                tbody
+                    tr(ng-repeat="student in model.students | filter: model.searchTerm1")
+                        td {{student.matricNo}}
+                        td {{student.lastName | uppercase}}, {{student.firstName}} {{student.middleName}}
+                        td {{student.college}}
+                        td {{student.department}}
+                        td
+                            button.btn.btn-primary(ng-click="model.selectStudent(student.matricNo)") Select
+    div(ng-show="model.studentSelect == 1 && model.roomSelect == 0")
+        h4 Selected Student: {{model.student.lastName | uppercase}}, {{model.student.firstName}} {{model.student.middleName}}
+        button.btn.btn-danger(ng-click="model.deSelectStudent()") Remove Selection
+        .row.content
+            form.content.col-sm-4
+                input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm2")
+        .table-responsive
+            table.table.table-striped.table-condensed
+                thead
+                    th Name
+                    th Hostel
+                    th Action
+                tbody
+                    tr(ng-repeat="room in model.rooms | filter: model.searchTerm2")
+                        td {{room.name}}
+                        td {{room.hostel}}
+                        td
+                            button.btn.btn-primary(ng-click="model.selectRoom(room.id)") Select
+    div(ng-show="model.roomSelect == 1")
+        h4 Selected Student: {{model.student.lastName | uppercase}}, {{model.student.firstName}} {{model.student.middleName}}
+        h4 Selected Room: {{model.room.name}} {{model.room.hostel}}
+        button.btn.btn-danger(ng-click="model.deSelectRoom()") Remove Selection
+        .panel.panel-info
+            .panel-heading
+                .panel-title Room {{model.room.name}} {{model.room.hostel}} Members
+            .panel-body
+                .table-responsive
+                    table.table.table-striped.table-condensed
+                        thead
+                            th S/N
+                            th Matric No
+                            th Name
+                            th Gender
+                            th College
+                            th Department
+                            th Level
+                        tbody
+                            tr(ng-repeat="(key,alloc) in model.allocations")
+                                td {{key + 1}}
+                                td {{alloc.matricNo}}
+                                td {{alloc.lastName | uppercase}}, {{alloc.firstName}} {{alloc.middleName}}
+                                td {{alloc.sex}}
+                                td {{alloc.college}}
+                                td {{alloc.department}}
+                                td {{alloc.level}}
+.modal-footer
+    button.btn.btn-primary(ng-click="model.ok()" ng-show="model.roomSelect == 1") Confirm
+    button.btn.btn-default(ng-click="$dismiss()") Cancel

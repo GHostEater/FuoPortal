@@ -8,6 +8,7 @@
             var vm = this;
             vm.user = User.profile;
             vm.view = view;
+            vm.edit = edit;
             Student.getAll()
                 .then(function(data){
                     vm.s = data;
@@ -33,6 +34,29 @@
                         Student.getAll()
                             .then(function(data){
                                 vm.students = lodash.filter(data,{levelAdviserId: User.profile.id});
+                            })
+                            .catch(function(){
+                                toastr.warning("Could Not Connect To Server");
+                            });
+                    });
+            }
+            function edit(matricNo){
+                var options = {
+                    templateUrl: 'app/studentMgmt/studentEdit.html',
+                    controller: "StudentEditController",
+                    controllerAs: 'model',
+                    size: 'lg',
+                    resolve:{
+                        matricNo: function(){
+                            return matricNo;
+                        }
+                    }
+                };
+                $modal.open(options).result
+                    .then(function(){
+                        Student.getAll()
+                            .then(function(data){
+                                vm.students = data;
                             })
                             .catch(function(){
                                 toastr.warning("Could Not Connect To Server");

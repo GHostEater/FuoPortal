@@ -1,0 +1,150 @@
+//
+   Created by Bello J on 6/12/2016.
+div(ng-controller="AdminBroadSheetController as model")
+    .row.visible-print
+        span.col-sm-4
+            img(src="img/logo.png")
+        span.col-sm-8
+            h2 FOUNTAIN UNIVERSITY, OSOGBO
+            h3 (University of Nasrul-Lahi-Il-Fatih Society)
+            h3 {{model.session.session}} &nbsp
+                span(ng-show="model.semester.semester == 1") First Semester Examination Results
+                span(ng-show="model.semester.semester == 2") Second Semester Examination Results
+    .row.visible-print
+        span Department: {{model.department.name}}  Level: {{model.level.level}}
+    .row.visible-print
+        span Programmme: B.Sc &nbsp
+        span(ng-show="model.college.acronym == 'COMAS'") (Hons.)&nbsp
+        span {{model.major.name}}
+    .row.hidden-print
+        .col-sm-2(ng-show="model.user.sysRank == 6")
+            select.form-control(ng-model="model.coll" ng-change="model.changeCollege(model.coll)")
+                option(value="") Select College
+                option(ng-repeat="college in model.colleges" value="{{college.id}}") {{college.acronym}}
+        .col-sm-2(ng-show="model.user.sysRank == 6 || model.user.sysRank == 2")
+            select.form-control(ng-model="model.dept" ng-change="model.changeDepartment(model.dept)")
+                option(value="") Select Department
+                option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
+        .col-sm-2(ng-show="model.user.sysRank == 2 || model.user.sysRank == 6")
+            select.form-control(ng-model="model.mj" ng-change="model.changeMajor(model.mj)")
+                option(value="") Select Major
+                option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
+        .col-sm-2(ng-show="model.user.sysRank == 2 || model.user.sysRank == 6")
+            select.form-control(ng-model="model.lvl" ng-change="model.changeLevel(model.lvl)")
+                option(value="") Select Level
+                option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
+        .col-sm-2
+            select.form-control(ng-model="model.sess" ng-change="model.changeSession(model.sess)")
+                option(ng-repeat="session in model.sessions" value="{{session.id}}") {{session.session}}
+        .col-sm-2
+            select.form-control(ng-model="model.semester.semester")
+                option(value="1") 1st Semester
+                option(value="2") 2nd Semester
+    .row.content
+        button.btn.btn-primary(ng-click="model.print()") Print
+    .panel.panel-info
+        .panel-body
+            .well
+                .row
+                    h3.col-sm-12.text-center PASS LIST
+                table.table.table-striped
+                    thead
+                        th S/N
+                        th Matric
+                        th Name
+                        th Previous CGPA
+                        th Present GPA
+                        th FINAL CGPA
+                        th
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id," +
+                        "departmentId:model.department.id,collegeId:model.college.id},status:1}")
+                            td {{key + 1}}
+                            td {{gp.gp.matricNo}}
+                            td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
+                            td {{gp.gp.prev_cgpa | number:2}}
+                            td {{gp.gp.gpa | number:2}}
+                            td {{gp.gp.cgpa | number:2}}
+                            td
+                                span(ng-show="gp.gp.statusId == 1") Fountain Scholar
+            .well
+                .row
+                    h3.col-sm-12.text-center PASS WITH COURSE(S) STILL OUTSTANDING LIST
+                table.table.table-striped
+                    thead
+                        th S/N
+                        th Matric
+                        th Name
+                        th Previous CGPA
+                        th Present GPA
+                        th FINAL CGPA
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id," +
+                        "departmentId:model.department.id,collegeId:model.college.id},status:2}")
+                            td {{key + 1}}
+                            td {{gp.gp.matricNo}}
+                            td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
+                            td {{gp.gp.prev_cgpa | number:2}}
+                            td {{gp.gp.gpa | number:2}}
+                            td {{gp.gp.cgpa | number:2}}
+            .well
+                .row
+                    h3.col-sm-12.text-center PROBATION LIST
+                table.table.table-striped
+                    thead
+                        th S/N
+                        th Matric
+                        th Name
+                        th Previous CGPA
+                        th Present GPA
+                        th FINAL CGPA
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id,statusId:3," +
+                        "departmentId:model.department.id,collegeId:model.college.id},status:2}")
+                            td {{key + 1}}
+                            td {{gp.gp.matricNo}}
+                            td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
+                            td {{gp.gp.prev_cgpa | number:2}}
+                            td {{gp.gp.gpa | number:2}}
+                            td {{gp.gp.cgpa | number:2}}
+            .well
+                .row
+                    h3.col-sm-12.text-center WITHDRAWAL LIST
+                table.table.table-striped
+                    thead
+                        th S/N
+                        th Matric
+                        th Name
+                        th Previous CGPA
+                        th Present GPA
+                        th FINAL CGPA
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id,statusId:4," +
+                        "departmentId:model.department.id,collegeId:model.college.id},status:2}")
+                            td {{key + 1}}
+                            td {{gp.gp.matricNo}}
+                            td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
+                            td {{gp.gp.prev_cgpa | number:2}}
+                            td {{gp.gp.gpa | number:2}}
+                            td {{gp.gp.cgpa | number:2}}
+    .row.visible-print
+        .col-sm-4
+            span {{model.levelAdviser.lastName | uppercase}}, {{model.levelAdviser.firstName}} {{model.levelAdviser.middleName}}
+            br
+            span ___________________________________&nbsp
+            br
+            span Level Adviser {{model.level.level}} Level Signature/Date
+        .col-sm-4
+            span {{model.hod.lastName | uppercase}}, {{model.hod.firstName}} {{model.hod.middleName}}
+            br
+            span ___________________________________&nbsp
+            br
+            span Head of {{model.department.name}}'s Signature/Date
+        .col-sm-4
+            span Dean of College: ____________________________&bnsp
+            br
+            span Signature/Date

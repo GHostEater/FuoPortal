@@ -26,11 +26,42 @@ div(ng-controller="LevelAdviserCourseSlipController as model")
                 th Course Title
                 th Unit
                 th Type
+                th Action
             tbody
-                tr(ng-repeat="course in model.courses | orderBy: '+code'")
+                tr(ng-repeat="course in model.registerredCourses | orderBy: '+code'")
                     td {{course.code}}
                     td {{course.title}}
                     td {{course.unit}}
                     td {{course.type}}
+                    td
+                        button.btn.btn-danger(ng-click="model.deleteCourse(course.id)") Delete Course
 
         span.row Total Units Registerred: {{model.counter}}
+    .col-sm-6(ng-show="model.outstandings.length > 0")
+        .panel.panel-danger
+            .panel-heading
+                .panel-title Outstanding Courses
+            .panel-body
+                table.table.table-striped.table-condensed
+                    thead
+                        th Course Code
+                        th Action
+                    tbody
+                        tr(ng-repeat="outstanding in model.outstandings | orderBy: '+code'")
+                            td {{outstanding.code}}
+                            td
+                                button.btn.btn-primary(ng-click="model.waveCourse(outstanding.code)") Wave Course
+    .col-sm-6(ng-show="model.wavings.length > 0")
+        .panel.panel-info
+            .panel-heading
+                .panel-title Waved Courses
+            .panel-body
+                table.table.table-striped.table-condensed
+                    thead
+                        th Course Code
+                        th Action
+                    tbody
+                        tr(ng-repeat="waving in model.wavings")
+                            td {{waving.code}}
+                            td
+                                button.btn.btn-primary(ng-click="model.unWaveCourse(waving.id)") Unwave Course

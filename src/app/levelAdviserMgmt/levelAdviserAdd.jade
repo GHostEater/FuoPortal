@@ -9,11 +9,6 @@
                     option(value="") Lecturer
                     option(ng-repeat="lecturer in model.lecturers" value="{{lecturer.id}}") {{lecturer.lastName}}, {{lecturer.firstName}} {{lecturer.middleName}}
         .form-group
-            .col-sm-10
-                select.form-control(name="departmentId" required ng-model="model.departmentId")
-                    option(value="") Department
-                    option(ng-repeat="department in model.departments" value="{{department.id}}") {{department.name}}
-        .form-group
             .col-sm-4
                 select.form-control(name="levelId" required ng-model="model.levelId")
                     option(value="") Select Level

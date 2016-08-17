@@ -10,13 +10,13 @@ div(ng-controller="MyTranscriptController as model")
             h4 {{model.lecturer.department}}
     .row
         span.col-sm-4
-            span Name {{model.student.lastName | uppercase}}, {{model.student.firstName}} {{model.student.middleName}}
-            span College {{model.student.college}}
-            span Department {{model.student.department}}
-        span.col-sm-4.col-sm-offset-4
-            span Matric No {{model.student.matricNo}}
-            span Gender {{model.student.gender}}
-            span Date of Birth {{model.student.dateBirth}}
+            span Matric No: {{model.student.matricNo}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Name: {{model.student.lastName | uppercase}}, {{model.student.firstName}} {{model.student.middleName}}
+            br
+            span College: {{model.student.collegeFull}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Gender: {{model.student.sex}}
+            br
+            span Department: {{model.student.department}} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Date of Birth: {{model.student.dateBirth}}
+    .row.content.hidden-print
+        button.btn.btn-primary(ng-click="model.print()") Print
     .panel.panel-info(ng-repeat="res in model.results")
         .panel-heading
             h3.panel-title
@@ -39,7 +39,66 @@ div(ng-controller="MyTranscriptController as model")
                             td {{result.unit}}
                             td {{result.final}}
                             td {{result.grade}}
-                span TNU: {{res.gp.tnu}}&nbsp
-                span TCP: {{res.gp.tcp}}&nbsp
-                span GPA: {{res.gp.gpa | number:2}}&nbsp
-                span CPGA: {{res.gp.cgpa | number:2}}
+                div
+                    span Present: &nbsp
+                    span TNU: {{res.gp.tnu}}&nbsp
+                    span TCP: {{res.gp.tcp}}&nbsp
+                    span GPA: {{res.gp.gpa | number:2}}
+                br
+                div
+                    span Cummulative: &nbsp
+                    span TCE: {{res.gp.tce}}&nbsp
+                    span TNU: {{res.gp.ctnu}}&nbsp
+                    span TCP: {{res.gp.ctcp}}&nbsp
+                    span CPGA: {{res.gp.cgpa | number:2}}
+                .row(ng-show="model.user.sysRank == 10")
+                    h5 Carry Forward:
+                    span(ng-repeat="fail in model.fails") {{fail.code}} &nbsp
+                    br
+                    span(ng-repeat="outstanding in model.outstandings") {{outstanding.code}} &nbsp
+    .row(ng-show="model.user.sysRank == 6").visible-print
+        p
+            em.
+                Transcript is official, if it bears the impression seal of the University and their ink or facsimilie signature of
+                the Registrar.
+    .row.visible-print
+        .col-sm-5(ng-show="model.user.sysRank == 10 || model.user.sysRank == 2")
+            span Exam Officer/Head of Department
+            br
+            span ___________________________________&nbsp
+            br
+            span Signature/Date
+        .col-sm-5(ng-show="model.user.sysRank == 6")
+            br
+            span ___________________________________&nbsp
+            br
+            span Registrar Signature/Date
+    .row.visible-print(ng-show="model.user.sysRank == 6")
+        .col-sm-4
+            table.table.table-striped.table-condensed
+                tr
+                    th Key to Grades
+                tr
+                    td 4.50 - 5.00 First Class
+                tr
+                    td 3.50 - 4.49 Second Class Upper
+                tr
+                    td 2.50 - 3.49 Second Class Lower
+                tr
+                    td 1.50 - 2.49 Third Class
+                tr
+                    td 1.00 - 1.49 Pass
+        .col-sm-4
+            table.table.table-striped.table-condensed
+                tr
+                    th Percentage Scores and Grades
+                tr
+                    td 70 - 100 = A
+                tr
+                    td 60 - 69 = B
+                tr
+                    td 50 - 59 = C
+                tr
+                    td 45 - 49 = D
+                tr
+                    td 0 - 44 = F

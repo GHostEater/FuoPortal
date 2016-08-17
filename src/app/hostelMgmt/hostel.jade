@@ -1,0 +1,23 @@
+//
+   Created by Bello J on 6/25/2016.
+div(ng-controller="HostelController as model")
+    .col-sm-12
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.add()") Add Hostel
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        div.col-sm-9
+            table.table.table-striped.table-bordered.table-condensed
+                thead
+                    th S/N
+                    th Name
+                    th Gender
+                    th Actions
+                tbody
+                    tr(ng-repeat="(key,hostel) in model.hostels | orderBy: '+name' | filter: model.searchTerm")
+                        td {{key + 1}}
+                        td {{hostel.name}}
+                        td {{hostel.sex}}
+                        td
+                            button.btn.btn-warning(ng-click="model.edit(hostel.id)") Edit
+                            button.btn.btn-danger(ng-click="model.remove(hostel.id)") Delete

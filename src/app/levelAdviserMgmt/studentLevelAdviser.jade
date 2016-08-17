@@ -17,7 +17,7 @@ div(ng-controller="StudentLevelAdviserController as model")
             th E-mail
             th Actions
         tbody
-            tr(ng-repeat="(key,student) in model.students | orderBy: '+lastName'")
+            tr(ng-repeat="(key,student) in model.students | orderBy: '+matricNo' | filter: model.searchTerm")
                 td {{key + 1}}
                 td {{student.matricNo}}
                 td {{student.lastName | uppercase}}, {{student.firstName}} {{student.middleName}}
@@ -29,5 +29,6 @@ div(ng-controller="StudentLevelAdviserController as model")
                 td {{student.email}}
                 td
                     button.btn.btn-primary(ng-click="model.view(student.matricNo)") View Details
+                    button.btn.btn-primary(ng-click="model.edit(student.matricNo)") Edit
                     a.btn.btn-primary(href="/student/levelAdviserCourseSlip/{{student.id}}") View Course Registration Detail
                     a.btn.btn-primary(href="/lecturer/myTranscript/{{student.id}}") View Transcript

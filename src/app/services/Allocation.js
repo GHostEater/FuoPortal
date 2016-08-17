@@ -2,7 +2,16 @@
  * Created by Bello J on 4/20/2016.
  */
 angular.module('fuoPortal')
-    .factory("Allocation",function(Host,$http,$q,lodash){
+    .factory("Allocation",function(Host,$http,$q){
+        function getAll(){
+            return $http.get(Host.host+'/allocation/allocations.php')
+                .then(function(response){
+                    return response.data;
+                })
+                .catch(function(response){
+                    return $q.reject(response.status);
+                });
+        }
         function getMyAllocations(id){
             return $http({
                 method: 'POST',
@@ -48,7 +57,7 @@ angular.module('fuoPortal')
                     return $q.reject(response.status);
                 });
         }
-        function allocateCoordinator(lecturerId,code,allocatedBy,semester,sessionId,position){
+        function allocateCoordinator(lecturerId,code,allocatedBy,semester,sessionId,position,departmentId,collegeId){
             return $http({
                 method: 'POST',
                 url: Host.host+'/allocation/allocateCoordinator.php',
@@ -58,7 +67,9 @@ angular.module('fuoPortal')
                     allocatedBy: allocatedBy,
                     semester: semester,
                     sessionId: sessionId,
-                    position: position
+                    position: position,
+                    departmentId: departmentId,
+                    collegeId: collegeId
                 }
             })
                 .then(function(response){
@@ -68,7 +79,7 @@ angular.module('fuoPortal')
                     return $q.reject(reponse.status);
                 });
         }
-        function allocateAssisting(lecturerId,code,allocatedBy,semester,sessionId,position){
+        function allocateAssisting(lecturerId,code,allocatedBy,semester,sessionId,position,departmentId,collegeId){
             return $http({
                 method: 'POST',
                 url: Host.host+'/allocation/allocateAssisting.php',
@@ -78,7 +89,9 @@ angular.module('fuoPortal')
                     allocatedBy: allocatedBy,
                     semester: semester,
                     sessionId: sessionId,
-                    position: position
+                    position: position,
+                    departmentId: departmentId,
+                    collegeId: collegeId
                 }
             })
                 .then(function(response){
@@ -104,6 +117,7 @@ angular.module('fuoPortal')
                 });
         }
         return{
+            getAll: getAll,
             getMyAllocations: getMyAllocations,
             getMyCourses: getMyCourses,
             getCourses: getCourses,

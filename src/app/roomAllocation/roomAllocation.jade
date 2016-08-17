@@ -1,0 +1,66 @@
+//
+   Created by Bello J on 6/28/2016.
+div(ng-controller="RoomAllocationController as model")
+    .col-sm-2.hidden-print
+        .panel.panel-primary.text-center
+            .panel-heading Room Allocation Menu
+            .panel-body
+                ul.nav.nav-pills.nav-stacked
+                    li
+                        a(ng-click="model.showList()") Show Student Allocations List
+                    li
+                        a(ng-click="model.showRooms()") Show Room Members List
+    .col-sm-10(ng-show="model.select == 0")
+        .row.content
+            button.col-sm-2.btn.btn-lg.btn-primary(ng-click="model.allocate()") Allocate Room
+        form.content.col-sm-4
+            input.form-control(type="text" placeholder="Search" ng-model="model.searchTerm")
+        div.col-sm-12
+            table.table.table-striped.table-bordered.table-condensed
+                thead
+                    th S/N
+                    th Matric No
+                    th Name
+                    th Gender
+                    th Department
+                    th College
+                    th Hostel
+                    th Room
+                    th Actions
+                tbody
+                    tr(ng-repeat="(key,alloc) in model.allocations | orderBy: '+matricNo' | filter: model.searchTerm")
+                        td {{key + 1}}
+                        td {{alloc.matricNo}}
+                        td {{alloc.lastName | uppercase}}, {{alloc.firstName}} {{alloc.middleName}}
+                        td {{alloc.sex}}
+                        td {{alloc.department}}
+                        td {{alloc.college}}
+                        td {{alloc.hostel}}
+                        td {{alloc.room}}
+                        td
+                            button.btn.btn-danger(ng-click="model.remove(alloc.id)") Delete
+    .col-sm-10(ng-show="model.select == 1")
+        .panel.panel-primary(ng-repeat="member in model.members")
+            .panel-heading {{member.hostel.name}}
+            .panel-body
+                .panel.panel-info(ng-repeat="room in member.rooms")
+                    .panel-heading Room {{room.name}}
+                    .panel-body
+                        table.table.table-striped.table-bordered.table-condensed
+                            thead
+                                th S/N
+                                th Matric No
+                                th Name
+                                th Gender
+                                th Department
+                                th College
+                                th Level
+                            tbody
+                                tr(ng-repeat="(key,alloc) in room.members | orderBy: '+matricNo' | filter: model.searchTerm")
+                                    td {{key + 1}}
+                                    td {{alloc.matricNo}}
+                                    td {{alloc.lastName | uppercase}}, {{alloc.firstName}} {{alloc.middleName}}
+                                    td {{alloc.sex}}
+                                    td {{alloc.department}}
+                                    td {{alloc.college}}
+                                    td {{alloc.level}}

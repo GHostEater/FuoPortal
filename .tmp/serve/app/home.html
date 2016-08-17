@@ -2,7 +2,6 @@
 <!--Created by GHostEater on 15-Apr-16.
 -->
 <div ng-controller="HomeController as model">
-  <h3>Home</h3>
   <div ng-show="model.user.sysRank == 1">
     <p>You are an Admin</p>
   </div>
@@ -32,5 +31,74 @@
   </div>
   <div ng-show="model.user.sysRank == 10">
     <p>You are a Level Adviser</p>
+  </div>
+  <div ng-show="model.user.sysRank == 5"></div>
+  <button ng-show="model.user.sysRank == 5" ng-click="model.studentEdit(model.student.matricNo)" class="btn btn-primary">Edit Info & Password</button>
+  <div ng-show="model.user.sysRank == 6">
+    <div class="row">
+      <section class="col-sm-6">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">Pending Requests</div>
+          </div>
+          <div class="panel-body">
+            <table class="table table-condensed table-striped table-bordered">
+              <thead>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>College</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <tr ng-repeat="(key,request) in model.requests | orderBy: '+status' | filter:{status:0}">
+                  <td>{{key + 1}}</td>
+                  <td>{{request.name}}</td>
+                  <td>{{request.department}}</td>
+                  <td>{{request.college}}</td>
+                  <td>
+                    <button ng-click="model.process(request.id,1,model.user.id)" class="btn btn-sm btn-success">Approve</button>
+                    <button ng-click="model.process(request.id,2,model.user.id)" class="btn btn-sm btn-danger">Decline</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="col-sm-6">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <div class="panel-title">Approved Requests</div>
+          </div>
+          <div class="panel-body">
+            <table class="table table-condensed table-striped table-bordered">
+              <thead>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>College</th>
+                <th>Date</th>
+                <th>Handled By</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+                <tr ng-repeat="(key,request) in model.requests | orderBy: '+status' | filter:{status:1}">
+                  <td>{{key + 1}}</td>
+                  <td>{{request.name}}</td>
+                  <td>{{request.department}}</td>
+                  <td>{{request.college}}</td>
+                  <td>{{request.date | date:'dd-MMM-yyyy hh:mm:ss a'}}</td>
+                  <td>{{request.handledBy}}</td>
+                  <td>
+                    <button ng-click="model.disable(request.id)" class="btn btn-sm btn-danger">Disable Edit</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </div>

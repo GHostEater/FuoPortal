@@ -16,10 +16,10 @@ div(ng-controller="BroadSheetController as model")
         span(ng-show="model.lecturer.college.id == 2") (Hons.)
         span {{model.major.name}}
     .row.hidden-print
-        .col-sm-2
+        .col-sm-2(ng-show="model.user.sysRank == 9")
             select.form-control(ng-model="model.lvl" ng-change="model.changeLevel(model.lvl)")
                 option(ng-repeat="level in model.levels" value="{{level.id}}") {{level.level}}
-        .col-sm-2
+        .col-sm-2(ng-show="model.user.sysRank == 9")
             select.form-control(ng-model="model.mj" ng-change="model.changeMajor(model.mj)")
                 option(ng-repeat="major in model.majors" value="{{major.id}}") {{major.name}}
         .col-sm-2
@@ -29,6 +29,8 @@ div(ng-controller="BroadSheetController as model")
             select.form-control(ng-model="model.semester.semester")
                 option(value="1") 1st Semester
                 option(value="2") 2nd Semester
+    .row.content.hidden-print
+        button.btn.btn-primary(ng-click="model.print()") Print
     .panel.panel-info
         .panel-body
             .well
@@ -43,8 +45,9 @@ div(ng-controller="BroadSheetController as model")
                         th Present GPA
                         th FINAL CGPA
                         th
-                    tbody
-                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id,majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id},status:1}")
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id},status:1}")
                             td {{key + 1}}
                             td {{gp.gp.matricNo}}
                             td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
@@ -64,8 +67,9 @@ div(ng-controller="BroadSheetController as model")
                         th Previous CGPA
                         th Present GPA
                         th FINAL CGPA
-                    tbody
-                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id,majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id},status:2}")
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id},status:2}")
                             td {{key + 1}}
                             td {{gp.gp.matricNo}}
                             td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
@@ -83,8 +87,9 @@ div(ng-controller="BroadSheetController as model")
                         th Previous CGPA
                         th Present GPA
                         th FINAL CGPA
-                    tbody
-                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id,majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id,statusId:3},status:2}")
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id,statusId:3},status:2}")
                             td {{key + 1}}
                             td {{gp.gp.matricNo}}
                             td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
@@ -102,11 +107,29 @@ div(ng-controller="BroadSheetController as model")
                         th Previous CGPA
                         th Present GPA
                         th FINAL CGPA
-                    tbody
-                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id,majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id,statusId:4},status:2}")
+                    tbody(style="font-size: 0.9em")
+                        tr(ng-repeat="(key,gp) in model.gps | orderBy:'+matricNo' | filter:{gp:{levelId:model.level.id," +
+                        "majorId:model.major.id,semester:model.semester.semester,sessionId:model.session.id,statusId:4},status:2}")
                             td {{key + 1}}
                             td {{gp.gp.matricNo}}
                             td {{gp.gp.lastName | uppercase}}, {{gp.gp.firstName}} {{gp.gp.middleName}}
                             td {{gp.gp.prev_cgpa | number:2}}
                             td {{gp.gp.gpa | number:2}}
                             td {{gp.gp.cgpa | number:2}}
+    .row.visible-print
+        .col-sm-4
+            span {{model.levelAdviser.lastName | uppercase}}, {{model.levelAdviser.firstName}} {{model.levelAdviser.middleName}}
+            br
+            span ___________________________________
+            br
+            span Level Adviser {{model.level.level}} Level Signature/Date
+        .col-sm-4
+            span {{model.hod.lastName | uppercase}}, {{model.hod.firstName}} {{model.hod.middleName}}
+            br
+            span ___________________________________&nbsp
+            br
+            span Head of {{model.department.name}}'s Signature/Date
+        .col-sm-4
+            span Dean of College: ____________________________
+            br
+            span Signature/Date

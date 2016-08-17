@@ -1,5 +1,7 @@
 //Created by GHostEater on 03-May-16.
 div(ng-controller="CourseDetailsController as model")
+    .content
+        button.btn.btn-primary(ng-click="model.request(model.user.id)" ng-hide="model.perm.status == 1") Request Edit Priviledges
     .panel.panel-primary
         .panel-heading Course Details for {{model.course.code}} {{model.course.title}}
         .panel-body
@@ -18,7 +20,7 @@ div(ng-controller="CourseDetailsController as model")
                         th Exam
                         th Score 100%
                         th Grade
-                        th Actions
+                        th(ng-show="model.user.sysRank == 3") Actions
                 tbody
                     tr(ng-repeat="(key,student) in model.students | orderBy: '+matricNo'")
                         td {{key+1}}
@@ -28,10 +30,10 @@ div(ng-controller="CourseDetailsController as model")
                         td {{student.result.exam}}
                         td {{student.result.final}}
                         td {{student.result.grade}}
-                        td
+                        td(ng-show="model.perm.status == 1")
                             button.btn.btn-warning(ng-click="model.editCa(student.result.id)") Edit Ca
                             button.btn.btn-warning(ng-click="model.editExam(student.result.id)") Edit Exam
-        .panel-footer.hidden-print(ng-show="model.course.position == 1")
+        .panel-footer.hidden-print(ng-show="model.course.position == 1 || model.user.sysRank == 3")
             .row.content
                 csv-upload.col-sm-2(ng-model="model.ca")
                 button.col-sm-2.btn.btn-primary(ng-click="model.uploadCA()") Upload CA
